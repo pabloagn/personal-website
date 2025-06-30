@@ -1,0 +1,39 @@
+{{ define "main" }}
+<article class="single-page">
+  <header class="single-header">
+    <h1 class="single-title">{{ .Title }}</h1>
+    <div class="single-meta">
+      <time class="single-date">{{ .Date.Format "2006.01.02" }}</time>
+      {{ if .Params.tags }}
+      <div class="single-tags">
+        {{ range .Params.tags }}
+        <span class="tag">{{ . }}</span>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </header>
+
+  <div class="single-content">{{ .Content }}</div>
+
+  {{ if or .NextInSection .PrevInSection }}
+  <nav class="single-nav">
+    {{ if .PrevInSection }}
+    <div class="single-nav-item single-nav-prev">
+      <span class="single-nav-label">◀ Previous</span>
+      <a href="{{ .PrevInSection.Permalink }}" class="single-nav-link"
+        >{{ .PrevInSection.Title }}</a
+      >
+    </div>
+    {{ end }} {{ if .NextInSection }}
+    <div class="single-nav-item single-nav-next">
+      <span class="single-nav-label">Next ▶</span>
+      <a href="{{ .NextInSection.Permalink }}" class="single-nav-link"
+        >{{ .NextInSection.Title }}</a
+      >
+    </div>
+    {{ end }}
+  </nav>
+  {{ end }}
+</article>
+{{ end }}

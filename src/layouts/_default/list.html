@@ -1,0 +1,46 @@
+{{ define "main" }}
+<section class="list-page">
+    <header class="list-header">
+        <h1 class="list-title">{{ .Title }}</h1>
+        {{ if .Content }}
+        <div class="list-description">
+            {{ .Content }}
+        </div>
+        {{ end }}
+    </header>
+
+    <div class="list-content">
+        {{ range .Pages }}
+        <article class="list-item">
+            <h2 class="list-item-title">
+                <a href="{{ .Permalink }}" class="list-item-link">{{ .Title }}</a>
+            </h2>
+            {{ if .Summary }}
+            <p class="list-item-summary">{{ .Summary }}</p>
+            {{ end }}
+            <div class="list-item-meta">
+                <time class="list-item-date">{{ .Date.Format "2006.01.02" }}</time>
+                {{ if .Params.tags }}
+                <div class="list-item-tags">
+                    {{ range .Params.tags }}
+                    <span class="tag">{{ . }}</span>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+        </article>
+        {{ end }}
+    </div>
+
+    {{ if .Paginator.HasPrev }}
+    <nav class="pagination">
+        {{ if .Paginator.HasPrev }}
+        <a href="{{ .Paginator.Prev.URL }}" class="pagination-link">◀ Previous</a>
+        {{ end }}
+        {{ if .Paginator.HasNext }}
+        <a href="{{ .Paginator.Next.URL }}" class="pagination-link">Next ▶</a>
+        {{ end }}
+    </nav>
+    {{ end }}
+</section>
+{{ end }}

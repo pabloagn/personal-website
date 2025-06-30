@@ -6,9 +6,9 @@ default:
 
 # Start development server
 dev:
-    hugo server --buildDrafts --buildFuture --disableFastRender
+    hugo server --buildDrafts --buildFuture --disableFastRender --bind 0.0.0.0
 
-# Build site for production
+# Build site for production  
 build:
     hugo --minify --gc
 
@@ -28,14 +28,10 @@ project title:
 clean:
     rm -rf public/
 
-# Deploy to production (customize as needed)
-deploy: build
-    rsync -avz --delete public/ user@server:/path/to/site/
-
-# Format and lint
+# Format markdown files
 fmt:
-    find . -name "*.md" -exec prettier --write {} \;
+    find src/content -name "*.md" -exec prettier --write {} \;
 
-# Check links
-check:
-    htmlproofer public/ --disable-external
+# Serve production build locally
+serve: build
+    cd public && python3 -m http.server 8080

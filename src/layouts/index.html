@@ -1,0 +1,43 @@
+{{ define "main" }}
+<section class="hero">
+    <div class="hero-container">
+        <h1 class="hero-title">Pablo Aguirre</h1>
+        <p class="hero-subtitle">Elegant Development</p>
+        <div class="hero-description">
+            <p>◆ Building elegant systems</p>
+            <p>◇ Crafting minimal interfaces</p>
+            <p>◈ Exploring digital philosophy</p>
+        </div>
+    </div>
+</section>
+
+<section class="recent">
+    <div class="recent-container">
+        <div class="recent-section">
+            <h2 class="section-title">Recent Projects</h2>
+            {{ range first 3 (where .Site.RegularPages "Type" "projects") }}
+            <article class="card">
+                <h3 class="card-title">
+                    <a href="{{ .Permalink }}" class="card-link">{{ .Title }}</a>
+                </h3>
+                <p class="card-summary">{{ .Summary }}</p>
+                <time class="card-date">{{ .Date.Format "2006.01.02" }}</time>
+            </article>
+            {{ end }}
+        </div>
+
+        <div class="recent-section">
+            <h2 class="section-title">Recent Posts</h2>
+            {{ range first 3 (where .Site.RegularPages "Type" "blog") }}
+            <article class="card">
+                <h3 class="card-title">
+                    <a href="{{ .Permalink }}" class="card-link">{{ .Title }}</a>
+                </h3>
+                <p class="card-summary">{{ .Summary }}</p>
+                <time class="card-date">{{ .Date.Format "2006.01.02" }}</time>
+            </article>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

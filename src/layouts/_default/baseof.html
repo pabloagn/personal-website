@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} • {{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    
+    <!-- CSS -->
+    {{ $style := resources.Get "css/main.css" | resources.Minify }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+    <header class="header">
+        {{ partial "navigation.html" . }}
+    </header>
+    
+    <main class="main">
+        {{ block "main" . }}{{ end }}
+    </main>
+    
+    <footer class="footer">
+        {{ partial "footer.html" . }}
+    </footer>
+</body>
+</html>

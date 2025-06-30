@@ -3,6 +3,12 @@ languageCode = "en-us"
 title = "Pablo Aguirre"
 theme = "kanso"
 
+# Directory structure
+contentDir = "src/content"
+layoutDir = "src/layouts"
+staticDir = "src/static"
+assetDir = "src/assets"
+
 # Build settings
 buildDrafts = false
 buildFuture = false
