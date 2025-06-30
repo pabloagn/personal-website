@@ -1,0 +1,44 @@
+{{ define "main" }}
+<section class="term-page">
+    <header class="term-header">
+        <h1 class="term-title">{{ .Title }}</h1>
+        <p class="term-meta">
+            {{ .Pages | len }} {{ if eq (.Pages | len) 1 }}post{{ else }}posts{{ end }} tagged with "{{ .Title }}"
+        </p>
+    </header>
+
+    <div class="term-content">
+        {{ range .Pages }}
+        <article class="term-item">
+            <h2 class="term-item-title">
+                <a href="{{ .Permalink }}" class="term-item-link">{{ .Title }}</a>
+            </h2>
+            {{ if .Summary }}
+            <p class="term-item-summary">{{ .Summary }}</p>
+            {{ end }}
+            <div class="term-item-meta">
+                <time class="term-item-date">{{ .Date.Format "2006.01.02" }}</time>
+                {{ if .Params.categories }}
+                <div class="term-item-categories">
+                    {{ range .Params.categories }}
+                    <a href="{{ "/categories/" | relURL }}{{ . | urlize }}" class="category-tag">{{ . }}</a>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+        </article>
+        {{ end }}
+    </div>
+
+    {{ if .Paginator.HasPrev }}
+    <nav class="pagination">
+        {{ if .Paginator.HasPrev }}
+        <a href="{{ .Paginator.Prev.URL }}" class="pagination-link">◀ Previous</a>
+        {{ end }}
+        {{ if .Paginator.HasNext }}
+        <a href="{{ .Paginator.Next.URL }}" class="pagination-link">Next ▶</a>
+        {{ end }}
+    </nav>
+    {{ end }}
+</section>
+{{ end }}

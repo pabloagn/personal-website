@@ -1,7 +1,7 @@
 baseURL = "https://pabloagn.com"
 languageCode = "en-us"
 title = "Pablo Aguirre"
-theme = "kanso"
+# theme = "kanso"
 
 # Directory structure
 contentDir = "src/content"
@@ -21,6 +21,15 @@ enableRobotsTXT = true
 home = ["HTML", "RSS", "JSON"]
 page = ["HTML"]
 section = ["HTML", "RSS"]
+taxonomy = ["HTML", "RSS"]
+term = ["HTML", "RSS"]
+
+# Taxonomies
+[taxonomies]
+category = "categories"
+tag = "tags"
+technology = "technologies"
+difficulty = "difficulty"
 
 # Pagination
 paginate = 10
@@ -29,22 +38,22 @@ paginatePath = "page"
 # Menu configuration
 [menu]
 [[menu.main]]
-name = "◆ Home"
+name = "Home"
 url = "/"
 weight = 10
 
 [[menu.main]]
-name = "◇ Projects"
+name = "Projects"
 url = "/projects/"
 weight = 20
 
 [[menu.main]]
-name = "◈ Blog"
+name = "Blog"
 url = "/blog/"
 weight = 30
 
 [[menu.main]]
-name = "◉ Deep Dives"
+name = "Deep Dives"
 url = "/deepdives/"
 weight = 40
 
@@ -63,8 +72,15 @@ github = "pabloagn"
 [markup.goldmark]
 [markup.goldmark.renderer]
 unsafe = true
+[markup.goldmark.extensions]
+table = true
+strikethrough = true
+linkify = true
+taskList = true
 [markup.highlight]
 style = "github-dark"
 lineNos = false
 lineNumbersInTable = false
 tabWidth = 2
+codeFences = true
+guessSyntax = false

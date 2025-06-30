@@ -1,0 +1,21 @@
+{{ define "main" }}
+<section class="taxonomy-page">
+    <header class="taxonomy-header">
+        <h1 class="taxonomy-title">{{ .Title }}</h1>
+        <p class="taxonomy-description">
+            {{ .Content }}
+        </p>
+    </header>
+
+    <div class="taxonomy-terms">
+        {{ range .Pages }}
+        <article class="taxonomy-term">
+            <h2 class="term-title">
+                <a href="{{ .Permalink }}" class="term-link">{{ .Title }}</a>
+            </h2>
+            <span class="term-count">{{ .Pages | len }} {{ if eq (.Pages | len) 1 }}post{{ else }}posts{{ end }}</span>
+        </article>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
