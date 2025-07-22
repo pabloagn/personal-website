@@ -1,0 +1,128 @@
+.section-title {
+  color: var(--accent-yellow);
+  font-size: 1.2rem;
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--bg-tertiary);
+}
+
+.card {
+  margin-bottom: var(--space-lg);
+  padding: var(--space-lg);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--bg-tertiary);
+  transition: border-color 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--accent-blue);
+}
+
+.card-title {
+  margin-bottom: var(--space-sm);
+  font-size: 1.1rem;
+}
+
+.card-link {
+  color: var(--fg-primary);
+  border: none;
+}
+
+.card-link:hover {
+  color: var(--accent-blue);
+}
+
+.card-summary {
+  color: var(--fg-secondary);
+  font-size: 0.85rem;
+  margin-bottom: var(--space-sm);
+}
+
+.card-date {
+  color: var(--fg-muted);
+  font-size: 0.75rem;
+}
+
+/* Single Post Meta */
+.single-title {
+  color: var(--fg-primary);
+  margin-bottom: var(--space-md);
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+.single-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-md);
+}
+
+.single-date {
+  color: var(--fg-muted);
+  font-size: 0.85rem;
+}
+
+.single-categories,
+.single-technologies,
+.single-tags {
+  display: flex;
+  gap: var(--space-xs);
+  align-items: center;
+}
+
+.category-link,
+.technology-link,
+.tag-link {
+  background-color: var(--bg-tertiary);
+  color: var(--fg-secondary);
+  padding: var(--space-xs) var(--space-sm);
+  font-size: 0.75rem;
+  border-radius: 3px;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.category-link:hover {
+  background-color: var(--accent-yellow);
+  color: var(--bg-primary);
+}
+
+.technology-link:hover {
+  background-color: var(--accent-blue);
+  color: var(--bg-primary);
+}
+
+.tag-link:hover {
+  background-color: var(--accent-green);
+  color: var(--bg-primary);
+}
+
+.single-difficulty {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.difficulty-badge {
+  padding: var(--space-xs) var(--space-sm);
+  font-size: 0.7rem;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.difficulty-beginner {
+  background-color: var(--accent-green);
+  color: var(--bg-primary);
+}
+
+.difficulty-intermediate {
+  background-color: var(--accent-yellow);
+  color: var(--bg-primary);
+}
+
+.difficulty-advanced {
+  background-color: var(--accent-red);
+  color: var(--bg-primary);
+}

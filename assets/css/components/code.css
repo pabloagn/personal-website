@@ -1,0 +1,107 @@
+.highlight {
+  background-color: transparent !important;
+  border-radius: 2px;
+  position: relative;
+  margin: 1rem 0 !important;
+  overflow: hidden;
+  border: 1px solid var(--bg-tertiary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.highlight pre {
+  background: var(--bg-code) !important;
+  border: none;
+  margin: 0;
+  padding: var(--space-sm) var(--space-md);
+  overflow-x: auto;
+}
+
+.highlight pre code {
+  background: none;
+  padding: 0;
+  border: none;
+  color: inherit;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  display: block;
+  width: 100%;
+}
+
+/* Line number styling */
+.highlight .ln {
+  margin-right: 0.5em;
+  color: var(--fg-muted);
+  user-select: none;
+}
+
+/* Code line wrapper for hover effects */
+.code-line {
+  padding: 0 var(--space-md);
+  margin: 0 calc(-1 * var(--space-md));
+  transition: opacity 0.2s ease-in-out;
+  display: block;
+  width: calc(100% + 2 * var(--space-md));
+  min-height: 1.6em;
+  position: relative;
+}
+
+/* Line hover effects */
+.highlight.is-hovered .code-line {
+  opacity: 0.4;
+}
+
+.highlight.is-hovered .code-line:hover {
+  opacity: 1;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(127, 180, 202, 0.08) 15%,
+    rgba(127, 180, 202, 0.08) 85%,
+    transparent 100%
+  );
+}
+
+/* Pulsating glow animation */
+@keyframes pulse-glow {
+  0%, 100% {
+    border-color: var(--bg-tertiary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    border-color: rgba(127, 180, 202, 0.8);
+    box-shadow: 
+      0 2px 8px rgba(0, 0, 0, 0.5),
+      0 0 20px rgba(127, 180, 202, 0.6),
+      inset 0 0 20px rgba(127, 180, 202, 0.1);
+  }
+}
+
+.highlight.header-hovered {
+  animation: pulse-glow 1.2s ease-in-out infinite !important;
+}
+
+.code-header {
+  background-color: var(--bg-primary);
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--bg-tertiary);
+  font-size: 0.8rem;
+  color: var(--fg-muted);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copy-button {
+  background: var(--accent-blue);
+  color: var(--bg-primary);
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1px;
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.copy-button:hover {
+  background: var(--accent-green);
+}

@@ -1,60 +1,105 @@
-# Development commands for Hugo blog
+# --- Global Settings & Variables ---
+set shell       := ["bash", "-eu", "-o", "pipefail", "-c"]
+set export      := true # keep env vars for subprocesses
+set dotenv-load := true # automatically load .env if present
 
-# Default recipe
+# --- Core Commands ---
+HUGO        := "hugo"
+
+# --- Core Paths ---
+SRC         := "src/"
+PUBLIC_DIR  := "public"
+CONFIG_DIR  := "config"
+CONTENT_DIR := SRC + "content"
+RES_DIR     := SRC + "resources"
+ASSET_DIR   := SRC + "assets"
+NODE_BIN    := "npm"
+
+# --- Hugo Flags ---
+HUGO_FLAGS  := "--ignoreCache --noHTTPCache"
+DEV_FLAGS   := "--buildDrafts --buildFuture --disableFastRender --bind 0.0.0.0"
+
+# --- Recipes ---
+# Default: list available commands
 default:
-    @just --list
+    @just --list --unsorted
 
-# Start development server with cleared cache
-dev:
-    @echo "Clearing cache and starting development server..."
-    @rm -rf public/
-    @rm -rf resources/
-    hugo server --buildDrafts --buildFuture --disableFastRender --bind 0.0.0.0 --noHTTPCache --ignoreCache
-
-# Build site for production  
-build:
-    @echo "Building site for production..."
-    @rm -rf public/
-    @rm -rf resources/
-    hugo --minify --gc
-
-# Create new blog post
+# Create: New blog post
 post title:
-    hugo new content/blog/{{title}}.md
+    {{HUGO}} new {{CONTENT_DIR}}/blog/{{title}}.md
 
-# Create new deep dive
+# Create: New deep dive
 deepdive title:
-    hugo new content/deepdives/{{title}}.md
+    {{HUGO}} new {{CONTENT_DIR}}/deepdives/{{title}}.md
 
-# Create new project
+# Create: New project
 project title:
-    hugo new content/projects/{{title}}.md
+    {{HUGO}} new {{CONTENT_DIR}}/projects/{{title}}.md
 
-# Clean all generated files and cache
-clean:
-    @echo "Cleaning all generated files..."
-    @rm -rf public/
-    @rm -rf resources/
-    @rm -rf .hugo_build.lock
+# Development server
+# dev: clean-assets
+#     @echo "Starting development server..."
+#     {{HUGO}} server {{DEV_FLAGS}} {{HUGO_FLAGS}}
 
-# Format markdown files
-fmt:
-    find src/content -name "*.md" -exec prettier --write {} \;
+
+dev:
+    @echo "Starting development server..."
+    {{HUGO}} server {{DEV_FLAGS}} {{HUGO_FLAGS}}
+
+# Production build
+build: clean-assets
+    @echo "Building production bundle..."
+    {{HUGO}} --minify --gc {{HUGO_FLAGS}}
 
 # Serve production build locally
 serve: build
-    cd public && python3 -m http.server 8080
+    cd {{PUBLIC_DIR}} && python3 -m http.server 8080
 
-# Hard refresh - clean everything and restart
+# Install JS/CSS dependencies
+install-assets:
+    {{NODE_BIN}} install
+
+# Build JS/CSS assets
+build-assets: install-assets
+    {{NODE_BIN}} run build
+
+# Watch JS/CSS assets
+watch-assets: install-assets
+    {{NODE_BIN}} run dev
+
+# Clean generated assets and rebuild assets
+clean-assets: clean
+    @rm -rf {{RES_DIR}} {{PUBLIC_DIR}}
+    @just build-assets
+
+# Format markdown
+fmt:
+    prettier --write "{{CONTENT_DIR}}/**/*.md"
+
+# Lint markdown
+lint:
+    markdownlint "{{CONTENT_DIR}}"
+
+# Check for broken links
+check: build
+    htmlproofer {{PUBLIC_DIR}} --disable-external --checks link,script,img-http
+
+# Template metrics
+perf:
+    {{HUGO}} --templateMetrics --templateMetricsHints
+
+# Clean build artifacts
+clean:
+    @rm -rf {{PUBLIC_DIR}} {{RES_DIR}} .hugo_build.lock
+
+# Full refresh
 refresh: clean dev
 
-# Check for broken links (requires htmlproofer)
-check:
-    @echo "Checking for broken links..."
-    htmlproofer public/ --disable-external --check-html --check-img-http
+# Deploy to GitHub Pages
+deploy: build
+    git subtree push --prefix {{PUBLIC_DIR}} origin gh-pages
 
-# Show site statistics
+# Site statistics
 stats:
-    @echo "Site statistics:"
-    @echo "Posts: $(find src/content -name "*.md" | wc -l)"
-    @echo "Size: $(du -sh public/ 2>/dev/null || echo "Not built")"
+    @echo "Markdown files: $(find {{CONTENT_DIR}} -name '*.md' | wc -l)"
+    @echo "Build size: $(du -sh {{PUBLIC_DIR}} 2>/dev/null || echo 'not built')"

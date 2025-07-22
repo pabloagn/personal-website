@@ -1,0 +1,85 @@
+.table-container {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin: var(--space-lg) 0;
+  border: 1px solid var(--bg-tertiary);
+  border-radius: 2px;
+  background-color: var(--bg-primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 650px;
+}
+
+.table-container thead {
+  border-bottom: 2px solid var(--accent-yellow);
+}
+
+.table-container th {
+  padding: var(--space-md);
+  text-align: left;
+  font-weight: 500;
+  color: var(--accent-yellow);
+  font-size: 0.9rem;
+  border-bottom: none;
+}
+
+.table-container td {
+  padding: var(--space-md);
+  color: var(--fg-secondary);
+  border-bottom: 1px solid var(--bg-tertiary);
+  vertical-align: top;
+}
+
+.table-container tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table-container tbody tr:hover {
+  background-color: rgba(127, 180, 202, 0.07);
+}
+
+.table-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background-color: var(--bg-tertiary);
+  border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent-blue);
+}
+
+.table-container.scrollable {
+  padding: 1rem;
+  overflow-x: auto;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  scrollbar-gutter: stable both-edges;
+}
+
+.table-container.scrollable table {
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: 100%;
+  width: max-content;
+}
+
+.table-container.scrollable th,
+.table-container.scrollable td {
+  padding: 0.75rem 1rem;
+  white-space: nowrap;
+  text-align: left;
+}

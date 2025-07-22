@@ -6,8 +6,14 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
-    flake-utils.lib.eachDefaultSystem (system:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      flake-utils,
+    }:
+    flake-utils.lib.eachDefaultSystem (
+      system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
       in
@@ -20,13 +26,16 @@
             # Development tools
             just
             nodejs
-            nodePackages.prettier
+            pnpm
+            prettierd
             html-proofer
+            prettier-plugin-go-template
 
             # Optional utilities
             rsync
             git
           ];
         };
-      });
+      }
+    );
 }

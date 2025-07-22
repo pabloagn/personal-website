@@ -1,0 +1,206 @@
+{
+  "meta": { "singular": "Library", "plural": "Libraries", "slug": "libraries" },
+
+  "groups": {
+    "Python": {
+      "singular": "Python library",
+      "plural": "Python libraries",
+      "slug": "python",
+      "values": [
+        "beautifulsoup4",
+        "click",
+        "django",
+        "fastapi",
+        "flask",
+        "jinja2",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pydantic",
+        "pytest",
+        "requests",
+        "scikit-learn",
+        "scipy",
+        "seaborn",
+        "sqlalchemy",
+        "torch",
+        "tqdm",
+        "transformers",
+        "typer"
+      ]
+    },
+
+    "Rust": {
+      "singular": "Rust crate",
+      "plural": "Rust crates",
+      "slug": "rust",
+      "values": [
+        "actix-web",
+        "anyhow",
+        "async-std",
+        "clap",
+        "hyper",
+        "indicatif",
+        "nom",
+        "rayon",
+        "reqwest",
+        "rocket",
+        "serde",
+        "thiserror",
+        "tokio",
+        "tracing",
+        "warp",
+        "ratatui",
+        "tachyonfx"
+      ]
+    },
+
+    "Go": {
+      "singular": "Go package",
+      "plural": "Go packages",
+      "slug": "go",
+      "values": [
+        "gin",
+        "echo",
+        "mux",
+        "gorilla",
+        "cobra",
+        "viper",
+        "zap",
+        "logrus",
+        "gorm",
+        "sqlx",
+        "go-kit",
+        "fiber",
+        "chi",
+        "go-micro"
+      ]
+    },
+
+    "Haskell": {
+      "singular": "Haskell package",
+      "plural": "Haskell packages",
+      "slug": "haskell",
+      "values": [
+        "base",
+        "containers",
+        "text",
+        "aeson",
+        "bytestring",
+        "lens",
+        "conduit",
+        "warp",
+        "yesod",
+        "servant",
+        "mtl",
+        "optparse-applicative",
+        "persistent"
+      ]
+    },
+
+    "C": {
+      "singular": "C library",
+      "plural": "C libraries",
+      "slug": "c",
+      "values": [
+        "glib",
+        "libcurl",
+        "zlib",
+        "libxml2",
+        "openssl",
+        "sqlite3",
+        "ncurses",
+        "cjson"
+      ]
+    },
+
+    "C++": {
+      "singular": "C++ library",
+      "plural": "C++ libraries",
+      "slug": "cpp",
+      "values": [
+        "boost",
+        "eigen",
+        "fmt",
+        "spdlog",
+        "poco",
+        "opencv",
+        "qt",
+        "tbb",
+        "protobuf",
+        "nlohmann-json"
+      ]
+    },
+
+    "Bash": {
+      "singular": "Bash tool",
+      "plural": "Bash tools",
+      "slug": "bash",
+      "values": [
+        "coreutils",
+        "sed",
+        "awk",
+        "grep",
+        "findutils",
+        "jq",
+        "curl",
+        "wget",
+        "tar",
+        "gzip",
+        "bzip2",
+        "xz",
+        "diffutils",
+        "rsync",
+        "ssh",
+        "tmux",
+        "htop"
+      ]
+    },
+
+    "Zsh": {
+      "singular": "Zsh plugin",
+      "plural": "Zsh plugins",
+      "slug": "zsh",
+      "values": [
+        "oh-my-zsh",
+        "zinit",
+        "zplug",
+        "powerlevel10k",
+        "fzf",
+        "zsh-autosuggestions",
+        "zsh-syntax-highlighting"
+      ]
+    },
+
+    "Fish": {
+      "singular": "Fish plugin",
+      "plural": "Fish plugins",
+      "slug": "fish",
+      "values": ["fisher", "oh-my-fish", "fzf"]
+    },
+
+    "Scala": {
+      "singular": "Scala library",
+      "plural": "Scala libraries",
+      "slug": "scala",
+      "values": [
+        "cats",
+        "cats-effect",
+        "fs2",
+        "http4s",
+        "doobie",
+        "circe",
+        "tapir",
+        "zio",
+        "zio-http",
+        "scalatest",
+        "scalacheck",
+        "shapeless",
+        "slick",
+        "akka",
+        "play",
+        "monocle"
+      ]
+    }
+  }
+}

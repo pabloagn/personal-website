@@ -1,0 +1,64 @@
+.hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: var(--bg-primary);
+}
+
+.hero-box {
+  position: relative;
+  max-width: 640px;
+  width: 100%;
+  padding: 2rem;
+  border: 1px dashed var(--fg-muted);
+  text-align: center;
+}
+
+.hero-label {
+  position: absolute;
+  font-size: 0.75rem;
+  background-color: var(--bg-secondary);
+  padding: 0 0.3rem;
+}
+
+.hero-label--nw { top: -0.75rem; left: -0.5rem; }
+.hero-label--ne { top: -0.75rem; right: -0.5rem; }
+.hero-label--sw { bottom: -0.75rem; left: -0.5rem; }
+.hero-label--se { bottom: -0.75rem; right: -0.5rem; }
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-role {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.hero-tagline {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.hero-telemetry {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-telemetry__item dt {
+  font-weight: 600;
+}
+
+.hero-telemetry__item dd {
+  margin: 0;
+}
+
+.hero-cta a {
+  margin: 0 0.5rem;
+}

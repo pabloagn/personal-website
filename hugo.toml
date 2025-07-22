@@ -1,22 +1,17 @@
+# --- General ---
 baseURL = "https://pabloagn.com"
 languageCode = "en-us"
 title = "Pablo Aguirre"
 # theme = "kanso"
 
-# Directory structure
-contentDir = "src/content"
-layoutDir = "src/layouts"
-staticDir = "src/static"
-assetDir = "src/assets"
-
-# Build settings
+# --- Build Settings ---
 buildDrafts = false
 buildFuture = false
 buildExpired = false
 enableGitInfo = true
 enableRobotsTXT = true
 
-# Output formats
+# --- Output Formats ---
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 page = ["HTML"]
@@ -24,18 +19,11 @@ section = ["HTML", "RSS"]
 taxonomy = ["HTML", "RSS"]
 term = ["HTML", "RSS"]
 
-# Taxonomies
-[taxonomies]
-category = "categories"
-tag = "tags"
-technology = "technologies"
-difficulty = "difficulty"
-
-# Pagination
+# --- Pagination ---
 paginate = 10
 paginatePath = "page"
 
-# Menu configuration
+# --- Menu Configuration ---
 [menu]
 [[menu.main]]
 name = "Home"
@@ -57,30 +45,39 @@ name = "Deep Dives"
 url = "/deepdives/"
 weight = 40
 
-# Site parameters
+# --- Site Parameters ---
 [params]
 description = "Pablo Aguirre • Elegant Development"
 author = "Pablo Aguirre"
 email = "pabloaguirrenck@protonmail.ch"
 
-# Social links (customize as needed)
+# --- Social Links ---
 [params.social]
 github = "pabloagn"
 
-# Markup configuration
+# --- Markup Configuration ---
 [markup]
+
 [markup.goldmark]
+
 [markup.goldmark.renderer]
 unsafe = true
+
 [markup.goldmark.extensions]
 table = true
 strikethrough = true
 linkify = true
 taskList = true
+
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 4
+ordered = false
+
 [markup.highlight]
-style = "github-dark"
-lineNos = false
+lineNos = true
 lineNumbersInTable = false
-tabWidth = 2
+noClasses = false
 codeFences = true
-guessSyntax = false
+guessSyntax = true
+tabWidth = 2

@@ -1,0 +1,30 @@
+{{/* layouts/partials/hooks/body-end.html
+     abort build if a post references an undefined taxonomy value            */}}
+
+{{/* build allowed technology list (all group slices concatenated) */}}
+{{ $tech := slice }}
+{{ range site.Data.allowed.technologies.groups }}
+  {{ $tech = $tech | append .values }}
+{{ end }}
+
+{{/* static allow‑lists for the simple taxonomies */}}
+{{ $allow := dict
+  "category"   (site.Data.allowed.categories.values)
+  "tag"        (site.Data.allowed.tags.values)
+  "difficulty" (site.Data.allowed.difficulty.values)
+  "technology" $tech
+}}
+
+{{ range site.RegularPages }}
+  {{ $p := . }}
+  {{ range $tax, $raw := .Params }}
+    {{ $vals := cond (reflect.IsSlice $raw) $raw (slice $raw) }}
+    {{ range $vals }}
+      {{- $v := lower . -}}
+      {{- if and (isset $allow $tax) (not (in ($allow.Get $tax) $v)) -}}
+        {{ errorf "%s: invalid %s “%s”" $p.File.Path $tax $v }}
+      {{- end -}}
+    {{- end }}
+  {{ end }}
+{{ end }}
+

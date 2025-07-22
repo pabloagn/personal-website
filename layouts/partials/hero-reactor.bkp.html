@@ -1,0 +1,77 @@
+{{- $p := .Site.Params.hero -}}
+{{- $name    := or $p.name .Site.Title -}}
+{{- $role    := default "Research Scientist" $p.role -}}
+{{- $tagline := default "Exploring elegant systems under extreme constraint." $p.tagline -}}
+{{- $cta1    := default "About" $p.cta_primary -}}
+{{- $cta1url := default "/about/" $p.cta_primary_url -}}
+{{- $cta2    := default "CV" $p.cta_secondary -}}
+{{- $cta2url := default "/cv.pdf" $p.cta_secondary_url -}}
+
+{{- $streams  := $p.streams -}}
+{{- $sepVis   := " &nbsp;•&nbsp; " -}}
+{{- $sepPlain := " • " -}}
+
+<section class="hero-reactor" id="top">
+
+  <div class="hero-reactor__streams" aria-hidden="true">
+    {{ range $lane := seq 1 $p.lanes }}
+      {{- $cleaned := slice -}}
+      {{- range shuffle $streams }}
+        {{- $cleaned = $cleaned | append (replaceRE `\s+` " " .) -}}
+      {{- end -}}
+      {{- $vis   := delimit $cleaned $sepVis -}}
+      {{- $plain := delimit $cleaned $sepPlain -}}
+      <div class="hero-stream" data-lane="{{ $lane }}">
+        <div class="hero-stream__inner" data-text="{{ $plain | htmlEscape }}">{{ $vis | safeHTML }}</div>
+      </div>
+    {{ end }}
+  </div>
+
+  <div class="hero-reactor__glasswall" aria-hidden="true"></div>
+
+  <div class="hero-reactor__center">
+    <div class="hero-reactor__frame">
+      <span class="hero-reactor__label hero-reactor__label--nw">SYS:Δ</span>
+      <span class="hero-reactor__label hero-reactor__label--ne">FLOW:β</span>
+      <span class="hero-reactor__label hero-reactor__label--sw">CORE:γ</span>
+      <span class="hero-reactor__label hero-reactor__label--se">v{{ hugo.Version }}</span>
+
+      <div class="hero-reactor__glass">
+        <h1 class="hero-title">{{ $name }}</h1>
+        <p class="hero-role">{{ $role }}</p>
+        <p class="hero-tagline">{{ $tagline }}</p>
+
+        {{ with $p.telemetry }}
+        <dl class="hero-telemetry">
+          {{ range . }}
+          <div class="hero-telemetry__item">
+            <dt>{{ .label }}</dt>
+            <dd>{{ .value }}</dd>
+          </div>
+          {{ end }}
+        </dl>
+        {{ end }}
+
+        <div class="hero-cta">
+          <a href="{{ $cta1url }}" class="btn btn--primary">{{ $cta1 }}</a>
+          <a href="{{ $cta2url }}" class="btn btn--ghost">{{ $cta2 }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <svg class="hero-reactor__fx" width="0" height="0" focusable="false" aria-hidden="true">
+    <defs>
+      <filter id="heroStreamDisplace" x="-20%" y="-20%" width="140%" height="140%">
+        <feTurbulence id="heroNoise" type="fractalNoise"
+                      baseFrequency="0.002 0.005"
+                      numOctaves="3" seed="8" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise"
+                           scale="0"
+                           xChannelSelector="R"
+                           yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+</section>
+

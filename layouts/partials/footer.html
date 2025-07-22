@@ -1,0 +1,10 @@
+<div class="footer-container">
+  <div class="footer-content">
+    <p class="footer-text">⬢ {{ .Site.Params.author }} • {{ now.Year }}</p>
+    <div class="footer-links">
+      {{ with .Site.Params.social.github }}
+      <a href="https://github.com/{{ . }}" class="footer-link">◇ GitHub</a>
+      {{ end }}
+    </div>
+  </div>
+</div>

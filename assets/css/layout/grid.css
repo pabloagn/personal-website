@@ -1,0 +1,30 @@
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg);
+}
+
+.recent-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+}
+
+.single-page {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.single-header {
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--bg-tertiary);
+  text-align: center;
+}
+
+.single-content {
+  line-height: 1.7;
+  margin-bottom: var(--space-xl);
+}

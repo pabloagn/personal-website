@@ -1,0 +1,4 @@
+---
+title: "Home"
+math: true
+---

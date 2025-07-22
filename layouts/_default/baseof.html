@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} • {{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+
+    {{/* CSS Pipeline */}}
+    {{ $styles := slice
+        (resources.Get "css/base/variables.css")
+        (resources.Get "css/main.css")
+        (resources.Get "css/base/typography.css")
+        (resources.Get "css/layout/grid.css")
+        (resources.Get "css/components/header.css")
+        (resources.Get "css/components/navigation.css")
+        (resources.Get "css/components/hero.css")
+        (resources.Get "css/components/cards.css")
+        (resources.Get "css/components/tables.css")
+        (resources.Get "css/components/code.css")
+        (resources.Get "css/components/toc.css")
+        (resources.Get "css/utilities/colors.css")
+        (resources.Get "css/utilities/spacing.css")
+        (resources.Get "css/syntax.css")
+        (resources.Get "css/layout/responsive.css")
+    }}
+
+    {{ $css := $styles | resources.Concat "css/bundle.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" />
+
+    <style>html,body{max-width:100%;}</style>
+
+    {{/* Application JS Bundle */}}
+    {{ $js := resources.Get "js/main.js" | js.Build (dict "minify" true) }}
+    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+
+    {{/* Conditionally load KaTeX if the page needs it */}}
+    {{ if .Params.math }}{{ partial "helpers/katex.html" . }}{{ end }}
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+</head>
+
+<body class="{{ if .IsHome }}is-home{{ end }}">
+    <header class="header{{ if .IsHome }} is-home-header{{ end }}">
+        {{ partial "navigation.html" . }}
+    </header>
+
+    <div class="page-content">
+        <main class="main">
+            <!-- <div class="single-content"> -->
+                {{ block "main" . }}{{ end }}
+            <!-- </div> -->
+        </main>
+    </div>
+
+    <footer class="footer">
+        {{ partial "footer.html" . }}
+    </footer>
+</body>
+</html>

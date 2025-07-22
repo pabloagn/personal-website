@@ -1,0 +1,407 @@
+{
+  "meta": {
+    "singular": "Technology",
+    "plural": "Technologies",
+    "slug": "technologies"
+  },
+  "groups": {
+    "Language": {
+      "singular": "Language",
+      "plural": "Languages",
+      "slug": "language",
+      "values": [
+        "ada",
+        "agda",
+        "assembly",
+        "c",
+        "clojure",
+        "cobol",
+        "coq",
+        "cpp",
+        "crystal",
+        "csharp",
+        "dart",
+        "d",
+        "elixir",
+        "elm",
+        "erlang",
+        "fennel",
+        "fortran",
+        "gap",
+        "gleam",
+        "go",
+        "groovy",
+        "haskell",
+        "idris",
+        "isabelle",
+        "java",
+        "javascript",
+        "julia",
+        "kotlin",
+        "lean",
+        "lisp",
+        "lua",
+        "mathematica",
+        "matlab",
+        "maxima",
+        "nim",
+        "nix",
+        "objc",
+        "ocaml",
+        "odin",
+        "pascal",
+        "perl",
+        "php",
+        "prolog",
+        "python",
+        "r",
+        "racket",
+        "ruby",
+        "rust",
+        "sage",
+        "scala",
+        "scheme",
+        "solidity",
+        "sql",
+        "swift",
+        "typescript",
+        "v",
+        "zig"
+      ]
+    },
+    "Markup": {
+      "singular": "Markup language",
+      "plural": "Markup languages",
+      "slug": "markup",
+      "values": ["html", "xml", "css", "latex", "markdown", "typst", "org"]
+    },
+    "Framework": {
+      "singular": "Framework",
+      "plural": "Frameworks",
+      "slug": "framework",
+      "values": ["angular", "astro", "hugo", "nodejs", "react", "svelte", "vue"]
+    },
+    "DataEngineering": {
+      "singular": "Data engineering tool",
+      "plural": "Data engineering tools",
+      "slug": "data-engineering",
+      "values": [
+        "airflow",
+        "clickhouse",
+        "databricks",
+        "dbt",
+        "delta lake",
+        "flink",
+        "glassflow",
+        "hadoop",
+        "iceberg",
+        "kedro",
+        "kafka",
+        "spark"
+      ]
+    },
+    "MLFramework": {
+      "singular": "ML framework",
+      "plural": "ML frameworks",
+      "slug": "ml-framework",
+      "values": [
+        "jax",
+        "keras",
+        "mlflow",
+        "numpy",
+        "pandas",
+        "pytorch",
+        "scikit-learn",
+        "tensorflow",
+        "xgboost"
+      ]
+    },
+    "NLP": {
+      "singular": "NLP tool",
+      "plural": "NLP tools",
+      "slug": "nlp",
+      "values": [
+        "bert",
+        "huggingface transformers",
+        "langchain",
+        "sentence-transformers"
+      ]
+    },
+    "ExperimentTracking": {
+      "singular": "Experiment tracking tool",
+      "plural": "Experiment tracking tools",
+      "slug": "experiment-tracking",
+      "values": ["mlflow", "wandb", "dvc"]
+    },
+    "Visualization": {
+      "singular": "Visualization tool",
+      "plural": "Visualization tools",
+      "slug": "visualization",
+      "values": ["power bi", "tableau", "superset"]
+    },
+    "Database": {
+      "singular": "Database",
+      "plural": "Databases",
+      "slug": "database",
+      "values": ["postgresql", "mongodb", "redis", "neo4j", "qdrant"]
+    },
+    "Cloud": {
+      "singular": "Cloud service",
+      "plural": "Cloud services",
+      "slug": "cloud",
+      "values": [
+        "aws",
+        "azure",
+        "gcp",
+        "s3",
+        "redshift",
+        "glue",
+        "emr",
+        "blob storage",
+        "synapse analytics",
+        "data factory",
+        "cloud storage",
+        "bigquery",
+        "dataflow",
+        "sagemaker",
+        "vertex ai",
+        "azure machine learning"
+      ]
+    },
+    "DevOps": {
+      "singular": "DevOps tool",
+      "plural": "DevOps tools",
+      "slug": "devops",
+      "values": [
+        "docker",
+        "kubernetes",
+        "kubeflow",
+        "nix",
+        "terraform",
+        "prometheus",
+        "grafana",
+        "argocd",
+        "flux"
+      ]
+    },
+    "Shell": {
+      "singular": "Shell",
+      "plural": "Shells",
+      "slug": "shell",
+      "values": ["bash", "zsh", "fish", "nu", "powershell"]
+    },
+    "Tooling": {
+      "singular": "Tool",
+      "plural": "Tools",
+      "slug": "tooling",
+      "values": [
+        "git",
+        "github",
+        "gitlab",
+        "codeberg",
+        "bitbucket",
+        "pytest",
+        "ci",
+        "cd",
+        "make",
+        "just",
+        "taskfile"
+      ]
+    },
+    "Rendering": {
+      "singular": "Rendering technology",
+      "plural": "Rendering technologies",
+      "slug": "rendering",
+      "values": ["shaders", "wasm"]
+    },
+    "Scientific": {
+      "singular": "Scientific tool",
+      "plural": "Scientific tools",
+      "slug": "scientific",
+      "values": ["jupyter", "scientific"]
+    },
+    "Config": {
+      "singular": "Configuration format",
+      "plural": "Configuration formats",
+      "slug": "config",
+      "values": [
+        "http",
+        "shellconfigs",
+        "jsconfigs",
+        "toml",
+        "yaml",
+        "json",
+        "ini",
+        "xml"
+      ]
+    },
+    "DataFormat": {
+      "singular": "Data format",
+      "plural": "Data formats",
+      "slug": "data-format",
+      "values": [
+        "csv",
+        "tsv",
+        "parquet",
+        "orc",
+        "avro",
+        "feather",
+        "arrow",
+        "ndjson",
+        "fasta"
+      ]
+    },
+    "OperatingSystem": {
+      "singular": "Operating system",
+      "plural": "Operating systems",
+      "slug": "operating-system",
+      "values": [
+        "linux",
+        "windows",
+        "macos",
+        "freebsd",
+        "openbsd",
+        "netbsd",
+        "dragonfly bsd",
+        "illumos",
+        "solaris",
+        "haiku",
+        "plan9",
+        "minix"
+      ]
+    },
+    "Distribution": {
+      "singular": "Linux distribution",
+      "plural": "Linux distributions",
+      "slug": "distribution",
+      "values": [
+        "alma linux",
+        "alpine linux",
+        "arch linux",
+        "artix linux",
+        "cachyos",
+        "centos stream",
+        "clear linux",
+        "debian",
+        "elementary os",
+        "endeavouros",
+        "fedora",
+        "garuda linux",
+        "gentoo",
+        "kali linux",
+        "kde neon",
+        "linux mint",
+        "manjaro",
+        "nixos",
+        "opensuse leap",
+        "opensuse tumbleweed",
+        "oracle linux",
+        "pop!_os",
+        "red hat enterprise linux",
+        "rocky linux",
+        "tails",
+        "ubuntu",
+        "void linux",
+        "zorin os"
+      ]
+    },
+    "Hypervisor": {
+      "singular": "Hypervisor",
+      "plural": "Hypervisors",
+      "slug": "hypervisor",
+      "values": ["kvm", "qemu", "xen", "virtualbox", "hyper-v", "vmware esxi"]
+    },
+    "BuildSystem": {
+      "singular": "Build system",
+      "plural": "Build systems",
+      "slug": "build-system",
+      "values": ["cmake", "meson", "ninja", "bazel", "scons", "buck"]
+    },
+    "DebugTool": {
+      "singular": "Debug tool",
+      "plural": "Debug tools",
+      "slug": "debug-tool",
+      "values": ["gdb", "lldb", "valgrind", "perf", "strace", "rr"]
+    },
+    "Architecture": {
+      "singular": "Architecture",
+      "plural": "Architectures",
+      "slug": "architecture",
+      "values": [
+        "x86",
+        "x86-64",
+        "arm",
+        "arm64",
+        "risc-v",
+        "mips",
+        "powerpc",
+        "sparc"
+      ]
+    },
+    "HDL": {
+      "singular": "Hardware description language",
+      "plural": "Hardware description languages",
+      "slug": "hdl",
+      "values": ["verilog", "systemverilog", "vhdl", "chisel"]
+    },
+    "DesktopEnvironment": {
+      "singular": "Desktop environment",
+      "plural": "Desktop environments",
+      "slug": "desktop-environment",
+      "values": [
+        "budgie",
+        "cinnamon",
+        "cosmic",
+        "dde",
+        "enlightenment",
+        "gnome",
+        "kde plasma",
+        "lxde",
+        "lxqt",
+        "mate",
+        "pantheon",
+        "ukui",
+        "xfce"
+      ]
+    },
+    "Compositor": {
+      "singular": "Compositor",
+      "plural": "Compositors",
+      "slug": "compositor",
+      "values": [
+        "compiz",
+        "hyprland",
+        "kwin",
+        "mutter",
+        "niri",
+        "picom",
+        "river",
+        "sway",
+        "wayfire",
+        "weston"
+      ]
+    },
+    "DisplayProtocol": {
+      "singular": "Display protocol",
+      "plural": "Display protocols",
+      "slug": "display-protocol",
+      "values": ["mir", "wayland", "x11"]
+    },
+    "VersionControl": {
+      "singular": "Version control system",
+      "plural": "Version control systems",
+      "slug": "version-control",
+      "values": [
+        "bazaar",
+        "cvs",
+        "darcs",
+        "fossil",
+        "git",
+        "mercurial",
+        "perforce",
+        "pijul",
+        "subversion"
+      ]
+    }
+  }
+}

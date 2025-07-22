@@ -1,0 +1,18 @@
+{
+  "meta": { "singular": "Tag", "plural": "Tags", "slug": "tags" },
+  "values": [
+    "functional-programming",
+    "monads",
+    "continuation-passing-style",
+    "tail-recursion",
+    "currying",
+    "pattern-matching",
+    "lazy-evaluation",
+    "higher-order-functions",
+    "higher-kinded-types",
+    "futures",
+    "linux",
+    "nixos",
+    "scala"
+  ]
+}

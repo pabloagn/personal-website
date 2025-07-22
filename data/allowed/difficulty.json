@@ -1,0 +1,8 @@
+{
+  "meta": {
+    "singular": "Difficulty level",
+    "plural": "Difficulty levels",
+    "slug": "difficulty"
+  },
+  "values": ["beginner", "intermediate", "advanced"]
+}

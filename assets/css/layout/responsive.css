@@ -1,0 +1,54 @@
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 var(--space-md);
+  }
+
+  .nav-menu {
+    gap: var(--space-md);
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+  }
+
+  .main {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .recent-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .single-title {
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .single-meta {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: var(--space-sm);
+    text-align: center;
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+
+  th,
+  td {
+    padding: var(--space-sm);
+  }
+}

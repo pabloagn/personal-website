@@ -1,0 +1,11 @@
+.header {
+  height: var(--header-height);
+  background-color: var(--bg-primary);
+  width: 100%;
+  position: sticky;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  top: 0;
+  z-index: 1000;
+  border-bottom: solid 1px #1a1a1a;
+}
