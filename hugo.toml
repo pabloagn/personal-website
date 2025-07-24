@@ -42,8 +42,18 @@ weight = 30
 
 [[menu.main]]
 name = "Deep Dives"
-url = "/deepdives/"
+url = "/deep-dives/"
 weight = 40
+
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 50
+
+[[menu.main]]
+name = "Contact"
+url = "/contact/"
+weight = 60
 
 # --- Site Parameters ---
 [params]
@@ -54,6 +64,10 @@ email = "pabloaguirrenck@protonmail.ch"
 # --- Social Links ---
 [params.social]
 github = "pabloagn"
+
+# --- Ajax Search Engine ---
+[params.search]
+types = ["posts", "projects", "notes"]
 
 # --- Markup Configuration ---
 [markup]

@@ -1,0 +1,19 @@
+<article class="card">
+  <div class="card-header">
+    {{ partial "tags/post-type.html" . }}
+  </div>
+
+  <h3 class="card-title">
+    <a href="{{ .Permalink }}" class="card-link">{{ .Title }}</a>
+  </h3>
+
+  {{ with .Summary }}
+    <p class="card-summary">{{ . }}</p>
+  {{ end }}
+
+
+  <div class="card-footer">
+    {{ partial "tags/labels.html" . }}
+    {{ partial "tags/time.html" . }}
+  </div>
+</article>

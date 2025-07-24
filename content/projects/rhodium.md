@@ -2,11 +2,12 @@
 title: "Rhodium"
 date: 2025-06-30
 tags: ["linux", "nixos"]
+summary: "A minimal status bar configuration for tiling window managers, following sacred computer principles."
 ---
 
 A minimal status bar configuration for tiling window managers, following sacred computer principles.
 
-## Features
+### Features
 
 - Clean typography using unicode symbols
 - Kanso color palette integration

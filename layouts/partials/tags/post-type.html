@@ -1,0 +1,16 @@
+{{- $type := lower .Type -}}
+{{- $label := "" -}}
+{{- if eq $type "projects" -}}
+  {{ $label = "Project" }}
+{{- else if eq $type "blog" -}}
+  {{ $label = "Blog Post" }}
+{{- else if eq $type "deep" -}}
+  {{ $label = "Deep Dive" }}
+{{- else -}}
+  {{ $label = .Type | title }}
+{{- end -}}
+
+
+<a href="{{ (printf "/%s/" $type) | relURL }}" class="tag tag--type">
+  {{ $label }}
+</a>

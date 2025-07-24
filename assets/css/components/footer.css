@@ -1,25 +1,19 @@
-.footer {
+footer {
   border-top: 1px solid var(--bg-tertiary);
-  margin-top: var(--space-xl);
 }
 
 .footer-container {
-  max-width: var(--max-width);
   margin: 0 auto;
-  padding: var(--space-lg);
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  max-width: var(--max-width);
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
 }
 
 .footer-text {
   color: var(--fg-muted);
   font-size: 0.8rem;
 }
-
 .footer-links {
   display: flex;
   gap: var(--space-md);
@@ -31,7 +25,6 @@
   border: none;
   transition: color 0.2s ease;
 }
-
 .footer-link:hover {
   color: var(--accent-green);
 }

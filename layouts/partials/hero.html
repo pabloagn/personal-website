@@ -1,38 +1,14 @@
-{{- $p := .Site.Params.hero -}}
-{{- $name    := or $p.name .Site.Title -}}
-{{- $role    := default "Research Scientist" $p.role -}}
-{{- $tagline := default "Exploring elegant systems under extreme constraint." $p.tagline -}}
-{{- $cta1    := default "About" $p.cta_primary -}}
-{{- $cta1url := default "/about/" $p.cta_primary_url -}}
-{{- $cta2    := default "CV" $p.cta_secondary -}}
-{{- $cta2url := default "/cv.pdf" $p.cta_secondary_url -}}
-
-<section class="hero bg-primary" id="hero">
-  <div class="hero-box bg-secondary">
-    <span class="hero-label hero-label--nw text-muted">SYS:Δ</span>
-    <span class="hero-label hero-label--ne text-muted">FLOW:β</span>
-    <span class="hero-label hero-label--sw text-muted">CORE:γ</span>
-    <span class="hero-label hero-label--se text-muted">v{{ hugo.Version }}</span>
-
-    <div class="hero-content">
-      <h1 class="hero-title text-primary">{{ $name }}</h1>
-      <p class="hero-role text-secondary">{{ $role }}</p>
-      <p class="hero-tagline text-muted">{{ $tagline }}</p>
-
-      {{ with $p.telemetry }}
-      <dl class="hero-telemetry">
-        {{ range . }}
-        <div class="hero-telemetry__item">
-          <dt class="text-subtle">{{ .label }}</dt>
-          <dd class="text-muted">{{ .value }}</dd>
-        </div>
-        {{ end }}
-      </dl>
-      {{ end }}
+<section class="hero">
+  <div class="hero-container">
+    <div class="hero-box">
+      <p class="hero-tagline">
+         Exploring elegant systems under extreme constraint.
+      </p>
+      <p></p>
 
       <div class="hero-cta">
-        <a href="{{ $cta1url }}" class="btn btn--primary">{{ $cta1 }}</a>
-        <a href="{{ $cta2url }}" class="btn btn--ghost">{{ $cta2 }}</a>
+        <a href="/about/" class="btn btn--primary">About</a>
+        <a href="/cv.pdf" class="btn btn--ghost">CV</a>
       </div>
     </div>
   </div>

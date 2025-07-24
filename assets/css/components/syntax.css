@@ -1,0 +1,135 @@
+/* Base Wrappers */
+.chroma,
+.bg {
+  color: var(--fg-primary);
+  background-color: var(--bg-code);
+}
+
+/* Line highlighting */
+.chroma .hl {
+  background-color: var(--rh-base02);
+}
+
+/* Line numbers */
+.chroma .lnt,
+.chroma .ln,
+.chroma .lnlinks {
+  color: var(--fg-muted);
+  user-select: none;
+}
+
+.chroma .lntable,
+.chroma .lntd {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* Comments */
+.chroma .c,
+.chroma .ch,
+.chroma .cm,
+.chroma .c1,
+.chroma .cs,
+.chroma .cp,
+.chroma .cpf {
+  color: var(--rh-base03);
+  font-style: italic;
+}
+
+/* Keywords */
+.chroma .k,
+.chroma .kd,
+.chroma .kn,
+.chroma .kp,
+.chroma .kr {
+  color: var(--rh-base0E); /* purple */
+  font-weight: 500;
+}
+
+/* Types / type constants */
+.chroma .kt,
+.chroma .kc {
+  color: var(--rh-base0A); /* yellow/gold */
+}
+
+/* Functions */
+.chroma .nf,
+.chroma .fm,
+.chroma .nd {
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
+/* Strings */
+.chroma .s,
+.chroma .sa,
+.chroma .sb,
+.chroma .sc,
+.chroma .sd,
+.chroma .s1,
+.chroma .s2,
+.chroma .se,
+.chroma .sh,
+.chroma .si,
+.chroma .sx,
+.chroma .sr,
+.chroma .ss {
+  color: var(--rh-base0B); /* green */
+}
+
+/* Numbers / literals */
+.chroma .m,
+.chroma .mb,
+.chroma .mf,
+.chroma .mh,
+.chroma .mi,
+.chroma .il,
+.chroma .mo {
+  color: var(--rh-base09); /* orange */
+}
+
+/* Operators */
+.chroma .o,
+.chroma .ow {
+  color: var(--rh-base05); /* neutral */
+}
+
+/* Punctuation */
+.chroma .p {
+  color: var(--fg-primary);
+}
+
+/* Identifiers / Names */
+.chroma .n,
+.chroma .na,
+.chroma .nb,
+.chroma .nc,
+.chroma .no,
+.chroma .ni,
+.chroma .ne,
+.chroma .nl,
+.chroma .nn,
+.chroma .nt,
+.chroma .nv,
+.chroma .vc,
+.chroma .vg,
+.chroma .vi,
+.chroma .nx {
+  color: var(--fg-primary); /* Remove red overload */
+}
+
+/* Diff highlighting */
+.chroma .gd {
+  color: var(--rh-base08); /* red (delete) */
+}
+.chroma .gi {
+  color: var(--rh-base0B); /* green (insert) */
+  font-weight: 500;
+}
+
+/* Unstyled / Whitespace */
+.chroma .w {
+  color: inherit;
+}
+

@@ -1,0 +1,59 @@
+/* Base */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  line-height: 1.2;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-default);
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition:
+    background-color var(--transition-default) ease,
+    color var(--transition-default) ease,
+    border-color var(--transition-default) ease;
+}
+
+/* Solid */
+.btn--primary {
+  background-color: var(--fg-primary);
+  color: var(--bg-primary);
+  border-color: var(--fg-primary);
+}
+.btn--primary:hover {
+  background-color: transparent;
+  border-color: var(--fg-primary);
+  color: var(--fg-primary);
+}
+
+/* Ghost */
+.btn--ghost {
+  background-color: transparent;
+  color: var(--accent-blue);
+  border: 1px solid var(--accent-blue);
+}
+
+.btn--ghost:hover {
+  background-color: var(--accent-blue);
+  color: var(--bg-primary);
+}
+
+/* Small */
+.btn--sm {
+  border: 1px solid;
+  border-radius: var(--radius-default);
+  font-size: var(--text-xs);
+  font-weight: 300;
+  line-height: 1.2;
+  padding: var(--space-xs) var(--space-sm);
+  text-transform: uppercase;
+  transition:
+    background-color var(--transition-default) ease,
+    color var(--transition-default) ease,
+    border-color var(--transition-default) ease;
+}

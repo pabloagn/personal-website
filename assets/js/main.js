@@ -5,15 +5,16 @@ import { initHeaderAnchors } from './modules/headerAnchors.js';
 import { initSmoothScroll } from './modules/smoothScroll.js';
 import { initCodeLineHover } from './modules/codeLineHover.js';
 import { initHeroReactor } from './modules/heroReactor.js';
+import { initSiteSearch } from './modules/search.js';
 
 function boot() {
   initHeaderScroll();
   initSmoothScroll();
-  initHeaderAnchors();
-  initCallouts();
   initCodeDecor();
   initCodeLineHover();
-  initHeroReactor();
+  initCallouts();
+  initSiteSearch();
+  // initHeaderAnchors();
 }
 
 if (document.readyState === 'loading') {

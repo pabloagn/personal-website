@@ -1,0 +1,17 @@
+<section class="recent container-mid">
+  <div class="recent-container">
+    <div class="recent-section">
+      <h2 class="section-title">Recent Projects</h2>
+      {{ range first 3 (where .Site.RegularPages "Type" "projects") }}
+        {{ partial "card.html" . }}
+      {{ end }}
+    </div>
+    <div class="recent-section">
+      <h2 class="section-title">Recent Posts</h2>
+      {{ range first 3 (where .Site.RegularPages "Type" "blog") }}
+        {{ partial "card.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+

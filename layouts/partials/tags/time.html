@@ -1,0 +1,7 @@
+{{ define "time" }}
+  <div class="card-time">
+  <time class="card-date">{{ .Date.Format "2006.01.02" }}</time>
+  </div>
+{{ end }}
+
+{{ template "time" . }}

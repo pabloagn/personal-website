@@ -1,0 +1,60 @@
+.callout {
+  padding: var(--space-lg);
+  background-color: var(--bg-secondary);
+  box-shadow:
+    inset 0 0 0 1px var(--bg-tertiary),
+    0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.callout p {
+  color: var(--fg-primary);
+  text-align: left;
+}
+
+.callout-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-md);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.callout-note {
+  border-left-color: var(--accent-blue);
+}
+.callout-note .callout-title {
+  color: var(--accent-blue);
+}
+
+.callout-tip {
+  border-left-color: var(--accent-green);
+}
+.callout-tip .callout-title {
+  color: var(--accent-green);
+}
+
+.callout-important {
+  border-left-color: var(--accent-purple);
+}
+.callout-important .callout-title {
+  color: var(--accent-purple);
+}
+
+.callout-warning {
+  border-left-color: var(--accent-yellow);
+}
+.callout-warning .callout-title {
+  color: var(--accent-yellow);
+}
+
+.callout-caution,
+.callout-danger {
+  border-left-color: var(--accent-red);
+}
+.callout-caution .callout-title,
+.callout-danger .callout-title {
+  color: var(--accent-red);
+}

@@ -1,8 +1,8 @@
-/* Table of Contents Component */
+/* Table‑of‑Contents */
 .toc {
   background-color: var(--bg-primary) !important;
   border: 1px solid var(--bg-tertiary);
-  border-radius: 2px !important;
+  border-radius: var(--radius-default) !important;
   padding: 0;
   margin: var(--space-lg) 0;
   overflow: hidden;
@@ -15,38 +15,39 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--accent-blue);
+  border-bottom: 1px solid var(--bg-tertiary);
 }
 
 .toc-title {
-  color: var(--accent-yellow);
-  font-size: 1.1rem;
+  color: var(--fg-primary);
+  font-size: var(--text-lg);
   margin: 0;
   font-weight: 500;
 }
 
 .toc-toggle {
   background: none;
-  border: 1px solid var(--accent-blue);
-  color: var(--accent-blue);
+  border: none;
+  color: var(--fg-primary);
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: var(--text-lg);
   padding: var(--space-xs);
-  border-radius: 3px;
-  transition: all 0.2s ease;
-  font-family: var(--font-mono);
+  border-radius: var(--radius-default);
+  transition: all var(--transition-default) ease;
+  font-family: var(--font-code);
 }
 
 .toc-toggle:hover {
-  background-color: var(--accent-blue);
-  color: var(--bg-primary);
+  color: var(--accent-blue);
 }
 
 .toc-content {
   padding: var(--space-sm);
   max-height: 600px;
   overflow-y: auto;
-  transition: max-height 0.3s ease, opacity 0.3s ease;
+  transition:
+    max-height var(--transition-default) ease,
+    opacity var(--transition-default) ease;
 }
 
 .toc-content.collapsed {
@@ -55,79 +56,65 @@
   padding: 0;
 }
 
-.toc-tree {
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  line-height: 1.6;
-  letter-spacing: 0;
-}
-
-.toc-item {
-  position: relative;
-  margin: 0;
-  transition: opacity 0.2s ease;
-}
+/* .toc-tree { */
+/*   font-family: var(--font-code); */
+/*   font-size: var(--text-sm); */
+/*   line-height: 1.6; */
+/* } */
+/**/
+/* .toc-item { */
+/*   position: relative; */
+/*   margin: 0; */
+/*   transition: all 0.2s ease; */
+/* } */
 
 .toc-link {
-  display: flex;
   align-items: baseline;
+  border: none;
   color: var(--fg-secondary);
-  text-decoration: none;
+  display: flex;
   padding: 0.3rem 0;
   position: relative;
-  z-index: 2;
-  border: none;
   transition: transform 0.2s ease;
+  z-index: 2;
 }
 
 .toc-link:hover {
-  transform: translateX(2px);
+  color: var(--accent-blue);
+  transition: all var(--transition-default);
+  text-decoration-color: var(--accent-blue);
+  text-decoration: underline;
 }
 
 .toc-connector {
   color: var(--accent-blue);
   white-space: pre;
-  font-family: var(--font-mono);
+  font-family: var(--font-code);
   user-select: none;
 }
 
+/* Bullets */
 .toc-bullet {
+  opacity: 1;
+  font-family: var(--font-body);
   color: var(--accent-yellow);
-  margin: 0 0.5rem;
-  opacity: 0;
-  transition: opacity 0.2s ease;
+  margin: 0 0.75rem 0 0.5rem;
 }
 
-.toc-text {
-  color: var(--fg-secondary);
-  transition: color 0.2s ease;
+.toc-level-2 .toc-bullet::before {
+  content: "◆";
+  color: var(--fg-primary);
+}
+.toc-level-3 .toc-bullet::before {
+  content: "◇";
+  color: var(--fg-primary);
+}
+.toc-level-4 .toc-bullet::before {
+  content: "◈";
+  color: var(--fg-primary);
 }
 
-.toc-link:hover .toc-text {
-  color: var(--accent-yellow);
-}
-
-/* Highlight background */
-.toc-highlight {
-  position: absolute;
-  top: 0;
-  left: -var(--space-md);
-  right: -var(--space-md);
-  bottom: 0;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(127, 180, 202, 0.1) 5%,
-    rgba(127, 180, 202, 0.1) 95%,
-    transparent
-  );
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* Level-specific indentation */
+/* Indentation */
 .toc-level-1 {
   padding-left: 0;
 }
@@ -141,74 +128,36 @@
   padding-left: 3rem;
 }
 
-/* Custom scrollbar */
-.toc-content::-webkit-scrollbar {
-  width: 6px;
+.toc-text {
+  color: var(--fg-secondary);
+  transition: color 0.2s ease;
 }
+/* .toc-link:hover .toc-text { */
+/*   color: var(--accent-yellow); */
+/* } */
 
-.toc-content::-webkit-scrollbar-track {
-  background: var(--bg-secondary);
-}
+/* Highlight band */
+/* .toc-highlight { */
+/*   position: absolute; */
+/*   top: 0; */
+/*   left: -var(--space-md); */
+/*   right: -var(--space-md); */
+/*   bottom: 0; */
+/*   background: linear-gradient( */
+/*     90deg, */
+/*     transparent, */
+/*     rgba(127, 180, 202, 0.1) 5%, */
+/*     rgba(127, 180, 202, 0.1) 95%, */
+/*     transparent */
+/*   ); */
+/*   opacity: 0; */
+/*   transition: opacity 0.2s ease; */
+/*   pointer-events: none; */
+/*   z-index: 1; */
+/* } */
 
-.toc-content::-webkit-scrollbar-thumb {
-  background: var(--bg-tertiary);
-  border-radius: 3px;
-}
-
-.toc-content::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-blue);
-}
-
-/* Glow effect on hover */
-.toc-item:hover .toc-highlight {
-  box-shadow: 0 0 20px rgba(127, 180, 202, 0.2), inset 0 0 10px rgba(127, 180, 202, 0.05);
-}
-
-/*
-========================================
-NEW STYLES TO MATCH DESIGN
-========================================
-*/
-
-/* Make bullets visible by default and set base style */
-.toc-bullet {
-  opacity: 1;
-  font-family: var(--font-sans); /* Use a font that supports these symbols well */
-  color: var(--accent-yellow);
-  margin: 0 0.75rem 0 0.5rem;
-}
-
-/* Level-specific BULLETS */
-.toc-level-2 .toc-bullet::before {
-  content: '◆';
-}
-.toc-level-3 .toc-bullet::before {
-  content: '◇';
-  color: var(--accent-blue); /* Use different colors for levels */
-}
-.toc-level-4 .toc-bullet::before {
-  content: '◈';
-  color: var(--accent-green);
-}
-
-/* Level-specific INDENTATION */
-/* Remove the old padding rules for .toc-level-* */
-.toc-level-3 {
-  padding-left: 1.5rem;
-}
-.toc-level-4 {
-  padding-left: 3rem;
-}
-
-/* Minor tweak for link hover */
-.toc-link:hover .toc-text {
-  color: var(--accent-yellow);
-}
-
-/* Hide the old bullet style you had */
-.toc-item .toc-bullet {
-    opacity: 1; /* This overrides your old rule */
-}
-.toc-link:hover .toc-bullet {
-    /* No change needed on hover for the bullet itself */
-}
+/* .toc-item:hover .toc-highlight { */
+/*   box-shadow: */
+/*     0 0 20px rgba(127, 180, 202, 0.2), */
+/*     inset 0 0 10px rgba(127, 180, 202, 0.05); */
+/* } */

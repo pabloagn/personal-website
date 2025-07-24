@@ -1,0 +1,65 @@
+:root {
+  /* Base colors (backgrounds, foregrounds) */
+  --rh-base00: #1f1f28; /* Default Background */
+  --rh-base01: #16161d; /* Lighter Background (Used for status bars, line number and folding marks) */
+  --rh-base02: #223249; /* Selection Background */
+  --rh-base03: #54546d; /* Comments, Invisibles, Line Highlighting */
+  --rh-base04: #727169; /* Dark Foreground (Used for status bars) */
+  --rh-base05: #dcd7ba; /* Default Foreground, Caret, Delimiters, Operators */
+  --rh-base06: #c8c093; /* Light Foreground (Not often used) */
+  --rh-base07: #717c7c; /* Light Background (Not often used) */
+
+  /* Accent colors (syntax highlighting) */
+  --rh-base08: #c34043; /* Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted */
+  --rh-base09: #ffa066; /* Integers, Boolean, Constants, XML Attributes, Markup Link Url */
+  --rh-base0A: #c0a36e; /* Classes, Markup Bold, Search Text Background */
+  --rh-base0B: #76946a; /* Strings, Inherited Class, Markup Code, Diff Inserted */
+  --rh-base0C: #7aa89f; /* Support, Regular Expressions, Escape Characters, Markup Quotes */
+  --rh-base0D: #7e9cd8; /* Functions, Methods, Attribute IDs, Headings */
+  --rh-base0E: #957fb8; /* Keywords, Storage, Selector, Markup Italic, Diff Changed */
+  --rh-base0F: #d27e99; /* Deprecated, Opening/Closing Embedded Language Tags */
+
+  /* === EXTENDED KANSO PALETTE === */
+
+  /* Additional theme-specific colors */
+  /* --zen-bg: #1f1f28; */
+  --rh-bg: #030507;
+  --rh-bg-dim: #16161d;
+  --rh-bg-light: #2a2a37;
+  --rh-fg: #c1c6c4;
+  --rh-fg-dim: #9DA4A1;
+  --rh-fg-reverse: #16161d;
+
+  /* Special UI colors */
+  --rh-red: #c34043;
+  --rh-orange: #ffa066;
+  --rh-yellow: #c0a36e;
+  --rh-green: #76946a;
+  --rh-teal: #7aa89f;
+  /* --rh-blue: #7e9cd8; */
+  --rh-blue: #648493;
+  --rh-purple: #957fb8;
+  --rh-magenta: #d27e99;
+
+  /* === EXTENDED KANSO PALETTE === */
+
+  /* Additional theme-specific colors */
+  /* --zen-bg: #1f1f28; */
+  /* --rh-bg: #090e13; */
+  /* --rh-bg-dim: #16161d; */
+  /* --rh-bg-light: #2a2a37; */
+  /* --rh-fg: #dcd7ba; */
+  /* --rh-fg-dim: #c8c093; */
+  /* --rh-fg-reverse: #16161d; */
+
+
+  /* Special UI colors */
+  /* --rh-red: #c34043; */
+  /* --rh-orange: #ffa066; */
+  /* --rh-yellow: #c0a36e; */
+  /* --rh-green: #76946a; */
+  /* --rh-teal: #7aa89f; */
+  /* --rh-blue: #7e9cd8; */
+  /* --rh-purple: #957fb8; */
+  /* --rh-magenta: #d27e99; */
+}

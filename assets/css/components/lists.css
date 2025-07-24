@@ -1,0 +1,100 @@
+/* --- Lists --- */
+ul,
+ol {
+  margin: var(--space-sm) 0;
+  padding-left: var(--space-lg);
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  position: relative;
+  margin-bottom: var(--space-sm);
+  padding-left: calc(var(--space-md) + 1ch);
+}
+
+ul li::before {
+  content: "●";
+  color: var(--fg-primary);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--space-md);
+  display: inline-block;
+  text-align: center;
+  margin: 3px 0px;
+}
+
+ul ul li::before {
+  content: "◇";
+  color: var(--accent-blue);
+}
+
+ul ul ul li::before {
+  content: "◈";
+  color: var(--accent-green);
+}
+
+ol li::marker {
+  color: var(--accent-yellow);
+  font-weight: var(--font-weight-medium);
+}
+
+/* --- Task Lists --- */
+li:has(> input[type="checkbox"]) {
+  list-style-type: none;
+}
+
+li:has(> input[type="checkbox"])::before {
+  content: none;
+}
+
+li > input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+  cursor: default;
+  vertical-align: -1px;
+  margin-right: 0.6rem;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  background-color: transparent;
+  border: 1px solid var(--fg-muted);
+  border-radius: 2px;
+  position: relative;
+  transition: border-color 0.1s ease-in-out;
+}
+
+li > input[type="checkbox"]::before {
+  content: "⊹";
+  position: absolute;
+  font-size: 0.8em;
+  line-height: 1;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -55%) scale(0);
+  color: var(--accent-green);
+  transition: transform 120ms ease-in-out;
+}
+
+li > input[type="checkbox"]:checked {
+  border-color: var(--accent-green);
+}
+
+li > input[type="checkbox"]:checked::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+li:has(> input[type="checkbox"]:checked) {
+  color: var(--fg-muted);
+}
+
+li s,
+li del {
+  color: inherit;
+  text-decoration: line-through;
+  text-decoration-color: rgba(228, 104, 118, 0.5);
+}

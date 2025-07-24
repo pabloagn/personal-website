@@ -1,0 +1,25 @@
+blockquote {
+  margin: var(--space-lg) 0;
+  padding: var(--space-md) var(--space-lg);
+  border-left: 3px solid var(--accent-blue);
+  border-right: 1px solid var(--bg-tertiary);
+  border-top: 1px solid var(--bg-tertiary);
+  border-bottom: 1px solid var(--bg-tertiary);
+  background-color: var(--bg-primary);
+  border-radius: var(--radius-default);
+  font-style: normal;
+  position: relative;
+}
+
+blockquote::before {
+  content: none;
+}
+
+blockquote p {
+  margin-bottom: 0;
+  color: var(--fg-secondary);
+}
+
+blockquote p:not(:last-child) {
+  margin-bottom: var(--space-md);
+}

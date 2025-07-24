@@ -1,0 +1,85 @@
+:root {
+  /* Space sizes */
+  --space-xs: var(--size-1);
+  --space-sm: var(--size-2);
+  --space-md: var(--size-3);
+  --space-lg: var(--size-4);
+  --space-xl: var(--size-5);
+  --space-2xl: var(--size-6);
+  --space-3xl: var(--size-7);
+  --space-4xl: var(--size-8);
+
+  /* Layout Sizes */
+  /* TODO: Change this */
+  --max-width: 1200px;
+  --content-width: 800px;
+
+  /* Typography */
+  --text-xs: var(--font-size-0);
+  --text-sm: var(--font-size-1);
+  --text-md: var(--font-size-2);
+  --text-lg: var(--font-size-3);
+  --text-xl: var(--font-size-4);
+  --text-xxl: var(--font-size-5);
+  --heading-xl: var(--font-size-6);
+  --heading-xxl: var(--font-size-7);
+
+  --heading-line-height: var(--line-height-tight);
+  --body-line-height: var(--line-height-base);
+
+  --heading-weight: var(--font-weight-regular);
+  --body-weight: var(--font-weight-regular);
+
+  --heading-spacing-top: var(--space-lg);
+  --heading-spacing-bottom: var(--space-md);
+
+  /* Font stacks */
+  --font-body: var(--font-sans);
+  --font-heading: var(--font-sans);
+  --font-code: var(--font-mono);
+
+  /* Radii */
+  --radius-default: var(--radius-sm);
+  --radius-pill: var(--radius-full);
+
+  /* Elevation */
+  --shadow-sm: var(--elevation-1);
+  --shadow-md: var(--elevation-2);
+  --shadow-lg: var(--elevation-3);
+
+  /* Colors */
+  --bg-primary: var(--rh-bg);
+  --bg-secondary: var(--rh-bg-dim);
+  --bg-tertiary: var(--rh-bg-light);
+  --bg-code: var(--rh-bg);
+
+  --fg-primary: var(--rh-fg);
+  --fg-secondary: var(--rh-fg-dim);
+  --fg-tertiary: var(--rh-fg-light);
+  --fg-muted: var(--rh-base07);
+
+  --accent-blue: var(--rh-blue);
+  --accent-green: var(--rh-green);
+  --accent-yellow: var(--rh-yellow);
+  --accent-red: var(--rh-red);
+  --accent-purple: var(--rh-purple);
+  --accent-orange: var(--rh-orange);
+
+  /* Transition Timing */
+  --transition-default: var(--time-md);
+  --transition-fast: var(--time-xs);
+  --transition-mid: var(--time-md);
+  --transition-slow: var(--time-lg);
+
+  /* --rh-comment: #54546d; */
+  /* --rh-selection: #223249; */
+  /* --rh-cursor: #c8c093; */
+  /* --rh-match: #2d4f67; */
+  /* --rh-diff-add: #76946a; */
+  /* --rh-diff-delete: #c34043; */
+  /* --rh-diff-change: #957fb8; */
+  /* --rh-warn: #c0a36e; */
+  /* --rh-error: #c34043; */
+  /* --rh-info: #7e9cd8; */
+  /* --rh-hint: #7aa89f; */
+}

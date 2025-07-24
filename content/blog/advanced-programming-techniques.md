@@ -18,6 +18,7 @@ tags:
   ]
 technologies: ["scala"]
 summary: "Explore ten advanced programming techniques in Scala that provide different functionalities to your code, making it more elegant, expressive, performant, compact, and modular."
+math: true
 ---
 
 We could spend our entire developer's life using just the basic concepts of any programming language we choose to learn, and there's nothing wrong with that; in many cases, very powerful concepts have already been abstracted for us, providing a great out-of-the-box experience, particularly with languages such as Python, R, and JavaScript. However, a programmer's horizon would be limited if we didn't have advanced techniques to play with because, in the end, programming is about solving problems, and the more creative, the better.

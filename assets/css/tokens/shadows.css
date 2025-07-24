@@ -1,0 +1,25 @@
+:root {
+  /* Subtle hairline shadow */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.06);
+
+  /* Light UI hover/active */
+  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.08);
+
+  /* Default UI element shadow (cards, modals) */
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.12);
+
+  /* Elevated card or modal */
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.16);
+
+  /* Heavy overlay (dropdowns, tooltips) */
+  --shadow-xl: 0 8px 24px rgba(0, 0, 0, 0.2);
+
+  /* Strongest layer (e.g. popovers or alerts) */
+  --shadow-2xl: 0 12px 32px rgba(0, 0, 0, 0.25);
+
+  /* Soft glow (accent edge lighting) */
+  --shadow-glow: 0 0 20px rgba(127, 180, 202, 0.3);
+
+  /* Inset subtle (for pressed buttons etc.) */
+  --shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}

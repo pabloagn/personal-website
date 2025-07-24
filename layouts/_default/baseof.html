@@ -1,60 +1,111 @@
 <!doctype html>
 <html lang="{{ .Site.LanguageCode }}">
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} • {{ .Site.Title }}{{ end }}</title>
-    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+    <title>
+      {{ if .IsHome }}
+        {{ .Site.Title }}
+      {{ else }}
+        {{ .Title }} •
+        {{ .Site.Title }}
+      {{ end }}
+    </title>
+    <meta
+      name="description"
+      content="{{ with .Description }}
+        {{ . }}
+      {{ else }}
+        {{ .Site.Params.description }}
+      {{ end }}
+      "
+    />
 
     {{/* CSS Pipeline */}}
     {{ $styles := slice
-        (resources.Get "css/base/variables.css")
-        (resources.Get "css/main.css")
-        (resources.Get "css/base/typography.css")
-        (resources.Get "css/layout/grid.css")
-        (resources.Get "css/components/header.css")
-        (resources.Get "css/components/navigation.css")
-        (resources.Get "css/components/hero.css")
-        (resources.Get "css/components/cards.css")
-        (resources.Get "css/components/tables.css")
-        (resources.Get "css/components/code.css")
-        (resources.Get "css/components/toc.css")
-        (resources.Get "css/utilities/colors.css")
-        (resources.Get "css/utilities/spacing.css")
-        (resources.Get "css/syntax.css")
-        (resources.Get "css/layout/responsive.css")
+      (resources.Get "css/tokens/colors.css")
+      (resources.Get "css/variables/variables.css")
+      (resources.Get "css/tokens/spacing.css")
+      (resources.Get "css/tokens/layout.css")
+      (resources.Get "css/tokens/typography.css")
+      (resources.Get "css/tokens/radius.css")
+      (resources.Get "css/tokens/elevation.css")
+      (resources.Get "css/tokens/times.css")
+      (resources.Get "css/tokens/gradients.css")
+      (resources.Get "css/tokens/shadows.css")
+      (resources.Get "css/base/typography.css")
+      (resources.Get "css/layout/grid.css")
+      (resources.Get "css/layout/responsive.css")
+      (resources.Get "css/components/header.css")
+      (resources.Get "css/components/footer.css")
+      (resources.Get "css/components/hero.css")
+      (resources.Get "css/components/buttons.css")
+      (resources.Get "css/components/cards.css")
+      (resources.Get "css/components/time.css")
+      (resources.Get "css/components/code.css")
+      (resources.Get "css/components/tables.css")
+      (resources.Get "css/components/tags.css")
+      (resources.Get "css/components/toc.css")
+      (resources.Get "css/components/syntax.css")
+      (resources.Get "css/components/blockquotes.css")
+      (resources.Get "css/components/callouts.css")
+      (resources.Get "css/components/lists.css")
+      (resources.Get "css/components/modal.css")
+      (resources.Get "css/components/search.css")
+      (resources.Get "css/modules/latex.css")
+      (resources.Get "css/main.css")
     }}
 
     {{ $css := $styles | resources.Concat "css/bundle.css" | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" />
+    <link
+      rel="stylesheet"
+      href="{{ $css.RelPermalink }}"
+      integrity="{{ $css.Data.Integrity }}"
+    />
 
-    <style>html,body{max-width:100%;}</style>
+    <style>
+      html,
+      body {
+        max-width: 100%;
+      }
+    </style>
 
-    {{/* Application JS Bundle */}}
     {{ $js := resources.Get "js/main.js" | js.Build (dict "minify" true) }}
-    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+    <script
+      src="{{ $js.RelPermalink }}"
+      integrity="{{ $js.Data.Integrity }}"
+      defer
+    ></script>
 
-    {{/* Conditionally load KaTeX if the page needs it */}}
     {{ if .Params.math }}{{ partial "helpers/katex.html" . }}{{ end }}
 
+
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-</head>
 
-<body class="{{ if .IsHome }}is-home{{ end }}">
-    <header class="header{{ if .IsHome }} is-home-header{{ end }}">
-        {{ partial "navigation.html" . }}
-    </header>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-    <div class="page-content">
-        <main class="main">
-            <!-- <div class="single-content"> -->
-                {{ block "main" . }}{{ end }}
-            <!-- </div> -->
-        </main>
-    </div>
+  <body>
+    {{ partial "header.html" . }}
 
-    <footer class="footer">
-        {{ partial "footer.html" . }}
-    </footer>
-</body>
+
+    <main class="main-content">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partial "footer.html" . }}
+  </body>
 </html>

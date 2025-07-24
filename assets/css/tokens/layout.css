@@ -1,0 +1,13 @@
+:root {
+  --max-width: 1200px;
+  --content-width: 800px;
+  --header-height: 4rem;
+
+  --hero-min-height: 600px;
+  --hero-max-height: 1000px;
+
+  --grid-gap-sm: var(--space-sm);
+  --grid-gap-md: var(--space-md);
+  --grid-gap-lg: var(--space-lg);
+}
+
