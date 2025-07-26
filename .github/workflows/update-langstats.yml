@@ -1,5 +1,8 @@
 name: Update Language Stats
 
+env:
+  GH_PAT: ${{ secrets.GH_LANGS }}
+
 on:
   push:
     branches: [main]
