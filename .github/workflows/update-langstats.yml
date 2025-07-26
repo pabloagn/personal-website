@@ -1,8 +1,5 @@
 name: Update Language Stats
 
-env:
-  GH_PAT: ${{ secrets.GH_LANGS }}
-
 on:
   push:
     branches: [main]
@@ -30,11 +27,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit if changed
+        env:
+          GH_PAT: ${{ secrets.GH_LANGS }}
         run: |
           git config user.name "LangStats Bot"
           git config user.email "bot@localhost"
           git add data/langstats/
           git diff --cached --quiet || (
-          git commit -m "BOT: Update language stats"
+            git commit -m "BOT: Update language stats"
             git push https://x-access-token:${GH_PAT}@github.com/pabloagn/personal-website.git HEAD:main
           )
