@@ -12,6 +12,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false  # ⬅️ disables default GitHub token
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -38,3 +40,4 @@ jobs:
             git commit -m "BOT: Update language stats"
             git push origin HEAD:main
           )
+
