@@ -1,0 +1,14 @@
+{{ $counts := .Counts }}
+{{ $excluded := .Excluded }}
+{{ $content := .Content }}
+
+{{ $regex := "`{3,}([a-zA-Z0-9+#-]*)\n?.*?`{3,}" }}
+{{ range $match := findRE $regex $content }}
+  {{ $lang := trim (replaceRE "`.*" "" $match) " \n\t" | lower }}
+  {{ if and $lang (not (in $excluded $lang)) }}
+    {{ $current := default 0 (index $counts $lang) }}
+    {{ $counts = merge $counts (dict $lang (add $current 1)) }}
+  {{ end }}
+{{ end }}
+
+{{ return $counts }}

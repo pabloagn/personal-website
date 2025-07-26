@@ -6,6 +6,7 @@ tags: ["test"]
 technologies: ["markdown", "latex", "html"]
 summary: "Explore ten advanced programming techniques in Scala that provide different functionalities to your code, making it more elegant, expressive, performant, compact, and modular."
 math: true
+layout: single
 ---
 
 # Heading 1 ◆ Top Level

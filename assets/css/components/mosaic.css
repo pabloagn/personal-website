@@ -1,0 +1,30 @@
+.mosaic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.mosaic-card {
+  border: 1px solid var(--fg-muted);
+  border-radius: var(--radius-default);
+  padding: var(--space-lg);
+  background-color: var(--bg-primary);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mosaic-title {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-sm);
+  color: var(--fg-primary);
+}
+
+.mosaic-desc {
+  font-size: var(--text-md);
+  color: var(--fg-secondary);
+  margin-bottom: var(--space-md);
+}
+

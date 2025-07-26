@@ -1,0 +1,31 @@
+/* --- Custom Tables --- */
+.table-wrapper {
+  overflow-x: auto;
+  margin: var(--space-md) 0;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  background: var(--bg-surface);
+  color: var(--fg-primary);
+  min-width: 600px;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: var(--space-xs) var(--space-sm);
+  border: 1px solid var(--border-muted);
+  white-space: nowrap;
+  text-align: left;
+}
+
+.custom-table th {
+  background: var(--bg-muted);
+  font-weight: 600;
+  color: var(--accent-yellow);
+}

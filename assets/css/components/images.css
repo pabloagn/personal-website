@@ -1,0 +1,36 @@
+/* --- Images --- */
+
+/* Post Images */
+.single-content figure {
+  margin: var(--space-md) 0;
+  padding: 0;
+  text-align: center;
+}
+
+.single-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: var(--radius-default);
+  box-shadow: var(--shadow-sm); /* use your predefined token */
+  object-fit: cover;
+}
+
+/* Optional: max-width for readability */
+.single-content figure img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+/* Caption below image */
+.single-content figcaption {
+  /* font-style: italic; */
+  font-size: var(--text-md);
+  color: var(--fg-secondary);
+  margin-top: var(--space-md);
+  text-align: center;
+  line-height: 1.4;
+}
+

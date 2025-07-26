@@ -3,7 +3,7 @@ code {
   background-color: var(--bg-secondary);
   border: solid 1px var(--bg-tertiary);
   border-radius: var(--radius-default);
-  padding: 3px 6px; /* ≤4 px values kept literal for readability */
+  padding: 0.15rem 0.2rem;
 }
 
 /* Code block wrapper */
@@ -11,7 +11,7 @@ code {
   background-color: transparent !important;
   border-radius: var(--radius-default);
   position: relative;
-  margin: var(--space-md) 0 !important;
+  margin: var(--space-lg) 0 !important;
   overflow: hidden;
   border: 1px solid var(--bg-tertiary);
   box-shadow: var(--shadow-md);

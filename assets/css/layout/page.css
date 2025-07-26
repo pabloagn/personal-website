@@ -1,0 +1,48 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.page-title {
+  font-size: var(--text-2xl);
+  color: var(--fg-primary);
+  border-bottom: 1px solid var(--bg-tertiary);
+  padding-bottom: var(--space-sm);
+}
+
+.page-content p {
+  font-size: var(--text-md);
+  color: var(--fg-secondary);
+  line-height: 1.6;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--text-sm);
+  color: var(--fg-secondary);
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: var(--bg-secondary);
+  border: 1px solid var(--bg-tertiary);
+  border-radius: var(--radius-default);
+  padding: var(--space-sm);
+  color: var(--fg-primary);
+  font: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent-blue);
+  outline: none;
+}
+

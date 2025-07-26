@@ -30,12 +30,25 @@
 
 .hero-box {
   -webkit-backdrop-filter: blur(60px);
+  align-items: center;
   backdrop-filter: blur(10px);
   background: rgba(39, 39, 39, 0.1);
   border-radius: var(--radius-default);
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
-  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-xl) var(--space-xl);
+}
+
+.hero-box > * {
+  margin: 0;
+  margin-bottom: var(--space-sm);
+}
+
+.hero-box > *:last-child {
+  margin-bottom: 0;
 }
 
 .hero-title {
@@ -44,8 +57,15 @@
 .hero-role {
   font-weight: 600;
 }
-.hero-tagline {
-  font-style: italic;
+.hero-tagline-top {
+  /* font-style: italic; */
 }
 
-/* Hero buttons just reuse global .btn styles */
+.hero-divider {
+  margin: var(--space-sm) 0;
+  text-align: center;
+}
+
+.hero-tagline-bottom {
+  /* font-style: italic; */
+}

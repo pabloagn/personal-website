@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <!-- <div class="hero-section"> -->
+  <!--   {{ partial "hero.html" . }} -->
+  <!-- </div> -->
+
+  <div class="content-section container-top">
+    {{ .Content }}
+
+    {{ partial "mosaic.html" . }}
+  </div>
+{{ end }}

@@ -6,6 +6,7 @@ tags: ["test"]
 technologies: ["markdown", "latex", "html"]
 summary: "Explore ten advanced programming techniques in Scala that provide different functionalities to your code, making it more elegant, expressive, performant, compact, and modular."
 math: true
+layout: single
 ---
 
 # Heading 1 ◆ Top Level
@@ -182,21 +183,19 @@ Nested Definition
 
 ### Basic Images ▦
 
-![Alt text](https://via.placeholder.com/150 \"Image title\")
-
-![Image without title](https://via.placeholder.com/100)
-
-### Reference Images ▧
-
-![Reference image][img1]
-
-[img1]: https://via.placeholder.com/200 \"Reference image title\"
+![Basic Image](/images/placeholder-01.jpg "This is a caption")
 
 ### Images with Links ▨
 
 [![Clickable image](https://via.placeholder.com/100)](https://example.com)
 
-## Tables ⊞ Complex Examples
+
+## Tables - Tabular Data
+
+{{< datablock "data/example.csv" >}}
+
+
+## Tables - Complex Examples
 
 ### Basic Table ⋮
 

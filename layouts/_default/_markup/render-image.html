@@ -1,0 +1,11 @@
+{{ $src := .Destination }}
+{{ $alt := .Text }}
+{{ $title := .Title }}
+
+
+<figure>
+  <img src="{{ $src | safeURL }}" alt="{{ $alt }}" loading="lazy" />
+  {{- if $title }}
+    <figcaption>{{ $title }}</figcaption>
+  {{- end }}
+</figure>

@@ -3,6 +3,9 @@ title: "Rhodium"
 date: 2025-06-30
 tags: ["linux", "nixos"]
 summary: "A minimal status bar configuration for tiling window managers, following sacred computer principles."
+repository: https://github.com/pabloagn/rhodium
+abbreviation: "Rh"
+serial: 1
 ---
 
 A minimal status bar configuration for tiling window managers, following sacred computer principles.

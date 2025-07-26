@@ -1,3 +1,6 @@
 .card-time {
+  margin-top: var(--space-sm);
+  margin-bottom: 0;
+  /* margin: var(--space-md) 0; */
   border-top: solid 1px var(--bg-tertiary);
 }

@@ -8,7 +8,15 @@
     </div>
     <div class="footer-right">
       {{ with .Site.Params.social.github }}
-        <a href="https://github.com/{{ . }}" class="footer-link">◇ GitHub</a>
+        <a href="https://github.com/{{ . }}" class="footer-link">
+          {{ partial "icon.html" (dict
+            "name" "github"
+            "style" "brands"
+            "size" "1.5em"
+            "color" "#50505E"
+            )
+          }}
+        </a>
       {{ end }}
     </div>
   </div>

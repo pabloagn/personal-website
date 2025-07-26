@@ -19,10 +19,6 @@ section = ["HTML", "RSS"]
 taxonomy = ["HTML", "RSS"]
 term = ["HTML", "RSS"]
 
-# --- Pagination ---
-paginate = 10
-paginatePath = "page"
-
 # --- Menu Configuration ---
 [menu]
 [[menu.main]]

@@ -11,23 +11,14 @@
   box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
 }
 
-/* .nav-container { */
-/*   max-width: var(--max-width); */
-/*   margin: 0 auto; */
-/*   padding: 0; */
-/*   height: 4rem; */
-/*   display: flex; */
-/*   align-items: center; */
-/*   justify-content: space-between; */
-/* } */
-
-
 .nav-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  height: 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 4rem;
-  padding: 0 var(--space-md);
 }
 
 .nav-right {
@@ -37,10 +28,24 @@
 }
 
 .nav-brand {
-  font-size: var(--text-lg);
-  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm); /* consistent spacing between icon and text */
+  text-decoration: none;
   color: var(--fg-primary);
-  border: none;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.nav-brand svg {
+  height: 2rem; /* or 1.5rem if your navbar is tighter */
+  width: auto; /* maintain aspect ratio */
+  display: block; /* avoid extra space below svg */
+  flex-shrink: 0; /* prevent from shrinking */
+  fill: var(--fg-primary); /* inherit text color */
+  color: var(--fg-primary);
 }
 
 .nav-item {
@@ -65,7 +70,6 @@
 .nav-link--active {
   color: var(--accent-blue);
 }
-
 
 .nav-item::before {
   content: none !important;

@@ -1,6 +1,6 @@
 /* Card Tags Div */
 .card-tags {
-  padding: var(--space-md) 0;
+  padding: var(--space-sm) 0;
 }
 
 /* Base tag style */
@@ -13,10 +13,13 @@
   font-weight: 300;
   line-height: 1.2;
   padding: var(--space-xs) var(--space-sm);
+  margin-right: var(--space-xs);
+  margin-bottom: var(--space-sm);
   border-radius: var(--radius-default);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   border: 1px solid var(--fg-primary);
+  box-shadow: var(--shadow-sm);
   transition:
     background-color var(--transition-default) ease,
     color var(--transition-default) ease,
@@ -25,9 +28,16 @@
 
 /* Post Type badge */
 .tag--type {
-  background-color: var(--bg-secondary);
-  color: var(--accent-blue);
-  border-color: var(--accent-blue);
+  /* background-color: var(--bg-primary); */
+  /* color: var(--accent-blue); */
+  /* border-color: var(--accent-blue); */
+  -webkit-backdrop-filter: blur(60px);
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background: rgba(39, 39, 39, 0.1);
+  border-radius: var(--radius-default);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
 }
 .tag--type:hover {
   background-color: var(--accent-blue);
@@ -36,9 +46,9 @@
 
 /* Category badge */
 .tag--category {
-  background-color: var(--bg-tertiary);
-  color: var(--accent-yellow);
-  border-color: var(--accent-yellow);
+  background-color: transparent;
+  color: var(--fg-primary);
+  border-color: var(--fg-primary);
 }
 .tag--category:hover {
   background-color: var(--accent-yellow);
@@ -47,7 +57,7 @@
 
 /* Tag label */
 .tag--label {
-  background-color: var(--bg-tertiary);
+  background-color: transparent;
   color: var(--accent-green);
   border-color: var(--accent-green);
 }

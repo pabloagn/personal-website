@@ -15,7 +15,7 @@ body {
 }
 
 .content-section {
-  padding: var(--space-md) 0;
+  padding: var(--space-md) var(--space-lg);
   background-color: var(--bg-primary); 
 }
 
@@ -25,6 +25,8 @@ body {
 
 .container-top {
   max-width: var(--max-width);
+  padding-left: 30px;
+  padding-right: 30px;
   margin-left: auto;
   margin-right: auto;
   padding-top: var(--space-4xl);

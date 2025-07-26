@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Modern CSS",
+    "description": "Utility-first, scalable, and clean CSS with modern tokens and semantic structure.",
+    "buttonText": "Explore CSS",
+    "buttonURL": "/tags/css/"
+  },
+  {
+    "title": "Hugo Mastery",
+    "description": "Fast, powerful static sites with deeply customized layouts, partials, and pipelines.",
+    "buttonText": "Learn Hugo",
+    "buttonURL": "/tags/hugo/"
+  },
+  {
+    "title": "Terminal Tools",
+    "description": "Minimal, keyboard-first tooling for developers who live in the terminal.",
+    "buttonText": "View Tools",
+    "buttonURL": "/tags/terminal/"
+  }
+]

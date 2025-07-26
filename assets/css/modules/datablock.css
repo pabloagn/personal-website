@@ -1,0 +1,82 @@
+.datablock-wrapper {
+  overflow-x: auto;
+  margin: var(--space-md) 0;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.datablock-table {
+  border: 1px solid var(--bg-tertiary);
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  background: var(--bg-surface);
+  color: var(--fg-primary);
+  min-width: 600px;
+}
+
+.datablock-table thead tr {
+  border-bottom: 1px solid var(--fg-primary);
+}
+
+.datablock-table tbody tr {
+  border-bottom: 1px solid var(--bg-tertiary);
+}
+
+.datablock-table tbody tr:hover {
+  background-color: rgba(127, 180, 202, 0.07);
+  transition: all var(--transition-default) ease;
+}
+
+.datablock-table tbody td:hover {
+  background-color: rgba(127, 180, 202, 0.1);
+  color: var(--fg-primary);
+  transition: all var(--transition-default) ease;
+}
+
+.datablock-table td {
+  color: var(--fg-secondary);
+  padding: var(--space-sm) var(--space-lg);
+  vertical-align: top;
+  border-bottom: 1px solid var(--bg-tertiary);
+  border-left: 1px solid var(--bg-tertiary);
+  border-right: 1px solid var(--bg-tertiary);
+}
+
+.datablock-table th {
+  color: var(--fg-primary);
+  font-weight: 500;
+  padding: var(--space-lg);
+  text-align: left;
+  border-left: 1px solid var(--bg-tertiary);
+  border-right: 1px solid var(--bg-tertiary);
+}
+
+/* Sort Indicators */
+.datablock-table th {
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+}
+
+.datablock-table th::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  padding-left: 5px;
+  transform: translateY(-50%);
+  font-size: 0.75em;
+  opacity: 0.4;
+}
+
+.datablock-table th.sorted-asc::after {
+  content: "▲";
+  opacity: 1;
+}
+
+.datablock-table th.sorted-desc::after {
+  content: "▼";
+  opacity: 1;
+}
+

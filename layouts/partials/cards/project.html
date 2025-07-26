@@ -1,0 +1,22 @@
+<article class="card project-card">
+  <div class="project-symbol-wrapper">
+    <a href="{{ .Permalink }}" class="project-symbol-box">
+      <div class="project-abbreviation">{{ .Params.abbreviation }}</div>
+      <div class="project-title">{{ .Title }}</div>
+      {{ with .Params.serial }}
+        <div class="project-serial">No. {{ printf "%03d" . }}</div>
+      {{ end }}
+    </a>
+  </div>
+
+  <div class="card-body">
+    <p class="card-summary">{{ .Summary }}</p>
+    {{ if .Params.repository }}
+      <h4>Code Composition</h4>
+      {{ partial "languages/language-stack.html" . }}
+    {{ end }}
+    <div class="card-footer">
+      {{ partial "tags/labels.html" . }}
+    </div>
+  </div>
+</article>

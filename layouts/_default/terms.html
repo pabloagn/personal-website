@@ -1,0 +1,18 @@
+{{ define "main" }}
+  <section class="term-page container-mid">
+    <header class="term-header">
+      <h1 class="term-title">{{ .Title }}</h1>
+      <p class="term-meta">Explore {{ .Title | lower }} used on this site.</p>
+    </header>
+
+    <div class="term-grid">
+      {{ range .Data.Terms.Alphabetical }}
+        <a href="{{ .Page.Permalink }}" class="term-card">
+          <div class="term-card-title">{{ .Page.Title }}</div>
+          <div class="term-card-count">{{ .Count }} {{ if eq .Count 1 }}post{{ else }}posts{{ end }}</div>
+        </a>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}
+

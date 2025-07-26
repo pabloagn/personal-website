@@ -1,0 +1,7 @@
+:root {
+  --overlay-xs: rgba(0, 0, 0, 0.05);
+  --overlay-sm: rgba(0, 0, 0, 0.1);
+  --overlay-md: rgba(0, 0, 0, 0.2);
+  --overlay-lg: rgba(0, 0, 0, 0.35);
+  --overlay-xl: rgba(0, 0, 0, 0.5);
+}

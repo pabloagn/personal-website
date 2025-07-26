@@ -1,0 +1,17 @@
+{{ $lines := split .Inner "\n" }}
+<div class="table-wrapper">
+  <table class="custom-table">
+    {{ range $i, $row := $lines }}
+      {{ $cols := split $row "\t" }}
+      <tr>
+        {{ range $cols }}
+          {{ if eq $i 0 }}
+            <th>{{ . | safeHTML }}</th>
+          {{ else }}
+            <td>{{ . | safeHTML }}</td>
+          {{ end }}
+        {{ end }}
+      </tr>
+    {{ end }}
+  </table>
+</div>

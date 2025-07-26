@@ -27,11 +27,11 @@
   --rh-bg-dim: #16161d;
   --rh-bg-light: #2a2a37;
   --rh-fg: #c1c6c4;
-  --rh-fg-dim: #9DA4A1;
+  --rh-fg-dim: #9da4a1;
   --rh-fg-reverse: #16161d;
 
   /* Special UI colors */
-  --rh-red: #c34043;
+  --rh-red: #bb3e41;
   --rh-orange: #ffa066;
   --rh-yellow: #c0a36e;
   --rh-green: #76946a;
@@ -40,6 +40,13 @@
   --rh-blue: #648493;
   --rh-purple: #957fb8;
   --rh-magenta: #d27e99;
+
+  /* Custom */
+  --rh-plum: #20131e;
+  --rh-rose: #7d3d52;
+  --rh-crimson: #8e4057;
+  --rh-slate: #586e75;
+  --rh-mulberry: #462941;
 
   /* === EXTENDED KANSO PALETTE === */
 
@@ -51,7 +58,6 @@
   /* --rh-fg: #dcd7ba; */
   /* --rh-fg-dim: #c8c093; */
   /* --rh-fg-reverse: #16161d; */
-
 
   /* Special UI colors */
   /* --rh-red: #c34043; */

@@ -1,0 +1,5 @@
+{{ $path := "svg/site/logo.svg" }}
+{{ if (fileExists (printf "assets/%s" $path)) }}
+  {{ readFile (printf "assets/%s" $path) | safeHTML }}
+{{ end }}
+

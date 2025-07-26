@@ -1,0 +1,10 @@
+{{ $path := printf "svg/%s/%s.svg" .style .name }}
+{{ if (fileExists (printf "assets/%s" $path)) }}
+  {{ $svg := readFile (printf "assets/%s" $path) }}
+  {{ $size := .size | default "1em" }}
+  {{ $color := .color | default "currentColor" }}
+  {{ $svg = replace $svg "<svg " (printf "<svg style=\"height:%s; width:%s; fill:%s\" " $size $size $color) }}
+  {{ $svg | safeHTML }}
+{{ else }}
+  <span title="Missing icon {{ .name }} in {{ .style }}">�</span>
+{{ end }}

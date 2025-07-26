@@ -3,7 +3,7 @@
     <div class="recent-section">
       <h2 class="section-title">Recent Projects</h2>
       {{ range first 3 (where .Site.RegularPages "Type" "projects") }}
-        {{ partial "card.html" . }}
+        {{ partial "cards/project.html" . }}
       {{ end }}
     </div>
     <div class="recent-section">

@@ -1,0 +1,6 @@
+{
+  "languages": [
+    { "name": "Nix", "percent": 85, "color": "#3d8b71" },
+    { "name": "Shell", "percent": 15, "color": "#89e051" }
+  ]
+}

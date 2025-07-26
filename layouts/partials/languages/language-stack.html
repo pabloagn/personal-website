@@ -1,0 +1,45 @@
+{{ $slug := .Page.File.TranslationBaseName }}
+{{ $dataPath := printf "data/langstats/%s.json" $slug }}
+{{ $langData := slice }}
+
+<!-- Try to load from assets/data/ -->
+{{ with resources.Get $dataPath }}
+  {{ $unmarshalled := . | transform.Unmarshal }}
+  {{ $langData = index $unmarshalled "languages" }}
+{{ else }}
+  <p>dataPath: {{ $dataPath }}</p>
+  <div>WHAT</div>
+  {{ $counts := dict }}
+  {{ $excluded := slice "markdown" "md" "yaml" "yml" "json" "toml" "text" "console" "shell" "bash" "ini" "dockerfile" "makefile" }}
+
+  {{ range .Page.Resources.ByType "page" }}
+    {{ $counts = partial "languages/count-langs" (dict "Content" .Content "Counts" $counts "Excluded" $excluded) }}
+  {{ end }}
+  {{ $counts = partial "languages/count-langs" (dict "Content" .Page.Content "Counts" $counts "Excluded" $excluded) }}
+
+  {{ $total := len (seq (add (len $counts) 0)) }}
+  {{ $langData = $langData }}
+  {{ range $lang, $count := $counts }}
+    {{ $percent := printf "%.0f" (mul 100 (div $count $total)) }}
+    {{ $color := partial "language-stack/lang-color" $lang }}
+    {{ $langData = $langData | append (dict "name" $lang "percent" $percent "color" $color) }}
+  {{ end }}
+  {{ $langData = sort $langData "percent" "desc" }}
+{{ end }}
+
+{{ if $langData }}
+  <div class="language-stack">
+    {{ range $langData }}
+      <div
+        class="language-segment"
+        style="width: {{ .percent }}%; background-color: {{ .color }};"
+        title="{{ .name }}: {{ .percent }}%"
+      ></div>
+    {{ end }}
+  </div>
+  <div class="language-legend">
+    {{ range $langData }}
+      <span><b>{{ .name }}</b> ({{ .percent }}%)</span>
+    {{ end }}
+  </div>
+{{ end }}

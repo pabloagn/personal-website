@@ -1,0 +1,32 @@
+{{ $file := .Get 0 }}
+{{ $resource := resources.Get $file }}
+{{ if not $resource }}
+  <div class="error">Error: file '{{ $file }}' not found.</div>
+{{ else }}
+  {{ $rows := $resource.Content | transform.Unmarshal }}
+  <div class="datablock-wrapper">
+    <table class="datablock-table">
+      <thead>
+        <tr>
+          {{ range (index $rows 0) }}
+            <th>{{ . }}</th>
+          {{ end }}
+        </tr>
+      </thead>
+      <tbody>
+        {{ range after 1 $rows }}
+          <tr>
+            {{ range . }}
+              {{ $val := printf "%v" . }}
+              {{- $type := cond (eq $val "null") "null"
+                (cond (findRE `^-?\d+\.\d+$` $val) "float"
+                (cond (findRE `^-?\d+$` $val) "int" "string")) }}
+              <td class="type-{{ $type }}">{{ $val }}</td>
+            {{ end }}
+          </tr>
+        {{ end }}
+      </tbody>
+    </table>
+  </div>
+{{ end }}
+

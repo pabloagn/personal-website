@@ -1,0 +1,11 @@
+id,name,type,value1,value2,value3,value4,value5,value6,value7,value8,value9,value10,value11,value12,value13,value14,value15,value16,value17
+1,alpha,int,12,23,34,45,56,67,78,89,90,101,112,123,134,145,156,167,178
+2,beta,float,1.1,2.2,3.3,4.4,5.5,6.6,7.7,8.8,9.9,10.1,11.2,12.3,13.4,14.5,15.6,16.7,17.8
+3,gamma,string,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q
+4,delta,bool,true,false,true,false,true,false,true,false,true,false,true,false,true,false,true,false,true
+5,epsilon,date,2024-01-01,2024-01-02,2024-01-03,2024-01-04,2024-01-05,2024-01-06,2024-01-07,2024-01-08,2024-01-09,2024-01-10,2024-01-11,2024-01-12,2024-01-13,2024-01-14,2024-01-15,2024-01-16,2024-01-17
+6,zeta,uuid,1a2b,2b3c,3c4d,4d5e,5e6f,6f7g,7g8h,8h9i,9i0j,0j1k,1k2l,2l3m,3m4n,4n5o,5o6p,6p7q,7q8r
+7,eta,decimal,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1,1.1,1.2,1.3,1.4,1.5,1.6,1.7
+8,theta,time,12:00,12:05,12:10,12:15,12:20,12:25,12:30,12:35,12:40,12:45,12:50,12:55,13:00,13:05,13:10,13:15,13:20
+9,iota,empty,,,,,,,,,,,,,,,,,
+10,kappa,mixed,42,hello,true,2024-01-01,3.14,a,99,false,0xdeadbeef,null,null,null,10000000000,NaN,∞,false,true
