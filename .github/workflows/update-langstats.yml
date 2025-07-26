@@ -32,8 +32,9 @@ jobs:
         run: |
           git config user.name "LangStats Bot"
           git config user.email "bot@localhost"
+          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/pabloagn/personal-website.git
           git add data/langstats/
           git diff --cached --quiet || (
             git commit -m "BOT: Update language stats"
-            git push https://x-access-token:${GH_PAT}@github.com/pabloagn/personal-website.git HEAD:main
+            git push origin HEAD:main
           )
