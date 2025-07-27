@@ -1,0 +1,11 @@
+{{ $boxClass := .boxClass | default "" }}
+<div class="project-symbol-wrapper">
+  <a href="{{ .context.Permalink }}" class="project-symbol-box {{ $boxClass }}">
+    <div class="project-abbreviation">{{ .context.Params.abbreviation }}</div>
+    <div class="project-title">{{ .context.Title }}</div>
+    {{ with .context.Params.serial }}
+      <div class="project-serial">No. {{ printf "%03d" . }}</div>
+    {{ end }}
+  </a>
+</div>
+

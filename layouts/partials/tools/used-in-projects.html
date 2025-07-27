@@ -10,15 +10,6 @@
 {{ if gt (len $related) 0 }}
   <section class="related-projects">
     <h3 class="section-heading">Used In Projects</h3>
-    <ul class="project-list">
-      {{ range $related }}
-        <li>
-          <a href="{{ .RelPermalink }}" class="tag tag--category">
-            {{ .Title }}
-          </a>
-        </li>
-      {{ end }}
-    </ul>
+    {{ partial "layout/grid.html" (dict "Pages" $related "class" "grid--2") }}
   </section>
 {{ end }}
-

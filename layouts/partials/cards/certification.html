@@ -1,0 +1,31 @@
+<div class="card certification-card">
+  <h3 class="cert-title card-title">
+    {{ with .course_url }}
+      <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="card-link">
+        {{ $.title }}
+      </a>
+    {{ else }}
+      {{ .title }}
+    {{ end }}
+  </h3>
+  <div class="cert-meta">{{ .issuer }} ({{ .year }})</div>
+  <p class="cert-summary card-summary">{{ .description }}</p>
+
+  {{ with .topics }}
+    <ul class="cert-topics">
+      {{ range . }}
+        <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+  {{ end }}
+
+  {{ with .certificate_url }}
+    {{ partial "buttons/button.html" (dict
+      "href" .
+      "text" "View Certificate"
+      "class" "btn btn--primary"
+      "target" "_blank"
+      )
+    }}
+  {{ end }}
+</div>

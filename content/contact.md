@@ -5,8 +5,6 @@ layout: "contact"
 
 # Get in Touch
 
-If you’d like to reach out—regarding work, feedback, or just a thoughtful hello—please use the form below.
-
 <form class="contact-form" name="contact" method="POST" data-netlify="true">
   <input type="hidden" name="form-name" value="contact" />
   

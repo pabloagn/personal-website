@@ -1,0 +1,26 @@
+<div class="card professional-card">
+  <h3 class="cert-title card-title">
+    {{ with .company_url }}
+      <a
+        href="{{ . }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="card-link"
+      >
+        {{ $.company }}
+      </a>
+    {{ else }}
+      {{ .company }}
+    {{ end }}
+  </h3>
+  <div class="cert-meta">{{ .position }} ({{ .dates }})</div>
+  <p class="cert-summary card-summary">{{ .description }}</p>
+
+  {{ with .topics }}
+    <ul class="cert-topics">
+      {{ range . }}
+        <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+  {{ end }}
+</div>

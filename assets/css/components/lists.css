@@ -17,7 +17,8 @@
 
 /* --- Unordered Lists --- */
 .single-content ul li::before {
-  content: "∙";
+  /* content: "∙"; */
+  content: "•";
   color: var(--accent-yellow);
   position: absolute;
   left: 0;

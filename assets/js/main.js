@@ -9,6 +9,7 @@ import { initSiteSearch } from "./modules/search.js";
 import { enableDatablockSort } from "./modules/datablockSort.js";
 import { enableLanguageStackTooltips } from "./modules/languageStack.js";
 import { progressScroll } from "./modules/progressBar.js";
+import { initTimelineLines } from './modules/verticalTimelines.js';
 
 function boot() {
   initHeaderScroll();
@@ -19,6 +20,7 @@ function boot() {
   progressScroll();
   enableDatablockSort();
   enableLanguageStackTooltips();
+  initTimelineLines();
   // initSiteSearch();
   // initHeaderAnchors();
 }

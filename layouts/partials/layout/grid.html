@@ -1,15 +1,12 @@
-{{ $pages := .Pages }}
-{{ $class := .class | default "" }}
-
-<div class="grid {{ $class }}">
-  {{ range $pages }}
+<div class="grid {{ .class }}">
+  {{ range .Pages }}
     {{ $section := .Section }}
-    {{ if eq $section "project" }}
+    {{ if eq $section "projects" }}
       {{ partial "cards/project.html" . }}
     {{ else if eq $section "tools" }}
       {{ partial "cards/tool.html" . }}
     {{ else }}
-      {{ partial "card.html" . }}
+      {{ partial "cards/post.html" . }}
     {{ end }}
   {{ end }}
 </div>

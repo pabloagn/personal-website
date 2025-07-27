@@ -37,7 +37,7 @@ jobs:
           git remote set-url origin https://x-access-token:${GH_PAT}@github.com/pabloagn/personal-website.git
           git add data/langstats/
           git diff --cached --quiet || (
-            git commit -m "BOT: Update language stats"
+            git commit -m "bot: update language stats"
             git push origin HEAD:main
           )
 

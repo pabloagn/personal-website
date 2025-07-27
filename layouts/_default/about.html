@@ -1,38 +1,12 @@
 {{ define "main" }}
-  <div class="content-section container-top">
-    <article class="about-intro glass--3-3">
-      <h1 class="about-heading">About This Site</h1>
-      <p class="about-lead">
-        This space is a study in refinement, friction, and precision.
-        Every module is hand-forged. Every interaction, intentional. 
-        This is not a portfolio—it is a living text.
-      </p>
-    </article>
-
+  <div class="content-section container-top single-page">
     <section class="about-columns">
-      <div class="about-pane">
-        <h2 class="about-subheading">The Stack</h2>
-        <ul class="about-list">
-          <li><span class="about-label">Site Generator:</span> Hugo</li>
-          <li><span class="about-label">Language:</span> HTML, CSS, JS (vanilla)</li>
-          <li><span class="about-label">Structure:</span> Modular, component-first</li>
-          <li><span class="about-label">Build:</span> Nix Flake / Home Manager</li>
-        </ul>
-      </div>
-
-      <div class="about-pane">
-        <h2 class="about-subheading">The Intent</h2>
-        <p class="about-block">
-          To create a space that resists trends. <br />
-          That values slowness over noise. <br />
-          That documents without spectacle. <br />
-          That is, in essence, <em>mine</em>.
-        </p>
-      </div>
-    </section>
-
-    <section class="about-grid mosaic">
-      {{ partial "mosaic.html" . }}
+      {{ partial "about/lead.html" . }}
+      {{ partial "about/motivations.html" . }}
+      {{ partial "about/professional.html" . }}
+      {{ partial "about/academic.html" . }}
+      {{ partial "about/stack.html" . }}
+      {{ partial "about/certifications.html" . }}
     </section>
 
     <footer class="about-footer">
@@ -44,4 +18,3 @@
     </footer>
   </div>
 {{ end }}
-

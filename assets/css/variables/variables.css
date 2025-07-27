@@ -9,6 +9,8 @@
   --space-3xl: var(--size-7);
   --space-4xl: var(--size-8);
 
+  --navbar-height: var(--size-7);
+
   /* Layout Sizes */
   /* TODO: Change this */
   --max-width: 1200px;

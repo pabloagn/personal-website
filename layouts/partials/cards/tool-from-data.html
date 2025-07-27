@@ -1,0 +1,20 @@
+<article class="card card--tool">
+  <div class="card-content">
+    <h3 class="card-title">
+      {{ with .slug }}
+        <a href="/tools/{{ . }}/">{{ $.name }}</a>
+      {{ else }}
+        <span>{{ $.name }}</span>
+      {{ end }}
+    </h3>
+    <p class="card-summary">{{ .summary }}</p>
+    {{ with .tags }}
+      <div class="card-tags">
+        {{ range . }}
+          <span class="tag tag--label">{{ . }}</span>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</article>
+

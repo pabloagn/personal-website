@@ -1,0 +1,25 @@
+{{ $tools := site.Data.tools }}
+{{ $featured := where $tools "featured" true }}
+{{ $categories := slice }}
+
+{{ range $featured }}
+  {{ $cat := .category }}
+  {{ if not (in $categories $cat) }}
+    {{ $categories = $categories | append $cat }}
+  {{ end }}
+{{ end }}
+
+{{ range $categories }}
+  {{ $cat := . }}
+  {{ $items := where $featured "category" $cat }}
+
+  <section class="tool-category-group">
+    <h3 class="tool-category-title tool-category-sticky glass--1-3">{{ $cat }}</h3>
+    <div class="grid grid--3">
+      {{ range $items }}
+        {{ partial "cards/tool-from-data.html" . }}
+      {{ end }}
+    </div>
+  </section>
+{{ end }}
+

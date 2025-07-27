@@ -1,0 +1,39 @@
+{{ define "main" }}
+  {{ $slug := .File.BaseFileName | urlize }}
+  {{ $section := .Section }}
+
+
+  <!-- Hero Header -->
+  <section class="project-hero-wrapper">
+    <div class="project-hero-lines">
+      {{ range seq 1 60 }}
+        <div class="line-wrapper">
+          <div class="line"></div>
+        </div>
+      {{ end }}
+    </div>
+
+    {{ partial "projects/symbol.html" (dict
+      "context" .
+      "boxClass" "symbol--single"
+      )
+    }}
+  </section>
+
+  <div class="project-meta">
+    {{ with .Params.catchphrase }}
+      <p class="project-catchphrase"><em>{{ . }}</em></p>
+    {{ end }}
+
+  </div>
+
+  <div class="project-content container-mid">
+    <div class="single-content">
+      {{ .Content }}
+    </div>
+
+    {{ partial "single/navigation.html" . }}
+  </div>
+
+  {{ partial "progress.html" . }}
+{{ end }}

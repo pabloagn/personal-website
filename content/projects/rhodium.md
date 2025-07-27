@@ -4,9 +4,12 @@ date: 2025-06-30
 tags: ["linux", "nixos"]
 summary: "A minimal status bar configuration for tiling window managers, following sacred computer principles."
 repository: https://github.com/pabloagn/rhodium
+docs: https://rhodium.solenoidlabs.com/docs
 abbreviation: "Rh"
 serial: 1
 tools: ["nixos", "julia"]
+status: "In Progress"
+catchphrase: "A Hypermodular NixOS System"
 ---
 
 A minimal status bar configuration for tiling window managers, following sacred computer principles.

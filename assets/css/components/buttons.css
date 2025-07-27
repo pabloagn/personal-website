@@ -21,26 +21,26 @@
 
 /* Solid */
 .btn--primary {
-  background-color: var(--fg-primary);
+  background-color: var(--fg-secondary);
   color: var(--bg-primary);
-  border-color: var(--fg-primary);
+  border-color: var(--fg-secondary);
 }
 .btn--primary:hover {
   background-color: transparent;
-  border-color: var(--fg-primary);
-  color: var(--fg-primary);
+  border-color: var(--fg-secondary);
+  color: var(--fg-secondary);
 }
 
-/* Ghost */
 .btn--ghost {
   background-color: transparent;
-  color: var(--accent-blue);
-  border: 1px solid var(--accent-blue);
+  color: var(--fg-primary);
+  border: 1px solid var(--fg-muted-darker);
 }
 
 .btn--ghost:hover {
-  background-color: var(--accent-blue);
+  background-color: var(--fg-secondary);
   color: var(--bg-primary);
+  border: 1px solid var(--fg-secondary);
 }
 
 /* Small */
@@ -59,7 +59,7 @@
 }
 
 /* Dual */
-.btn-dual-group {
+.btn-multi-group {
   display: flex;
   gap: 0.75rem; /* spacing between buttons */
   margin-top: 1.25rem;

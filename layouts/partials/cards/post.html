@@ -1,0 +1,42 @@
+<article class="card">
+  {{ $slug := .File.BaseFileName | urlize }}
+  {{ $section := .Section }}
+  {{ $img := printf "/images/%s/%s.jpg" $section $slug }}
+
+  {{ if (fileExists (printf "static%s" $img)) }}
+    <div class="card-image-wrapper">
+      <img
+        src="{{ $img | relURL }}"
+        alt="Featured image for {{ .Title }}"
+        class="card-image"
+      />
+      <div class="card-image-mask"></div>
+      <div class="card-image-overlay">
+        <div class="card-post-type">
+          {{ partial "tags/post-type.html" . }}
+        </div>
+      </div>
+    </div>
+  {{ end }}
+
+
+  <div class="card-body">
+    <div class="card-meta">
+      {{ partial "meta/date.html" . }} •
+      {{ partial "meta/reading-time.html" . }}
+    </div>
+
+    <h3 class="card-title">
+      <a href="{{ .Permalink }}" class="card-link">{{ .Title }}</a>
+    </h3>
+
+    {{ with .Summary }}
+      <p class="card-summary">{{ . }}</p>
+    {{ end }}
+
+
+    <div class="card-footer">
+      {{ partial "tags/labels.html" . }}
+    </div>
+  </div>
+</article>

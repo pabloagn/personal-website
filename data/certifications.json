@@ -1,0 +1,187 @@
+[
+  {
+    "title": "Functional Program Design in Scala",
+    "issuer": "Coursera / EPFL",
+    "year": 2023,
+    "description": "Applying design principles of functional programs, writing simple functional reactive applications, designing functional libraries and their APIs, and understanding reasoning techniques for programs that combine functions and state.",
+    "topics": [
+      "For Expressions & Monads",
+      "Lazy Evaluation",
+      "Type-Directed Programming",
+      "Functions & State",
+      "Timely Effects"
+    ],
+    "course_url": "https://www.coursera.org/learn/scala-functional-program-design",
+    "certificate_url": "https://www.coursera.org/account/accomplishments/verify/BG4YB6P954PH?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
+  },
+  {
+    "title": "Database Design and Basic SQL in PostgreSQL",
+    "issuer": "Coursera / University of Michigan",
+    "year": 2023,
+    "description": "Utilizing psql and SQL commands to implement CRUD operations for tables in a PostgreSQL database, modeling one-to-many and many-to-many relationships, and understanding keys within a database.",
+    "topics": [
+      "Introduction to SQL",
+      "Single Table SQL",
+      "One-To-Many Data Models",
+      "Many-To-One Data Models"
+    ],
+    "course_url": "https://www.coursera.org/learn/scala-functional-program-design",
+    "certificate_url": "https://www.coursera.org/account/accomplishments/verify/H9GS295WSHME?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
+  },
+  {
+    "title": "Functional Programming Principles in Scala",
+    "issuer": "Coursera / EPFL",
+    "year": 2023,
+    "description": "Understanding the foundations of Functional Programming, designing immutable data structures, writing purely functional programs, and combining FP with OOP.",
+    "topics": [
+      "Functions & Evaluation",
+      "Higher Order Functions",
+      "Data and Abstraction",
+      "Classes, Objects & Packages",
+      "Types and Pattern Matching",
+      "Lists, Tuples, Maps, Vectors & Arrays",
+      "Higher-Order Collection Methods",
+      "For-Expressions"
+    ],
+    "course_url": "https://www.coursera.org/learn/scala-functional-programming",
+    "certificate_url": "https://www.coursera.org/account/accomplishments/certificate/7VLETX23H59W"
+  },
+  {
+    "title": "6.86x: Machine Learning with Python - From Linear Models to Deep Learning",
+    "issuer": "MITx",
+    "year": 2023,
+    "description": "Principles, design, and application of Machine Learning algorithms including classification, regression, clustering, and reinforcement learning.",
+    "topics": [
+      "Linear Classifiers, Separability, Perceptron Algorithm",
+      "Maximum Margin Hyperplane, Loss, Regularization",
+      "Stochastic Gradient Descent, Over-Fitting, Generalization",
+      "Linear Regression",
+      "Recommender Problems, Collaborative Filtering",
+      "Non-Linear Classification, Kernels",
+      "Learning Features, Neural Networks",
+      "Deep Learning, Back Propagation",
+      "Recurrent Neural Networks",
+      "Unsupervised Learning",
+      "Generative Models",
+      "Natural Language Processing"
+    ],
+    "course_url": "https://www.edx.org/course/machine-learning-with-python-from-linear-models-to",
+    "certificate_url": "https://courses.edx.org/certificates/2c85a72aa8c7445aaae07bc35f4bca90"
+  },
+  {
+    "title": "Taming Regular Expressions",
+    "issuer": "Udemy",
+    "year": 2023,
+    "description": "The foundations of regular expressions with examples in multiple languages including Python, JavaScript, Rust, and others.",
+    "topics": [
+      "Basic Syntax",
+      "Literal Characters",
+      "Metacharacters",
+      "Character Sets",
+      "Character Ranges",
+      "Quantifiers",
+      "Anchors & Boundaries",
+      "Positive & Negative Lookarounds"
+    ],
+    "course_url": "https://www.udemy.com/course/taming-regex-a-complete-guide-to-regular-expressions/",
+    "certificate_url": "https://www.udemy.com/certificate/UC-372cb4f7-bc64-4fdf-8373-e4ba395d44a4/"
+  },
+  {
+    "title": "6.431x: Probability – The Science of Uncertainty and Data",
+    "issuer": "MITx",
+    "year": 2022,
+    "description": "Introduction to probabilistic models, including random processes and the basic elements of statistical inference.",
+    "topics": [
+      "Probability Models & Axioms",
+      "Conditioning and Independence",
+      "Counting",
+      "Discrete Random Variables",
+      "Continuous Random Variables",
+      "Bayesian Inference",
+      "Limit Theorems and Classical Statistics",
+      "Bernoulli & Poisson Processes",
+      "Markov Chains"
+    ],
+    "course_url": "https://www.edx.org/course/probability-the-science-of-uncertainty-and-data",
+    "certificate_url": "https://courses.edx.org/certificates/4f504d24a50c45f6bc78a5ea93aedb5b"
+  },
+  {
+    "title": "6.00.2x: Introduction to Computational Thinking and Data Science",
+    "issuer": "MITx",
+    "year": 2022,
+    "description": "An introduction to using computation to understand real-world phenomena.",
+    "topics": [
+      "Optimization Problems",
+      "Dynamic Programming",
+      "Graph Theory",
+      "Stochastic Thinking",
+      "Random Walks",
+      "Inferential Statistics",
+      "Monte Carlo Simulations",
+      "Experimental Data and Model Fitting",
+      "Machine Learning",
+      "Statistical Fallacies"
+    ],
+    "course_url": "https://www.edx.org/course/introduction-to-computational-thinking-and-data-4",
+    "certificate_url": "https://courses.edx.org/certificates/adb4ecd5be334ebf8581a58c8908a9a0"
+  },
+  {
+    "title": "6.00.1x: Introduction to Computer Science and Programming Using Python",
+    "issuer": "MITx",
+    "year": 2022,
+    "description": "An introduction to computer science as a tool to solve real-world analytical problems using Python 3.5.",
+    "topics": [
+      "Introduction to Python",
+      "Core Elements of Programs",
+      "Simple Programs",
+      "Functions",
+      "Data Structures",
+      "Debugging",
+      "Assertions and Exceptions",
+      "Classes and Inheritance",
+      "Computational Complexity",
+      "Searching and Sorting Algorithms",
+      "Data Visualization"
+    ],
+    "course_url": "https://www.edx.org/course/introduction-to-computer-science-and-programming-7",
+    "certificate_url": "https://courses.edx.org/certificates/bd1a7c6144de40c2b22ae414e3a5c97e"
+  },
+  {
+    "title": "Introduction to Julia",
+    "issuer": "Julia Academy",
+    "year": 2022,
+    "description": "An overview of the Julia Programming Language.",
+    "topics": [
+      "Variables",
+      "Data Structures",
+      "Control Flow",
+      "Plotting",
+      "Structs",
+      "Multiple Dispatch",
+      "Linear Algebra",
+      "Factorizations and Linear Transformations"
+    ],
+    "course_url": "https://juliaacademy.com/p/intro-to-julia",
+    "certificate_url": "https://www.dropbox.com/s/1yku43dm4nitn6o/certificate-of-completion-for-introduction-to-julia.pdf?dl=0"
+  },
+  {
+    "title": "Apache Spark 3 for Data Engineering & Analytics with Python",
+    "issuer": "Udemy",
+    "year": 2022,
+    "description": "An overview of Apache Spark using DataBricks, PySpark & SparkSQL.",
+    "topics": [
+      "Spark Architecture",
+      "Spark Transformations and Actions using the Structured API",
+      "PySpark Environments",
+      "DAG Interpretation for Spark Execution",
+      "Spark DataFrame API",
+      "Spark on Databricks",
+      "Spark Execution Concepts",
+      "Spark RDD API",
+      "Spark Web UI",
+      "Spark SQL"
+    ],
+    "course_url": "https://www.udemy.com/course/introduction-to-python-for-big-data-engineering-with-pyspark/",
+    "certificate_url": "https://ude.my/UC-7de91298-65dd-4a44-8cd3-71b0082b3105"
+  }
+]

@@ -1,0 +1,84 @@
+{{ define "main" }}
+  {{ $slug := .File.BaseFileName | urlize }}
+  {{ $section := .Section }}
+  {{ $img := printf "/images/%s/%s.jpg" $section $slug }}
+
+  {{ if (fileExists (printf "static%s" $img)) }}
+    <div class="single-hero-wrapper">
+      <img
+        src="{{ $img | relURL }}"
+        alt="Featured image for {{ .Title }}"
+        class="single-hero-image"
+      />
+    </div>
+  {{ end }}
+
+
+  <div class="container-top">
+    <header class="single-hero-card glass--3-3">
+      <div class="single-meta-top">
+        <div class="single-meta-reading">
+          {{ partial "meta/reading-time.html" . }}
+        </div>
+
+        <div class="single-meta-categories">
+          {{ partial "tags/post-type.html" . }}
+          {{ with .Params.categories }}
+            {{ range . }}
+              <a
+                href="{{ "/categories/" | relURL }}{{ . | urlize }}"
+                class="tag tag--category"
+                >{{ . }}</a
+              >
+            {{ end }}
+          {{ end }}
+        </div>
+
+        <div class="single-meta-tags">
+          {{ with .Params.tags }}
+            {{ range . }}
+              <a
+                href="{{ "/tags/" | relURL }}{{ . | urlize }}"
+                class="tag tag--label"
+                >{{ . }}</a
+              >
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+
+      <h1 class="single-title">{{ .Title }}</h1>
+
+      {{ with .Params.catchphrase }}
+        <p class="single-catchphrase"><em>{{ . }}</em></p>
+      {{ end }}
+
+
+      <p class="hero-divider">─────── § ───────</p>
+
+      <div class="single-meta-bottom">
+        <span>◉ {{ .Date.Format "Jan 02, 2006" }}</span>
+        {{ with .Lastmod }}
+          <span>◎ {{ .Format "Jan 02, 2006" }}</span>
+        {{ end }}
+      </div>
+    </header>
+
+    {{ partial "toc.html" . }}
+
+
+    <div class="single-page">
+      <div class="single-content">
+        {{ .Content }}
+      </div>
+
+      {{ partial "single/navigation.html" . }}
+    </div>
+  </div>
+
+  {{ with .Section }}
+    {{ if in (slice "blog" "deep-dive" "project") . }}
+      {{ partial "progress.html" . }}
+    {{ end }}
+  {{ end }}
+{{ end }}

@@ -1,0 +1,17 @@
+{{- $href := .href | default "#" -}}
+{{- $text := .text | default "Click" -}}
+{{- $icon := .icon -}}
+{{- $class := .class | default "btn btn--primary" -}}
+{{- $target := .target -}}
+
+
+<a
+  href="{{ $href }}"
+  class="{{ $class }}"
+  {{ with $target }}target="{{ . }}" rel="noopener noreferrer"{{ end }}
+>
+  {{ if $icon }}
+    <i class="{{ $icon }}" aria-hidden="true"></i>
+  {{ end }}
+  {{ $text }}
+</a>

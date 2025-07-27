@@ -23,7 +23,7 @@
   <div class="card-body">
     <div class="card-meta">
       <time datetime="{{ .Date.Format "2006-01-02" }}">
-        {{ .Date.Format "Jan 02, 2006" }} • {{ .ReadingTime }} min read
+        {{ .Date.Format "Jan 02, 2006" }} • {{ math.Ceil .ReadingTime }} min read
       </time>
     </div>
 

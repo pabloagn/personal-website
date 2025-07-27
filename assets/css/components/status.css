@@ -1,0 +1,43 @@
+.project-status {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  margin: var(--space-md);
+  gap: 1ch;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-default);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--fg-muted-darker);
+  width: fit-content;
+}
+
+.status-indicator {
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 50%;
+  box-shadow: 0 0 6px currentColor;
+  background-color: currentColor;
+}
+
+/* Status-specific colors */
+.status--shipped .status-indicator {
+  color: var(--rh-teal);
+}
+
+.status--development .status-indicator {
+  color: var(--rh-blue);
+}
+
+.status--archived .status-indicator {
+  color: var(--fg-muted);
+}
+
+.status--canceled .status-indicator {
+  color: var(--rh-crimson);
+}
+
+.status--unknown .status-indicator {
+  color: var(--accent-yellow);
+}

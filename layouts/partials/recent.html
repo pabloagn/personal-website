@@ -1,17 +1,29 @@
+{{ $postTypes := slice "blog" "deep-dive" }}
+{{ $projectTypes := slice "projects" }}
+
+
 <section class="recent container-mid">
   <div class="recent-container">
+    <!-- Recent Projects -->
     <div class="recent-section">
       <h2 class="section-title">Recent Projects</h2>
-      {{ range first 3 (where .Site.RegularPages "Type" "projects") }}
-        {{ partial "cards/project.html" . }}
-      {{ end }}
+      {{ $projects := first 4 (where site.RegularPages "Type" "in" $projectTypes) }}
+      {{ partial "layout/grid.html" (dict
+        "Pages" $projects
+        "class" "grid--2"
+        )
+      }}
     </div>
+
+    <!-- Recent Posts -->
     <div class="recent-section">
       <h2 class="section-title">Recent Posts</h2>
-      {{ range first 3 (where .Site.RegularPages "Type" "blog") }}
-        {{ partial "card.html" . }}
-      {{ end }}
+      {{ $posts := first 6 (where site.RegularPages "Type" "in" $postTypes) }}
+      {{ partial "layout/grid.html" (dict
+        "Pages" $posts
+        "class" "grid--2"
+        )
+      }}
     </div>
   </div>
 </section>
-

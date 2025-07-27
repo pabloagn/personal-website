@@ -1,3 +1,7 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
 ::selection {
   background: var(--rh-yellow);
   color: var(--bg-primary);
@@ -22,6 +26,7 @@ body {
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.6;
+  scrollbar-width: none !important;  /* Firefox */
 }
 
 .content-section {
@@ -49,11 +54,11 @@ body {
   padding: 20px var(--space-lg);
 }
 
-.recent-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-xl);
-}
+/* .recent-container { */
+/*   display: grid; */
+/*   grid-template-columns: 1fr 1fr; */
+/*   gap: var(--space-xl); */
+/* } */
 
 .single-page {
   max-width: var(--max-width);

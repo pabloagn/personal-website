@@ -1,0 +1,26 @@
+<div class="card academic-card">
+  <h3 class="cert-title card-title">
+    {{ with .url }}
+      <a
+        href="{{ . }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="card-link"
+      >
+        {{ $.institution }}
+      </a>
+    {{ else }}
+      {{ .institution }}
+    {{ end }}
+  </h3>
+  <div class="cert-meta">{{ .degree }} ({{ .dates }})</div>
+  <p class="cert-summary card-summary">{{ .description }}</p>
+
+  {{ with .topics }}
+    <ul class="cert-topics">
+      {{ range . }}
+        <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+  {{ end }}
+</div>

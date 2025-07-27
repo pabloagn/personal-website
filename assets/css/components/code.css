@@ -3,7 +3,7 @@ code {
   background-color: var(--bg-secondary);
   border: solid 1px var(--bg-tertiary);
   border-radius: var(--radius-default);
-  padding: 0.15rem 0.40rem;
+  padding: 0.15rem 0.35rem;
 }
 
 /* Code block wrapper */
@@ -15,6 +15,7 @@ code {
   overflow: hidden;
   border: 1px solid var(--bg-tertiary);
   box-shadow: var(--shadow-md);
+  scrollbar-width: none !important;  /* Firefox */
 }
 
 .highlight pre {

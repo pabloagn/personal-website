@@ -1,7 +1,8 @@
 :root {
   --font-sans: "Work Sans", sans-serif;
-  --font-serif: "EB Garamond", serif;
-  --font-mono: "IBM Plex Mono", "SF Mono", "Fira Code", monospace;
+  --font-serif: "EB Garamond", "Spectral", serif;
+  --font-mono: "JuliaMono", "IBM Plex Mono", "SF Mono", "Fira Code", monospace;
+  /* --font-mono: "Iosevka", "IBM Plex Mono", "SF Mono", "Fira Code", monospace; */
 
   --font-size-0: 0.75rem; /* 12px */
   --font-size-1: 0.875rem; /* 14px */

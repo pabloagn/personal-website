@@ -1,0 +1,32 @@
+[
+  {
+    "institution": "University of Bristol",
+    "degree": "M.Sc. Data Science",
+    "dates": "Sep 2024 — Sep 2025 (expected)",
+    "url": "https://www.bristol.ac.uk/study/postgraduate/taught/msc-data-science/",
+    "description": "Dissertation on infrastructure poverty in the UK, building a reproducible open-source index and analytics framework.",
+    "topics": [
+      "Composite Index Design",
+      "Open Data Engineering",
+      "Geospatial + Socioeconomic Analytics"
+    ]
+  },
+  {
+    "institution": "École Polytechnique Fédérale de Lausanne (EPFL)",
+    "degree": "Specialization in Functional Programming in Scala",
+    "dates": "Jan 2024 — Ongoing",
+    "url": "https://www.coursera.org/specializations/scala"
+  },
+  {
+    "institution": "Universidad Iberoamericana",
+    "degree": "B.Sc. in Chemical Engineering",
+    "dates": "2015 — 2019",
+    "url": "https://licenciaturas.ibero.mx/ingenieria-quimica",
+    "description": "Led biomass geospatial research under Ph.D. Arcelus. Built ETL pipelines and spatial workflows with GeoPandas, PostGIS.",
+    "topics": [
+      "Geospatial ETL",
+      "Automated data validation",
+      "Python geospatial stack"
+    ]
+  }
+]

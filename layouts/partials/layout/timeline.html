@@ -1,0 +1,13 @@
+<div class="timeline">
+  {{ range .Professional }}
+    <div class="timeline-entry">
+      <div class="timeline-marker">
+        <div class="timeline-bullet"></div>
+      </div>
+      <div class="timeline-body">
+        <div class="timeline-date">{{ .dates }}</div>
+        {{ partial "cards/professional.html" . }}
+      </div>
+    </div>
+  {{ end }}
+</div>

@@ -1,0 +1,7 @@
+{{ $items := site.Data.professional }}
+
+<section class="professional-section">
+  <h2 class="section-heading">Professional Trajectory</h2>
+  {{ partial "grid/professional.html" (dict "Professional" $items) }}
+</section>
+

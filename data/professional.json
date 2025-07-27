@@ -1,0 +1,40 @@
+[
+  {
+    "company": "NielsenIQ",
+    "position": "Data Scientist, New Product Design",
+    "dates": "Jan 2022 — Sep 2024",
+    "company_url": "https://nielseniq.com/global/en/",
+    "description": "Designed and deployed 3 ML data products generating ~$2M/year. Built pipelines with PySpark/Scala, containerized via Docker, orchestrated via Airflow, and deployed to Databricks.",
+    "topics": [
+      "Custom ML algorithms (classification, LP, stochastic)",
+      "Geometric Brownian motion for probabilistic demand forecasting",
+      "Airflow DAG orchestration",
+      "DevOps practices & observability",
+      "Team leadership"
+    ]
+  },
+  {
+    "company": "Bunge North America",
+    "position": "Data Analyst, Wheat Procurement",
+    "dates": "Jan 2021 — Jan 2022",
+    "company_url": "https://www.bungenorthamerica.com/",
+    "description": "Built SAP-integrated Python ETL pipelines, reduced report times from 6h → 20m. Delivered > 91% forecast accuracy, $710K drag savings, and $10MM+ operational impact.",
+    "topics": [
+      "Forecasting with StatsModels, Scikit-learn",
+      "Contract optimization models",
+      "Daily logistics analytics for 180K+ MT"
+    ]
+  },
+  {
+    "company": "DUX Capital",
+    "position": "Data & Financial Analyst",
+    "dates": "Jan 2018 — Jan 2019",
+    "company_url": "https://www.duxcapital.vc/",
+    "description": "Led internal reporting automation and collaborated on investor website relaunch. Reduced manual overhead and standardized operational workflows.",
+    "topics": [
+      "Excel/VBA reporting automation",
+      "Python scripting",
+      "Cross-functional design & collaboration"
+    ]
+  }
+]

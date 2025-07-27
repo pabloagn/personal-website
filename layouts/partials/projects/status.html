@@ -1,0 +1,23 @@
+{{ $status := .Params.status | default "Unknown" }}
+{{ $class := "" }}
+{{ $label := $status }}
+
+{{- if eq $status "Shipped" }}
+  {{ $class = "status--shipped" }}
+{{- else if eq $status "Planned" }}
+  {{ $class = "status--planned" }}
+{{ else if eq $status "In Progress" }}
+  {{ $class = "status--development" }}
+{{ else if eq $status "Archived" }}
+  {{ $class = "status--archived" }}
+{{ else if eq $status "Canceled" }}
+  {{ $class = "status--canceled" }}
+{{ else }}
+  {{ $class = "status--unknown" }}
+{{ end }}
+
+
+<div class="project-status {{ $class }}">
+  <span class="status-indicator"></span>
+  <span class="status-label">{{ $label }}</span>
+</div>

@@ -61,13 +61,13 @@
     {{ range $major }}
       <div class="lang-label">
         <span class="lang-dot" style="background-color: {{ .color }}"></span>
-        <span><b>{{ .name }}</b> ({{ .percent }}%)</span>
+        <span><p class="lang-label-text">{{ .name }}:</p> {{ .percent }}%</span>
       </div>
     {{ end }}
     {{ if gt $othersTotal 0 }}
       <div class="lang-label">
         <span class="lang-dot" style="background-color: #999999"></span>
-        <span><b>Others</b> ({{ $othersTotal }}%)</span>
+        <span><p class="lang-label-text">Others:</p> {{ $othersTotal }}%</span>
       </div>
     {{ end }}
   </div>

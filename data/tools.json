@@ -1,0 +1,659 @@
+[
+  {
+    "name": "Python",
+    "slug": "python",
+    "summary": "A versatile, high-level programming language for data science, ML, and general-purpose development.",
+    "category": "Languages",
+    "color": "var(--rh-blue)",
+    "tags": ["Data Science", "Machine Learning", "Scripting"],
+    "featured": true
+  },
+  {
+    "name": "Scala",
+    "slug": "scala",
+    "summary": "A functional and object-oriented language for JVM, excellent for big data and concurrent systems.",
+    "category": "Languages",
+    "color": "var(--rh-red)",
+    "tags": ["Functional", "JVM", "Big Data"],
+    "featured": true
+  },
+  {
+    "name": "SQL",
+    "slug": "sql",
+    "summary": "Standard language for relational database management and data querying.",
+    "category": "Languages",
+    "color": "var(--rh-orange)",
+    "tags": ["Database", "Querying", "Analytics"],
+    "featured": true
+  },
+  {
+    "name": "Nix",
+    "slug": "nix",
+    "summary": "A purely functional package manager and system configuration language.",
+    "category": "Languages",
+    "color": "var(--rh-purple)",
+    "tags": ["Functional", "Package Management", "DevOps"],
+    "featured": true
+  },
+  {
+    "name": "Bash",
+    "slug": "bash",
+    "summary": "Unix shell and command language for system administration and automation.",
+    "category": "Languages",
+    "color": "var(--rh-green)",
+    "tags": ["Shell", "Automation", "System Administration"],
+    "featured": true
+  },
+  {
+    "name": "Rust",
+    "slug": "rust",
+    "summary": "A systems programming language focused on safety, speed, and concurrency.",
+    "category": "Languages",
+    "color": "var(--rh-orange)",
+    "tags": ["Systems", "Memory Safety", "Performance"],
+    "featured": true
+  },
+  {
+    "name": "Julia",
+    "slug": "julia",
+    "summary": "A high-performance programming language for numerical computing, combining speed and expressiveness.",
+    "category": "Languages",
+    "color": "var(--rh-purple)",
+    "tags": ["Scientific", "Numerical", "LLVM"],
+    "featured": true
+  },
+  {
+    "name": "Haskell",
+    "slug": "haskell",
+    "summary": "A purely functional programming language with strong static typing and lazy evaluation.",
+    "category": "Languages",
+    "color": "var(--rh-purple)",
+    "tags": ["Functional", "Pure", "Type System"],
+    "featured": true
+  },
+  {
+    "name": "Go",
+    "slug": "go",
+    "summary": "A statically typed, compiled language designed for simplicity and efficiency.",
+    "category": "Languages",
+    "color": "var(--rh-teal)",
+    "tags": ["Concurrent", "Simple", "Fast"],
+    "featured": true
+  },
+  {
+    "name": "C",
+    "slug": "c",
+    "summary": "A low-level, procedural programming language for system programming.",
+    "category": "Languages",
+    "color": "var(--rh-slate)",
+    "tags": ["Systems", "Low-level", "Performance"],
+    "featured": false
+  },
+  {
+    "name": "C++",
+    "slug": "cpp",
+    "summary": "An extension of C with object-oriented features for systems and application development.",
+    "category": "Languages",
+    "color": "var(--rh-blue)",
+    "tags": ["Object-oriented", "Systems", "Performance"],
+    "featured": false
+  },
+  {
+    "name": "TypeScript",
+    "slug": "typescript",
+    "summary": "A typed superset of JavaScript that compiles to plain JavaScript.",
+    "category": "Languages",
+    "color": "var(--rh-blue)",
+    "tags": ["Web", "Typed", "JavaScript"],
+    "featured": false
+  },
+  {
+    "name": "Node.js",
+    "slug": "nodejs",
+    "summary": "A JavaScript runtime built on Chrome's V8 engine for server-side development.",
+    "category": "Runtime",
+    "color": "var(--rh-green)",
+    "tags": ["JavaScript", "Server", "Runtime"],
+    "featured": false
+  },
+  {
+    "name": "TensorFlow",
+    "slug": "tensorflow",
+    "summary": "An open-source machine learning framework for deep learning and neural networks.",
+    "category": "ML & Analytics",
+    "color": "var(--rh-orange)",
+    "tags": ["Deep Learning", "Neural Networks", "Google"],
+    "featured": true
+  },
+  {
+    "name": "PyTorch",
+    "slug": "pytorch",
+    "summary": "A dynamic deep learning framework with strong GPU acceleration and Python integration.",
+    "category": "ML & Analytics",
+    "color": "var(--rh-red)",
+    "tags": ["Deep Learning", "Dynamic", "Research"],
+    "featured": true
+  },
+  {
+    "name": "Power BI",
+    "slug": "powerbi",
+    "summary": "Microsoft's business intelligence platform for data visualization and analytics.",
+    "category": "ML & Analytics",
+    "color": "var(--rh-yellow)",
+    "tags": ["Business Intelligence", "Visualization", "Microsoft"],
+    "featured": true
+  },
+  {
+    "name": "XGBoost",
+    "slug": "xgboost",
+    "summary": "An optimized gradient boosting framework for machine learning competitions and production.",
+    "category": "ML & Analytics",
+    "color": "var(--rh-green)",
+    "tags": ["Gradient Boosting", "Competition", "Performance"],
+    "featured": true
+  },
+  {
+    "name": "Hugging Face",
+    "slug": "huggingface",
+    "summary": "A platform and library ecosystem for natural language processing and transformers.",
+    "category": "ML & Analytics",
+    "color": "var(--rh-yellow)",
+    "tags": ["NLP", "Transformers", "Community"],
+    "featured": false
+  },
+  {
+    "name": "Scikit-learn",
+    "slug": "sklearn",
+    "summary": "A comprehensive machine learning library for Python with simple and efficient tools.",
+    "category": "ML & Analytics",
+    "color": "var(--rh-blue)",
+    "tags": ["Machine Learning", "Python", "Classical ML"],
+    "featured": true
+  },
+  {
+    "name": "Pandas",
+    "slug": "pandas",
+    "summary": "A powerful data manipulation and analysis library for Python.",
+    "category": "Data & Analytics",
+    "color": "var(--rh-blue)",
+    "tags": ["Data Manipulation", "Analysis", "Python"],
+    "featured": true
+  },
+  {
+    "name": "Polars",
+    "slug": "polars",
+    "summary": "A fast DataFrame library for Rust and Python with lazy evaluation.",
+    "category": "Data & Analytics",
+    "color": "var(--rh-orange)",
+    "tags": ["DataFrame", "Fast", "Lazy Evaluation"],
+    "featured": true
+  },
+  {
+    "name": "NumPy",
+    "slug": "numpy",
+    "summary": "The fundamental package for scientific computing with Python.",
+    "category": "Data & Analytics",
+    "color": "var(--rh-blue)",
+    "tags": ["Scientific Computing", "Arrays", "Python"],
+    "featured": false
+  },
+  {
+    "name": "PyArrow",
+    "slug": "pyarrow",
+    "summary": "Python bindings for Apache Arrow columnar in-memory analytics.",
+    "category": "Data & Analytics",
+    "color": "var(--rh-red)",
+    "tags": ["Columnar", "Performance", "Arrow"],
+    "featured": false
+  },
+  {
+    "name": "Apache Spark",
+    "slug": "spark",
+    "summary": "A unified engine for large-scale data processing with built-in modules for streaming, SQL, ML and graph processing.",
+    "category": "Data & Streaming",
+    "color": "var(--rh-orange)",
+    "tags": ["Big Data", "Distributed", "Analytics"],
+    "featured": true
+  },
+  {
+    "name": "Kafka",
+    "slug": "kafka",
+    "summary": "A distributed event streaming platform for high-throughput data pipelines and streaming analytics.",
+    "category": "Data & Streaming",
+    "color": "var(--rh-slate)",
+    "tags": ["Streaming", "Event-driven", "Distributed"],
+    "featured": true
+  },
+  {
+    "name": "Flink",
+    "slug": "flink",
+    "summary": "A framework for stateful computations over data streams with low latency and high throughput.",
+    "category": "Data & Streaming",
+    "color": "var(--rh-magenta)",
+    "tags": ["Stream Processing", "Low Latency", "Stateful"],
+    "featured": false
+  },
+  {
+    "name": "Terraform",
+    "slug": "terraform",
+    "summary": "Infrastructure as code software tool for building, changing and versioning infrastructure safely and efficiently.",
+    "category": "Cloud & Infrastructure",
+    "color": "var(--rh-purple)",
+    "tags": ["Infrastructure as Code", "Multi-cloud", "Provisioning"],
+    "featured": true
+  },
+  {
+    "name": "AWS SageMaker",
+    "slug": "aws-sagemaker",
+    "summary": "Fully managed service for building, training, and deploying machine learning models at scale.",
+    "category": "Cloud & Infrastructure",
+    "color": "var(--rh-orange)",
+    "tags": ["ML", "Training", "Inference"],
+    "featured": true
+  },
+  {
+    "name": "AWS Bedrock",
+    "slug": "aws-bedrock",
+    "summary": "Serverless platform for building and deploying generative AI applications using foundation models.",
+    "category": "Cloud & Infrastructure",
+    "color": "var(--rh-orange)",
+    "tags": ["Generative AI", "LLMs", "Foundation Models"],
+    "featured": true
+  },
+  {
+    "name": "AWS Comprehend",
+    "slug": "aws-comprehend",
+    "summary": "NLP service for entity extraction, sentiment analysis, topic modeling, and language detection.",
+    "category": "Cloud & Infrastructure",
+    "color": "var(--rh-orange)",
+    "tags": ["NLP", "Text Analysis", "Language"],
+    "featured": true
+  },
+  {
+    "name": "AWS Forecast",
+    "slug": "aws-forecast",
+    "summary": "Fully managed service for time-series forecasting using machine learning, no ML experience required.",
+    "category": "Cloud & Infrastructure",
+    "color": "var(--rh-orange)",
+    "tags": ["Time Series", "Forecasting", "ML"],
+    "featured": true
+  },
+  {
+    "name": "AWS Glue",
+    "slug": "aws-glue",
+    "summary": "Serverless data integration service for ETL, cataloging, and preparing data for analytics and ML.",
+    "category": "Cloud & Infrastructure",
+    "color": "var(--rh-orange)",
+    "tags": ["ETL", "Data Prep", "Data Engineering"],
+    "featured": true
+  },
+  {
+    "name": "AWS Lambda",
+    "slug": "aws-lambda",
+    "summary": "Serverless compute service that runs your code in response to events and automatically manages the underlying infrastructure.",
+    "category": "Cloud & Infrastructure",
+    "color": "var(--rh-orange)",
+    "tags": ["Serverless", "Compute", "Functions"],
+    "featured": true
+  },
+  {
+    "name": "AWS S3",
+    "slug": "aws-s3",
+    "summary": "Scalable object storage service used for storing and retrieving any amount of data from anywhere.",
+    "category": "Cloud & Infrastructure",
+    "color": "var(--rh-orange)",
+    "tags": ["Storage", "Object Storage", "Backup"],
+    "featured": true
+  },
+  {
+    "name": "AWS CloudWatch",
+    "slug": "aws-cloudwatch",
+    "summary": "Monitoring and observability service for logs, metrics, and application performance on AWS.",
+    "category": "Cloud & Infrastructure",
+    "color": "var(--rh-orange)",
+    "tags": ["Monitoring", "Metrics", "Logging"],
+    "featured": true
+  },
+  {
+    "name": "Azure",
+    "slug": "azure",
+    "summary": "Microsoft's cloud computing service for building, testing, deploying, and managing applications.",
+    "category": "Cloud & Infrastructure",
+    "color": "var(--rh-blue)",
+    "tags": ["Cloud", "Microsoft", "Enterprise"],
+    "featured": false
+  },
+  {
+    "name": "GCP",
+    "slug": "gcp",
+    "summary": "Google Cloud Platform offering computing, data storage, data analytics and machine learning services.",
+    "category": "Cloud & Infrastructure",
+    "color": "var(--rh-green)",
+    "tags": ["Cloud", "Google", "ML Services"],
+    "featured": false
+  },
+  {
+    "name": "Docker",
+    "slug": "docker",
+    "summary": "A platform for developing, shipping, and running applications using containerization technology.",
+    "category": "Cloud & Infrastructure",
+    "color": "var(--rh-blue)",
+    "tags": ["Containerization", "DevOps", "Deployment"],
+    "featured": true
+  },
+  {
+    "name": "Kubernetes",
+    "slug": "kubernetes",
+    "summary": "An open-source container orchestration platform for automating deployment, scaling, and management.",
+    "category": "Cloud & Infrastructure",
+    "color": "var(--rh-blue)",
+    "tags": ["Container Orchestration", "Scaling", "Cloud Native"],
+    "featured": true
+  },
+  {
+    "name": "MLflow",
+    "slug": "mlflow",
+    "summary": "An open source platform for managing the end-to-end machine learning lifecycle.",
+    "category": "MLOps",
+    "color": "var(--rh-teal)",
+    "tags": ["ML Lifecycle", "Experiment Tracking", "Model Management"],
+    "featured": true
+  },
+  {
+    "name": "Kubeflow",
+    "slug": "kubeflow",
+    "summary": "A machine learning toolkit for Kubernetes to deploy ML workflows on Kubernetes clusters.",
+    "category": "MLOps",
+    "color": "var(--rh-blue)",
+    "tags": ["ML on Kubernetes", "Pipelines", "Workflows"],
+    "featured": true
+  },
+  {
+    "name": "NixOS",
+    "slug": "nixos",
+    "summary": "A Linux distribution built on the Nix package manager with declarative configuration management.",
+    "category": "Operating Systems",
+    "color": "var(--rh-purple)",
+    "tags": ["Linux", "Declarative", "Reproducible"],
+    "featured": true
+  },
+  {
+    "name": "Linux",
+    "slug": "linux",
+    "summary": "A family of open-source Unix-like operating systems based on the Linux kernel.",
+    "category": "Operating Systems",
+    "color": "var(--rh-slate)",
+    "tags": ["Open Source", "Unix-like", "Server"],
+    "featured": false
+  },
+  {
+    "name": "PostgreSQL",
+    "slug": "postgresql",
+    "summary": "A powerful, open source object-relational database system with advanced features.",
+    "category": "Databases",
+    "color": "var(--rh-blue)",
+    "tags": ["Relational", "ACID", "Open Source"],
+    "featured": true
+  },
+  {
+    "name": "Qdrant",
+    "slug": "qdrant",
+    "summary": "A vector similarity search engine optimized for extended filtering support.",
+    "category": "Databases",
+    "color": "var(--rh-red)",
+    "tags": ["Vector Search", "Similarity", "AI"],
+    "featured": true
+  },
+  {
+    "name": "React",
+    "slug": "react",
+    "summary": "A JavaScript library for building user interfaces with component-based architecture.",
+    "category": "Frontend",
+    "color": "var(--rh-teal)",
+    "tags": ["UI Library", "Component-based", "JavaScript"],
+    "featured": false
+  },
+  {
+    "name": "FastAPI",
+    "slug": "fastapi",
+    "summary": "A modern, fast web framework for building APIs with Python based on standard Python type hints.",
+    "category": "Backend",
+    "color": "var(--rh-green)",
+    "tags": ["API", "Fast", "Type Hints"],
+    "featured": true
+  },
+  {
+    "name": "Streamlit",
+    "slug": "streamlit",
+    "summary": "An open-source framework for creating data science and machine learning web applications.",
+    "category": "Web Frameworks",
+    "color": "var(--rh-red)",
+    "tags": ["Data Apps", "Python", "Rapid Prototyping"],
+    "featured": false
+  },
+  {
+    "name": "JAX",
+    "slug": "jax",
+    "summary": "A Python library for accelerated scientific computing and machine learning research.",
+    "category": "ML & Analytics",
+    "color": "var(--rh-orange)",
+    "tags": ["Scientific Computing", "GPU", "Research"],
+    "featured": false
+  },
+  {
+    "name": "Ray",
+    "slug": "ray",
+    "summary": "A unified framework for scaling AI and Python applications from laptops to clusters.",
+    "category": "Distributed Computing",
+    "color": "var(--rh-blue)",
+    "tags": ["Distributed", "Scaling", "AI"],
+    "featured": true
+  },
+  {
+    "name": "LangChain",
+    "slug": "langchain",
+    "summary": "A framework for developing applications powered by language models with chaining capabilities.",
+    "category": "LLM & AI",
+    "color": "var(--rh-green)",
+    "tags": ["LLM", "Chaining", "AI Applications"],
+    "featured": false
+  },
+  {
+    "name": "LlamaIndex",
+    "slug": "llamaindex",
+    "summary": "A data framework for connecting custom data sources to large language models.",
+    "category": "LLM & AI",
+    "color": "var(--rh-purple)",
+    "tags": ["LLM", "Data Indexing", "RAG"],
+    "featured": false
+  },
+  {
+    "name": "GitHub Actions",
+    "slug": "github-actions",
+    "summary": "GitHub's CI/CD platform for automating workflows directly in your repository.",
+    "category": "CI/CD",
+    "color": "var(--rh-slate)",
+    "tags": ["CI/CD", "Automation", "GitHub"],
+    "featured": true
+  },
+  {
+    "name": "Argo CD",
+    "slug": "argocd",
+    "summary": "A declarative, GitOps continuous delivery tool for Kubernetes applications.",
+    "category": "CI/CD",
+    "color": "var(--rh-orange)",
+    "tags": ["GitOps", "Kubernetes", "Continuous Delivery"],
+    "featured": true
+  },
+  {
+    "name": "Airflow",
+    "slug": "airflow",
+    "summary": "A platform to programmatically author, schedule and monitor workflows as DAGs.",
+    "category": "Workflow Orchestration",
+    "color": "var(--rh-teal)",
+    "tags": ["Workflow", "DAG", "Scheduling"],
+    "featured": false
+  },
+  {
+    "name": "Databricks",
+    "slug": "databricks",
+    "summary": "A unified analytics platform for data science, data engineering and machine learning.",
+    "category": "Data Platforms",
+    "color": "var(--rh-red)",
+    "tags": ["Analytics", "Collaborative", "Spark"],
+    "featured": false
+  },
+  {
+    "name": "SOPS",
+    "slug": "sops",
+    "summary": "A simple and flexible tool for managing secrets in code repositories using encryption.",
+    "category": "Security",
+    "color": "var(--rh-purple)",
+    "tags": ["Secrets Management", "Encryption", "GitOps"],
+    "featured": true
+  },
+  {
+    "name": "pnpm",
+    "slug": "pnpm",
+    "summary": "A fast, disk space efficient package manager for JavaScript with strict dependency resolution.",
+    "category": "Package Managers",
+    "color": "var(--rh-orange)",
+    "tags": ["Package Manager", "JavaScript", "Efficient"],
+    "featured": false
+  },
+  {
+    "name": "Turborepo",
+    "slug": "turborepo",
+    "summary": "A high-performance build system for JavaScript and TypeScript codebases with intelligent caching.",
+    "category": "Build Tools",
+    "color": "var(--rh-red)",
+    "tags": ["Monorepo", "Build System", "Caching"],
+    "featured": false
+  },
+  {
+    "name": "Karpenter",
+    "slug": "karpenter",
+    "summary": "A high-performance Kubernetes node autoscaler for efficiently scaling compute resources on AWS EKS.",
+    "category": "Cloud & Infrastructure",
+    "color": "var(--rh-orange)",
+    "tags": ["Kubernetes", "Autoscaling", "AWS EKS"],
+    "featured": true
+  },
+  {
+    "name": "Istio",
+    "slug": "istio",
+    "summary": "An open-source service mesh that layers transparently onto existing distributed applications.",
+    "category": "Cloud & Infrastructure",
+    "color": "var(--rh-blue)",
+    "tags": ["Service Mesh", "Microservices", "Kubernetes"],
+    "featured": true
+  },
+  {
+    "name": "Oracle DB",
+    "slug": "oracle-db",
+    "summary": "A multi-model database management system known for its robust enterprise features and scalability.",
+    "category": "Databases",
+    "color": "var(--rh-red)",
+    "tags": ["Relational", "Enterprise", "Database"],
+    "featured": true
+  },
+  {
+    "name": "Apache Hadoop",
+    "slug": "hadoop",
+    "summary": "An open-source framework for distributed storage and processing of large datasets across clusters.",
+    "category": "Data & Streaming",
+    "color": "var(--rh-orange)",
+    "tags": ["Big Data", "Distributed Storage", "MapReduce"],
+    "featured": true
+  },
+  {
+    "name": "Grafana",
+    "slug": "grafana",
+    "summary": "An open-source platform for monitoring and observability, allowing visualization of metrics and logs.",
+    "category": "Monitoring & Observability",
+    "color": "var(--rh-orange)",
+    "tags": ["Monitoring", "Visualization", "Observability"],
+    "featured": true
+  },
+  {
+    "name": "SAP",
+    "slug": "sap",
+    "summary": "Enterprise resource planning (ERP) software used for managing business operations and customer relations.",
+    "category": "Enterprise Software",
+    "color": "var(--rh-blue)",
+    "tags": ["ERP", "Business Intelligence", "Data Integration"],
+    "featured": false
+  },
+  {
+    "name": "StatsModels",
+    "slug": "statsmodels",
+    "summary": "A Python module providing classes and functions for the estimation of many different statistical models.",
+    "category": "ML & Analytics",
+    "color": "var(--rh-blue)",
+    "tags": ["Statistical Modeling", "Python", "Econometrics"],
+    "featured": false
+  },
+  {
+    "name": "Home Manager",
+    "slug": "home-manager",
+    "summary": "A declarative configuration manager for user-specific dotfiles and packages on NixOS and other Linux systems.",
+    "category": "Operating Systems",
+    "color": "var(--rh-purple)",
+    "tags": ["Nix", "Declarative Configuration", "Dotfiles"],
+    "featured": true
+  },
+  {
+    "name": "NixOS-anywhere",
+    "slug": "nixos-anywhere",
+    "summary": "A tool for declaratively installing and deploying NixOS systems over SSH.",
+    "category": "Operating Systems",
+    "color": "var(--rh-purple)",
+    "tags": ["NixOS", "Deployment", "Infrastructure as Code"],
+    "featured": true
+  },
+  {
+    "name": "systemd",
+    "slug": "systemd",
+    "summary": "A suite of fundamental building blocks for a Linux operating system, including an init system and service manager.",
+    "category": "Operating Systems",
+    "color": "var(--rh-slate)",
+    "tags": ["Linux", "Init System", "Service Management"],
+    "featured": true
+  },
+  {
+    "name": "Just",
+    "slug": "justfile",
+    "summary": "A command runner for easily building and running project-specific recipes, similar to Makefiles.",
+    "category": "Build Tools",
+    "color": "var(--rh-green)",
+    "tags": ["Command Runner", "Automation", "Development"],
+    "featured": true
+  },
+  {
+    "name": "Age",
+    "slug": "age-encryption",
+    "summary": "A simple, modern, and secure file encryption tool with a minimalist interface.",
+    "category": "Security",
+    "color": "var(--rh-purple)",
+    "tags": ["Encryption", "Security", "CLI Tool"],
+    "featured": true
+  },
+  {
+    "name": "Vercel",
+    "slug": "vercel",
+    "summary": "A platform for frontend developers to deploy and host websites and web services, offering serverless functions and global CDN.",
+    "category": "Cloud & Infrastructure",
+    "color": "var(--rh-slate)",
+    "tags": ["Deployment", "Frontend", "Serverless"],
+    "featured": true
+  },
+  {
+    "name": "SCSS",
+    "slug": "scss",
+    "summary": "A preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS).",
+    "category": "Frontend",
+    "color": "var(--rh-magenta)",
+    "tags": ["CSS Preprocessor", "Web Development", "Styling"],
+    "featured": false
+  }
+]

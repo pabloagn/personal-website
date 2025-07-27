@@ -2,7 +2,7 @@
   display: block;
   margin: var(--space-lg) 0;
   padding: 20px;
-  border: 1px solid rgba(255,255,255,.12);
+  border: 1px solid var(--fg-muted-darker);
   border-radius: var(--radius-default);
 }
 
@@ -28,8 +28,8 @@
 
 .language-legend {
   font-size: 0.85em;
-  color: var(--text-quiet);
-  margin-top: 0.4em;
+  color: var(--fg-primary);
+  margin-top: 1rem;
   display: flex;
   gap: 1em;
   flex-wrap: wrap;
@@ -46,6 +46,13 @@
   align-items: center;
   gap: 0.4em;
   white-space: nowrap;
+}
+
+.lang-label-text {
+  font-size: var(--size-md);
+  display: inline-block;
+  padding: 0;
+  margin: 0;
 }
 
 .lang-dot {
