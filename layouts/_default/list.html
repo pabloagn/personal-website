@@ -10,9 +10,11 @@
     </header>
 
     <div class="list-content">
-      {{ range .Pages }}
-        {{ partial "card.html" . }}
-      {{ end }}
+      {{ partial "layout/grid.html" (dict
+        "Pages" (cond .IsNode .Paginator.Pages .Pages)
+        "class" "grid--2"
+        )
+      }}
     </div>
 
     {{ if .Paginator.HasPrev }}

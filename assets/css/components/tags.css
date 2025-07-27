@@ -1,3 +1,20 @@
+.card-tag-section {
+  margin-top: var(--space-md);
+}
+
+.card-tag-group + .card-tag-group {
+  margin-top: var(--space-sm);
+}
+
+.card-tag-heading {
+  font-size: var(--text-xs);
+  font-family: var(--font-mono);
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  margin-bottom: 0.25em;
+  letter-spacing: 0.05em;
+}
+
 /* Card Tags Div */
 .card-tags {
   padding: var(--space-sm) 0;
@@ -41,27 +58,28 @@
 }
 .tag--type:hover {
   background-color: var(--accent-blue);
+  border-color: var(--accent-blue);
   color: var(--bg-primary);
 }
 
 /* Category badge */
 .tag--category {
   background-color: transparent;
-  color: var(--fg-primary);
-  border-color: var(--fg-primary);
+  color: var(--fg-muted);
+  border-color: var(--fg-muted);
 }
 .tag--category:hover {
-  background-color: var(--accent-yellow);
+  background-color: var(--fg-muted);
   color: var(--bg-primary);
 }
 
 /* Tag label */
 .tag--label {
   background-color: transparent;
-  color: var(--accent-green);
-  border-color: var(--accent-green);
+  color: var(--fg-muted);
+  border-color: var(--fg-muted);
 }
 .tag--label:hover {
-  background-color: var(--accent-green);
+  background-color: var(--fg-muted);
   color: var(--bg-primary);
 }

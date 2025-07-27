@@ -2,13 +2,10 @@
 {{ $dataPath := printf "data/langstats/%s.json" $slug }}
 {{ $langData := slice }}
 
-<!-- Try to load from assets/data/ -->
 {{ with resources.Get $dataPath }}
   {{ $unmarshalled := . | transform.Unmarshal }}
   {{ $langData = index $unmarshalled "languages" }}
 {{ else }}
-  <p>dataPath: {{ $dataPath }}</p>
-  <div>WHAT</div>
   {{ $counts := dict }}
   {{ $excluded := slice "markdown" "md" "yaml" "yml" "json" "toml" "text" "console" "shell" "bash" "ini" "dockerfile" "makefile" }}
 
@@ -28,18 +25,51 @@
 {{ end }}
 
 {{ if $langData }}
+  <!-- Language Bar -->
   <div class="language-stack">
     {{ range $langData }}
+      {{ if ge (int .percent) 2 }}
+        <div
+          class="language-segment"
+          style="width: {{ .percent }}%; background-color: {{ .color }};"
+          title="{{ .name }}: {{ .percent }}%"
+        ></div>
+      {{ end }}
+    {{ end }}
+    {{ if gt (len (where $langData "percent" "lt" 2)) 0 }}
       <div
         class="language-segment"
-        style="width: {{ .percent }}%; background-color: {{ .color }};"
-        title="{{ .name }}: {{ .percent }}%"
+        style="background-color: #999999; flex-grow: 1;"
+        title="Others (<2%)"
       ></div>
     {{ end }}
   </div>
-  <div class="language-legend">
-    {{ range $langData }}
-      <span><b>{{ .name }}</b> ({{ .percent }}%)</span>
+
+  <!-- Language Legend -->
+  {{ $major := where $langData "percent" "ge" 2 }}
+  {{ $minor := where $langData "percent" "lt" 2 }}
+  {{ $othersPercent := slice }}
+  {{ range $minor }}
+    {{ $othersPercent = $othersPercent | append (int .percent) }}
+  {{ end }}
+  {{ $othersTotal := 0 }}
+  {{ range $othersPercent }}
+    {{ $othersTotal = add $othersTotal . }}
+  {{ end }}
+
+  <div class="language-legend language-legend--columns">
+    {{ range $major }}
+      <div class="lang-label">
+        <span class="lang-dot" style="background-color: {{ .color }}"></span>
+        <span><b>{{ .name }}</b> ({{ .percent }}%)</span>
+      </div>
+    {{ end }}
+    {{ if gt $othersTotal 0 }}
+      <div class="lang-label">
+        <span class="lang-dot" style="background-color: #999999"></span>
+        <span><b>Others</b> ({{ $othersTotal }}%)</span>
+      </div>
     {{ end }}
   </div>
 {{ end }}
+

@@ -14,7 +14,6 @@ h6 {
 }
 
 h1 {
-  border-bottom: 2px solid var(--bg-tertiary);
   font-size: var(--heading-xxl);
   margin-top: var(--space-xl);
   padding-bottom: var(--space-md);
@@ -34,7 +33,7 @@ h2 {
   font-size: var(--heading-xl);
   margin-top: var(--space-lg);
   padding-bottom: var(--space-sm);
-  border-bottom: 1px solid var(--bg-tertiary);
+  border-bottom: 1px solid var(--fg-muted-darker);
 }
 
 h3 {
@@ -82,6 +81,29 @@ a {
   transition: all var(--transition-default) ease;
 }
 
-single-content a:hover {
+.single-content a:hover {
   border-bottom-color: var(--accent-blue);
+}
+
+.single-content h1,
+.list-page h1,
+.single-page h1 {
+  border-bottom: 1px solid var(--fg-muted-darker);
+}
+
+/* Drop Caps */
+p.dropcap::first-letter {
+  /* float: left; */
+  font-family: var(--font-serif); /* Or whatever style you use */
+  font-size: 4rem;
+  line-height: 1;
+  font-weight: var(--font-weight-semibold);
+  padding: 0.25rem 0.5rem;
+  margin: 0.1rem 1rem 0 0;
+  border: 2px solid var(--fg-muted);
+  color: var(--fg-primary);
+  background: var(--bg-primary);
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
 }

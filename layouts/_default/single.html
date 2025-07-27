@@ -1,82 +1,95 @@
 {{ define "main" }}
-  <article class="single-page container-top">
-    <header class="single-header">
-      <h1 class="single-title">{{ .Title }}</h1>
-      <div class="single-meta">
-        <time class="single-date">{{ .Date.Format "2006.01.02" }}</time>
+  {{ $slug := .File.BaseFileName | urlize }}
+  {{ $section := .Section }}
+  {{ $img := printf "/images/%s/%s.jpg" $section $slug }}
 
-        {{ if .Params.categories }}
-          <div class="single-categories">
-            {{ range .Params.categories }}
+  {{ if (fileExists (printf "static%s" $img)) }}
+    <div class="single-hero-wrapper">
+      <img
+        src="{{ $img | relURL }}"
+        alt="Featured image for {{ .Title }}"
+        class="single-hero-image"
+      />
+    </div>
+  {{ end }}
+
+
+  <div class="container-top">
+    <header class="single-hero-card glass--3-3">
+      <div class="single-meta-top">
+        <div class="single-meta-reading">{{ .ReadingTime }} min read</div>
+
+        <div class="single-meta-categories">
+          {{ partial "tags/post-type.html" . }}
+          {{ with .Params.categories }}
+            {{ range . }}
               <a
                 href="{{ "/categories/" | relURL }}{{ . | urlize }}"
-                class="category-link"
+                class="tag tag--category"
                 >{{ . }}</a
               >
             {{ end }}
-          </div>
-        {{ end }}
+          {{ end }}
+        </div>
 
-        {{ if .Params.technologies }}
-          <div class="single-technologies">
-            {{ range .Params.technologies }}
+        <div class="single-meta-tags">
+          {{ with .Params.tags }}
+            {{ range . }}
               <a
-                href="{{ "/technologies/" | relURL }}{{ . | urlize }}"
-                class="technology-link"
+                href="{{ "/tags/" | relURL }}{{ . | urlize }}"
+                class="tag tag--label"
                 >{{ . }}</a
               >
             {{ end }}
-          </div>
-        {{ end }}
+          {{ end }}
+        </div>
+      </div>
 
-        {{ if .Params.difficulty }}
-          <div class="single-difficulty">
-            {{ range .Params.difficulty }}
-              <span class="difficulty-badge difficulty-{{ . }}">{{ . }}</span>
-            {{ end }}
-          </div>
+      <h1 class="single-title">{{ .Title }}</h1>
+
+      {{ with .Params.catchphrase }}
+        <p class="single-catchphrase"><em>{{ . }}</em></p>
+      {{ end }}
+
+
+      <p class="hero-divider">─────── § ───────</p>
+
+      <div class="single-meta-bottom">
+        <span>◉ {{ .Date.Format "Jan 02, 2006" }}</span>
+        {{ with .Lastmod }}
+          <span>◎ {{ .Format "Jan 02, 2006" }}</span>
         {{ end }}
       </div>
     </header>
 
     {{ partial "toc.html" . }}
 
-    <div class="single-content">
-      {{ .Content }}
+
+    <div class="single-page">
+      <div class="single-content">
+        {{ .Content }}
+      </div>
+
+      {{ if .Params.tags }}
+        <footer class="single-footer">
+          <div class="single-tags">
+            <span class="tags-label">Tags:</span>
+            {{ range .Params.tags }}
+              <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="tag-link"
+                >{{ . }}</a
+              >
+            {{ end }}
+          </div>
+        </footer>
+      {{ end }}
+
+      {{ partial "single/navigation.html" . }}
     </div>
+  </div>
 
-    {{ if .Params.tags }}
-      <footer class="single-footer">
-        <div class="single-tags">
-          <span class="tags-label">Tags:</span>
-          {{ range .Params.tags }}
-            <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="tag-link"
-              >{{ . }}</a
-            >
-          {{ end }}
-        </div>
-      </footer>
+  {{ with .Section }}
+    {{ if in (slice "blog" "deep-dive" "project") . }}
+      {{ partial "progress.html" . }}
     {{ end }}
-
-    {{ if or .NextInSection .PrevInSection }}
-      <nav class="single-nav">
-        {{ if .PrevInSection }}
-          <div class="single-nav-item single-nav-prev">
-            <span class="single-nav-label">◀ Previous</span>
-            <a href="{{ .PrevInSection.Permalink }}" class="single-nav-link"
-              >{{ .PrevInSection.Title }}</a
-            >
-          </div>
-        {{ end }}
-        {{ if .NextInSection }}
-          <div class="single-nav-item single-nav-next">
-            <span class="single-nav-label">Next ▶</span>
-            <a href="{{ .NextInSection.Permalink }}" class="single-nav-link"
-              >{{ .NextInSection.Title }}</a
-            >
-          </div>
-        {{ end }}
-      </nav>
-    {{ end }}
-  </article>
+  {{ end }}
 {{ end }}

@@ -1,0 +1,26 @@
+{{ $related := slice }}
+{{ $toolSlugs := .Params.tools }}
+
+{{ if $toolSlugs }}
+  {{ range $slug := $toolSlugs }}
+    {{ with site.GetPage (printf "tools/%s" $slug) }}
+      {{ $related = $related | append . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if gt (len $related) 0 }}
+<section class="related-tools">
+  <h3 class="section-heading">Uses These Tools</h3>
+  <ul class="tool-list">
+    {{ range $related }}
+      <li>
+        <a href="{{ .RelPermalink }}" class="tag tag--label">
+          {{ .Title }}
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
+

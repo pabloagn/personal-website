@@ -1,0 +1,7 @@
+{{ define "main" }}
+  <div class="content-section container-top single-page">
+    {{ .Content }}
+
+    {{ partial "mosaic.html" . }}
+  </div>
+{{ end }}

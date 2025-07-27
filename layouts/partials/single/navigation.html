@@ -1,0 +1,20 @@
+<nav class="single-nav">
+  {{ if .PrevInSection }}
+    <div class="single-nav-item single-nav-prev">
+      <span class="single-nav-label">◀ Previous</span>
+      <a href="{{ .PrevInSection.Permalink }}" class="single-nav-link">
+        {{ .PrevInSection.Title }}
+      </a>
+    </div>
+  {{ end }}
+
+  {{ if .NextInSection }}
+    <div class="single-nav-item single-nav-next">
+      <span class="single-nav-label">Next ▶</span>
+      <a href="{{ .NextInSection.Permalink }}" class="single-nav-link">
+        {{ .NextInSection.Title }}
+      </a>
+    </div>
+  {{ end }}
+</nav>
+

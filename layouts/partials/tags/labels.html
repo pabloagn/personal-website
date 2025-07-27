@@ -1,22 +1,36 @@
-{{ with .Params.categories }}
-  <div class="card-tags">
-    {{ range . }}
-      <a
-        href="{{ "/categories/" | relURL }}{{ . | urlize }}"
-        class="tag tag--category"
-      >
-        {{ . }}
-      </a>
+{{ if or .Params.categories .Params.tags }}
+  <div class="card-tag-section">
+    {{ with .Params.categories }}
+      <div class="card-tag-group">
+        <div class="card-tag-heading">Categories</div>
+        <div class="card-tags">
+          {{ range . }}
+            <a
+              href="{{ "/categories/" | relURL }}{{ . | urlize }}"
+              class="tag tag--category"
+            >
+              {{ . }}
+            </a>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+
+    {{ with .Params.tags }}
+      <div class="card-tag-group">
+        <div class="card-tag-heading">Tags</div>
+        <div class="card-tags">
+          {{ range . }}
+            <a
+              href="{{ "/tags/" | relURL }}{{ . | urlize }}"
+              class="tag tag--label"
+            >
+              {{ . }}
+            </a>
+          {{ end }}
+        </div>
+      </div>
     {{ end }}
   </div>
 {{ end }}
 
-{{ with .Params.tags }}
-  <div class="card-tags">
-    {{ range . }}
-      <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="tag tag--label">
-        {{ . }}
-      </a>
-    {{ end }}
-  </div>
-{{ end }}

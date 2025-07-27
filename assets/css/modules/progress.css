@@ -1,0 +1,31 @@
+.scroll-indicator {
+  position: fixed;
+  padding: var(--space-md) var(--space-lg);
+  bottom: var(--space-sm);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 8px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  z-index: 999;
+}
+
+.glass-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  border-radius: inherit;
+}
+
+/* Progress bar inside pill */
+.scroll-indicator-bar {
+  height: 100%;
+  width: 0;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: inherit;
+  transition: width 0.1s ease-out;
+  box-shadow: 0 0 8px var(--fg-primary), 0 0 4px var(--fg-primary);
+}
+
+

@@ -1,0 +1,99 @@
+/* Full-width hero container */
+.featured-hero {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  height: 60vh;
+  max-height: 600px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Background image */
+.featured-hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+/* Glass overlay wrapper */
+.featured-overlay {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  margin-top: -5rem;
+  padding: 0 var(--space-lg);
+}
+
+/* Floating glass card */
+.featured-content {
+  background: rgba(20, 20, 20, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  max-width: var(--max-width);
+  width: 100%;
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+}
+
+/* Title */
+.featured-title {
+  font-size: var(--text-3xl);
+  font-weight: 600;
+  margin: var(--space-md) 0 var(--space-sm);
+}
+
+/* Catchphrase */
+.featured-catchphrase {
+  font-size: var(--text-md);
+  font-style: italic;
+  color: var(--fg-muted);
+  margin-bottom: var(--space-md);
+}
+
+/* Top meta row */
+.featured-meta {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  justify-content: center;
+  margin-bottom: var(--space-sm);
+  color: var(--fg-muted);
+}
+
+/* Tag and category labels (reuse existing styles) */
+.featured-meta .tag {
+  margin: 0 var(--space-2xs);
+}
+
+/* Custom separator line */
+.featured-separator {
+  width: 40px;
+  height: 2px;
+  background: var(--fg-muted);
+  margin: var(--space-lg) auto;
+}
+
+/* Dates row */
+.featured-dates {
+  font-size: var(--text-xs);
+  color: var(--fg-muted);
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+}
+

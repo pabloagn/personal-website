@@ -1,0 +1,15 @@
+<article class="card card--tool">
+  <div class="card-content">
+    <h3 class="card-title">
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </h3>
+    <p class="card-summary">{{ .Params.summary }}</p>
+    {{ with .Params.tags }}
+      <div class="card-tags">
+        {{ range . }}
+          <span class="tag tag--label">{{ . }}</span>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</article>

@@ -1,3 +1,13 @@
+::selection {
+  background: var(--rh-yellow);
+  color: var(--bg-primary);
+}
+
+::-moz-selection {
+  background: var(--rh-yellow);
+  color: var(--bg-primary);
+}
+
 html,
 body {
   margin: 0;
@@ -16,7 +26,7 @@ body {
 
 .content-section {
   padding: var(--space-md) var(--space-lg);
-  background-color: var(--bg-primary); 
+  background-color: var(--bg-primary);
 }
 
 .main-content {
@@ -29,14 +39,14 @@ body {
   padding-right: 30px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: var(--space-4xl);
+  padding: var(--space-4xl) var(--space-lg);
 }
 
 .container-mid {
   max-width: var(--max-width);
   margin-left: auto;
   margin-right: auto;
-  padding-top: 20px;
+  padding: 20px var(--space-lg);
 }
 
 .recent-container {
@@ -53,7 +63,7 @@ body {
 .single-header {
   margin-bottom: var(--space-xl);
   padding-bottom: var(--space-lg);
-  border-bottom: 1px solid var(--bg-tertiary);
+  border-bottom: 1px solid var(--fg-muted-darker);
   text-align: center;
 }
 

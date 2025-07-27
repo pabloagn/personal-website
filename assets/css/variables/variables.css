@@ -27,8 +27,8 @@
   --heading-line-height: var(--line-height-tight);
   --body-line-height: var(--line-height-base);
 
-  --heading-weight: var(--font-weight-regular);
-  --body-weight: var(--font-weight-regular);
+  --heading-weight: var(--font-weight-normal);
+  --body-weight: var(--font-weight-normal);
 
   --heading-spacing-top: var(--space-lg);
   --heading-spacing-bottom: var(--space-md);
@@ -57,6 +57,7 @@
   --fg-secondary: var(--rh-fg-dim);
   --fg-tertiary: var(--rh-fg-light);
   --fg-muted: var(--rh-base07);
+  --fg-muted-darker: var(--rh-bg-light);
 
   --accent-blue: var(--rh-blue);
   --accent-green: var(--rh-green);

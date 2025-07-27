@@ -1,7 +1,7 @@
 /* Table‑of‑Contents */
 .toc {
   background-color: var(--bg-primary) !important;
-  border: 1px solid var(--bg-tertiary);
+  border: 1px solid var(--fg-muted-darker);
   border-radius: var(--radius-default) !important;
   padding: 0;
   margin: var(--space-lg) 0;
@@ -15,7 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--bg-tertiary);
+  border-bottom: 1px solid var(--fg-muted-darker);
 }
 
 .toc-title {
@@ -56,24 +56,12 @@
   padding: 0;
 }
 
-/* .toc-tree { */
-/*   font-family: var(--font-code); */
-/*   font-size: var(--text-sm); */
-/*   line-height: 1.6; */
-/* } */
-/**/
-/* .toc-item { */
-/*   position: relative; */
-/*   margin: 0; */
-/*   transition: all 0.2s ease; */
-/* } */
-
 .toc-link {
   align-items: baseline;
   border: none;
   color: var(--fg-secondary);
   display: flex;
-  padding: 0;
+  padding: 2px 0;
   position: relative;
   transition: transform 0.2s ease;
   z-index: 2;

@@ -8,6 +8,7 @@ import { initHeroReactor } from "./modules/heroReactor.js";
 import { initSiteSearch } from "./modules/search.js";
 import { enableDatablockSort } from "./modules/datablockSort.js";
 import { enableLanguageStackTooltips } from "./modules/languageStack.js";
+import { progressScroll } from "./modules/progressBar.js";
 
 function boot() {
   initHeaderScroll();
@@ -15,9 +16,10 @@ function boot() {
   initCodeDecor();
   initCodeLineHover();
   initCallouts();
-  initSiteSearch();
+  progressScroll();
   enableDatablockSort();
   enableLanguageStackTooltips();
+  // initSiteSearch();
   // initHeaderAnchors();
 }
 

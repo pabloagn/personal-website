@@ -1,0 +1,59 @@
+{{ $slug := .File.BaseFileName | urlize }}
+{{ $section := .Section }}
+{{ $img := printf "/images/%s/%s.jpg" $section $slug }}
+{{ $staticPath := printf "static%s" $img }}
+
+{{ if fileExists $staticPath }}
+  <section class="featured-hero">
+    <img
+      src="{{ $img | relURL }}"
+      alt="Featured image for {{ .Title }}"
+      class="featured-hero-image"
+    />
+
+    <div class="featured-overlay">
+      <div class="featured-content container-mid">
+        <div class="featured-meta">
+          <span class="reading-time">{{ .ReadingTime }} min read</span>
+          {{ partial "tags/post-type.html" . }}
+
+          {{ with .Params.categories }}
+            {{ range . }}
+              <a
+                href="{{ "/categories/" | relURL }}{{ . | urlize }}"
+                class="tag tag--category"
+                >{{ . }}</a
+              >
+            {{ end }}
+          {{ end }}
+
+          {{ with .Params.tags }}
+            {{ range . }}
+              <a
+                href="{{ "/tags/" | relURL }}{{ . | urlize }}"
+                class="tag tag--label"
+                >{{ . }}</a
+              >
+            {{ end }}
+          {{ end }}
+        </div>
+
+        <h1 class="featured-title">{{ .Title }}</h1>
+
+        {{ with .Params.catchphrase }}
+          <p class="featured-catchphrase"><em>{{ . }}</em></p>
+        {{ end }}
+
+
+        <div class="featured-separator"></div>
+
+        <div class="featured-dates">
+          <span>📅 {{ .Date.Format "Jan 02, 2006" }}</span>
+          {{ with .Lastmod }}
+            <span>📝 {{ .Format "Jan 02, 2006" }}</span>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}

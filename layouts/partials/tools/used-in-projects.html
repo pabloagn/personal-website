@@ -1,0 +1,24 @@
+{{ $slug := .File.BaseFileName }}
+{{ $related := slice }}
+
+{{ range where site.RegularPages "Section" "projects" }}
+  {{ if in .Params.tools $slug }}
+    {{ $related = $related | append . }}
+  {{ end }}
+{{ end }}
+
+{{ if gt (len $related) 0 }}
+  <section class="related-projects">
+    <h3 class="section-heading">Used In Projects</h3>
+    <ul class="project-list">
+      {{ range $related }}
+        <li>
+          <a href="{{ .RelPermalink }}" class="tag tag--category">
+            {{ .Title }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+{{ end }}
+

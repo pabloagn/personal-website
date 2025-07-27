@@ -93,11 +93,12 @@
 .card-summary {
   color: var(--fg-secondary);
   font-size: var(--text-md);
-  margin-bottom: var(--space-sm);
 }
 
 .card-footer {
   margin-top: auto;
+  padding-top: var(--space-sm);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-sm);
@@ -241,4 +242,15 @@
   font-family: var(--font-mono);
   font-size: 0.75rem;
   color: var(--fg-muted);
+}
+
+/* Tools */
+.card--tool .card-title {
+  font-size: var(--text-lg);
+  color: var(--accent-purple);
+}
+
+.card--tool .card-summary {
+  color: var(--fg-secondary);
+  font-size: var(--text-sm);
 }

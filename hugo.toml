@@ -42,14 +42,19 @@ url = "/deep-dives/"
 weight = 40
 
 [[menu.main]]
+name = "Tools"
+url = "/tools/"
+weight = 50
+
+[[menu.main]]
 name = "About"
 url = "/about/"
-weight = 50
+weight = 60
 
 [[menu.main]]
 name = "Contact"
 url = "/contact/"
-weight = 60
+weight = 70
 
 # --- Site Parameters ---
 [params]
@@ -63,7 +68,7 @@ github = "pabloagn"
 
 # --- Ajax Search Engine ---
 [params.search]
-types = ["posts", "projects", "notes"]
+types = ["blog", "deep-dives", "projects", "tools"]
 
 # --- Markup Configuration ---
 [markup]

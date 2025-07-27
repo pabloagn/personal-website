@@ -11,12 +11,22 @@
 
   <div class="card-body">
     <p class="card-summary">{{ .Summary }}</p>
+
     {{ if .Params.repository }}
-      <h4>Code Composition</h4>
-      {{ partial "languages/language-stack.html" . }}
+      {{ partial "buttons/dual.html" (dict
+        "left"  (dict "href" .Params.repository "text" "GitHub Repo")
+        "right" (dict "href" .Permalink "text" "Read More")
+      ) }}
+
+      <div class="project-languages">
+        <h4>Languages</h4>
+        {{ partial "languages/language-stack.html" . }}
+      </div>
     {{ end }}
+
     <div class="card-footer">
       {{ partial "tags/labels.html" . }}
     </div>
   </div>
 </article>
+

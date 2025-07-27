@@ -6,6 +6,7 @@ summary: "A minimal status bar configuration for tiling window managers, followi
 repository: https://github.com/pabloagn/rhodium
 abbreviation: "Rh"
 serial: 1
+tools: ["nixos", "julia"]
 ---
 
 A minimal status bar configuration for tiling window managers, following sacred computer principles.
