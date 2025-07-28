@@ -1,0 +1,5 @@
+[settings]
+raw_dir = "static/images/raw"
+compressed_dir = "static/images/processed"
+jpeg_quality = 85
+png_level = 3

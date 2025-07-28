@@ -1,6 +1,6 @@
 {{ $slug := .File.BaseFileName | urlize }}
 {{ $section := .Section }}
-{{ $img := printf "/images/%s/%s.jpg" $section $slug }}
+{{ $img := printf "/images/processed/%s/%s.webp" $section $slug }}
 {{ $staticPath := printf "static%s" $img }}
 
 {{ if fileExists $staticPath }}
