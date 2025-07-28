@@ -2,29 +2,57 @@ footer {
   border-top: 1px solid var(--bg-tertiary);
 }
 
-.footer-container {
-  margin: 0 auto;
+.footer-level {
   display: grid;
-  max-width: var(--max-width);
-  grid-template-columns: 1fr 1fr 1fr;
-  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin: 0 auto;
+}
+
+/* Level 1: Name and year */
+.footer-level1 {
+  padding: var(--space-lg) 0;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  border-bottom: 1px solid var(--bg-tertiary);
 }
 
 .footer-text {
   color: var(--fg-muted);
   font-size: 0.8rem;
 }
-.footer-links {
-  display: flex;
-  gap: var(--space-md);
+
+/* Level 2: 3-column navigation */
+.footer-level2 {
+  padding: var(--space-3xl) 0;
 }
 
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  margin: auto 0;
+}
+
+/* Header text for each group */
+.footer-heading {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--fg-primary);
+  margin-bottom: 0.25rem;
+}
+
+/* Navigation links */
 .footer-link {
   color: var(--fg-muted);
   font-size: 0.8rem;
-  border: none;
+  text-decoration: none;
   transition: color 0.2s ease;
 }
+
 .footer-link:hover {
-  color: var(--accent-green);
+  color: var(--accent-blue);
 }
+

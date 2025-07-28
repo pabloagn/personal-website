@@ -95,6 +95,10 @@ clean:
 # Full refresh
 refresh: clean dev
 
+# Test pre-commit hooks
+hooks:
+  @pre-commit run --all-files
+
 # Deploy to GitHub Pages
 deploy: build
     git subtree push --prefix {{PUBLIC_DIR}} origin gh-pages

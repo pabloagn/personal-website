@@ -1,0 +1,15 @@
+[preprocess-images]
+# Uncompressed image dir
+raw_dir = "static/images/raw"
+# Processed image dir
+processed_dir = "static/images/processed"
+# JPEG Quality Level
+jpeg_quality = 40
+# PNG Quality Level
+png_level = 3
+# Wepb quality level
+webp_quality = 70
+# Supported image extensions
+extensions = ["jpg", "jpeg", "JPG", "JPEG", "png", "PNG", "webp", "WEBP"]
+
+[language-stats]

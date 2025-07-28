@@ -5,13 +5,28 @@
   box-sizing: border-box;
 
   background:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
-    url(/images/placeholder-02.jpg) no-repeat center center;
+    url(/images/processed/site/hero.webp) no-repeat center center;
   background-size: cover;
 
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(3, 5, 7, 0.1),
+    rgba(3, 5, 7, 1)
+  );
+
+  /* mix-blend-mode: overlay; */
+  z-index: 1;
+  pointer-events: none;
 }
 
 .hero {
@@ -40,6 +55,7 @@
   flex-direction: column;
   justify-content: center;
   padding: var(--space-xl) var(--space-xl);
+  z-index: 2;
 }
 
 .hero-box > * {

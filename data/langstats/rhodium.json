@@ -1,0 +1,49 @@
+{
+  "languages": [
+    {
+      "name": "Nix",
+      "percent": 70,
+      "color": "#658594"
+    },
+    {
+      "name": "Shell",
+      "percent": 17,
+      "color": "#89e051"
+    },
+    {
+      "name": "Lua",
+      "percent": 12,
+      "color": "#000080"
+    },
+    {
+      "name": "TypeScript",
+      "percent": 1,
+      "color": "#2b7489"
+    },
+    {
+      "name": "SCSS",
+      "percent": 0,
+      "color": "#999999"
+    },
+    {
+      "name": "Just",
+      "percent": 0,
+      "color": "#999999"
+    },
+    {
+      "name": "Python",
+      "percent": 0,
+      "color": "#3572A5"
+    },
+    {
+      "name": "CSS",
+      "percent": 0,
+      "color": "#563d7c"
+    },
+    {
+      "name": "Nu",
+      "percent": 0,
+      "color": "#999999"
+    }
+  ]
+}
