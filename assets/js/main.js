@@ -10,6 +10,7 @@ import { enableDatablockSort } from "./modules/datablockSort.js";
 import { enableLanguageStackTooltips } from "./modules/languageStack.js";
 import { progressScroll } from "./modules/progressBar.js";
 import { initTimelineLines } from './modules/verticalTimelines.js';
+import { initHexagonPillars } from './modules/pillarsHexagon.js';
 
 function boot() {
   initHeaderScroll();
@@ -21,8 +22,9 @@ function boot() {
   enableDatablockSort();
   enableLanguageStackTooltips();
   initTimelineLines();
+  initHeaderAnchors();
+  initHexagonPillars();
   // initSiteSearch();
-  // initHeaderAnchors();
 }
 
 import "./modules/datablock.js";

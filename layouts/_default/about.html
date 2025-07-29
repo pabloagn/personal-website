@@ -1,7 +1,7 @@
 {{ define "main" }}
+  {{ partial "about/lead.html" . }}
   <div class="content-section container-top single-page">
     <section class="about-columns">
-      {{ partial "about/lead.html" . }}
       {{ partial "about/motivations.html" . }}
       {{ partial "about/professional.html" . }}
       {{ partial "about/academic.html" . }}
@@ -9,12 +9,8 @@
       {{ partial "about/certifications.html" . }}
     </section>
 
-    <footer class="about-footer">
-      <p class="footer-epigraph">
-        “Perfection is achieved not when there is nothing more to add, <br />
-        but when there is nothing left to take away.” <br />
-        — Antoine de Saint-Exupéry
-      </p>
-    </footer>
+    <div class="about-footer">
+      {{ partial "about/epigraph.html" . }}
+    </div>
   </div>
 {{ end }}

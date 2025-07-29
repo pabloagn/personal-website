@@ -1,0 +1,34 @@
+.about-section .section-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* spacing between bullet and text */
+}
+
+.header-anchor {
+  display: inline-flex;
+  /* height: 1rem; */
+  align-items: center;
+  justify-content: center;
+  margin-right: var(--space-xs);
+  opacity: 1;
+  transition: opacity 0.2s ease;
+  color: var(--fg-primary);
+  /* text-decoration: none; */
+  /* vertical-align: baseline; */
+  height: 100%;
+}
+
+h1:hover .header-anchor,
+h2:hover .header-anchor,
+h3:hover .header-anchor {
+  color: var(--fg-primary);
+  opacity: 1;
+}
+
+.anchor-icon {
+  display: block;
+  fill: currentColor;
+  pointer-events: none;
+  transform: translateY(1px);
+  filter: drop-shadow(0 0 5px currentColor);
+}

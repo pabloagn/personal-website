@@ -1,8 +1,9 @@
-<div class="about-pane">
-  <h2 class="about-subheading">Motivations</h2>
-  <p class="about-subheading-catchphrase">Elegant development</p>
+<section class="about-section about-pane">
+  <h1 id="{{ anchorize "Motivations" }}" class="section-heading">
+    Motivations
+  </h1>
 
   <div class="about-grid mosaic">
-    {{ partial "mosaic.html" . }}
+    {{ partial "mosaic.html" (dict "key" "motivations") }}
   </div>
-</div>
+</section>

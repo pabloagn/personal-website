@@ -1,8 +1,8 @@
 {{ $items := site.Data.academic }}
 
-
-<section class="academic-section">
-  <h2 class="section-heading">Academic Trajectory</h2>
+<section class="about-section academic-section">
+  <h1 id="{{ anchorize "Academic Trajectory" }}" class="section-heading">
+    Academic Trajectory
+  </h1>
   {{ partial "grid/academic.html" (dict "Academic" $items) }}
 </section>
-

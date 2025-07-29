@@ -1,4 +1,5 @@
-{{ $items := site.Data.mosaic }}
+{{- $key := .key -}}
+{{- $items := index site.Data $key -}}
 <div class="mosaic-grid">
   {{ range $items }}
     <div class="mosaic-card">

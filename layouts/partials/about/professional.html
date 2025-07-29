@@ -1,7 +1,9 @@
 {{ $items := site.Data.professional }}
 
-<section class="professional-section">
-  <h2 class="section-heading">Professional Trajectory</h2>
+
+<section class="about-section professional-section">
+  <h1 id="{{ anchorize "Professional Trajectory" }}" class="section-heading">
+    Professional Trajectory
+  </h1>
   {{ partial "grid/professional.html" (dict "Professional" $items) }}
 </section>
-

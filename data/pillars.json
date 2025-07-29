@@ -1,0 +1,33 @@
+[
+  {
+    "title": "Research Science",
+    "description": "Investigating complex systems through simulation, modeling, and quantitative analysis.",
+    "buttonText": "View Research",
+    "buttonURL": "/tags/research/"
+  },
+  {
+    "title": "Scientific Computing",
+    "description": "Numerical software for solving real-world mathematical and physical problems.",
+    "buttonText": "Explore Computing",
+    "buttonURL": "/tags/scientific-computing/"
+  },
+  {
+    "title": "Data & Process Engineering",
+    "description": "Designing structured pipelines and execution layers for transformation and orchestration.",
+    "buttonText": "Browse Engineering",
+    "buttonURL": "/tags/data-engineering/"
+  },
+  {
+    "title": "Systems Architecture & Automation",
+    "description": "Declarative infrastructure, functional design, and CI/CD systems for reproducible builds.",
+    "buttonText": "See Systems",
+    "buttonURL": "/tags/systems/"
+  },
+  {
+    "title": "Open Source Development",
+    "description": "Sustainable, transparent tools built for composability, clarity, and long-term value.",
+    "buttonText": "Explore Projects",
+    "buttonURL": "/tags/open-source/"
+  }
+]
+

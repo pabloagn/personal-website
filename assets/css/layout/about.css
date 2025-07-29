@@ -1,0 +1,18 @@
+.about-footer {
+  padding-top: var(--space-lg);
+  margin-top: var(--space-lg);
+  border-top: solid 1px var(--fg-muted-darker);
+}
+
+.footer-epigraph .quote {
+  font-family: var(--font-serif);
+  font-style: normal;
+  font-size: var(--font-size-4);
+}
+
+
+.footer-epigraph .author {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--font-size-4);
+}

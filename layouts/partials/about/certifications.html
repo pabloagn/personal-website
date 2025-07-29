@@ -1,7 +1,9 @@
-{{ $certs := site.Data.certifications }}
+{{ $items := site.Data.certifications }}
 
-
-<section class="certifications-section">
-  <h2 class="section-heading">Certifications</h2>
-  {{ partial "grid/certifications.html" (dict "Certifications" $certs) }}
+<section class="about-section certifications-section">
+  <h1 id="{{ anchorize "Certifications" }}" class="section-heading">
+    Certifications
+  </h1>
+  {{ partial "grid/certifications.html" (dict "Certifications" $items) }}
 </section>
+

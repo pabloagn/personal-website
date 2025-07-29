@@ -1,0 +1,231 @@
+.hero-about {
+  width: 100%;
+  height: 100dvh;
+  /* padding-top: 4rem; */
+  /* box-sizing: border-box; */
+
+  background:
+    url(/images/processed/site/hero_02.jpg) no-repeat center center;
+  background-size: cover;
+
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(3, 5, 7, 0.2),
+    rgba(3, 5, 7, 1)
+  );
+
+  /* mix-blend-mode: overlay; */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.pillars-container {
+  width: 100%;
+  max-width: 100%;
+  /* padding: 500px; */
+  /* margin: 0; */
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pillars-diagram {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.central-hexagon {
+  transition: stroke 0.3s ease;
+  stroke-width: 1px;
+  stroke: var(--fg-primary);
+}
+
+.central-circle {
+  stroke: var(--fg-primary);
+  stroke-width: 1px;
+}
+
+.node-line {
+  stroke-width: 1px;
+  stroke: var(--fg-primary);
+}
+
+.pillar-node {
+  cursor: pointer;
+}
+
+.pillar-node circle {
+  pointer-events: none;
+  fill: var(--fg-primary);
+  stroke-width: 0;
+  filter: drop-shadow(0 0 5px var(--fg-primary));
+}
+
+.pillar-node.active circle {
+}
+
+.pillar-label {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-1);
+  font-weight: var(--font-weight-normal);
+  fill: var(--fg-primary);
+  pointer-events: none;
+}
+
+.node-top .pillar-label {
+  transform: translateY(-30px);
+}
+
+.node-bottom .pillar-label {
+  transform: translateY(30px);
+}
+
+
+@keyframes pulseCentral {
+  0% {
+    stroke: var(--fg-primary);
+    stroke-width: 1px;
+  }
+  25% {
+    stroke: var(--fg-muted);
+    stroke-width: 1px;
+  }
+  50% {
+    stroke: var(--fg-muted-darker);
+    stroke-width: 1px;
+    filter: drop-shadow(0 0 12px var(--fg-muted-darker));
+  }
+  75% {
+    stroke: var(--fg-muted);
+    stroke-width: 1px;
+  }
+  100% {
+    stroke: var(--fg-primary);
+    stroke-width: 1px;
+  }
+}
+
+@keyframes pulseHexagon {
+  0% {
+    stroke: var(--fg-muted);
+    filter: drop-shadow(0 0 4px var(--fg-muted));
+  }
+  33% {
+    stroke: var(--fg-muted-darker);
+    filter: drop-shadow(0 0 8px var(--fg-muted-darker));
+  }
+  66% {
+    stroke: var(--fg-muted);
+    filter: drop-shadow(0 0 6px var(--fg-muted));
+  }
+  100% {
+    stroke: var(--fg-muted);
+    filter: drop-shadow(0 0 4px var(--fg-muted));
+  }
+}
+
+@keyframes pulseLine {
+  0% {
+    stroke: var(--fg-primary);
+    stroke-width: 1px;
+  }
+  25% {
+    stroke: var(--fg-muted);
+    stroke-width: 1px;
+  }
+  50% {
+    stroke: var(--fg-muted-darker);
+    stroke-width: 1px;
+    filter: drop-shadow(0 0 8px var(--fg-muted-darker));
+  }
+  75% {
+    stroke: var(--fg-muted);
+    stroke-width: 1px;
+  }
+  100% {
+    stroke: var(--fg-primary);
+    stroke-width: 1px;
+  }
+}
+
+@keyframes pulseNode {
+  0% {
+    fill: var(--fg-primary);
+    filter: drop-shadow(0 0 4px var(--fg-primary));
+  }
+  25% {
+    fill: var(--fg-muted);
+    filter: drop-shadow(0 0 6px var(--fg-muted));
+  }
+  50% {
+    fill: var(--fg-muted-darker);
+    filter: drop-shadow(0 0 10px var(--fg-muted-darker));
+  }
+  75% {
+    fill: var(--fg-muted);
+    filter: drop-shadow(0 0 6px var(--fg-muted));
+  }
+  100% {
+    fill: var(--fg-primary);
+    filter: drop-shadow(0 0 4px var(--fg-primary));
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.central-circle.is-pulsing {
+  animation: pulseCentral 1s ease-in-out;
+}
+
+.central-hexagon.is-pulsing {
+  animation: pulseCentral 1s ease-in-out;
+}
+
+.node-line.is-pulsing {
+  animation: pulseLine 1s ease-in-out;
+}
+
+.pillar-node circle.is-pulsing {
+  animation: pulseNode 1s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .pillars-container {
+    padding: 1rem;
+  }
+  .pillar-label {
+    font-size: var(--font-size-1);
+  }
+  .pillar-detail {
+    padding: 1.5rem;
+  }
+  .pillar-detail h3 {
+    font-size: 1.25rem;
+  }
+  .pillar-detail p {
+    font-size: 1rem;
+  }
+}
