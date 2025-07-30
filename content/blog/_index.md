@@ -2,4 +2,4 @@
 title: "Blog"
 ---
 
-Thoughts on technology, minimalism, and digital craftsmanship.
+Thoughts on technology, engineering, science, aesthetics, and other things digital.

@@ -186,16 +186,6 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
 .central-circle.is-pulsing {
   animation: pulseCentral 1s ease-in-out;
 }
@@ -210,22 +200,4 @@
 
 .pillar-node circle.is-pulsing {
   animation: pulseNode 1s ease-in-out;
-}
-
-@media (max-width: 768px) {
-  .pillars-container {
-    padding: 1rem;
-  }
-  .pillar-label {
-    font-size: var(--font-size-1);
-  }
-  .pillar-detail {
-    padding: 1.5rem;
-  }
-  .pillar-detail h3 {
-    font-size: 1.25rem;
-  }
-  .pillar-detail p {
-    font-size: 1rem;
-  }
 }

@@ -1,4 +1,4 @@
-footer {
+.footer-content {
   border-top: 1px solid var(--bg-tertiary);
 }
 
@@ -7,6 +7,7 @@ footer {
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-lg);
   margin: 0 auto;
+  max-width: var(--max-width);
 }
 
 /* Level 1: Name and year */
@@ -15,7 +16,8 @@ footer {
   /* display: flex; */
   /* justify-content: center; */
   /* align-items: center; */
-  border-bottom: 1px solid var(--bg-tertiary);
+  /* border-top: 1px solid var(--bg-tertiary); */
+  padding: var(--space-2xl) 0;
 }
 
 .footer-text {
@@ -36,12 +38,19 @@ footer {
   margin: auto 0;
 }
 
+.footer-column .socials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+}
+
 /* Header text for each group */
 .footer-heading {
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: (--font-weight-medium);
   color: var(--fg-primary);
-  margin-bottom: 0.25rem;
+  margin-top: 0;
+  margin-bottom: var(--space-sm);
 }
 
 /* Navigation links */
@@ -55,4 +64,3 @@ footer {
 .footer-link:hover {
   color: var(--accent-blue);
 }
-

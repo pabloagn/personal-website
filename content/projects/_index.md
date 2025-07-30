@@ -2,4 +2,4 @@
 title: "Projects"
 ---
 
-A collection of tools, experiments, and digital artifacts.
+A collection of single & collaborative projects.

@@ -1,0 +1,36 @@
+<div class="footer-level1 footer-level">
+  <div class="footer-column">
+    <p class="footer-text">&copy; {{ now.Year }} {{ .Site.Params.author }}</p>
+  </div>
+  <div class="footer-column">
+    <a href="/" class="nav-brand">
+      {{ partial "logo.html" . }}
+    </a>
+  </div>
+  <div class="footer-column">
+    <div class="socials">
+      {{ with .Site.Params.social.github }}
+        <a href="https://github.com/{{ . }}" class="footer-link">
+          {{ partial "icon.html" (dict
+            "name" "github"
+            "style" "brands"
+            "size" "2em"
+            "color" "#50505E"
+            )
+          }}
+        </a>
+      {{ end }}
+      {{ with .Site.Params.social.linkedin }}
+        <a href="https://linkedin.com/{{ . }}" class="footer-link">
+          {{ partial "icon.html" (dict
+            "name" "linkedin"
+            "style" "brands"
+            "size" "2em"
+            "color" "#50505E"
+            )
+          }}
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</div>

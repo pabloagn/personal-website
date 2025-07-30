@@ -7,12 +7,12 @@
 .footer-epigraph .quote {
   font-family: var(--font-serif);
   font-style: normal;
-  font-size: var(--font-size-4);
+  font-size: var(--font-size-3);
 }
 
 
 .footer-epigraph .author {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: var(--font-size-4);
+  font-size: var(--font-size-3);
 }

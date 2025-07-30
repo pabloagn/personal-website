@@ -271,3 +271,40 @@
   font-size: var(--text-xl);
   /* border-bottom: 1px solid var(--fg-muted-darker); */
 }
+
+.card-counters {
+  display: flex;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-sm);
+}
+
+.counter {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  gap: 1ch;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-default);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--fg-muted-darker);
+  width: fit-content;
+}
+
+.counter::before {
+  content: '';
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 50%;
+  box-shadow: 0 0 6px currentColor;
+  background-color: currentColor;
+}
+
+.counter--projects {
+  color: var(--accent-blue);
+}
+
+.counter--posts {
+  color: var(--accent-green);
+}

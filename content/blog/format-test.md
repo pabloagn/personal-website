@@ -3,10 +3,11 @@ title: "Format Test"
 date: 2025-06-30
 categories: ["test"]
 tags: ["test"]
-technologies: ["markdown", "latex", "html"]
+tools: ["markdown", "latex", "html"]
 summary: "Explore ten advanced programming techniques in Scala that provide different functionalities to your code, making it more elegant, expressive, performant, compact, and modular."
 math: true
 layout: single
+draft: true
 ---
 
 # Heading 1 ◆ Top Level
@@ -23,11 +24,11 @@ layout: single
 
 ## Text Formatting ⟨ Basic Styles ⟩
 
-This is *italic text* and _also italic_.
+This is _italic text_ and _also italic_.
 
-This is **bold text** and __also bold__.
+This is **bold text** and **also bold**.
 
-This is ***bold italic*** and ___also bold italic___.
+This is **_bold italic_** and **_also bold italic_**.
 
 This is ~~strikethrough text~~.
 
@@ -55,30 +56,34 @@ Three or more hyphens:
 
 Three or more asterisks:
 
-***
+---
 
 Three or more underscores:
 
-___
+---
 
 ## Blockquotes ⟪ ⟫
 
 > Single level blockquote with simple text.
 
-> Blockquote with **bold**, *italic*, and `code`.
-> 
+> Blockquote with **bold**, _italic_, and `code`.
+>
 > Multiple paragraphs in blockquote.
 
 > Nested blockquotes
->> Level 2 quote
->>> Level 3 quote with `code`
->>>> Level 4 quote
+>
+> > Level 2 quote
+> >
+> > > Level 3 quote with `code`
+> > >
+> > > > Level 4 quote
 
 > Blockquote with list:
+>
 > - Item 1
 > - Item 2
 >   - Nested item
-> 
+>
 > 1. Numbered item
 > 2. Another item
 
@@ -96,11 +101,11 @@ ___
 
 * Using asterisks
 * Another item
-  * Nested with asterisk
+  - Nested with asterisk
 
-+ Using plus signs
-+ Another plus item
-  + Nested plus
+- Using plus signs
+- Another plus item
+  - Nested plus
 
 ### Ordered Lists ◉
 
@@ -125,8 +130,8 @@ ___
      1. Back to ordered
      2. Another ordered
 2. Second ordered item
-   * Different marker
-   + Yet another marker
+   - Different marker
+   * Yet another marker
 
 ### Task Lists ☐ ☑
 
@@ -144,13 +149,13 @@ Term 1
 : Alternative definition for term 1
 
 Complex Term
-: Definition with **bold** and *italic*
+: Definition with **bold** and _italic_
 : Another definition with `code`
 
 Nested Definition
 : Primary definition
-  : Nested definition part
-  : Another nested part
+: Nested definition part
+: Another nested part
 
 ## Links ⟶ All Types
 
@@ -189,11 +194,9 @@ Nested Definition
 
 [![Clickable image](https://via.placeholder.com/100)](https://example.com)
 
-
 ## Tables - Tabular Data
 
 {{< datablock "data/example.csv" >}}
-
 
 ## Tables - Complex Examples
 
@@ -202,7 +205,7 @@ Nested Definition
 <div class="table-container">
 
 | Header 1 | Header 2 | Header 3 |
-|----------|----------|----------|
+| -------- | -------- | -------- |
 | Cell 1   | Cell 2   | Cell 3   |
 | Cell 4   | Cell 5   | Cell 6   |
 
@@ -213,24 +216,23 @@ Nested Definition
 <div class="table-container">
 
 | Left Aligned | Center Aligned | Right Aligned |
-|:-------------|:--------------:|--------------:|
-| Left         | Center         | Right         |
-| **Bold**     | *Italic*       | `Code`        |
+| :----------- | :------------: | ------------: |
+| Left         |     Center     |         Right |
+| **Bold**     |    _Italic_    |        `Code` |
 
 </div>
-
 
 ### Complex Table with Various Content ⊠
 
 <div class="table-container">
 
-| Feature | Description | Code Example | Status |
-|:--------|:------------|:-------------|:------:|
-| **Lists** | • Bullet 1<br>• Bullet 2 | `- Item`<br>`* Item` | ✓ |
-| *Math* | Inline: $a^2 + b^2$ | `$equation$` | ✓ |
-| ~~Strike~~ | Strikethrough text | `~~text~~` | ✓ |
-| [Links](#) | Clickable references | `[text](url)` | ✓ |
-| Images | ![](https://via.placeholder.com/30) | `![](url)` | ✓ |
+| Feature    | Description                         | Code Example         | Status |
+| :--------- | :---------------------------------- | :------------------- | :----: |
+| **Lists**  | • Bullet 1<br>• Bullet 2            | `- Item`<br>`* Item` |   ✓    |
+| _Math_     | Inline: $a^2 + b^2$                 | `$equation$`         |   ✓    |
+| ~~Strike~~ | Strikethrough text                  | `~~text~~`           |   ✓    |
+| [Links](#) | Clickable references                | `[text](url)`        |   ✓    |
+| Images     | ![](https://via.placeholder.com/30) | `![](url)`           |   ✓    |
 
 </div>
 
@@ -238,11 +240,11 @@ Nested Definition
 
 <div class="table-container">
 
-| Type | Example | LaTeX |
-|:-----|:--------|:------|
-| Set Theory | ∈ ∉ ⊂ ⊃ ⊆ ⊇ | $x \\in A$ |
-| Logic | ∀ ∃ ∧ ∨ ¬ ⇒ ⇔ | $\\forall x \\exists y$ |
-| Operators | ∑ ∏ ∫ ∮ ∂ ∇ | $\\sum_{i=1}^n x_i$ |
+| Type       | Example       | LaTeX                   |
+| :--------- | :------------ | :---------------------- |
+| Set Theory | ∈ ∉ ⊂ ⊃ ⊆ ⊇   | $x \\in A$              |
+| Logic      | ∀ ∃ ∧ ∨ ¬ ⇒ ⇔ | $\\forall x \\exists y$ |
+| Operators  | ∑ ∏ ∫ ∮ ∂ ∇   | $\\sum_{i=1}^n x_i$     |
 
 </div>
 
@@ -250,12 +252,12 @@ Nested Definition
 
 <div class="table-container">
 
-| Challenge                | ClickHouse Native Limitation                                             | GlassFlow + ClickStack Solution                                                        | Column A         | Column B       | Column C         | Column D       |
-|--------------------------|--------------------------------------------------------------------------|----------------------------------------------------------------------------------------|------------------|----------------|------------------|----------------|
-| Data Deduplication       | ReplacingMergeTree is eventual; FINAL is slow.                          | Upstream, stateful deduplication ensures clean data upon ingestion.                   | Alpha Sequence   | Lunar Metrics  | Static Override  | Crimson Path   |
-| Schema Evolution         | Requires manual ALTER TABLE; can break the pipeline.                    | Automated schema detection and column creation in the sink.                           | Echo Protocol    | Binary Shard   | Glass Index      | Temporal Code  |
-| Real-time Data Enrichment| Query-time JOIN operations are expensive on large data.                 | Pre-ingestion temporal joins create flat, fast-to-query tables.                       | Phantom Trigger  | Velvet Ratio   | Carbon Filter    | Spiral Thread  |
-| Data Quality             | Inconsistent or invalid data can pollute the database.                  | Upstream filtering and transformation acts as a quality gate.                         | Hollow Matrix    | Quartz Beacon  | Delta Gateway    | Obsidian Key   |
+| Challenge                 | ClickHouse Native Limitation                            | GlassFlow + ClickStack Solution                                     | Column A        | Column B      | Column C        | Column D      |
+| ------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------- | --------------- | ------------- | --------------- | ------------- |
+| Data Deduplication        | ReplacingMergeTree is eventual; FINAL is slow.          | Upstream, stateful deduplication ensures clean data upon ingestion. | Alpha Sequence  | Lunar Metrics | Static Override | Crimson Path  |
+| Schema Evolution          | Requires manual ALTER TABLE; can break the pipeline.    | Automated schema detection and column creation in the sink.         | Echo Protocol   | Binary Shard  | Glass Index     | Temporal Code |
+| Real-time Data Enrichment | Query-time JOIN operations are expensive on large data. | Pre-ingestion temporal joins create flat, fast-to-query tables.     | Phantom Trigger | Velvet Ratio  | Carbon Filter   | Spiral Thread |
+| Data Quality              | Inconsistent or invalid data can pollute the database.  | Upstream filtering and transformation acts as a quality gate.       | Hollow Matrix   | Quartz Beacon | Delta Gateway   | Obsidian Key  |
 
 </div>
 
@@ -267,9 +269,10 @@ Regular inline: `code`
 
 Inline with backticks: `` `backticks` ``
 
-Inline with more backticks: ``` ``double backticks`` ```
+Inline with more backticks: ` ``double backticks`` `
 
 ### ActionScript
+
 ```actionscript
 // rhodium.as
 // This is a test for ActionScript syntax highlighting.
@@ -288,6 +291,7 @@ package {
 ```
 
 ### Ada
+
 ```ada
 -- rhodium.adb
 -- This is a test for Ada syntax highlighting.
@@ -300,6 +304,7 @@ end Rhodium;
 ```
 
 ### Agda
+
 ```agda
 -- rhodium.agda
 -- This is a test for Agda syntax highlighting.
@@ -312,27 +317,30 @@ message = \"Welcome to Rhodium\"
 ```
 
 ### Angular
+
 ```js
 // rhodium.component.ts
 // This is a test for Angular syntax highlighting.
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-rhodium',
-  template: '<h1>Welcome to Rhodium</h1>'
+  selector: "app-rhodium",
+  template: "<h1>Welcome to Rhodium</h1>",
 })
-export class RhodiumComponent { }
+export class RhodiumComponent {}
 ```
 
 ### AppleScript
+
 ```applescript
 Generated applescript
 -- rhodium.applescript
 -- This is a test for AppleScript syntax highlighting.
 display dialog "Welcome to Rhodium"
-``` 
+```
 
 ### Assembly
+
 ```armasm
 ; rhodium.asm
 ; This is a test for Assembly syntax highlighting.
@@ -353,6 +361,7 @@ _start:
 ```
 
 ### Astro
+
 ```js
 ---
 // rhodium.astro
@@ -368,6 +377,7 @@ const message = \"Welcome to Rhodium\";
 ```
 
 ### C
+
 ```c
 // rhodium.c
 // This is a test for C syntax highlighting.
@@ -381,6 +391,7 @@ int main() {
 ```
 
 ### Clojure
+
 ```clojure
 ;; rhodium.clj
 ;; This is a test for Clojure syntax highlighting.
@@ -393,12 +404,13 @@ int main() {
 ```
 
 ### COBOL
+
 ```cobol
       * rhodium.cob
       * This is a test for COBOL syntax highlighting.
        IDENTIFICATION DIVISION.
        PROGRAM-ID. RHODIUM.
-       
+
        PROCEDURE DIVISION.
            DISPLAY \"Welcome to Rhodium\".
            STOP RUN.
@@ -407,6 +419,7 @@ int main() {
 > NOTE: Not working
 
 ### Config
+
 ```config
 # rhodium.conf
 # This is a test for configuration file syntax.
@@ -417,6 +430,7 @@ port = 8080
 ```
 
 ### Dockerfile
+
 ```dockerfile
 # rhodium.dockerfile
 # This is a test for container configuration syntax.
@@ -427,6 +441,7 @@ CMD [\"echo\", \"Container started\"]
 ```
 
 ### Coq
+
 ```coq
 (* rhodium.v *)
 (* This is a test for Coq syntax highlighting. *)
@@ -438,6 +453,7 @@ Compute message.
 ```
 
 ### C++
+
 ```cpp
 // rhodium.cpp
 // This is a test for C++ syntax highlighting.
@@ -452,6 +468,7 @@ int main() {
 ```
 
 ### Crystal
+
 ```crystal
 # rhodium.cr
 # This is a test for Crystal syntax highlighting.
@@ -461,6 +478,7 @@ puts message
 ```
 
 ### C#
+
 ```csharp
 // rhodium.cs
 // This is a test for C# syntax highlighting.
@@ -479,22 +497,24 @@ namespace Rhodium
 ```
 
 ### CSS
+
 ```css
 /* rhodium.css */
 /* This is a test for CSS syntax highlighting. */
 :root {
-    --rhodium-bg: #090E13;
-    --rhodium-fg: #C5C9C7;
+  --rhodium-bg: #090e13;
+  --rhodium-fg: #c5c9c7;
 }
 
 .rhodium-welcome {
-    color: var(--rhodium-fg);
-    background: var(--rhodium-bg);
-    content: \"Welcome to Rhodium\";
+  color: var(--rhodium-fg);
+  background: var(--rhodium-bg);
+  content: \"Welcome to Rhodium\";
 }
 ```
 
 ### D
+
 ```d
 // rhodium.d
 // This is a test for D syntax highlighting.
@@ -506,6 +526,7 @@ void main() {
 ```
 
 ### Dart
+
 ```dart
 // rhodium.dart
 // This is a test for Dart syntax highlighting.
@@ -516,6 +537,7 @@ void main() {
 ```
 
 ### Elixir
+
 ```elixir
 # rhodium.ex
 # This is a test for Elixir syntax highlighting.
@@ -529,6 +551,7 @@ Rhodium.greet()
 ```
 
 ### Elm
+
 ```elm
 -- rhodium.elm
 -- This is a test for Elm syntax highlighting.
@@ -541,6 +564,7 @@ main =
 ```
 
 ### Erlang
+
 ```erlang
 % rhodium.erl
 % This is a test for Erlang syntax highlighting.
@@ -552,6 +576,7 @@ greet() ->
 ```
 
 ### Fennel
+
 ```fennel
 ;; rhodium.fnl
 ;; This is a test for Fennel syntax highlighting.
@@ -560,6 +585,7 @@ greet() ->
 ```
 
 ### Fortran
+
 ```fortran
 ! rhodium.f90
 ! This is a test for Fortran syntax highlighting.
@@ -570,6 +596,7 @@ end program rhodium
 ```
 
 ### GAP
+
 ```gap
 # rhodium.gap
 # This is a test for GAP syntax highlighting.
@@ -579,6 +606,7 @@ Print(message, \"\
 ```
 
 ### Gleam
+
 ```gleam
 // rhodium.gleam
 // This is a test for Gleam syntax highlighting.
@@ -590,6 +618,7 @@ pub fn main() {
 ```
 
 ### Go
+
 ```go
 // rhodium.go
 // This is a test for Go syntax highlighting.
@@ -604,6 +633,7 @@ func main() {
 ```
 
 ### GraphQL
+
 ```graphql
 # rhodium.graphql
 # This is a test for GraphQL syntax highlighting.
@@ -617,6 +647,7 @@ query GetRhodium {
 ```
 
 ### Haskell
+
 ```haskell
 -- rhodium.hs
 -- This is a test for Haskell syntax highlighting.
@@ -629,6 +660,7 @@ main = putStrLn \"Welcome to Rhodium\"
 > NOTE: Not working
 
 ### HDL
+
 ```hdl
 -- rhodium.vhdl
 -- This is a test for HDL syntax highlighting.
@@ -646,6 +678,7 @@ end behavior;
 ```
 
 ### HTML
+
 ```html
 <!-- rhodium.html -->
 <!-- This is a test for HTML syntax highlighting. -->
@@ -661,6 +694,7 @@ end behavior;
 ```
 
 ### HTTP
+
 ```http
 # rhodium.http
 # This is a test for HTTP syntax highlighting.
@@ -675,6 +709,7 @@ Welcome to Rhodium
 ```
 
 ### Hugo
+
 ```go
 {{/* rhodium.hugo */}}
 {{/* This is a test for Hugo template syntax. */}}
@@ -683,6 +718,7 @@ Welcome to Rhodium
 ```
 
 ### Idris
+
 ```idris
 -- rhodium.idr
 -- This is a test for Idris syntax highlighting.
@@ -695,6 +731,7 @@ main = putStrLn \"Welcome to Rhodium\"
 > NOTE: Not working
 
 ### Isabelle
+
 ```isabelle
 (* rhodium.thy *)
 (* This is a test for Isabelle syntax highlighting. *)
@@ -709,6 +746,7 @@ end
 ```
 
 ### Java
+
 ```java
 // Rhodium.java
 // This is a test for Java syntax highlighting.
@@ -721,6 +759,7 @@ public class Rhodium {
 ```
 
 ### JavaScript
+
 ```javascript
 // rhodium.js
 // This is a test for JavaScript syntax highlighting.
@@ -734,6 +773,7 @@ greet();
 ```
 
 ### Julia
+
 ```julia
 # rhodium.jl
 # This is a test for Julia syntax highlighting.
@@ -742,6 +782,7 @@ println(message)
 ```
 
 ### Kotlin
+
 ```kotlin
 // rhodium.kt
 // This is a test for Kotlin syntax highlighting.
@@ -752,6 +793,7 @@ fun main() {
 ```
 
 ### LaTeX
+
 ```latex
 % rhodium.tex
 % This is a test for LaTeX syntax highlighting.
@@ -762,6 +804,7 @@ Welcome to Rhodium
 ```
 
 ### Lisp
+
 ```lisp
 ;; rhodium.lisp
 ;; This is a test for Common Lisp syntax highlighting.
@@ -774,6 +817,7 @@ Welcome to Rhodium
 ```
 
 ### Lua
+
 ```lua
 -- rhodium.lua
 -- This is a test for Lua linters and language servers.
@@ -787,6 +831,7 @@ greet()
 ```
 
 ### Markup
+
 ```xml
 <!-- rhodium.xml -->
 <!-- This is a test for markup syntax highlighting. -->
@@ -797,6 +842,7 @@ greet()
 ```
 
 ### Mathematica
+
 ```mathematica
 (* rhodium.nb *)
 (* This is a test for Mathematica syntax highlighting. *)
@@ -805,6 +851,7 @@ Print[message]
 ```
 
 ### MATLAB
+
 ```matlab
 % rhodium.m
 % This is a test for MATLAB syntax highlighting.
@@ -813,6 +860,7 @@ disp(message)
 ```
 
 ### Nim
+
 ```nim
 # rhodium.nim
 # This is a test for Nim syntax highlighting.
@@ -821,6 +869,7 @@ echo message
 ```
 
 ### Nix
+
 ```nix
 # rhodium.nix
 # This is a test for Nix syntax highlighting.
@@ -830,6 +879,7 @@ echo message
 ```
 
 ### Node.js
+
 ```js
 // rhodium.node.js
 // This is a test for Node.js syntax highlighting.
@@ -839,6 +889,7 @@ process.stdout.write(message + '\
 ```
 
 ### Objective-C
+
 ```objc
 // rhodium.m
 // This is a test for Objective-C syntax highlighting.
@@ -854,6 +905,7 @@ int main() {
 ```
 
 ### OCaml
+
 ```ocaml
 (* rhodium.ml *)
 (* This is a test for OCaml syntax highlighting. *)
@@ -862,6 +914,7 @@ let () = print_endline message
 ```
 
 ### Odin
+
 ```odin
 // rhodium.odin
 // This is a test for Odin syntax highlighting.
@@ -878,6 +931,7 @@ main :: proc() {
 > NOTE: Not working
 
 ### Pascal
+
 ```pascal
 { rhodium.pas }
 { This is a test for Pascal syntax highlighting. }
@@ -888,6 +942,7 @@ end.
 ```
 
 ### Perl
+
 ```perl
 #!/usr/bin/perl
 # rhodium.pl
@@ -900,9 +955,8 @@ print \"$message\
 \";
 ```
 
-
-
 ### PHP
+
 ```php
 <?php
 $name = "Rhodium";
@@ -913,6 +967,7 @@ echo "Hi! My name is " . $NaMe . "<br>";
 ```
 
 ### Prolog
+
 ```prolog
 % rhodium.pl
 % This is a test for Prolog syntax highlighting.
@@ -924,6 +979,7 @@ main :-
 ```
 
 ### Python
+
 ```python
 # rhodium.py
 # This is a test for Python syntax highlighting.
@@ -938,6 +994,7 @@ if __name__ == \"__main__\":
 ```
 
 ### R
+
 ```r
 # rhodium.R
 # This is a test for R syntax highlighting.
@@ -952,6 +1009,7 @@ greet()
 ```
 
 ### Racket
+
 ```racket
 ;; rhodium.rkt
 ;; This is a test for Racket syntax highlighting.
@@ -962,6 +1020,7 @@ greet()
 ```
 
 ### React
+
 ```react
 // rhodium.jsx
 // This is a test for React syntax highlighting.
@@ -976,6 +1035,7 @@ export default Rhodium;
 ```
 
 ### Ruby
+
 ```ruby
 # rhodium.rb
 # This is a test for Ruby syntax highlighting.
@@ -989,6 +1049,7 @@ greet(message)
 ```
 
 ### Rust
+
 ```rust
 // rhodium.rs
 // This is a test for Rust syntax highlighting.
@@ -999,6 +1060,7 @@ fn main() {
 ```
 
 ### Sage
+
 ```sage
 # rhodium.sage
 # This is a test for SageMath syntax highlighting.
@@ -1007,6 +1069,7 @@ print(message)
 ```
 
 ### Scala
+
 ```scala
 // rhodium.scala
 // This is a test for Scala syntax highlighting.
@@ -1019,6 +1082,7 @@ object Rhodium {
 ```
 
 ### Scheme
+
 ```scheme
 ;; rhodium.scm
 ;; This is a test for Scheme syntax highlighting.
@@ -1028,6 +1092,7 @@ object Rhodium {
 ```
 
 ### Shell Configs
+
 ```shell
 # rhodium.bashrc
 # This is a test for shell configuration syntax.
@@ -1036,6 +1101,7 @@ alias rhodium='echo $RHODIUM_MSG'
 ```
 
 ### Bash
+
 ```bash
 #!/bin/bash
 # rhodium.sh
@@ -1045,6 +1111,7 @@ echo \"$message\"
 ```
 
 ### Solidity
+
 ```solidity
 // rhodium.sol
 // This is a test for Solidity syntax highlighting.
@@ -1052,7 +1119,7 @@ pragma solidity ^0.8.0;
 
 contract Rhodium {
     string public message = \"Welcome to Rhodium\";
-    
+
     function getMessage() public view returns (string memory) {
         return message;
     }
@@ -1060,6 +1127,7 @@ contract Rhodium {
 ```
 
 ### SQL
+
 ```sql
 -- rhodium.sql
 -- This is a test for SQL syntax highlighting.
@@ -1072,6 +1140,7 @@ SELECT message FROM rhodium;
 ```
 
 ### Svelte
+
 ```js
 <!-- rhodium.svelte -->
 <!-- This is a test for Svelte syntax highlighting. -->
@@ -1083,6 +1152,7 @@ SELECT message FROM rhodium;
 ```
 
 ### Swift
+
 ```swift
 // rhodium.swift
 // This is a test for Swift syntax highlighting.
@@ -1091,6 +1161,7 @@ print(message)
 ```
 
 ### TypeScript
+
 ```typescript
 // rhodium.ts
 // This is a test for TypeScript syntax highlighting.
@@ -1104,6 +1175,7 @@ greet();
 ```
 
 ### Typst
+
 ```typst
 // rhodium.typ
 // This is a test for Typst syntax highlighting.
@@ -1115,6 +1187,7 @@ Welcome to Rhodium
 ```
 
 ### V
+
 ```v
 // rhodium.v
 // This is a test for V syntax highlighting.
@@ -1125,6 +1198,7 @@ fn main() {
 ```
 
 ### Vue
+
 ```js
 <!-- rhodium.vue -->
 <!-- This is a test for Vue syntax highlighting. -->
@@ -1144,6 +1218,7 @@ export default {
 ```
 
 ### Zig
+
 ```zig
 // rhodium.zig
 // This is a test for Zig syntax highlighting.
@@ -1157,6 +1232,7 @@ pub fn main() void {
 ```
 
 ### ASP.NET (C#)
+
 ```aspnet
 <%-- rhodium.aspx --%>
 <%-- This is a test for ASP.NET syntax highlighting. --%>
@@ -1170,6 +1246,7 @@ pub fn main() void {
 ```
 
 ### AutoHotkey
+
 ```autohotkey
 ; rhodium.ahk
 ; This is a test for AutoHotkey syntax highlighting.
@@ -1177,6 +1254,7 @@ MsgBox, Welcome to Rhodium
 ```
 
 ### AWK
+
 ```awk
 # rhodium.awk
 # This is a test for AWK syntax highlighting.
@@ -1187,6 +1265,7 @@ BEGIN {
 ```
 
 ### BASIC
+
 ```basic
 ' rhodium.bas
 ' This is a test for BASIC syntax highlighting.
@@ -1195,6 +1274,7 @@ END
 ```
 
 ### Batch
+
 ```batch
 @echo off
 :: rhodium.bat
@@ -1203,6 +1283,7 @@ echo Welcome to Rhodium
 ```
 
 ### Bicep
+
 ```bicep
 // rhodium.bicep
 // This is a test for Bicep syntax highlighting.
@@ -1212,6 +1293,7 @@ output rhodiumMessage string = 'Welcome to Rhodium'
 ```
 
 ### CMake
+
 ```cmake
 # CMakeLists.txt
 # This is a test for CMake syntax highlighting.
@@ -1222,6 +1304,7 @@ message(STATUS "Welcome to Rhodium")
 ```
 
 ### CoffeeScript
+
 ```coffeescript
 # rhodium.coffee
 # This is a test for CoffeeScript syntax highlighting.
@@ -1230,6 +1313,7 @@ console.log message
 ```
 
 ### Diff
+
 ```diff
 --- a/rhodium.txt
 +++ b/rhodium.txt
@@ -1239,6 +1323,7 @@ console.log message
 ```
 
 ### Django/Jinja2
+
 ```django
 {# rhodium.html.j2 #}
 {# This is a test for Django/Jinja2 syntax highlighting. #}
@@ -1248,6 +1333,7 @@ console.log message
 ```
 
 ### DOT (Graphviz)
+
 ```dot
 // rhodium.dot
 // This is a test for DOT (Graphviz) syntax highlighting.
@@ -1259,6 +1345,7 @@ digraph Rhodium {
 ```
 
 ### F#
+
 ```fsharp
 // rhodium.fs
 // This is a test for F# syntax highlighting.
@@ -1267,6 +1354,7 @@ printfn "%s" message
 ```
 
 ### Gherkin
+
 ```gherkin
 # rhodium.feature
 # This is a test for Gherkin syntax highlighting.
@@ -1279,6 +1367,7 @@ Feature: Rhodium Welcome Message
 ```
 
 ### Git
+
 ```git
 # .git/config
 # This is a test for Git config syntax highlighting.
@@ -1294,6 +1383,7 @@ Feature: Rhodium Welcome Message
 ```
 
 ### Go module
+
 ```go-mod
 // go.mod
 // This is a test for Go module syntax highlighting.
@@ -1306,6 +1396,7 @@ go 1.18
 ```
 
 ### Groovy
+
 ```groovy
 // rhodium.groovy
 // This is a test for Groovy syntax highlighting.
@@ -1314,6 +1405,7 @@ println message
 ```
 
 ### Haml
+
 ```haml
 -# rhodium.haml
 -# This is a test for Haml syntax highlighting.
@@ -1322,6 +1414,7 @@ println message
 ```
 
 ### Handlebars
+
 ```handlebars
 {{! rhodium.hbs }}
 {{! This is a test for Handlebars syntax highlighting. }}
@@ -1331,6 +1424,7 @@ println message
 ```
 
 ### Haxe
+
 ```haxe
 // Rhodium.hx
 // This is a test for Haxe syntax highlighting.
@@ -1343,6 +1437,7 @@ class Rhodium {
 ```
 
 ### HCL
+
 ```hcl
 # rhodium.hcl
 # This is a test for HCL syntax highlighting.
@@ -1358,6 +1453,7 @@ output "welcome" {
 ```
 
 ### .ignore
+
 ```ignore
 # .gitignore
 # This is a test for .ignore syntax highlighting.
@@ -1369,6 +1465,7 @@ output "welcome" {
 ```
 
 ### Ini
+
 ```ini
 ; rhodium.ini
 ; This is a test for INI syntax highlighting.
@@ -1378,6 +1475,7 @@ status = active
 ```
 
 ### JSON
+
 ```json
 // rhodium.json
 // This is a test for JSON syntax highlighting.
@@ -1389,20 +1487,22 @@ status = active
 ```
 
 ### Less
+
 ```less
 /* rhodium.less */
 /* This is a test for Less syntax highlighting. */
-@rhodium-bg: #090E13;
-@rhodium-fg: #C5C9C7;
+@rhodium-bg: #090e13;
+@rhodium-fg: #c5c9c7;
 
 .rhodium-welcome {
-    color: @rhodium-fg;
-    background: @rhodium-bg;
-    content: "Welcome to Rhodium";
+  color: @rhodium-fg;
+  background: @rhodium-bg;
+  content: "Welcome to Rhodium";
 }
 ```
 
 ### Liquid
+
 ```liquid
 {% comment %}
   rhodium.liquid
@@ -1413,6 +1513,7 @@ status = active
 ```
 
 ### Makefile
+
 ```makefile
 # Makefile
 # This is a test for Makefile syntax highlighting.
@@ -1424,9 +1525,11 @@ greet:
 ```
 
 ### Markdown
+
 ```markdown
 <!-- rhodium.md -->
 <!-- This is a test for Markdown syntax highlighting. -->
+
 # Rhodium
 
 Welcome to _Rhodium_.
@@ -1436,6 +1539,7 @@ Welcome to _Rhodium_.
 ```
 
 ### Mermaid
+
 ```mermaid
 %% rhodium.mmd
 %% This is a test for Mermaid syntax highlighting.
@@ -1448,6 +1552,7 @@ graph TD;
 ```
 
 ### Nginx
+
 ```nginx
 # rhodium.conf
 # This is a test for Nginx config syntax highlighting.
@@ -1463,6 +1568,7 @@ server {
 ```
 
 ### PowerShell
+
 ```powershell
 # rhodium.ps1
 # This is a test for PowerShell syntax highlighting.
@@ -1471,6 +1577,7 @@ Write-Host $message
 ```
 
 ### Processing
+
 ```processing
 // rhodium.pde
 // This is a test for Processing syntax highlighting.
@@ -1485,6 +1592,7 @@ void setup() {
 ```
 
 ### Protocol Buffers
+
 ```protobuf
 // rhodium.proto
 // This is a test for Protobuf syntax highlighting.
@@ -1505,6 +1613,7 @@ message RhodiumReply {
 ```
 
 ### Pug
+
 ```pug
 //- rhodium.pug
 //- This is a test for Pug syntax highlighting.
@@ -1518,6 +1627,7 @@ html
 ```
 
 ### Puppet
+
 ```puppet
 # rhodium.pp
 # This is a test for Puppet syntax highlighting.
@@ -1529,6 +1639,7 @@ notify { 'rhodium_welcome':
 ```
 
 ### PureScript
+
 ```purescript
 -- src/Rhodium.purs
 -- This is a test for PureScript syntax highlighting.
@@ -1545,6 +1656,7 @@ main = do
 ```
 
 ### Razor C#
+
 ```cshtml
 @* rhodium.cshtml *@
 @* This is a test for Razor C# syntax highlighting. *@
@@ -1556,17 +1668,18 @@ main = do
 ```
 
 ### React TSX
+
 ```tsx
 // rhodium.tsx
 // This is a test for React TSX syntax highlighting.
-import React from 'react';
+import React from "react";
 
 interface RhodiumProps {
   message: string;
 }
 
 const Rhodium: React.FC<RhodiumProps> = ({ message }) => {
-    return <h1>{message}</h1>;
+  return <h1>{message}</h1>;
 };
 
 // <Rhodium message="Welcome to Rhodium" />
@@ -1574,6 +1687,7 @@ export default Rhodium;
 ```
 
 ### reST (reStructuredText)
+
 ```rest
 .. rhodium.rst
 .. This is a test for reStructuredText syntax highlighting.
@@ -1592,6 +1706,7 @@ Welcome to Rhodium.
 ```
 
 ### Sass (Sass)
+
 ```sass
 /* rhodium.sass */
 /* This is a test for Sass (indented) syntax highlighting. */
@@ -1605,11 +1720,12 @@ $rhodium-fg: #C5C9C7
 ```
 
 ### Sass (SCSS)
+
 ```scss
 /* rhodium.scss */
 /* This is a test for SCSS syntax highlighting. */
-$rhodium-bg: #090E13;
-$rhodium-fg: #C5C9C7;
+$rhodium-bg: #090e13;
+$rhodium-fg: #c5c9c7;
 
 .rhodium-welcome {
   color: $rhodium-fg;
@@ -1619,6 +1735,7 @@ $rhodium-fg: #C5C9C7;
 ```
 
 ### Shell session
+
 ```shell-session
 # rhodium.shell-session
 # This is a test for shell session syntax highlighting.
@@ -1630,6 +1747,7 @@ Welcome to Rhodium
 ```
 
 ### Smalltalk
+
 ```smalltalk
 " rhodium.st "
 " This is a test for Smalltalk syntax highlighting. "
@@ -1638,6 +1756,7 @@ Transcript cr.
 ```
 
 ### SVG
+
 ```svg
 <!-- rhodium.svg -->
 <!-- This is a test for SVG syntax highlighting. -->
@@ -1653,6 +1772,7 @@ Transcript cr.
 ```
 
 ### Tcl
+
 ```tcl
 # rhodium.tcl
 # This is a test for Tcl syntax highlighting.
@@ -1661,6 +1781,7 @@ puts $message
 ```
 
 ### TOML
+
 ```toml
 # rhodium.toml
 # This is a test for TOML syntax highlighting.
@@ -1673,6 +1794,7 @@ version = 1.0
 ```
 
 ### Twig
+
 ```twig
 {# rhodium.html.twig #}
 {# This is a test for Twig syntax highlighting. #}
@@ -1681,6 +1803,7 @@ version = 1.0
 ```
 
 ### Vala
+
 ```vala
 // rhodium.vala
 // This is a test for Vala syntax highlighting.
@@ -1691,6 +1814,7 @@ void main () {
 ```
 
 ### VB.Net
+
 ```vbnet
 ' rhodium.vb
 ' This is a test for VB.Net syntax highlighting.
@@ -1703,6 +1827,7 @@ End Module
 ```
 
 ### Verilog
+
 ```verilog
 // rhodium.v
 // This is a test for Verilog syntax highlighting.
@@ -1715,6 +1840,7 @@ endmodule
 ```
 
 ### VHDL
+
 ```vhdl
 -- rhodium.vhd
 -- This is a test for VHDL syntax highlighting.
@@ -1738,6 +1864,7 @@ end architecture test;
 ```
 
 ### Vim
+
 ```vim
 " rhodium.vim
 " This is a test for Vim script syntax highlighting.
@@ -1746,6 +1873,7 @@ echo s:message
 ```
 
 ### WebAssembly
+
 ```wasm
 ;; rhodium.wat
 ;; This is a test for WebAssembly Text Format syntax highlighting.
@@ -1761,6 +1889,7 @@ echo s:message
 ```
 
 ### YAML
+
 ```yaml
 # rhodium.yaml
 # This is a test for YAML syntax highlighting.
@@ -1773,7 +1902,6 @@ settings:
     - blog
     - test
 ```
-
 
 ## Mathematics ∮ LaTeX
 
@@ -1809,14 +1937,14 @@ $$
 
 ### LaTeX in Tables ⊞
 
-| Symbol | LaTeX | Meaning |
-|:-------|:------|:--------|
-| $\\infty$ | `\\infty` | Infinity |
+| Symbol      | LaTeX       | Meaning            |
+| :---------- | :---------- | :----------------- |
+| $\\infty$   | `\\infty`   | Infinity           |
 | $\\partial$ | `\\partial` | Partial derivative |
+
 | $\
 abla$ | `\
 abla` | Gradient |
-
 
 ## Callouts / Alerts ⚠ GitHub Style
 
@@ -1839,21 +1967,23 @@ abla` | Gradient |
 
 > [!NOTE]
 > This callout contains multiple elements:
+>
 > - A list item
 > - Another item with **bold**
-> 
+>
 > A code block:
+>
 > ```python
 > print(\"Inside callout\")
 > ```
-> 
+>
 > And even math: $e^{i\\pi} + 1 = 0$
 
 > [!WARNING]
 > | Table | In | Callout |
 > |:------|:--:|--------:|
-> | Left  | Center | Right |
-> 
+> | Left | Center | Right |
+>
 > > Nested blockquote in callout
 
 ---
@@ -1864,6 +1994,7 @@ abla` | Gradient |
 <summary>Click to expand</summary>
 
 This is hidden content with:
+
 - Lists
 - **Bold text**
 - `Code`
@@ -1887,8 +2018,9 @@ Another sentence with a longer footnote[^2].
 Multiple references to same footnote[^1].
 
 [^1]: This is the first footnote.
+
 [^2]: This is a longer footnote with multiple paragraphs.
-    
+
     Second paragraph with `code` and **formatting**.
 
 ---
@@ -1919,7 +2051,7 @@ Multiple references to same footnote[^1].
 
 ## Escaping Characters \\\\
 
-Escape asterisk: \\*not italic\\*
+Escape asterisk: \\_not italic\\_
 
 Escape underscore: \\_not italic\\_
 
@@ -1936,42 +2068,45 @@ Double escape in math: \\\\\\\\
 ### Deep Nesting Example
 
 > Blockquote level 1
->> Blockquote level 2 with **bold**
->>> Blockquote level 3 with list:
->>> - Item 1 with `code`
->>>   - Nested item with math: $x^2$
->>>     - Deep nested with [link](#)
->>> 
->>> ```python
->>> # Code in deep blockquote
->>> print(\"Deep code\")
->>> ```
+>
+> > Blockquote level 2 with **bold**
+> >
+> > > Blockquote level 3 with list:
+> > >
+> > > - Item 1 with `code`
+> > >   - Nested item with math: $x^2$
+> > >     - Deep nested with [link](#)
+> > >
+> > > ```python
+> > > # Code in deep blockquote
+> > > print(\"Deep code\")
+> > > ```
 
 ### Mixed Content Types
 
 1. **Ordered item with table:**
-   
-   | Col 1 | Col 2 |
-   |:------|:------|
+
+   | Col 1 | Col 2  |
+   | :---- | :----- |
    | Data  | $\\pi$ |
-   
+
    - Nested unordered with image:
      ![](https://via.placeholder.com/50)
-     
+
      > [!TIP]
      > Callout in nested list
-     
+
 2. Second item with details:
-   
+
    <details>
    <summary>Expandable in list</summary>
-   
+
    ```rust
    fn nested() {
        println!(\"Nested code in details in list\");
    }
    ```
-   
+
    </details>
 
 ---
@@ -1979,12 +2114,15 @@ Double escape in math: \\\\\\\\
 ## Special Characters Test ◈
 
 ### Currency and Symbols
+
 ¢ £ ¤ ¥ ¦ § ¨ © ª « ¬ ® ¯ ° ± ² ³ ´ µ ¶ · ¸ ¹ º » ¼ ½ ¾ ¿
 
 ### Greek Letters
+
 Α Β Γ Δ Ε Ζ Η Θ Ι Κ Λ Μ Ν Ξ Ο Π Ρ Σ Τ Υ Φ Χ Ψ Ω α β γ δ ε ζ η θ ι κ λ μ ν ξ ο π ρ σ τ υ φ χ ψ ω
 
 ### Subscripts and Superscripts
+
 x² x³ x⁴ x⁵ x⁶ x⁷ x⁸ x⁹ x⁰ x⁺ x⁻ x⁼ x⁽ x⁾ xⁿ
 
 x₀ x₁ x₂ x₃ x₄ x₅ x₆ x₇ x₈ x₉ x₊ x₋ x₌ x₍ x₎
@@ -1993,9 +2131,9 @@ x₀ x₁ x₂ x₃ x₄ x₅ x₆ x₇ x₈ x₉ x₊ x₋ x₌ x₍ x₎
 
 ## Empty Elements Test ∅
 
-Empty bold: ****
+Empty bold: \*\*\*\*
 
-Empty italic: **
+Empty italic: \*\*
 
 Empty code: ``
 
@@ -2004,7 +2142,8 @@ Empty link: [](
 Empty image: ![]()
 
 Empty heading:
-### 
+
+###
 
 ---
 

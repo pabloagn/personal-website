@@ -6,12 +6,12 @@
   margin-top: var(--space-lg);
 }
 
-/* Tighter spacing (use for compact lists) */
+/* Tighter spacing (for compact lists) */
 .grid--tight {
   gap: var(--space-sm);
 }
 
-/* Fixed column count (optional) */
+/* Fixed column count (non-responsive by default) */
 .grid--1 {
   grid-template-columns: repeat(1, 1fr);
 }
@@ -27,13 +27,3 @@
 .grid--4 {
   grid-template-columns: repeat(4, 1fr);
 }
-
-/* Responsive override: collapse on mobile */
-@media (max-width: 640px) {
-  .grid--2,
-  .grid--3,
-  .grid--4 {
-    grid-template-columns: 1fr;
-  }
-}
-

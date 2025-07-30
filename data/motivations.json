@@ -1,20 +1,20 @@
 [
   {
-    "title": "Modern CSS",
-    "description": "Utility-first, scalable, and clean CSS with modern tokens and semantic structure.",
-    "buttonText": "Explore CSS",
-    "buttonURL": "/tags/css/"
+    "title": "Applied Research",
+    "description": "Coming up with sound theoretical frameworks, and applying them to real-world processes.",
+    "buttonText": "Explore",
+    "buttonURL": "/projects"
   },
   {
-    "title": "Hugo Mastery",
-    "description": "Fast, powerful static sites with deeply customized layouts, partials, and pipelines.",
-    "buttonText": "Learn Hugo",
-    "buttonURL": "/tags/hugo/"
+    "title": "Systems & Processes",
+    "description": "Always thinking in terms of systems & dynamic processes, inputs & outputs.",
+    "buttonText": "Explore",
+    "buttonURL": "/projects"
   },
   {
-    "title": "Terminal Tools",
-    "description": "Minimal, keyboard-first tooling for developers who live in the terminal.",
-    "buttonText": "View Tools",
-    "buttonURL": "/tags/terminal/"
+    "title": "Collaboration & Democratization",
+    "description": "Building open-source tools, encouraging a two-way exchange.",
+    "buttonText": "Explore",
+    "buttonURL": "/projects"
   }
 ]

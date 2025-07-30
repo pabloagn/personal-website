@@ -1,0 +1,14 @@
+{{- $section := .Section -}}
+{{- $slug := .File.BaseFileName | urlize -}}
+{{- $path := printf "static/images/processed/%s" $section -}}
+{{- $files := readDir $path -}}
+{{- $match := "" -}}
+{{- range $files -}}
+  {{- if (in .Name (printf "--%s.webp" $slug)) -}}
+    {{- $match = .Name -}}
+  {{- end -}}
+{{- end -}}
+{{- if $match -}}
+  {{- $img := printf "/images/processed/%s/%s" $section $match -}}
+  {{- .Scratch.Set "postImage" $img -}}
+{{- end -}}

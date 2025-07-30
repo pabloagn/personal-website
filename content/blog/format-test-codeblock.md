@@ -2,19 +2,20 @@
 title: "Format Test Codeblock"
 date: 2025-06-30
 categories: ["test"]
-tags: ["test"]
+tools: ["test"]
 technologies: ["markdown", "latex", "html"]
 summary: "Explore ten advanced programming techniques in Scala that provide different functionalities to your code, making it more elegant, expressive, performant, compact, and modular."
 math: true
 layout: single
+draft: true
 ---
 
 # Heading 1 ◆ Top Level
 
 ## Heading 2 ⟡ Second Level
 
-
 ### ActionScript
+
 ```actionscript
 // rhodium.as
 // This is a test for ActionScript syntax highlighting.

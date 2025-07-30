@@ -1,3 +1,8 @@
 <div class="hero-tagline-bottom">
-  <p class="credentials">Chemical Engineer • Senior Research Scientist • Open Source Contributor</p>
+ <p class="credentials">
+   {{- range $index, $item := .items -}}
+     {{- if $index }} {{ $.separator }} {{ end -}}
+     {{- $item -}}
+   {{- end -}}
+ </p>
 </div>

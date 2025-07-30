@@ -1,4 +1,8 @@
-.about-section .section-heading {
+.about-section .section-heading,
+.single-content h2,
+.single-content h3,
+.single-content h4,
+.single-content h5 {
   display: flex;
   align-items: center;
   gap: 0.5rem; /* spacing between bullet and text */
@@ -20,7 +24,9 @@
 
 h1:hover .header-anchor,
 h2:hover .header-anchor,
-h3:hover .header-anchor {
+h3:hover .header-anchor,
+h4:hover .header-anchor,
+h5:hover .header-anchor {
   color: var(--fg-primary);
   opacity: 1;
 }

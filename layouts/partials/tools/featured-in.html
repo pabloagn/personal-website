@@ -1,0 +1,15 @@
+{{ $slug := .File.BaseFileName }}
+{{ $related := slice }}
+
+{{ range where site.RegularPages "Section" "in" (slice "blog" "deep-dives") }}
+  {{ if in .Params.tools $slug }}
+    {{ $related = $related | append . }}
+  {{ end }}
+{{ end }}
+
+{{ if gt (len $related) 0 }}
+  <section class="related-entries">
+    <h2 class="section-heading">Featured In</h2>
+    {{ partial "layout/grid.html" (dict "Pages" $related "class" "grid--2") }}
+  </section>
+{{ end }}

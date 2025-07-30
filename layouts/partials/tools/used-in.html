@@ -8,8 +8,8 @@
 {{ end }}
 
 {{ if gt (len $related) 0 }}
-  <section class="related-projects">
-    <h3 class="section-heading">Used In Projects</h3>
+  <section class="related-entries">
+    <h2 class="section-heading">Used In</h2>
     {{ partial "layout/grid.html" (dict "Pages" $related "class" "grid--2") }}
   </section>
 {{ end }}

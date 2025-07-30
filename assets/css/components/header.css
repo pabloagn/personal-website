@@ -26,7 +26,7 @@
 .nav-brand {
   display: flex;
   align-items: center;
-  gap: var(--space-sm); /* consistent spacing between icon and text */
+  gap: var(--space-sm);
   text-decoration: none;
   color: var(--fg-primary);
   font-weight: 600;
@@ -36,11 +36,11 @@
 }
 
 .nav-brand svg {
-  height: 2rem; /* or 1.5rem if your navbar is tighter */
-  width: auto; /* maintain aspect ratio */
-  display: block; /* avoid extra space below svg */
-  flex-shrink: 0; /* prevent from shrinking */
-  fill: var(--fg-primary); /* inherit text color */
+  height: 2rem;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+  fill: var(--fg-primary);
   color: var(--fg-primary);
 }
 
@@ -70,4 +70,65 @@
 .nav-item::before {
   content: none !important;
   display: none !important;
+}
+
+/* Hamburger button styling */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
+  width: 2rem;
+  height: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.nav-toggle .bar {
+  width: 100%;
+  height: 1.5px;
+  background-color: var(--fg-primary);
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: var(--space-md);
+    border-top: 1px solid var(--fg-muted);
+    border-bottom: 1px solid var(--fg-muted);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .nav-menu.open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    display: flex;
+    margin: 0;
+    gap: var(--space-md);
+    background: var(--bg-primary);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-container {
+    justify-content: space-between;
+  }
 }

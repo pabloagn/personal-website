@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <div class="content-section container-top single-page">
+    <section class="about-section about-pane">
+      <h1 class="section-heading">Contact</h1>
+
+      <div class="about-grid mosaic">
+        {{ partial "contact/form.html" . }}
+      </div>
+    </section>
+
+    <div class="about-footer">
+      {{ partial "about/epigraph.html" . }}
+    </div>
+  </div>
+{{ end }}

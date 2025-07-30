@@ -14,7 +14,7 @@ catchphrase: "A Hypermodular NixOS System"
 
 A minimal status bar configuration for tiling window managers, following sacred computer principles.
 
-### Features
+## Features
 
 - Clean typography using unicode symbols
 - Kanso color palette integration

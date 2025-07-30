@@ -1,9 +1,7 @@
 <article class="card">
-  {{ $slug := .File.BaseFileName | urlize }}
-  {{ $section := .Section }}
-  {{ $img := printf "/images/processed/%s/%s.webp" $section $slug }}
-
-  {{ if (fileExists (printf "static%s" $img)) }}
+  {{ partial "meta/featured-image.html" . }}
+  {{ $img := .Scratch.Get "postImage" }}
+  {{ if $img }}
     <div class="card-image-wrapper">
       <img
         src="{{ $img | relURL }}"
@@ -18,24 +16,18 @@
       </div>
     </div>
   {{ end }}
-
-
   <div class="card-body">
     <div class="card-meta">
       <time datetime="{{ .Date.Format "2006-01-02" }}">
         {{ .Date.Format "Jan 02, 2006" }} • {{ math.Ceil .ReadingTime }} min read
       </time>
     </div>
-
     <h3 class="card-title">
       <a href="{{ .Permalink }}" class="card-link">{{ .Title }}</a>
     </h3>
-
     {{ with .Summary }}
       <p class="card-summary">{{ . }}</p>
     {{ end }}
-
-
     <div class="card-footer">
       {{ partial "tags/labels.html" . }}
     </div>

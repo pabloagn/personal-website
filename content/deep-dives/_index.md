@@ -2,4 +2,4 @@
 title: "Deep Dives"
 ---
 
-In-depth explorations of complex topics and systems.
+In-depth, hands-on explorations on concepts, tools, languages, libraries, and more.

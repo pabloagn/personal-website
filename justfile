@@ -7,12 +7,11 @@ set dotenv-load := true # automatically load .env if present
 HUGO        := "hugo"
 
 # --- Core Paths ---
-SRC         := "src/"
 PUBLIC_DIR  := "public"
 CONFIG_DIR  := "config"
-CONTENT_DIR := SRC + "content"
-RES_DIR     := SRC + "resources"
-ASSET_DIR   := SRC + "assets"
+CONTENT_DIR := "content"
+RES_DIR     := "resources"
+ASSET_DIR   := "assets"
 NODE_BIN    := "npm"
 
 # --- Hugo Flags ---
@@ -36,12 +35,12 @@ deepdive title:
 project title:
     {{HUGO}} new {{CONTENT_DIR}}/projects/{{title}}.md
 
+# Production server
+prod:
+    @echo "Starting development server..."
+    {{HUGO}} server {{HUGO_FLAGS}}
+
 # Development server
-# dev: clean-assets
-#     @echo "Starting development server..."
-#     {{HUGO}} server {{DEV_FLAGS}} {{HUGO_FLAGS}}
-
-
 dev:
     @echo "Starting development server..."
     {{HUGO}} server {{DEV_FLAGS}} {{HUGO_FLAGS}}
@@ -75,10 +74,6 @@ clean-assets: clean
 # Format markdown
 fmt:
     prettier --write "{{CONTENT_DIR}}/**/*.md"
-
-# Lint markdown
-lint:
-    markdownlint "{{CONTENT_DIR}}"
 
 # Check for broken links
 check: build

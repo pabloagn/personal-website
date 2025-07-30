@@ -6,5 +6,5 @@ date: 2024-01-01
 categories: ["Infrastructure"]
 tags: ["IaC", "DevOps", "HashiCorp"]
 ---
-Terraform empowers teams to codify and manage infrastructure across a multi-cloud environment. With provider-based extensibility and full plan/apply workflows, it enables scalable, versioned, auditable infrastructure.
 
+Terraform empowers teams to codify and manage infrastructure across a multi-cloud environment. With provider-based extensibility and full plan/apply workflows, it enables scalable, versioned, auditable infrastructure.

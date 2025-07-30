@@ -1,54 +1,84 @@
-/* @media (max-width: 768px) { */
-/*   .nav-container { */
-/*     padding: 0 var(--space-md); */
-/*   } */
-/**/
-/*   .nav-menu { */
-/*     gap: var(--space-md); */
-/*   } */
-/**/
-/*   .nav-link { */
-/*     font-size: 0.8rem; */
-/*   } */
-/**/
-/*   .main { */
-/*     padding: var(--space-lg) var(--space-md); */
-/*   } */
-/**/
-/*   .recent-container { */
-/*     grid-template-columns: 1fr; */
-/*     gap: var(--space-lg); */
-/*   } */
-/**/
-/*   .single-title { */
-/*     font-size: 2rem; */
-/*   } */
-/**/
-/*   h1 { */
-/*     font-size: 2rem; */
-/*   } */
-/**/
-/*   h2 { */
-/*     font-size: 1.5rem; */
-/*   } */
-/**/
-/*   .single-meta { */
-/*     flex-direction: column; */
-/*     gap: var(--space-sm); */
-/*   } */
-/**/
-/*   .footer-content { */
-/*     flex-direction: column; */
-/*     gap: var(--space-sm); */
-/*     text-align: center; */
-/*   } */
-/**/
-/*   table { */
-/*     font-size: 0.8rem; */
-/*   } */
-/**/
-/*   th, */
-/*   td { */
-/*     padding: var(--space-sm); */
-/*   } */
-/* } */
+@media (min-width: 480px) {
+  .grid--2,
+  .grid--3,
+  .grid--4 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  h1 {
+    font-size: var(--font-size-5);
+  }
+
+  .pillars-container {
+    padding: 0 2rem;
+  }
+  .pillar-label {
+    font-size: var(--font-size-1);
+  }
+}
+
+@media (min-width: 640px) {
+  .grid--2,
+  .grid--3,
+  .grid--4 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  h1 {
+    font-size: var(--font-size-5);
+  }
+  .pillars-container {
+    padding: 0 2rem;
+  }
+  .pillar-label {
+    font-size: var(--font-size-1);
+  }
+}
+
+@media (min-width: 768px) {
+  .grid--2,
+  .grid--3,
+  .grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  h1 {
+    font-size: var(--font-size-6);
+  }
+  .pillars-container {
+    padding: 0 1rem;
+  }
+  .pillar-label {
+    font-size: var(--font-size-1);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid--2,
+  .grid--3,
+  .grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  h1 {
+    font-size: var(--font-size-7);
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid--2,
+  .grid--3,
+  .grid--4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  h1 {
+    font-size: var(--font-size-7);
+  }
+}
+
+@media (min-width: 1536px) {
+  .grid--2,
+  .grid--3,
+  .grid--4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  h1 {
+    font-size: var(--font-size-7);
+  }
+}

@@ -1,33 +1,23 @@
 ---
 title: "10 Advanced Programming Techniques"
-date: 2025-06-30
 categories: ["computer-science", "programming"]
-tags:
-  [
-    "scala",
-    "functional-programming",
-    "tail-recursion",
-    "higher-order-functions",
-    "currying",
-    "monads",
-    "pattern-matching",
-    "lazy-evaluation",
-    "continuation-passing-style",
-    "futures",
-    "higher-kinded-types",
-  ]
-technologies: ["scala"]
-summary: "Explore ten advanced programming techniques in Scala that provide different functionalities to your code, making it more elegant, expressive, performant, compact, and modular."
-math: true
+tags: ["advanced", "code-structure", "software-engineering", "best-practices"]
+tools: ["scala", "nixos"]
+summary: "Explore ten high-level programming techniques that improve the structure, readability, and performance of your code."
+catchphrase: "Write smarter, not harder."
 layout: single
-catchphrase: "A powerful language that is simple but is not easy."
+draft: true
+math: true
+date: 2025-06-30
 ---
 
-We could spend our entire developer's life using just the basic concepts of any programming language we choose to learn, and there's nothing wrong with that; in many cases, very powerful concepts have already been abstracted for us, providing a great out-of-the-box experience, particularly with languages such as Python, R, and JavaScript. However, a programmer's horizon would be limited if we didn't have advanced techniques to play with because, in the end, programming is about solving problems, and the more creative, the better.
+We could spend our entire developer's life using just the basic concepts of any programming language we choose to learn, and there's nothing wrong with that; in many cases, very powerful concepts have already been abstracted for us, providing a great out-of-the-box experience, particularly with languages such as Python, R, and JavaScript. However, a programmer's horizon would be limited if we didn't have advanced techniques to play with because, in the end, programming is about solving problems, and the more creative, the better. These techniques are not only there to make us more efficient in writing code but also in thinking out of the box by using more sophisticated tools.
 
-These techniques are not only there to make us more efficient in writing code but also in thinking out of the box by using more sophisticated tools. In this article, we'll discuss ten advanced programming techniques that provide different functionalities to our code; they can make our syntax more elegant, expressive, performant, compact, modular, and a bunch of different attributes that we probably didn't know could be included in the first place.
+In this Blog Article, we'll discuss ten advanced programming techniques that provide different functionalities to our code; they can make our syntax more elegant, expressive, performant, compact, modular, and a bunch of different attributes that we probably didn't know could be included in the first place. We'll focus on Scala since many techniques are closely related to functional programming.
 
-We'll focus on Scala since many techniques are closely related to functional programming. For each technique, we'll provide historical context, formal definition, main advantages, hands-on examples, recommendations & best practices, and popular real-world use cases.
+We'll start by providing historical context on each technique, following a formal definition, main advantages, a set of hands-on examples, recommendations & best practices, and popular real-world use cases.
+
+We'll be using Scala scripts which can be found in the [Blog Article Repo](https://github.com/pabloagn/blog/tree/master/computer-science/10-advanced-programming-techniques).
 
 # What to expect
 
@@ -41,13 +31,17 @@ As mentioned, we'll be using Scala for this segment.
 
 We'll first head to the directory where we wish our project to be created in:
 
-```shell
+##### **Code**
+
+```PowerShell
 cd Projects
 ```
 
 We'll then create a new Scala project by executing the following command in our terminal:
 
-```shell
+##### **Code**
+
+```PowerShell
 sbt new sbt/scala-seed.g8
 ```
 
@@ -55,13 +49,15 @@ We'll name our project whenever sbt requests the project name.
 
 We'll then open our preferred IDE, import the newly-generated build, and create a new worksheet inside `/projectname/src/main/scala`.
 
+##### **Code**
 
-```shell
+```PowerShell
 cd /projectname/src/main/scala
 ```
 
+##### **Code**
 
-```shell
+```PowerShell
 New-Item -ItemType File -Path ".\Sheet.worksheet.sc"
 ```
 
@@ -107,7 +103,9 @@ What we'll do here is the following:
 
 We first import the `tailrec` annotation and define our outer and nested recursive functions:
 
-```scala
+##### **Code**
+
+```Scala
 import scala.annotation.tailrec
 
 def recursiveSum(list: List[Int]): Int = {
@@ -124,31 +122,43 @@ If we noticed, the `@tailrec` annotation refers to the nested function. This is 
 
 We can then call our outer function with a simple list first:
 
-```scala
+##### **Code**
+
+```Scala
 recursiveSum(List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
 ```
 
-```output
+##### **Output**
+
+```
 // res1: Int = 55
 ```
 
 We can try our function with a larger number:
 
-```scala
+##### **Code**
+
+```Scala
 recursiveSum(List.range(1, 100000))
 ```
 
-```output
+##### **Output**
+
+```
 // res2: Int = 704982704
 ```
 
 But what if we try it with an even larger number?:
 
-```scala
+##### **Code**
+
+```Scala
 recursiveSum(List.range(1, 1000000000))
 ```
 
-```output
+##### **Output**
+
+```
 java.lang.OutOfMemoryError: Java heap space: failed reallocation of scalar replaced objects
 ```
 
@@ -178,7 +188,9 @@ As with the previous example, we will import the `@tailrec` annotation and defin
 
 We first import the `tailrec` annotation and define our outer and nested recursive functions:
 
-```scala
+##### **Code**
+
+```Scala
 def factorialCalc(n: Int): BigInt = {
     @tailrec
     def factorialItems(n: Int, counter: BigInt): BigInt = {
@@ -192,41 +204,57 @@ def factorialCalc(n: Int): BigInt = {
 
 We can start by calling our function using an edge case, which in our case will be 0:
 
-```scala
+##### **Code**
+
+```Scala
 factorialCalc(0)
 ```
 
-```output
+##### **Output**
+
+```
 // res1: BigInt = 1
 ```
 
 We can then call out outer function with a small integer:
 
-```scala
+##### **Code**
+
+```Scala
 factorialCalc(4)
 ```
 
-```output
+##### **Output**
+
+```
 // res2: BigInt = 24
 ```
 
 We can try our function with a larger number:
 
-```scala
+##### **Code**
+
+```Scala
 factorialCalc(10)
 ```
 
-```output
+##### **Output**
+
+```
 // res3: BigInt = 3628800
 ```
 
 And even with a larger number:
 
-```scala
+##### **Code**
+
+```Scala
 factorialCalc(100)
 ```
 
-```output
+##### **Output**
+
+```
 // res4: BigInt = 93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000
 ```
 
@@ -251,7 +279,9 @@ We define a and b as follows:
 
 We first import the `tailrec` annotation and define our outer and nested recursive functions:
 
-```scala
+##### **Code**
+
+```Scala
 def FibCalc(n: Int): BigInt = {
     @tailrec
     def fibItems(n: Int, next: BigInt, current: BigInt): BigInt = {
@@ -264,8 +294,6 @@ def FibCalc(n: Int): BigInt = {
 
 Let us exemplify this calculation using a table:
 
-<div class="table-container">
-
 | Index | Next                    | Current     |
 | ----- | ----------------------- | ----------- |
 | 7     | 1                       | 0           |
@@ -277,9 +305,7 @@ Let us exemplify this calculation using a table:
 | 1     | 13 (`next` + `current`) | 8 (`next`)  |
 | 0     | 21 (`next` + `current`) | 13 (`next`) |
 
-</div>
-
-_Table 1: Tail-Recursive Fibonacci Sequence For Index = 7_
+###### _Table 1: Tail-Recursive Fibonacci Sequence For Index = 7_
 
 A step-by-step explanation:
 
@@ -298,7 +324,9 @@ The key thing here is that we don't return the `next` value; instead, we return 
 
 We can test our algorithm with some smaller and bigger numbers:
 
-```scala
+##### **Code**
+
+```Scala
 // Edge case call
 FibCalc(0)
 
@@ -312,7 +340,9 @@ FibCalc(10)
 FibCalc(1000)
 ```
 
-```output
+##### **Output**
+
+```
 // res6: BigInt = 0
 
 // res7: BigInt = 5
@@ -336,7 +366,9 @@ We'll take a similar approach to our previous implementations:
 
 We first import the `tailrec` annotation and define our outer and nested recursive functions:
 
-```scala
+##### **Code**
+
+```Scala
 def ExpCalc(base: Int, exp: Int) : BigInt = {
     @tailrec
     def ExpItems(base: Int, exp: Int, counter: BigInt): BigInt = {
@@ -351,7 +383,9 @@ def ExpCalc(base: Int, exp: Int) : BigInt = {
 
 We will then call our function with smaller and bigger numbers:
 
-```scala
+##### **Code**
+
+```Scala
 // Edge case call
 ExpCalc(0, 0)
 
@@ -365,10 +399,15 @@ ExpCalc(8, 4)
 ExpCalc(14328, 5)
 ```
 
-```output
+##### **Output**
+
+```
 // res1: BigInt = 0
+
 // res2: BigInt = 4
+
 // res3: BigInt = 4096
+
 // res4: BigInt = 603848322560489914368
 ```
 
@@ -389,19 +428,18 @@ As we have seen, tail recursion is not infallible, and there are some recommenda
 4. **Using helper functions:** Using helper functions to encapsulate the tail-recursive logic can make the code more readable and maintainable. It also makes it possible to implement many tail-recursive functions in the first place.
 5. **Documenting our code:** Clearly documenting our tail-recursive functions, including a description of the function, input parameters, return values, and any edge cases, will make it easier for others (and ourselves) to understand and maintain the code.
 6. **Testing edge cases:** Thoroughly testing our tail-recursive functions with various input values, including edge cases such as negative numbers, zero, and large numbers, will help ensure the correctness and stability of our implementation.
-7. **Considering alternatives:** While tail recursion is an effective technique for certain problems, it may not always be the best approach. We must consider alternative algorithms or data structures that might offer better performance or simplicity in some cases.
+7. **Considering alternatives:** While tail recursion is an effective technique for certain problems, it may not always be the best approach. We must consider alternative algorithms or [[Data Structure|data structures]] that might offer better performance or simplicity in some cases.
 8. **Understanding language/compiler limitations:** Some programming languages or compilers may not support tail-call optimization. It's important to be aware of the language or compiler's limitations and consider alternative approaches if tail-call optimization is not supported or guaranteed.
 
 ## 1.5 Use cases
 
 Apart from the mathematical applications we already reviewed, this technique can be used in a variety of real-life situations:
 
-1. **Tree traversal:** We can use tail recursion to efficiently traverse data structures like trees or graphs in depth-first or breadth-first order, which can be particularly useful in scenarios like searching, sorting, or parsing XML/JSON files.
+1. **Tree traversal:** We can use tail recursion to efficiently traverse [[Data Structure|data structures]] like trees or graphs in depth-first or breadth-first order, which can be particularly useful in scenarios like searching, sorting, or parsing XML/JSON files.
 2. **Parsing and tokenization:** Tail recursion can optimize memory usage and improve performance in parsing and tokenization processes, essential in compiler design when converting a source code file into tokens or parsing an expression.
 3. **String manipulation:** Tail recursion can be used for efficient string manipulation tasks like string reversal, pattern matching, or substring search, which are common in text processing scenarios.
 4. **File and directory operations:** Tail recursion can optimize memory consumption and improve performance in file system operations such as directory traversal, file search, or file copying.
 5. **Optimization problems:** Tail recursion can be applied in dynamic programming or other optimization problems, where a problem is broken down into smaller subproblems and solved iteratively, leading to efficient solutions that avoid redundant calculations and save memory.
-
 
 # 2. Higher-order functions
 
@@ -415,7 +453,9 @@ This concept is easy to implement in Scala since all functions are first-class c
 
 The basic syntax of a higher-order function is as follows:
 
-```scala
+##### **Code**
+
+```Scala
 // Higher-order function
 def myfun(f: Int => Boolean, n: Int): Boolean = {
     f(n)
@@ -457,7 +497,9 @@ We can follow the steps below:
 3. Define a predicate function to evaluate whether a given number is even.
 4. Return the total number of occurrences by using a counter.
 
-```scala
+##### **Code**
+
+```Scala
 def checkList(checkerEven: Int => Boolean, list: List[Int]): Int = {
     def countElements(checkerEven: Int => Boolean, list: List[Int], counter: Int): Int = {
         if (list.isEmpty) counter
@@ -476,11 +518,15 @@ def checkerEven(target: Int): Boolean = {
 
 If we call our higher-order function, we should get the following:
 
-```scala
+##### **Code**
+
+```Scala
 checkList(checkerEven, List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
 ```
 
-```output
+##### **Output**
+
+```
 // : Int = 5
 ```
 
@@ -495,7 +541,9 @@ Similar to the previous example, we can follow the steps below:
 3. Define a third function that performs the product operation.
 4. Return the resulting value.
 
-```scala
+##### **Code**
+
+```Scala
 def sumNumbers(applyProduct: (Int, Int) => Int, applyAddition: (Int, Int) => Int, a: Int, b: Int, x: Int): Int = {
     if (a > b) 0
     else applyProduct(applyAddition(a, x), x) + sumNumbers(applyProduct, applyAddition, a + 1, b, x)
@@ -522,11 +570,15 @@ Let us explain the process step-by-step:
 
 We can finally call our function:
 
-```scala
+##### **Code**
+
+```Scala
 sumNumbers(applyProduct, applyAddition, 2, 3, 2)
 ```
 
-```output
+##### **Output**
+
+```
 // : Int = 18
 ```
 
@@ -535,7 +587,7 @@ sumNumbers(applyProduct, applyAddition, 2, 3, 2)
 1. **Using clear naming**: It's best to use descriptive names for higher-order functions and their arguments to improve code readability and maintainability.
 2. **Using type annotations**: We can specify types for function arguments and return values to ensure type safety and make the code more understandable.
 3. **Keeping functions small and focused**: Each function should have a single responsibility. This makes it easier to understand, test, and reuse the functions.
-4. **Leveraging immutability**: As with functional programming in general, using immutable data structures and avoiding side effects in higher-order functions can reduce the risk of bugs and improve code predictability.
+4. **Leveraging immutability**: As with functional programming in general, using immutable [[Data Structure|data structures]] and avoiding side effects in higher-order functions can reduce the risk of bugs and improve code predictability.
 5. **Using standard library functions**: We can use built-in higher-order functions like `map`, `filter`, and `reduce` instead of implementing custom iterations. This leads to cleaner, more idiomatic code.
 
 ## 2.5 Use cases
@@ -576,7 +628,9 @@ The steps to follow are straightforward:
 2. Partially call the curried function.
 3. Complete the curried function call in a new line.
 
-```scala
+##### **Code**
+
+```Scala
 // Define a curried function
 def sumNums(x: Int)(y: Int) = {
     x + y
@@ -589,7 +643,9 @@ val first_call = sumNums(7) _
 val second_call = first_call(3)
 ```
 
-```output
+##### **Output**
+
+```
 // : Int => Int = <function1>
 // : Int = 10
 ```
@@ -598,7 +654,9 @@ We use the `_` placeholder to indicate that we want to apply a function with one
 
 The type of `first_call` is actually a function we can apply to a given value. If we hover over `first_call` below the `Complete call` line, it will tell us the following:
 
-```output
+##### **Output**
+
+```
 def apply(v1: Int): Int
 Apply the body of this function to the argument.
 **Returns:** the result of function application.
@@ -618,7 +676,9 @@ This one is a little bit trickier since we need to first define a function that 
 
 Let us begin with the first one:
 
-```scala
+##### **Code**
+
+```Scala
 def sumInts(squareInt: Int => Int)(x: Int, y: Int): Int = {
     squareInt(x + y)
 }
@@ -634,7 +694,9 @@ We can already see that the syntax is slightly different. What we're doing is:
 
 We then define our `squareInt` function:
 
-```scala
+##### **Code**
+
+```Scala
 def squareInt(a: Int): Int = {
     a*a
 }
@@ -642,7 +704,9 @@ def squareInt(a: Int): Int = {
 
 We can finally call our functions:
 
-```scala
+##### **Code**
+
+```Scala
 sumInts(squareInt)(2, 3)
 ```
 
@@ -655,21 +719,29 @@ If we recall anonymous functions, each function inside our call is anonymous, me
 
 We get the following output in return:
 
-```output
+##### **Output**
+
+```
 // : Int = 25
 ```
 
 As with the previous example, we could've also performed a partial call, and then use our new function as required:
 
-```scala
+##### **Code**
+
+```Scala
 val applySumSquare = sumInts(squareInt) _
 ```
 
-```scala
+##### **Code**
+
+```Scala
 applySumSquare(2, 3)
 ```
 
-```output
+##### **Output**
+
+```
 // : Int = 25
 ```
 
@@ -734,7 +806,9 @@ We would like to pack two expressions into two separate functions and perform th
 - Value A divided y Value B equals Value C.
 - Value C divided by Value D equals E.
 
-```scala
+##### **Code**
+
+```Scala
 // Unsafe division one
 def unsafeDivOne(UnsafeDivTwo: (Double, Double)  => Double, a: Double, b: Double, d: Double): Double = {
     UnsafeDivTwo(a, b) / d
@@ -748,27 +822,37 @@ def UnsafeDivTwo(a: Double, b: Double): Double = {
 
 If we call our first function with positive real numbers, we'll get the expected result:
 
-```scala
+##### **Code**
+
+```Scala
 unsafeDivOne(UnsafeDivTwo, 12, 2, 3)
 ```
 
-```output
+##### **Output**
+
+```
 // res1: Double = 2.0
 ```
 
 However, as simple as this example is, it can easily fail; if we feed 0 to the parameter B, the result of the expression becomes undefined, and the execution returns infinity.
 
-```scala
+##### **Code**
+
+```Scala
 unsafeDivOne(UnsafeDivTwo, 12, 0, 3)
 ```
 
-```output
+##### **Output**
+
+```
 // res1: Double = Infinity
 ```
 
 Let us redefine our unsafe implementations to safe ones:
 
-```scala
+##### **Code**
+
+```Scala
 // Safe division one
 def safeDivOne(SafeDivTwo: (Double, Double) => Option[Double], a: Double, b: Double, d: Double): Option[Double] = {
     if (b != 0 & d != 0) {
@@ -815,13 +899,17 @@ This can be a little confusing, so let us explain what we're doing step-by-step:
 
 We can then call our function with unsafe parameters:
 
-```scala
+##### **Code**
+
+```Scala
 safeDivOne(safeDivTwo, 12, 0, 3)
 ```
 
 And the output will be what we intended.
 
-```output
+##### **Output**
+
+```
 // res1: Option[Double] = None
 ```
 
@@ -869,7 +957,9 @@ Pattern matching is often used with case classes, sealed traits, tuples, and lis
 
 Here is the basic syntax of a pattern-matching construct:
 
-```scala
+##### **Code**
+
+```Scala
 // Define a pattern-matching construct
 def patternMatch(x: Int): Unit = {
   x match {
@@ -890,7 +980,9 @@ patternMatch(simple_int_2)
 patternMatch(simple_int_3)
 ```
 
-```output
+##### **Output**
+
+```
 // The number is 14
 // The number is 15
 // The number is not 15 nor 16
@@ -916,7 +1008,9 @@ In our first example, we'll add more functionalities to this implementation.
 
 We can extend our `safeDivision` functionality by using pattern matching:
 
-```scala
+##### **Code**
+
+```Scala
 def checkDivide(result: Option[Double]) = {
     result match {
     case Some(value) => println(s"Division result: $value")
@@ -927,12 +1021,16 @@ def checkDivide(result: Option[Double]) = {
 
 Now, we simply feed our expression:
 
-```scala
+##### **Code**
+
+```Scala
 checkDivide(safeDivOne(safeDivTwo, 12, 2, 3))
 checkDivide(safeDivOne(safeDivTwo, 12, 0, 3))
 ```
 
-```output
+##### **Output**
+
+```
 // Division result: 2.0
 // Division by zero is not allowed
 ```
@@ -941,7 +1039,9 @@ checkDivide(safeDivOne(safeDivTwo, 12, 0, 3))
 
 Let us create a simple application that takes an input string representing an animal's name and, using pattern matching, determines the animal's classification within a basic hierarchy. The hierarchy consists of 3 levels: Mammal, Bird, and Reptile. We must match the input animal to the correct classification and return the correct class as a `String`.
 
-```scala
+##### **Code**
+
+```Scala
 // Define an animal checker
 def checkAnimal(animal: String): String = {
     animal match {
@@ -959,7 +1059,9 @@ val my_animal = "Snake"
 checkAnimal(my_animal)
 ```
 
-```output
+##### **Output**
+
+```
 res1: String = "Reptile"
 ```
 
@@ -969,7 +1071,9 @@ Let us define a function that checks for four basic base data types in Scala. Th
 
 For this example, we'll define two versions of the same function: one using pattern matching and the other using if-else if-else constructs.
 
-```scala
+##### **Code**
+
+```Scala
 // Implement using pattern matching
 def checkType1(x: Any): String = x match {
   case _: Int => "Int"
@@ -996,7 +1100,9 @@ checkType2("A String")
 
 While both implementations return the same value, the first function is much more concise and readable since we use a placeholder `_`. In contrast, the second one requires additional methods to do the same.
 
-```output
+##### **Output**
+
+```
 res1: String = "Int"
 res2: String = "Int"
 
@@ -1008,7 +1114,9 @@ res4: String = "String"
 
 Let us define a custom class called `PositiveInt`, which can represent a positive integer object. We want to be able to check if an integer is positive by using the `PositiveInt` constructor and pattern matching.
 
-```scala
+##### **Code**
+
+```Scala
 // Define our custom class
 class PositiveInt(val value: Int)
 
@@ -1028,7 +1136,9 @@ checkNum(7)
 checkNum(-10)
 ```
 
-```output
+##### Output
+
+```
 // The number 7 is positive.
 // The number -10 is not positive.
 ```
@@ -1099,7 +1209,9 @@ We can, however, declare a lazy value by using the `lazy` keyword:
 
 Let us declare two simple variables: An eager variable and a lazy one:
 
-```scala
+##### **Code**
+
+```Scala
 // Define an eager list and a lazy list
 val my_list:List[Int] = List(1, 2, 3, 4, 5)
 lazy val my_lazy_list:List[Int] = List(1, 2, 3, 4, 5)
@@ -1107,7 +1219,9 @@ lazy val my_lazy_list:List[Int] = List(1, 2, 3, 4, 5)
 
 If we hover over the variable name, we will see that the eager variable already returns its value, while the second does not:
 
-```output
+##### **Output**
+
+```
 my_list: List[Int] = List(1, 2, 3, 4, 5)
 lazy private val my_lazy_list: List[Int]
 ```
@@ -1179,7 +1293,9 @@ Let us define a very simple example.
 
 Let us declare a function that accepts an integer value and returns the same value. We'll define its parameter as implicit and study its behavior.
 
-```scala
+##### **Code**
+
+```Scala
 // Define a function with implicit parameter x
 def findInt(implicit x: Int) = x
 
@@ -1189,13 +1305,17 @@ findInt
 
 As expected, we get an error:
 
-```output
+##### **Output**
+
+```
 could not find implicit value for parameter x: Int
 ```
 
 This is because we have not yet declared an implicit value that falls under the scope of the implicit parameter lookup. Let us do that:
 
-```scala
+##### **Code**
+
+```Scala
 // Define a function with implicit parameter x
 def findInt(implicit x: Int) = x
 
@@ -1206,7 +1326,9 @@ implicit val my_int: Int = 10
 findInt
 ```
 
-```output
+##### **Output**
+
+```
 res1: Int = 10
 ```
 
@@ -1214,7 +1336,9 @@ Surprise, surprise, the function gets magically evaluated. What happened was clo
 
 What if we declare another implicit `Int`?
 
-```scala
+##### **Code**
+
+```Scala
 // Define a function with implicit parameter x
 def findInt(implicit x: Int) = x
 
@@ -1226,7 +1350,9 @@ implicit val my_int_2: Int = 7
 findInt
 ```
 
-```output
+##### **Output**
+
+```
 ambiguous implicit values:
 both value my_int_2 in class MdocApp of type => Int
 and value my_int in class MdocApp of type => Int
@@ -1237,7 +1363,9 @@ We will get an ambiguous implicit value error: since both values belong to the s
 
 But what if, in turn, we declare a value of a different type?
 
-```scala
+##### **Code**
+
+```Scala
 // Define a function with implicit parameter x
 def findInt(implicit x: Int) = x
 
@@ -1249,7 +1377,9 @@ implicit val my_string: String = "A String"
 findInt
 ```
 
-```output
+##### **Output**
+
+```
 res1: Int = 10
 ```
 
@@ -1259,7 +1389,9 @@ This works perfectly because our second implicit value, `my_string`, is not of t
 
 Let us define a type class to format different types when printing them to `stdout`. We want to be able to use two types: `String` and `Int`.
 
-```scala
+##### **Code**
+
+```Scala
 trait Formatter[T] {
   def format(value: T): String
 }
@@ -1295,7 +1427,9 @@ Let us explain in more detail what we just declared:
    2. We extend the functionality of `Formatter` with these two methods.
 4. We then create a function to print the formatted type.
 
-```output
+##### **Output**
+
+```
 // The integer value is 777
 // The string value is a string
 ```
@@ -1362,7 +1496,9 @@ Let us think of a more concrete example where we would like to define two functi
 
 We'll start with the conventional style:
 
-```scala
+##### **Code**
+
+```Scala
 // Define an addition function
 def addInts(x: Int, y: Int): Int = {
     x + y
@@ -1382,7 +1518,9 @@ val z1 = 21
 println(s"($x1 + $y1) * $z1 = ${multiplyInts(addInts(x1, y1), z1)}")
 ```
 
-```output
+##### **Output**
+
+```
 // (7 + 14) * 21 = 441
 ```
 
@@ -1390,7 +1528,9 @@ Simple, right?
 
 Now, let us define an equivalent implementation using the CPS style:
 
-```scala
+##### **Code**
+
+```Scala
 // Define an addition function
 def addIntsCPS(x: Int, y: Int, k: Int => Unit): Unit = {
     k(x + y)
@@ -1426,7 +1566,9 @@ Let us explain step by step:
 
 As expected, we get the same result:
 
-```output
+##### **Output**
+
+```
 // (7 + 14) * 21 = 441
 ```
 
@@ -1459,7 +1601,9 @@ Let us start by defining what we'll need to achieve this:
 - A list of `Int` values.
 - A call to the CPS functions we defined previously.
 
-```scala
+##### **Code**
+
+```Scala
 def sumListCPS(list: List[Int], k: Int => Unit): Unit = k(list.sum)
 
 def productListCPS(list: List[Int], k: Int => Unit): Unit = k(list.product)
@@ -1475,7 +1619,9 @@ sumListCPS(numbers, sum => {
 })
 ```
 
-```output
+##### **Output**
+
+```
 // Sum: 105
 // Product: 2016840
 ```
@@ -1559,7 +1705,9 @@ Let us break our approach step-by-step:
 5. We finally call our asynchronous process using the `Await` API.
 6. The `sumAsync` process call will tell us if our process terminated successfully.
 
-```scala
+##### **Code**
+
+```Scala
 import scala.concurrent.{Promise, Await, Future}
 import scala.concurrent.duration._
 
@@ -1591,7 +1739,9 @@ val result = Await.result(future, 10.seconds)
 println(s"Sum: $result")
 ```
 
-```output
+##### **Output**
+
+```
 // future: Future[Int] = Future(Success(3))
 // result: Int = 3
 // Sum: 3
@@ -1605,7 +1755,9 @@ Let us implement an addition and a multiplication asynchronously and returns a f
 
 The process will be similar to our previous example. The only difference is that we'll now use a `for` comprehension that combines the futures returned by the `addAsync` and `multiplyAsync` functions.
 
-```scala
+##### **Code**
+
+```Scala
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
 
@@ -1629,7 +1781,9 @@ val resultFuture = for {
 val result_2 = Await.result(resultFuture, 10.seconds)
 ```
 
-```output
+##### **Output**
+
+```
 // resultFuture: Future[(Int, Int)] = Future(Success((12,35)))
 // result_2: (Int, Int) = (12, 35)
 ```
@@ -1695,7 +1849,9 @@ Before any code, we'll explain step-by-step what we will do:
 
 Now that we have a little bit more clarity, we can begin with our implementation:
 
-```scala
+##### **Code**
+
+```Scala
 // 1. Define the higher-kinded type called Box
 trait Box[F[_]] {
   def first[A](fa: F[A]): Option[A]
@@ -1727,13 +1883,17 @@ val myVector = Vector(4, 5, 6)
 val firstElementVector = findFirst(vectorBox, myVector)
 ```
 
-```scala
+##### **Code**
+
+```Scala
 // Print both values
 println(firstElementList)
 println(firstElementVector)
 ```
 
-```output
+##### **Output**
+
+```
 // Some(1)
 // Some(4)
 ```
@@ -1742,13 +1902,17 @@ We can even go one step further and introduce a generic implementation of the `B
 
 For this, we will first head to our `build.sbt` file and append the following line:
 
-```scala
+##### **Code**
+
+```Scala
 libraryDependencies += "org.typelevel" %% "cats-core" % "2.6.1"
 ```
 
 So that our entire build file should look like such:
 
-```scala
+##### **Code**
+
+```Scala
 import Dependencies._
 
 ThisBuild / scalaVersion     := "2.12.8"
@@ -1766,7 +1930,9 @@ lazy val root = (project in file("."))
 
 This should automatically download `Cats` and make it available for import. So, back in our worksheet file, we can include the following:
 
-```scala
+##### **Code**
+
+```Scala
 import cats._
 import cats.implicits._
 import cats.instances.list._
@@ -1777,7 +1943,9 @@ Lets get this party started, shall we?
 
 Let us define our generic implementation:
 
-```scala
+##### **Code**
+
+```Scala
 class GenericBox[F[_]: Foldable] extends Box[F] {
   def first[A](container: F[A]): Option[A] = {
     Foldable[F].reduceLeftOption(container)((a, _) => a)
@@ -1794,7 +1962,9 @@ So, in summary, the combination of `Foldable` with `reduceLeftOption` gets us th
 
 Lastly, we simply need to define our appropriate instances and call the appropriate methods:
 
-```scala
+##### **Code**
+
+```Scala
 // 2. Create an instance of ListBox and use it to find the first element in a list
 val genericListBox = new GenericBox[List]
 val myList2 = List(1, 2, 3)
@@ -1806,12 +1976,16 @@ val myVector2 = Vector(4, 5, 6)
 val firstElementVector2 = genericVectorBox.first(myVector2)
 ```
 
-```scala
+##### **Code**
+
+```Scala
 println(firstElementList)
 println(firstElementVector)
 ```
 
-```output
+##### **Output**
+
+```
 // Some(1)
 // Some(4)
 ```
@@ -1878,4 +2052,8 @@ As we continue to explore advanced concepts and mathematical theories, remember 
 - [Scala Documentation, Futures and Promises](https://docs.scala-lang.org/overviews/core/futures.html)
 - [Baeldung, Higher-Kinded Types](https://www.baeldung.com/scala/higher-kinded-types)
 
+---
 
+# Copyright
+
+Pablo Aguirre, Creative Commons Attribution 4.0 International, All Rights Reserved.

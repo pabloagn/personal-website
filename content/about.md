@@ -1,6 +1,3 @@
 ---
 title: "About"
-layout: "about"
 ---
-
-

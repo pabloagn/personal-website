@@ -102,21 +102,40 @@
 /*   color: var(--fg-primary); */
 /* } */
 
-/* Indentation */
-.toc-level-1 {
-  padding-left: 0;
-}
-.toc-level-2 {
-  padding-left: 0;
-}
-.toc-level-3 {
-  padding-left: var(--space-sm);
-}
-.toc-level-4 {
-  padding-left: var(--space-md);
-}
 
 .toc-text {
   color: var(--fg-secondary);
   transition: color 0.2s ease;
+}
+
+/* Indentation */
+/* Remove bullets */
+.toc-content ul,
+.toc-content ol {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Proper indentation for nested levels */
+.toc-content li {
+  padding-left: 1rem;
+}
+
+.toc-content ul ul li {
+  padding-left: 2rem;
+}
+
+.toc-content ul ul ul li {
+  padding-left: 3rem;
+}
+
+.toc-content ul ul ul ul li {
+  padding-left: 4rem;
+}
+
+/* Optional: anchor spacing */
+.toc-content li > a {
+  display: block;
+  padding: 0.25rem 0;
 }

@@ -11,25 +11,13 @@
 
     <div class="list-content">
       {{ partial "layout/grid.html" (dict
-        "Pages" (cond .IsNode .Paginator.Pages .Pages)
+        "Pages" .Paginator.Pages
         "class" "grid--2"
-        )
-      }}
+      ) }}
     </div>
 
-    {{ if .Paginator.HasPrev }}
-      <nav class="pagination">
-        {{ if .Paginator.HasPrev }}
-          <a href="{{ .Paginator.Prev.URL }}" class="pagination-link"
-            >◀ Previous</a
-          >
-        {{ end }}
-        {{ if .Paginator.HasNext }}
-          <a href="{{ .Paginator.Next.URL }}" class="pagination-link"
-            >Next ▶</a
-          >
-        {{ end }}
-      </nav>
-    {{ end }}
+    {{ partial "paginator.html" . }}
+
   </section>
 {{ end }}
+

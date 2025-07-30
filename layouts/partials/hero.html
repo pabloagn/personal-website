@@ -1,12 +1,14 @@
 <section class="hero">
   <div class="hero-container">
     <div class="hero-box">
-      <p class="hero-tagline-top">
-        Pablo Aguirre, MSc
-      </p>
+      <p class="hero-tagline-top">Pablo Aguirre, MSc</p>
       <p class="hero-divider">─────── § ───────</p>
-      {{partial "/hero/verticals.html" . }}
-      <p></p>
+      {{ partial "hero/verticals.html" (dict
+        "items" (slice "Chemical Engineer" "Senior Research Scientist" "Open Source Developer")
+        "separator" "•"
+        )
+      }}
+      {{ partial "/hero/actionables.html" . }}
     </div>
   </div>
 </section>

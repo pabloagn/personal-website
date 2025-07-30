@@ -11,7 +11,12 @@ import { enableLanguageStackTooltips } from "./modules/languageStack.js";
 import { progressScroll } from "./modules/progressBar.js";
 import { initTimelineLines } from './modules/verticalTimelines.js';
 import { initHexagonPillars } from './modules/pillarsHexagon.js';
+import { hamburgerMenu } from './modules/hamburgerMenu.js';
+import { autonumberHeadings } from './modules/autonumberHeadings.js';
 
+// NOTE:
+// Be careful with the orderof function calling.
+// e.g., autonumber always must go before anchors.
 function boot() {
   initHeaderScroll();
   initSmoothScroll();
@@ -22,8 +27,10 @@ function boot() {
   enableDatablockSort();
   enableLanguageStackTooltips();
   initTimelineLines();
+  autonumberHeadings();
   initHeaderAnchors();
   initHexagonPillars();
+  hamburgerMenu();
   // initSiteSearch();
 }
 
