@@ -1,5 +1,5 @@
 export function initHeaderAnchors() {
-  const headings = document.querySelectorAll("h1[id], h2[id], h3[id]");
+  const headings = document.querySelectorAll("h1[id], h2[id], h3[id], h4[id], h5[id]");
 
   headings.forEach((heading) => {
     if (heading.querySelector(".header-anchor")) return;

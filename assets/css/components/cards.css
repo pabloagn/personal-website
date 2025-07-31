@@ -79,6 +79,7 @@
 
 .card-title {
   margin-bottom: var(--space-sm);
+  font-size: var(--font-size-6)
 }
 
 .card-link {
@@ -199,7 +200,7 @@
 }
 
 .card--tool .card-title {
-  font-size: var(--text-lg);
+  font-size: var(--font-size-4);
   color: var(--accent-purple);
 }
 

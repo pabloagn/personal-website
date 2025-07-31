@@ -81,3 +81,27 @@
   font-family: var(--font-mono);
   color: var(--fg-muted);
 }
+
+.h2-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  color: var(--fg-muted-darker);
+  /* margin: 20px 0; */
+  font-size: var(--font-size-lg);
+  max-width: 15rem;
+  margin: 0 auto;
+  padding-top: var(--space-xl);
+}
+
+.h2-divider span:first-child,
+.h2-divider span:last-child {
+  flex: 1;
+  height: 1px;
+  background-color: currentColor;
+  content: '';
+}
+
+.h2-divider span:nth-child(2) {
+  padding: 0 8px;
+}

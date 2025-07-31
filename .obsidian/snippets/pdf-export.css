@@ -1,0 +1,267 @@
+@media print {
+
+    /* Document-wide. ---------------------------------------------------------------------- */
+    @page { /* Page structure. */
+        margin: 2cm !important;
+    }
+    a:link, a:visited, a { /* Links. */
+        font-family: "Cormorant Garamond" !important;
+        font-size: 10pt !important;
+        color: #1a1a1a !important;
+        text-decoration: underline !important;
+    }
+
+    /* Main body of text. ------------------------------------------------------------------ */
+    body {
+        tab-size: 4 !important;
+        --code-background: #dfdfdf !important;
+        --code-normal: #1A1A1A !important;
+    }    
+    code {
+        background-color: #dddddd !important;
+        padding: 1px 4px !important;
+        color: #1a1a1a !important;
+        border-style: solid !important;
+        border-radius: 3px !important;
+        border-width: 1px 1px 1px 1px !important;
+        border-color: #dddddd !important;
+        line-height: 1 !important;
+        font-size: 7.5pt !important;
+    }
+    pre {
+        background-color: #1b1e28 !important;
+        border-radius: 0px !important;
+        border-width: 0px 0px 0px 0px !important;
+        border-color: #c9c9c9 !important;
+        line-height: 1 !important;
+        page-break-before: avoid !important;
+        page-break-after: avoid !important;
+    }
+    pre code {
+        color: #c4c4c4 !important;
+        font-size: 8pt !important;
+        padding: 0px 0px !important;
+        background-color: transparent !important;
+        border-radius: 0px !important;
+        border-width: 0px 0px 0px 0px !important;
+        border-color: #1b1e28 !important;
+        line-height: 1.5 !important;
+    }
+    p {
+        font-family: "Cormorant Garamond" !important;
+        font-size: 10pt !important;
+        /*text-align: justify !important;*/
+        line-height: 1.3 !important;
+        margin-top: 5px !important;
+    }
+    strong {
+        font-weight: bold !important;
+    }
+
+    /* Header styling and automatic numbering. --------------------------------------------- */
+    h1, h2, h3, h4, h5 {
+        font-family: "CMU Serif" !important;
+        font-weight: 400 !important;
+        color: #1a1a1a !important;
+        page-break-after:avoid;
+        page-break-inside:avoid;
+        font-size: 12pt !important;
+        line-height: 1 !important;
+        margin-bottom: 10px !important;
+        padding-bottom: 0 !important;
+        margin-top: 20px !important;
+    }
+    .first {
+        display: table !important;
+        width: 100% !important;
+        vertical-align: middle !important;
+      }
+      
+    .title {
+        display: table-cell !important;
+        vertical-align: middle !important;
+        text-align: center !important;
+    }
+    .title h1 { /* Title. */
+        font-family: "CMU Serif" !important;
+        color: #1a1a1a !important;
+        font-size: 20pt !important;
+    }
+    .title h3 { /* Title. */
+        font-family: "CMU Serif" !important;
+        color: #1a1a1a !important;
+        font-size: 16pt !important;
+    }
+    h1 { /* Title. */
+        font-family: "CMU Serif" !important;
+        font-size: 16pt !important;
+        margin-top: 0px !important;
+        margin-bottom: 10px !important;
+    }
+    h2 { /* Title. */
+        font-family: "CMU Serif" !important;
+        font-size: 14pt !important;
+    }
+
+    h3 { /* Title. */
+        font-family: "CMU Serif" !important;
+        font-size: 12pt !important;
+    }
+
+    h4 { /* Title. */
+        font-family: "CMU Serif" !important;
+        font-size: 12pt !important;
+    }
+
+    h5 { /* Title. */
+        font-size: 8pt !important;
+        margin-bottom: 0 !important;
+    }
+
+    h6 { /* Subtitle. */
+        font-family: "Cormorant Garamond" !important;
+        font-size: 8pt !important;
+        margin-top: 6px !important;
+        text-align: center !important;
+        text-transform: capitalize !important;
+    }
+    /*
+    h2:before {
+        counter-increment: H2;
+        content: counter(H2) ". \0000a0";
+    }
+    h2 {counter-reset: H3;}
+    h3:before {
+        counter-increment: H3;
+        content: counter(H2) "." counter(H3) ". \0000a0";
+    }
+    h3 {counter-reset: H4;}
+    h4:before {
+        counter-increment: H4;
+        content: counter(H2) "." counter(H3) "." counter(H4) ". \0000a0";
+    }
+    */
+
+    /* Credits. ---------------------------------------------------- */
+
+    del { /* Credits, i.e. author information. */
+        font-family: "Cormorant Garamond" !important;
+        display: block !important;
+        text-align: center !important;
+        font-size: 10pt !important;
+        text-decoration: none;
+        margin-top: 8px !important;
+        padding-bottom: 10px !important;
+    }
+
+    /* Math blocks. --------------------------------------------------------------- */
+    mjx-math {
+        font-size: 90% !important;
+    }
+    math-block {
+        padding: 0.5em 0 0 0 !important;
+        margin: 0.5em 0 0 0 !important;
+        page-break-before: avoid !important;
+    }
+
+    /* Figures. ---------------------------------------------------------------------------- */
+    svg, img {
+        font-family: "Cormorant Garamond" !important;
+        display: inline !important;
+        /* filter: invert(100%) !important; */
+        page-break-inside: avoid !important;
+        page-break-after: avoid !important;
+        margin: 10px auto 5px !important;
+    }
+    figcaption {
+        font-family: "Cormorant Garamond" !important;
+        text-align: center !important;
+        margin-bottom: 16px !important;
+        font-size: 8pt !important;
+    }
+
+    /* Tables. ----------------------------------------------------------------------------- */
+    table, pre {
+        page-break-inside: avoid !important;
+    }
+    table {
+        font-family: "Cormorant Garamond" !important;
+        font-size: 10pt !important;
+        text-align: center !important;
+        margin: 10px auto 5px !important;
+        border-top: 1px solid #1a1a1a !important;
+        border-bottom: 1px solid #1a1a1a !important;
+    }
+    th { /* Table headers. */
+        font-family: "Cormorant Garamond" !important;
+        font-size: 10pt !important;
+        text-align: center !important;
+        color: #1a1a1a !important;
+        font-weight: normal !important;
+        border: none !important;
+        border-bottom: 1px solid #1a1a1a !important;
+        padding: 2px 5px !important;
+    }
+    td {
+        border: none !important;
+        padding: 2px 5px !important;
+    }
+
+    /* Lists ------------------------------------------------------------------------------- */
+    ul, ol, dl {
+        page-break-before: avoid !important;
+        font-family: "Cormorant Garamond" !important;
+        font-size: 10pt !important;
+        line-height: 1.1 !important;
+        margin-top: 0px !important;
+        padding-top: 0px !important;
+    }
+    ul li { /* Adjusts size of bullet points. */
+        list-style-type: none !important;
+        position: relative !important;
+        font-size: 10pt !important;
+    }
+    ul li::before {
+        content: '•' !important;
+        position: absolute !important;
+        left: -1.15em !important;
+        top: 0.1em !important;
+        font-size: 0.85em !important;
+    }
+
+    /* Horizontal separator. --------------------------------------------------------------- */
+    hr {
+        overflow: visible !important; /* For IE */
+        height: 0px !important;
+        padding: 10px !important;
+        border-top: None !important;
+        border-bottom: solid !important;
+        border-width: 0.5px !important;
+        border-color: #1a1a1a !important; 
+        color: #1a1a1a !important;
+        text-align: center !important;
+        }
+    hr:after {
+        content: "§" !important;
+        display: inline-block !important;
+        position: relative !important;
+        top: -0.37em !important;
+        font-size: 1.5em !important;
+        padding: 0 0.25em !important;
+        background: white !important;
+    }
+
+    /* Additional settings. ---------------------------------------------------------------- */
+    blockquote {
+        content: "§";
+        display: inline-block;
+        position: relative;
+        top: -0.7em;
+        font-size: 1.5em;
+        padding: 0 0.25em;
+        background: white;
+    }
+    .mermaid { /* Inline diagrams. */
+        color: black !important;
+    }
+}

@@ -31,3 +31,18 @@
   align-self: flex-end;
 }
 
+/* Single Navigation */
+.single-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: solid 1px var(--fg-muted-darker);
+  padding: var(--space-lg) 0;
+}
+
+.single-nav > :first-child {
+  justify-self: start;
+}
+
+.single-nav > :last-child {
+  justify-self: end;
+}

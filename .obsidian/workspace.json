@@ -1,0 +1,284 @@
+{
+  "main": {
+    "id": "0a0a3f790d3da8e9",
+    "type": "split",
+    "children": [
+      {
+        "id": "6b3d081829b76da2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "51c44b758b672a8b",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3f9854fa2ce1e76e",
+    "type": "split",
+    "children": [
+      {
+        "id": "8d6a002889f3daac",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ebad91839cefc762",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "a46797cacd051114",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "73f29ec5ec42b92f",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          },
+          {
+            "id": "dda7480591164fbd",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {},
+              "icon": "clock",
+              "title": "Recent Files"
+            }
+          },
+          {
+            "id": "54ced4366f6c03a1",
+            "type": "leaf",
+            "state": {
+              "type": "VIEW_TYPE_LONGFORM_EXPLORER",
+              "state": {},
+              "icon": "longform",
+              "title": "Longform"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 382.5
+  },
+  "right": {
+    "id": "f0ebe3e0ef8445e3",
+    "type": "split",
+    "children": [
+      {
+        "id": "1a85f0fec868a04d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7cac944c5089a901",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "6089b27e496ffb32",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "e32b1b1dfefbb9ce",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "9b073e12043a3213",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "bc749586278dad54",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
+            }
+          },
+          {
+            "id": "9ae3aded3d23d418",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "467bc36c0b8e8774",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 356.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-book-search-plugin:Create new book note": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "obsidian-kanban:Create new board": false,
+      "obsidian-map-view:Open map view": false,
+      "obsidian-media-db-plugin:Add new Media DB entry": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "dda7480591164fbd",
+  "lastOpenFiles": [
+    "content/blog/6-big-data-file-formats-compared-pt-1.md~",
+    "content/blog/10-expert-mentors-for-learing-to-code.md~",
+    "TEST_MARKDOWN/6-big-data-file-formats-compared-pt-1.md",
+    "TEST_MARKDOWN/format-test-codeblock.md",
+    "TEST_MARKDOWN/an-introduction-to-concurrent-programming-pt-1.md",
+    "TEST_MARKDOWN/assembly-for-beginners.md",
+    "TEST_MARKDOWN/julia-for-beginners.md",
+    "TEST_MARKDOWN/the-scala-experience-a-fusion-of-power-and-elegance.md",
+    "TEST_MARKDOWN/what-are-github-gists-and-how-to-use-them.md",
+    "TEST_MARKDOWN/_index.md",
+    "TEST_MARKDOWN/scala-3-for-beginners.md",
+    "TEST_MARKDOWN/6-big-data-file-formats-compared-pt-3.md",
+    "TEST_MARKDOWN/10-advanced-programming-techniques.md",
+    "TEST_MARKDOWN/6-big-data-file-formats-compared-pt-1_1.md",
+    "TEST_MARKDOWN/javascript-for-beginners.md",
+    "TEST_MARKDOWN/probability-distributions-explained.md",
+    "TEST_MARKDOWN/julia-for-data-scientists.md",
+    "TEST_MARKDOWN/an-introduction-to-nix.md",
+    "TEST_MARKDOWN/what-is-dax-and-why-is-it-useful.md",
+    "TEST_MARKDOWN/the-linux-filesystem-explained.md",
+    "TEST_MARKDOWN/programming-paradigms-explained.md",
+    "TEST_MARKDOWN/programming-best-practices-writing-better-code.md",
+    "TEST_MARKDOWN/r-for-beginners.md",
+    "TEST_MARKDOWN/rust-for-beginners.md",
+    "TEST_MARKDOWN/10-expert-mentors-for-learing-to-code.md",
+    "TEST_MARKDOWN/the-types-of-machine-learning-algorithms-explained.md",
+    "TEST_MARKDOWN/elixir-for-beginners.md",
+    "TEST_MARKDOWN/6-big-data-file-formats-compared-pt-1.md~",
+    "scripts/fmt-markdown.py~",
+    "scripts/README.md~",
+    "content/blog/10-advanced-programming-techniques.md~",
+    "scripts/fmt-markdown.py",
+    "TEST_MARKDOWN",
+    "content/blog/an-introduction-to-nix.md~",
+    "layouts/deep-dives/single.html~",
+    "hugo.toml~",
+    "9000-9999 Configuration/9300-9399 Attachments/Pasted image 20250407133309.png",
+    "9000-9999 Configuration/9300-9399 Attachments/{2A05DC9E-737D-4CA0-A195-13954B4DA4DE}.png",
+    "9000-9999 Configuration/9300-9399 Attachments/{372BB50D-9D25-4687-807D-362C294957FC}.png",
+    "9000-9999 Configuration/9300-9399 Attachments/{8A1DD51E-A393-483A-AEE6-FF0A974C5E62}.png",
+    "9000-9999 Configuration/9300-9399 Attachments/{C5F08933-BAA3-4D60-8832-A090F0298612}.png",
+    "9000-9999 Configuration/9300-9399 Attachments/{B7FC6FD6-F0CB-4974-A40C-3D2AE25E62F4}.png",
+    "9000-9999 Configuration/9300-9399 Attachments/{B5CF7551-7E8C-4C86-94AB-660F1F5049D6}.png",
+    "9000-9999 Configuration/9300-9399 Attachments/{7847F423-7288-485C-BA52-89334ACC5B99}.png",
+    "9000-9999 Configuration/9300-9399 Attachments/{8BE7E2EB-1C38-4121-B354-6AED06433A87}.png",
+    "9000-9999 Configuration/9300-9399 Attachments/{2C593964-EA5D-4FB4-B9E6-611C91111E1B}.png",
+    "6000-6999 Solenoid Labs/6750-6799 Operations/6752 Processes/0000 Processes Canvas.canvas",
+    "9000-9999 Configuration/9200-9299 Templates/0001 Templates - Inbox/Canvas Candy/Flowcharts - Parallelogram.canvas",
+    "9000-9999 Configuration/9200-9299 Templates/0001 Templates - Inbox/Canvas Candy/Flowcharts - Circles.canvas",
+    "9000-9999 Configuration/9200-9299 Templates/0001 Templates - Inbox/Canvas Candy/Flowcharts - Ovals.canvas",
+    "9000-9999 Configuration/9200-9299 Templates/0001 Templates - Inbox/Canvas Candy/Flowcharts - Squares.canvas",
+    "9000-9999 Configuration/9200-9299 Templates/0001 Templates - Inbox/Canvas Candy/Footers.canvas",
+    "9000-9999 Configuration/9200-9299 Templates/0001 Templates - Inbox/Canvas Candy/Headers.canvas",
+    "9000-9999 Configuration/9200-9299 Templates/0001 Templates - Inbox/Canvas Candy/Borders Stencil.canvas",
+    "9000-9999 Configuration/9200-9299 Templates/0001 Templates - Inbox/Canvas Candy/Headers Footers Combined.canvas",
+    "9000-9999 Configuration/9200-9299 Templates/0001 Templates - Inbox/Canvas Candy/Labels.canvas"
+  ]
+}

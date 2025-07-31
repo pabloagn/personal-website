@@ -5,84 +5,80 @@ tags: ["scala", "functional-programming", "expressiveness"]
 tools: ["scala"]
 summary: "Explore how Scala blends power, expressiveness, and scalability into a language fit for both beginners and experts."
 catchphrase: "The elegance of function, the power of type."
-layout: single
 draft: true
 math: true
 date: 2025-06-30
 ---
 
 Scala is a powerful, compiled, strong statically typed, high-level, general-purpose programming language that supports both [[Object-Oriented Programming|object-oriented]] programming and functional programming. Its demand has grown over the last years because of the powerful features it offers: Hybrid programming, type interface, immutability, pattern matching, higher-order functions, extensibility, interoperability with Java, and scalability, are just some of the main functionalities offered by the language.
-
 In this Blog Article, we'll discuss what Scala is, why it's relevant today, how it was built, and its main characteristics. We'll then compare Scala with other similar general-purpose languages such as Java, Haskell, F#, OCaml, and more. We'll also highlight Scala's main advantages over other general-purpose languages such as Python, Rust, and Go. Next, we'll talk about popular engines built on Scala, such as Apache Spark, Akka & Apache Kafka. We'll close this segment with next steps for those interesting in starting to learn this powerful language.
-
 We'll be using Scala code which can be found in the [Blog Article Repo](https://github.com/pabloagn/blog/tree/master/computer-science/the-scala-experience-a-fusion-of-power-and-elegance).
 
-# What is [[Scala]]?
+## What is [[Scala]]?
 
 ---
 
-# A brief historical background
+## A brief historical background
 
-## n. A need for a high-performance language
+### n. A need for a high-performance language
 
-## n.
-
----
-
-# Why learn [[Scala]]?
+### n.
 
 ---
 
-# Why is it difficult to learn?
+## Why learn [[Scala]]?
 
 ---
 
-# Main features
+## Why is it difficult to learn?
 
-## n. Compiled
+---
 
-## n. Hybrid programming
+## Main features
+
+### n. Compiled
+
+### n. Hybrid programming
 
 Scala was designed to be both [[Object-Oriented Programming|object-oriented]] and functional. It is a pure [[Object-Oriented Programming|object-oriented]] language in the sense that every value is an object and functional language in the sense that every function is a value. The name of Scala is derived from word scalable which means it can grow with the demand of users.
 
-## n. Strong statically typed
+### n. Strong statically typed
 
-## n. Immutability
+### n. Immutability
 
-## n. Pattern matching capabilities
+### n. Pattern matching capabilities
 
-## n. Higher-order functions
+### n. Higher-order functions
 
-## n. Extensibility
+### n. Extensibility
 
-## n. Interoperability with Java
+### n. Interoperability with Java
 
 Scala is not an extension of Java, but it is completely interoperable with it. While compilation, Scala file translates to Java bytecode and runs on JVM (_Java Virtual machine_).
 
-## n. Scalability
+### n. Scalability
 
 ---
 
-# [[Scala]] vs. similar languages
+## [[Scala]] vs. similar languages
 
 ---
 
-# [[Scala]] vs. other languages
+## [[Scala]] vs. other languages
 
 ---
 
-# Apache Spark in Scala vs. in other languages
+## Apache Spark in Scala vs. in other languages
 
 ---
 
-# Adoption
+## Adoption
 
-## Main engines built on [[Scala]]
+### Main engines built on [[Scala]]
 
-### n. Apache Spark
+#### n. Apache Spark
 
 Apache Spark is
-
 Some of the main companies using Apache Spark today:
 
 - **Alibaba Group:** The Chinese multinational conglomerate uses Spark to process and analyze large amounts of data across its various businesses, including e-commerce, cloud computing, and digital media.
@@ -94,10 +90,9 @@ Some of the main companies using Apache Spark today:
 - **Netflix:** The American media-services provider uses Spark to process and analyze large amounts of data related to user behavior, content delivery, and performance optimization.
 - **Uber:** The American ride-sharing company uses Spark to analyze and optimize its transportation network, to monitor its marketplace, and to perform real-time fraud detection.
 
-### n. Akka
+#### n. Akka
 
 Akka is
-
 Some of the main companies using Akka today:
 
 - **BBC:** The British Broadcasting Corporation uses Akka to build scalable and resilient web applications and services, including the iPlayer and Sounds platforms.
@@ -112,10 +107,9 @@ Some of the main companies using Akka today:
 - **Starbucks:** The American coffee company uses Akka to build highly available and scalable systems for mobile ordering, payment processing, and other features.
 - **The Guardian:** The British news organization uses Akka to build highly concurrent, distributed systems for content delivery, audience engagement, and other applications.
 
-### n. Apache Kafka
+#### n. Apache Kafka
 
 Apache Kafka is
-
 Some of the main companies using Apache Kafka today:
 
 - **Airbnb:** The online marketplace for short-term rentals uses Kafka to collect, process, and analyze large volumes of real-time data, including user behavior and transaction data.
@@ -129,7 +123,7 @@ Some of the main companies using Apache Kafka today:
 - **Uber:** The ride-sharing company uses Kafka to power its real-time data pipeline, including data ingestion, transformation, and analysis for various applications such as fraud detection, route optimization, and more.
 - **Verizon:** The American telecommunications company uses Kafka to build scalable and resilient data pipelines for streaming data, including call data records and other network data.
 
-## Main organizations using [[Scala]]
+### Main organizations using [[Scala]]
 
 - **Twitter:** A
 - **Apple:** A
@@ -150,22 +144,14 @@ Some of the main companies using Apache Kafka today:
 
 ---
 
-# Next steps
+## Next steps
 
 ---
 
-# Conclusions
+## Conclusions
 
-We've reviewed
+## We've reviewed
 
----
-
-# References
+## References
 
 - Aaa
-
----
-
-# Copyright
-
-Pablo Aguirre, Creative Commons Attribution 4.0 International, All Rights Reserved.

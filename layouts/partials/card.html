@@ -22,9 +22,9 @@
         {{ .Date.Format "Jan 02, 2006" }} • {{ math.Ceil .ReadingTime }} min read
       </time>
     </div>
-    <h3 class="card-title">
+    <h2 class="card-title">
       <a href="{{ .Permalink }}" class="card-link">{{ .Title }}</a>
-    </h3>
+    </h2>
     {{ with .Summary }}
       <p class="card-summary">{{ . }}</p>
     {{ end }}

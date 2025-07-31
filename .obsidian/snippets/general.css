@@ -1,0 +1,892 @@
+/* CSS variables at root level */
+/* ------------------------------------------------- */
+:root {
+    /* Font properties */
+    --font-size-inline-title: 28pt !important;
+    --font-size-h1: 26pt !important;
+    --font-size-h2: 20pt !important;
+    --font-size-h3: 16pt !important;
+    --font-size-h4: 14pt !important;
+    --font-size-h5: 12pt !important;
+    --font-size-h6: 10pt !important;
+
+    /* Color variables */
+    /* Color white base */
+    --color-white-primary: #f3f1ee !important;
+    --color-white-primary-rgb: 243, 241, 238 !important;
+
+    --color-white-secondary: #D7D3CA !important;
+    --color-white-secondary-rgb: 215, 211, 202 !important;
+
+    --color-white-tertiary: #9E998D !important;
+    --color-white-tertiary-rgb: 127, 121, 108 !important;
+
+    --color-white-quaternary: #5A564F !important;
+    --color-white-quaternary-rgb: 90, 86, 79 !important;
+
+    /* Color white interpolations */
+    --color-white-5: #eeeae6 !important;
+    --color-white-5-rgb: 238, 234, 230 !important;
+
+    --color-white-6: #ddd7ce !important;
+    --color-white-6-rgb: 221, 215, 206 !important;
+
+    --color-white-7: #c7c2b5 !important;
+    --color-white-7-rgb: 199, 194, 181 !important;
+
+    --color-white-8: #b0ab9c !important;
+    --color-white-8-rgb: 176, 171, 156 !important;
+
+    --color-white-9: #999384 !important;
+    --color-white-9-rgb: 153, 147, 132 !important;
+
+    --color-white-10: #827b6c !important;
+    --color-white-10-rgb: 130, 123, 108 !important;
+
+    --color-white-11: #6b6354 !important;
+    --color-white-11-rgb: 107, 99, 84 !important;
+
+    /* Color black */
+    --color-black-primary: #080A0C !important;
+    --color-black-primary-rgb: 24, 24, 24 !important;
+
+    --color-black-secondary: #0C0F12 !important;
+    --color-black-secondary-rgb: 35, 36, 38 !important;
+
+    --color-black-secondary-alt: #1A1D21 !important;
+    --color-black-secondary-alt-rgb: 26, 29, 33 !important;
+
+    --color-black-tertiary: #303234 !important;
+    --color-black-tertiary-rgb: 48, 50, 52 !important;
+
+    /* Color accent */
+    --color-bone: #EFD7B1 !important;
+    --color-bone-rgb: 239, 215, 177 !important;
+
+    --color-gunmetal: #182c38 !important;
+    --color-gunmetal-rgb: 24, 44, 56 !important;
+
+    --color-fire: #B6372B !important;
+    --color-fire-rgb: 182, 55, 43 !important;
+
+    /* Geometry properties */
+    --border-radius: 7px !important;
+
+    /* Popover height */
+    --popover-height-custom: 700px !important;
+
+    /* Document widths */
+    /* IMPORTANT: This line must be changed if we're trying to change the desktop max width */
+    --document-max-width: 750px !important;
+    --mobile-document-max-width: calc(100vw - 40px) !important;
+}
+
+.theme-dark {
+    /* Text color vars */
+    --tx1: var(--color-white-primary) !important;
+    /* Accent color vars */
+    --ax1: var(--color-bone) !important;
+    --ax3: var(--color-bone) !important;
+    /* Background color vars */
+    --bg1: var(--color-black-primary) !important;
+    --bg2: var(--color-black-secondary) !important;
+    /* Highlight color vars */
+    --hl1: var(--color-gunmetal) !important;
+    --hl2: var(--color-fire) !important;
+
+    /* color Variables */
+    --text-normal: var(--color-white-primary) !important;
+    --background-primary: var(--color-black-primary) !important;
+    --background-primary-alt: var(--color-black-primary) !important;
+    --background-secondary: var(--color-black-secondary) !important;
+    --background-secondary-alt: var(--color-black-secondary) !important;
+    --text-muted: var(--color-white-primary) !important;
+    --text-faint: var(--color-white-primary) !important;
+    --background-modifier-border: var(--color-black-tertiary) !important;
+    --ctp-custom-crust: var(--color-white-tertiary-rgb) !important;
+    --ctp-custom-surface0: var(--color-white-tertiary-rgb) !important;
+    --ctp-custom-surface1: var(--color-white-quaternary-rgb) !important;
+    --ctp-custom-overlay0: var(--color-white-tertiary-rgb) !important;
+    --ctp-custom-overlay1: var(--color-white-quaternary-rgb) !important;
+    --ctp-custom-mantle: var(--color-black-tertiary-rgb) !important;
+
+    /* Colors */
+    --ctp-rosewater: var(--color-bone-rgb) !important;
+    --ctp-flamingo: var(--color-white-primary-rgb) !important;
+    --ctp-pink: var(--color-white-5-rgb) !important;
+    --ctp-mauve: var(--color-white-secondary-rgb) !important;
+    --ctp-red: var(--color-white-6-rgb) !important;
+    --ctp-maroon: var(--color-white-7-rgb) !important;
+    --ctp-peach: var(--color-white-tertiary-rgb) !important;
+    --ctp-yellow: var(--color-white-8-rgb) !important;
+    --ctp-green: var(--color-white-9-rgb) !important;
+    --ctp-teal: var(--color-white-10-rgb) !important;
+    --ctp-sky: var(--color-white-11-rgb) !important;
+    --ctp-sapphire: var(--color-white-quaternary-rgb) !important;
+    /* --ctp-blue: var() !important;
+    --ctp-lavender: var() !important; */
+}
+
+/* Editable content */
+/* .tree-item-self.is-clickable.is-being-renamed {
+    color: var(--color-white-5) !important;
+} */
+
+
+.metadata-container {
+  display: none !important;
+}
+
+/* Input boxes */
+textarea,
+input.metadata-input-text,
+input[type='date'],
+input[type='datetime-local'],
+input[type='text'],
+input[type='search'],
+input[type='email'],
+input[type='password'],
+input[type='number'] {
+    -webkit-app-region: no-drag !important;
+    border: var(--input-border-width) !important;
+    font-family: inherit !important;
+    border-radius: var(--border-radius) !important;
+    outline: none !important;
+}
+
+.properties-field>.setting-item-info {
+    border-radius: var(--border-radius) !important;
+    margin-right: 10px !important;
+}
+
+textarea:active,
+input.metadata-input-text:active,
+input[type='date']:active,
+input[type='datetime-local']:active,
+input[type='text']:active,
+input[type='search']:active,
+input[type='email']:active,
+input[type='password']:active,
+input[type='number'] .tree-item-self.has-active-menu:active,
+input[type='search']:focus,
+input[type='search']:focus-visible,
+input[type='text']:focus,
+input[type='text']:focus-visible {
+    box-shadow: none !important;
+}
+
+/* Folder Menu */
+.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-files-container>div .nav-file .nav-file-title:hover {
+    background-color: rgba(var(--color-white-quaternary-rgb), 0.8);
+}
+
+.anp-full-rainbow-color-toggle .tree-item-self .tree-item-icon {
+    color: var(--color-white-primary) !important;
+}
+
+.tab-button.selected.svelte-q9aj3o {
+    border-radius: 0px !important;
+    border-bottom: 2px solid var(--color-bone) !important;
+}
+
+/* Folder & file title icons (set default -> Error) */
+.metadata-menu.fileclass-icon {
+    color: var(--color-black-cuaternary) !important;
+}
+
+/* Text Selection */
+.anuppuccin-accent-toggle {
+    --text-selection: #999384 !important;
+}
+
+/* Markdown body general */
+/* ------------------------------------------------- */
+.markdown-source-view.mod-cm6 .cm-scroller,
+.markdown-reading-view>.markdown-preview-view {
+    margin-top: 0 !important;
+}
+
+body {
+    --radius-m: 0 !important;
+    --input-radius: 0 !important;
+    --line-number-color: var(--color-white-tertiary) !important;
+    --line-number-color-active: var(--color-white-secondary) !important;
+}
+
+body:not(.is-mobile) .modal {
+    border: none !important;
+}
+
+/*un-wrap code*/
+/* .HyperMD-codeblock {
+    white-space: nowrap;
+} */
+
+/*scroll codeblock in read mode*/
+.markdown-reading-view code[class*="language-"] {
+    overflow-x: scroll;
+    white-space: pre;
+}
+
+
+/* Increase in workspace width (including both edit & view mode) */
+/* ------------------------------------------------- */
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-content>.image-embed,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-content>img:not([width]),
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block.cm-callout>.callout,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-html-embed,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-line,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-codeblock,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-quote,
+.markdown-source-view.mod-cm6.is-readable-line-width .embedded-backlinks,
+.markdown-source-view.mod-cm6.is-readable-line-width .internal-embed {
+    width: var(--document-max-width) !important;
+    max-width: var(--document-max-width) !important;
+}
+
+.markdown-preview-view img:not([src*="img.shields.io"]):not([width]),
+.markdown-rendered img:not([src*="img.shields.io"]):not([width]) {
+    width: 100% !important;
+}
+
+img:not([src*="img.shields.io"]) {
+    border-radius: var(--border-radius) !important;
+}
+
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer {
+    width: var(--document-max-width) !important;
+    max-width: var(--document-max-width) !important;
+}
+
+@media (min-width: 851px) {
+
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-content>.image-embed,
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-content>img:not([width]),
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block.cm-callout>.callout,
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-html-embed,
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-line,
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-codeblock,
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-quote,
+    .markdown-source-view.mod-cm6.is-readable-line-width .embedded-backlinks,
+    .markdown-source-view.mod-cm6.is-readable-line-width .internal-embed,
+    .markdown-preview-view.is-readable-line-width .cm-content>.image-embed,
+    .markdown-preview-view.mod-cm6.is-readable-line-width .cm-content>img:not([width]),
+    .markdown-preview-view.mod-cm6.is-readable-line-width .cm-embed-block.cm-callout>.callout,
+    .markdown-preview-view.mod-cm6.is-readable-line-width .cm-html-embed,
+    .markdown-preview-view.is-readable-line-width .cm-line,
+    .markdown-preview-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-codeblock,
+    .markdown-preview-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-quote,
+    .markdown-preview-view.mod-cm6.is-readable-line-width .embedded-backlinks,
+    .markdown-preview-view.mod-cm6.is-readable-line-width .internal-embed,
+    .markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer {
+        width: var(--document-max-width) !important;
+        max-width: var(--document-max-width) !important;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-content>.image-embed,
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-content>img:not([width]),
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block.cm-callout>.callout,
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-html-embed,
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-line,
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-codeblock,
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-quote,
+    .markdown-source-view.mod-cm6.is-readable-line-width .embedded-backlinks,
+    .markdown-source-view.mod-cm6.is-readable-line-width .internal-embed,
+    .markdown-preview-view.is-readable-line-width .cm-content>.image-embed,
+    .markdown-preview-view.mod-cm6.is-readable-line-width .cm-content>img:not([width]),
+    .markdown-preview-view.mod-cm6.is-readable-line-width .cm-embed-block.cm-callout>.callout,
+    .markdown-preview-view.mod-cm6.is-readable-line-width .cm-html-embed,
+    .markdown-preview-view.is-readable-line-width .cm-line,
+    .markdown-preview-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-codeblock,
+    .markdown-preview-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-quote,
+    .markdown-preview-view.mod-cm6.is-readable-line-width .embedded-backlinks,
+    .markdown-preview-view.mod-cm6.is-readable-line-width .internal-embed,
+    .markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
+    .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer {
+        width: var(--mobile-document-max-width) !important;
+        max-width: var(--mobile-document-max-width) !important;
+    }
+}
+
+.markdown-preview-view.is-readable-line-width .cm-content>.image-embed,
+.markdown-preview-view.mod-cm6.is-readable-line-width .cm-content>img:not([width]),
+.markdown-preview-view.mod-cm6.is-readable-line-width .cm-embed-block.cm-callout>.callout,
+.markdown-preview-view.mod-cm6.is-readable-line-width .cm-html-embed,
+.markdown-preview-view.is-readable-line-width .cm-line,
+.markdown-preview-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-codeblock,
+.markdown-preview-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-quote,
+.markdown-preview-view.mod-cm6.is-readable-line-width .embedded-backlinks,
+.markdown-preview-view.mod-cm6.is-readable-line-width .internal-embed {
+    width: var(--document-max-width) !important;
+    max-width: var(--document-max-width) !important;
+}
+
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer>div:has(>table) {
+    margin-inline: inherit !important;
+}
+
+/* Image Shield Badges */
+img[src*="img.shields.io"] {
+    width: auto !important;
+    height: auto !important;
+    border-radius: 0 !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+
+/* Images */
+/* ------------------------------------------------- */
+img {
+    border-radius: var(--border-radius) !important;
+}
+
+/* Article title */
+/* ------------------------------------------------- */
+.markdown-preview-view .inline-title,
+.markdown-source-view .inline-title {
+    font-size: var(--font-size-inline-title) !important;
+    margin-top: 0px !important;
+    margin-bottom: 10px !important;
+}
+
+/* Article headers */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+
+/* Header paddings  */
+
+/* H1 header */
+/* ------------------------------------------------- */
+.markdown-preview-view h1,
+.markdown-source-view h1,
+.cm-s-obsidian .cm-header.cm-header-1 {
+    font-size: var(--font-size-h1) !important;
+    /* margin-top: 0px !important;
+    margin-bottom: 10px !important; */
+}
+
+/* H2 header */
+/* ------------------------------------------------- */
+.markdown-preview-view h2,
+.cm-s-obsidian .cm-header.cm-header-2 {
+    font-size: var(--font-size-h2) !important;
+}
+
+/* H3 header */
+/* ------------------------------------------------- */
+.markdown-preview-view h3,
+.cm-s-obsidian .cm-header.cm-header-3 {
+    font-size: var(--font-size-h3) !important;
+}
+
+/* H4 header */
+/* ------------------------------------------------- */
+.markdown-preview-view h4,
+.cm-s-obsidian .cm-header.cm-header-4 {
+    font-size: var(--font-size-h4) !important;
+}
+
+/* H5 header */
+/* ------------------------------------------------- */
+.markdown-preview-view h5,
+.cm-s-obsidian .cm-header.cm-header-5 {
+    font-size: var(--font-size-h5) !important;
+}
+
+/* H6 header */
+/* ------------------------------------------------- */
+.markdown-preview-view h6,
+.cm-s-obsidian .cm-header.cm-header-6 {
+    font-size: var(--font-size-h6) !important;
+    text-align: center !important;
+    margin-top: 6px !important;
+    text-transform: capitalize !important;
+}
+
+/* Article tables */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+.markdown-source-view table thead tr th {
+    text-align: left !important;
+}
+
+.markdown-preview-view table,
+.markdown-source-view table {
+    min-width: 100% !important;
+    table-layout: auto !important;
+}
+
+.prompt {
+    border: none;
+    border-radius: var(--border-radius) !important;
+}
+
+.modal {
+    border-radius: var(--border-radius) !important;
+}
+
+.side-dock-ribbon {
+    display: block;
+}
+
+.markdown-source-view.mod-cm6 .cm-scroller,
+.markdown-reading-view>.markdown-preview-view {
+    padding-top: 0px;
+    margin-top: 10px;
+}
+
+.workspace-ribbon.mod-left {
+    width: 20px;
+}
+
+.mod-root .workspace-tab-header-container-inner {
+    padding-left: 6px;
+    margin-top: 0px;
+}
+
+.workspace .mod-root .workspace-tab-header {
+    padding: 0px;
+}
+
+.mod-root .workspace-tab-header-inner {
+    padding: 2px 6px 0 12px;
+}
+
+.markdown-source-view.mod-cm6:not(.is-readable-line-width) .cm-contentContainer,
+.markdown-reading-view .markdown-preview-view:not(.is-readable-line-width)>.markdown-preview-sizer {
+    margin: 0 0 0 20px !important;
+}
+
+img {
+    display: inline !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-content>* {
+    margin: auto auto !important;
+}
+
+figcaption {
+    text-align: center !important;
+    font-size: 0.8em !important;
+}
+
+table {
+    margin-left: auto !important;
+    margin: 10px auto !important;
+}
+
+.cm-strikethrough {
+    text-decoration: none !important;
+}
+
+.cm-quote {
+    opacity: 50% !important;
+}
+
+.cm-s-obsidian span.cm-math,
+.cm-s-obsidian span.hmd-fold-math-placeholder {
+    font-style: normal;
+}
+
+.menu,
+.menu-item {
+    border-radius: var(--border-radius) !important;
+}
+
+.tree-item-self.has-active-menu {
+    box-shadow: none !important;
+}
+
+.modal button {
+    border-radius: var(--border-radius) !important;
+}
+
+.dropdown {
+    border-radius: var(--border-radius) !important;
+    box-shadow: 0 0 0 0 !important;
+}
+
+#calendar-container .today,
+#calendar-container .today.active {
+    color: var(--color-bone) !important;
+    background-color: var(--color-white-quaternary) !important;
+}
+
+body:not(.is-phone) .workspace-leaf.mod-active .tree-item-self.has-focus {
+    box-shadow: none !important;
+}
+
+/*  Suggestion containers */
+.suggestion-container {
+    border-radius: var(--border-radius) !important;
+}
+
+/* Code blocks */
+:not(pre)>code[class*="language-"],
+pre[class*="language-"] {
+    border-radius: var(--border-radius) !important;
+    background-color: var(--color-black-secondary-alt) !important;
+    color: var(--color-white-primary) !important;
+    padding: 20px !important;
+    overflow-x: auto !important;
+    font-family: 'Fira Code', monospace !important;
+}
+
+.copy-code-button {
+    border-radius: var(--border-radius) !important;
+}
+
+.copy-code-button:hover {
+    cursor: pointer;
+}
+
+.community-modal-button-container button {
+    border-radius: var(--border-radius) !important;
+    box-shadow: 0 0 0 0 !important;
+}
+
+.button.mod-cta,
+.graph-controls .mod-cta {
+    border-radius: var(--border-radius) !important;
+}
+
+.graph-controls:not(.is-close) {
+    border-radius: var(--border-radius) !important;
+}
+
+/* Tag for class */
+
+.markdown-preview-view .entity-class {
+    color: var(--color-bone) !important;
+    background-color: var(--color-black-tertiary) !important;
+    display: inline !important;
+    padding: 2px 6px !important;
+    margin: 2px !important;
+    border-radius: var(--border-radius) !important;
+    font-size: 0.9em !important;
+    /* margin: 10px 0 10px 0 !important; */
+}
+
+.markdown-preview-view .custom-padding-container {
+    padding-bottom: 100px !important;
+}
+
+/* Buttons */
+button:not(.clickable-icon) {
+    border-radius: var(--border-radius) !important;
+}
+
+
+/* Dataview tags (inline vs ul) */
+.dataview.dataview-ul.dataview-result-list-ul {
+    list-style: none !important;
+    padding-left: 0 !important;
+}
+
+.dataview.dataview-ul.dataview-result-list-ul>.dataview-result-list-li {
+    display: inline !important;
+    margin-inline-start: 0 !important;
+}
+
+.dataview.dataview-ul.dataview-result-list-ul>.dataview-result-list-li:after {
+    content: ", " !important;
+}
+
+.dataview.dataview-ul.dataview-result-list-ul>.dataview-result-list-li:last-child:after {
+    content: "" !important;
+}
+
+/* Dataview cards */
+.cards.cards-no-banner table.dataview>tbody>tr {
+    padding: 5px !important;
+}
+
+.cards table.dataview tbody>tr>td:not(:first-child) {
+    padding: 10px 0 5px 0 !important;
+}
+
+.cards table.dataview tbody>tr>td:first-child {
+    border: none !important;
+}
+
+/* Dataview cards sort menu */
+.cards table.dataview thead>tr {
+    border-radius: var(--border-radius) !important;
+}
+
+.el-pre .obsidian-banner-wrapper {
+    margin-bottom: 50px !important;
+}
+
+.obsidian-banner.solid {
+    border: none !important;
+}
+
+.obsidian-banner {
+    padding-bottom: 30px !important;
+    border-radius: var(--border-radius) !important;
+}
+
+body:not(.zoom-off):not(.is-mobile) .workspace-leaf-content[data-type=markdown] .view-content div:not(.canvas-node-content) img {
+    cursor: pointer !important;
+    border-radius: var(--border-radius) !important;
+}
+
+.trim-cols .cards table.dataview tbody>tr>td {
+    padding-top: 15px;
+}
+
+.canvas-node-container {
+    border-radius: var(--border-radius) !important;
+}
+
+.cards table.dataview tbody>tr>td>* {
+    padding: 0 !important;
+}
+
+/* Inline Title */
+.markdown-preview-view:not(has-banner) .inline-title,
+.markdown-source-view.has-banner .inline-title {
+    padding-bottom: 50px !important;
+}
+
+.markdown-preview-view.has-banner .inline-title,
+.markdown-source-view.has-banner .inline-title {
+    display: none !important;
+}
+
+.markdown-preview-view.has-banner .custom-inline-title,
+.markdown-source-view.has-banner .custom-inline-title {
+    display: block !important;
+    padding-bottom: 5px !important;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Popover */
+.popover .markdown-embed-content .obsidian-banner-wrapper {
+    margin-top: 180px !important;
+}
+
+.popover.hover-popover>.markdown-embed {
+    border-radius: var(--border-radius) !important;
+    max-height: var(--popover-height-custom) !important;
+}
+
+.popover.hover-popover {
+    border-radius: var(--border-radius) !important;
+}
+
+/* Padding for popover on preview hover  */
+.popover.hover-popover>.markdown-embed>.markdown-embed-content>.markdown-preview-view {
+    padding: 10px 20px 20px 20px !important;
+}
+
+/* Iconize icon margin adjustment */
+.iconize-icon-in-link svg {
+    margin-bottom: 0 !important;
+}
+
+.padding-tables {
+    padding: 12px !important;
+}
+
+.graph-controls.is-close {
+    border-radius: var(--border-radius) !important;
+}
+
+/* Film Template */
+/* -------------------------------------------------- */
+.film-template {
+    max-width: var(--document-max-width);
+    margin: 0 auto;
+    padding: 20px;
+    color: var(--color-white-secondary);
+}
+
+.film-template .film-title {
+    color: var(--color-white-primary);
+    border-bottom: 2px solid var(--color-bone);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.film-template .film-year {
+    color: var(--color-white-tertiary);
+    font-weight: 300;
+    margin-left: 10px;
+}
+
+.film-template .film-subtitle {
+    margin-bottom: 10px;
+}
+
+.film-template .film-director {
+    color: var(--color-white-tertiary);
+    font-weight: 300;
+    margin: 0;
+}
+
+.film-template .film-details {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: var(--color-gunmetal);
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+
+.film-template h4 {
+    color: var(--color-white-primary);
+    border-bottom: 1px solid var(--color-bone);
+    padding-bottom: 5px;
+}
+
+.film-template .film-details-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.film-template .film-details-table th,
+.film-template .film-details-table td {
+    padding: 10px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-gunmetal);
+}
+
+.film-template .film-details-table th {
+    color: var(--color-white-tertiary);
+    font-weight: bold;
+    width: 40%;
+}
+
+.film-template a {
+    color: var(--color-bone);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.film-template a:hover {
+    color: var(--color-white-primary);
+    text-decoration: underline;
+}
+
+.film-template .film-details-table tr:last-child a {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: var(--color-bone);
+    color: var(--color-black-primary);
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease;
+}
+
+.film-template .film-details-table tr:last-child a:hover {
+    background-color: var(--color-gunmetal);
+    color: var(--color-white-primary);
+    text-decoration: none;
+}
+
+.star-rating {
+    font-size: 1.2rem;
+    color: var(--color-bone);
+}
+
+.tomato-rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.tomato-rating.fresh {
+    color: var(--color-fire);
+}
+
+.tomato-rating.rotten {
+    color: var(--color-bone);
+}
+
+/* Artist Template */
+/* -------------------------------------------------- */
+.artist-template {
+    max-width: var(--document-max-width);
+    margin: 0 auto;
+    padding: 20px;
+    color: var(--color-white-secondary);
+}
+
+.artist-template .artist-name {
+    color: var(--color-white-primary);
+    border-bottom: 2px solid var(--color-bone);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.artist-template .artist-class {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: var(--color-gunmetal);
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+
+.artist-template h4 {
+    color: var(--color-white-primary);
+    border-bottom: 1px solid var(--color-bone);
+    padding-bottom: 5px;
+}
+
+.artist-template .artist-details-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.artist-template .artist-details-table th,
+.artist-template .artist-details-table td {
+    padding: 10px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-gunmetal);
+}
+
+.artist-template .artist-details-table th {
+    color: var(--color-white-tertiary);
+    font-weight: bold;
+    width: 40%;
+}
+
+.artist-template a {
+    color: var(--color-bone);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.artist-template a:hover {
+    color: var(--color-white-primary);
+    text-decoration: underline;
+}
+
+.artist-template .artist-gallery,
+.artist-template .artist-works {
+    margin-top: 20px;
+}
+
+.artist-template .artist-works {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.artist-template .artist-works li {
+    margin-bottom: 10px;
+}
+
+.artist-template .gallery-image {
+    max-width: 200px;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-right: 10px;
+    margin-bottom: 10px;
+}

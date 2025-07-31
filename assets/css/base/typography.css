@@ -6,7 +6,7 @@ h4,
 h5,
 h6 {
   color: var(--fg-primary);
-  font-family: var(--font-heading);
+  font-family: var(--font-serif);
   font-weight: var(--heading-weight);
   line-height: var(--heading-line-height);
   margin-bottom: var(--heading-spacing-bottom);
@@ -14,45 +14,35 @@ h6 {
 }
 
 h1 {
-  font-size: var(--heading-xxl);
-  margin-top: var(--space-xl);
+  font-size: var(--font-size-4xl);
+  margin-top: var(--space-lg);
   padding-bottom: var(--space-md);
 }
 
-/* .single-content h1:not(:first-child)::before { */
-/*   content: "─────── § ───────"; */
-/*   color: var(--accent-blue); */
-/*   display: block; */
-/*   font-size: var(--text-sm); */
-/*   letter-spacing: 0.1em; */
-/*   margin: var(--space-xl) 0 var(--space-lg); */
-/*   text-align: center; */
-/* } */
-
 h2 {
-  font-size: var(--heading-xl);
+  font-size: var(--font-size-3xl);
   margin-top: var(--space-lg);
   padding-bottom: var(--space-sm);
   border-bottom: 1px solid var(--fg-muted-darker);
 }
 
 h3 {
-  font-size: var(--text-xl);
-  margin-top: var(--space-lg);
+  font-size: var(--font-size-2xl);
+  /* margin-top: var(--space-2xl); */
 }
 
 h4 {
-  font-size: var(--text-lg);
+  font-size: var(--font-size-xl);
   margin-top: var(--space-md);
 }
 
 h5 {
-  font-size: var(--text-md);
+  font-size: var(--font-size-lg);
   margin-top: var(--space-md);
 }
 
 h6 {
-  font-size: var(--text-sm);
+  font-size: var(--font-size-md);
   margin-top: var(--space-md);
 }
 
@@ -60,7 +50,7 @@ h6 {
 p {
   color: var(--fg-primary);
   font-family: var(--font-body);
-  font-size: var(--text-md);
+  font-size: var(--font-size-sm);
   font-weight: var(--body-weight);
   line-height: var(--body-line-height);
   margin-bottom: var(--space-md);
@@ -70,7 +60,7 @@ p {
 /* --- Inline Code --- */
 code {
   font-family: var(--font-code);
-  font-size: var(--text-sm);
+  font-size: var(--font-size-xs);
 }
 
 /* --- Links --- */
@@ -92,18 +82,31 @@ a {
 }
 
 /* Drop Caps */
-p.dropcap::first-letter {
-  /* float: left; */
-  font-family: var(--font-serif); /* Or whatever style you use */
-  font-size: 4rem;
-  line-height: 1;
+.drop-cap {
+  float: left;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 4.5rem;
+  height: 5.5rem;
+  font-size: 5rem;
+  font-family: var(--font-serif);
   font-weight: var(--font-weight-semibold);
-  padding: 0.25rem 0.5rem;
+  line-height: 1;
   margin: 0.1rem 1rem 0 0;
-  border: 2px solid var(--fg-muted);
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--fg-primary);
   color: var(--fg-primary);
-  background: var(--bg-primary);
-  display: inline-block;
-  box-sizing: border-box;
-  text-align: center;
+  background: none;
+}
+
+/* Single Content Spacings */
+.single-content h2,
+.single-content h3,
+.single-content h4,
+.single-content h5 {
+  border-bottom: 1px solid var(--fg-muted-darker);
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-sm);
+  padding-bottom: var(--space-sm);
 }

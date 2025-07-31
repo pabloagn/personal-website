@@ -10,11 +10,10 @@
 
   {{ if .NextInSection }}
     <div class="single-nav-item single-nav-next">
-      <span class="single-nav-label">Next →</span>
       <a href="{{ .NextInSection.Permalink }}" class="single-nav-link">
         {{ .NextInSection.Title }}
       </a>
+      <span class="single-nav-label">Next →</span>
     </div>
   {{ end }}
 </nav>
-

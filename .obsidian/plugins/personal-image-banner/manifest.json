@@ -1,0 +1,10 @@
+{
+    "id": "personal-image-banner",
+    "name": "Personal Image Banner",
+    "version": "1.0.0",
+    "minAppVersion": "0.12.0",
+    "description": "A custom plugin to set banner image position from YAML frontmatter.",
+    "author": "Pablo Aguirre",
+    "authorUrl": "https://solenoidlabs.com",
+    "isDesktopOnly": false
+}

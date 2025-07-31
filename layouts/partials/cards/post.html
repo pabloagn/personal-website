@@ -18,23 +18,24 @@
     </div>
   {{ end }}
 
+
   <div class="card-body">
     <div class="card-meta">
       {{ partial "meta/date.html" . }} •
       {{ partial "meta/reading-time.html" . }}
     </div>
 
-    <h3 class="card-title">
+    <h2 class="card-title">
       <a href="{{ .Permalink }}" class="card-link">{{ .Title }}</a>
-    </h3>
+    </h2>
 
     {{ with .Summary }}
       <p class="card-summary">{{ . }}</p>
     {{ end }}
+
 
     <div class="card-footer">
       {{ partial "tags/labels.html" . }}
     </div>
   </div>
 </article>
-

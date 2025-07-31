@@ -1,0 +1,13 @@
+{
+  "showInlineTitle": true,
+  "propertiesInDocument": "source",
+  "attachmentFolderPath": "9000-9999 Configuration/9300-9399 Attachments",
+  "pdfExportSettings": {
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "promptDelete": true,
+  "alwaysUpdateLinks": true
+}

@@ -11,11 +11,13 @@
         ⌾
       </button>
     </div>
-    <div class="toc-content">
-      {{ $toc := .TableOfContents }}
-      {{ $toc = replaceRE `<a href="([^"]+)"` `<a class="toc-link" href="$1"` $toc }}
-      {{ $toc | safeHTML }}
+    <div class="toc-scroll-wrapper js-toc-fade">
+      <div class="toc-content">
+        {{ $toc := .TableOfContents }}
+        {{ $toc = replaceRE `<a href="([^"]+)"` `<a class="toc-link" href="$1"` $toc }}
+        {{ $toc | safeHTML }}
+      </div>
+      <div class="toc-fade-bottom"></div>
     </div>
   </aside>
 {{ end }}
-

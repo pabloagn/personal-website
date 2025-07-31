@@ -1,0 +1,31 @@
+.bookmark-box {
+    border: None;
+    padding: 10px;
+    border-radius: var(--border-radius) !important;
+    background-color: var(--color-white-quaternary) !important;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    display: inline-block;
+    width: 100% !important;
+}
+
+.bookmark-box a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.bookmark-box:hover {
+    background-color: var(--color-white-11) !important;
+}
+
+.bookmark-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.bookmark-url {
+    color: var(--color-white-primary);
+    font-size: 0.9em;
+    margin-top: 5px;
+}

@@ -1,0 +1,281 @@
+{
+  "choices": [
+    {
+      "id": "5c5dcc7e-f449-4cbe-8abc-18deee4b2b09",
+      "name": "Add Actress",
+      "type": "Macro",
+      "command": true,
+      "macroId": "9a4b7b7a-16e6-4d0f-9b00-6738da52b6a9"
+    },
+    {
+      "id": "16b2efad-d5c0-42e6-993a-06cd7bf588e2",
+      "name": "Add Film",
+      "type": "Macro",
+      "command": true,
+      "macroId": "da02eb08-dfb4-44d5-ba3e-1581bcc62968"
+    },
+    {
+      "id": "08869390-0b6c-41b2-bb66-0ae6bf8d6bf7",
+      "name": "Insert Blank Space",
+      "type": "Macro",
+      "command": true,
+      "macroId": "d7ed73f9-03fb-44d0-8429-a23818949bb9"
+    },
+    {
+      "id": "49492207-67d4-4813-958c-2a9f02a1ce78",
+      "name": "Insert Description Header",
+      "type": "Macro",
+      "command": true,
+      "macroId": "b53fcc6b-6bd5-4dc5-8d3f-4213a7aee228"
+    },
+    {
+      "id": "65b57dec-bd4c-44ea-a3ae-7a906b35e83b",
+      "name": "Create Link",
+      "type": "Macro",
+      "command": true,
+      "macroId": "a40c2220-1027-4544-8fb7-355d1d1b4e4a"
+    },
+    {
+      "id": "51e11330-b5a5-4400-80a7-552eb5de580a",
+      "name": "Capture to Daily Note",
+      "type": "Capture",
+      "command": true,
+      "appendLink": false,
+      "captureTo": "Daily Notes/{{DATE:DD-MM-YYYY}}.md",
+      "captureToActiveFile": false,
+      "createFileIfItDoesntExist": {
+        "enabled": true,
+        "createWithTemplate": true,
+        "template": "Templates/Daily Note.md"
+      },
+      "format": {
+        "enabled": false,
+        "format": ""
+      },
+      "insertAfter": {
+        "enabled": false,
+        "after": "",
+        "insertAtEnd": false,
+        "considerSubsections": false,
+        "createIfNotFound": false,
+        "createIfNotFoundLocation": "top"
+      },
+      "prepend": false,
+      "task": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": false,
+      "openFileInMode": "default"
+    }
+  ],
+  "macros": [
+    {
+      "name": "Add Actress",
+      "id": "9a4b7b7a-16e6-4d0f-9b00-6738da52b6a9",
+      "commands": [
+        {
+          "name": "actress_template",
+          "type": "UserScript",
+          "id": "2012ae02-84a7-462a-914b-d4c56c64a7cd",
+          "path": "9000-9999 Configuration/9400-9499 Scripts/actress_template.js",
+          "settings": {}
+        },
+        {
+          "name": "Untitled Template Choice",
+          "type": "NestedChoice",
+          "id": "11175f49-70f0-404c-a7c7-a8a6aa0ca8f7",
+          "choice": {
+            "id": "fe7861d1-b8b0-4728-9e68-2482908a2de5",
+            "name": "Untitled Template Choice",
+            "type": "Template",
+            "command": false,
+            "templatePath": "Templates/Actress.md",
+            "fileNameFormat": {
+              "enabled": true,
+              "format": "{{VALUE:fullName}}"
+            },
+            "folder": {
+              "enabled": false,
+              "folders": [],
+              "chooseWhenCreatingNote": false,
+              "createInSameFolderAsActiveFile": false,
+              "chooseFromSubfolders": false
+            },
+            "appendLink": false,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": true,
+            "openFileInMode": "default",
+            "fileExistsMode": "Nothing",
+            "setFileExistsBehavior": true
+          }
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Insert Blank Space",
+      "id": "d7ed73f9-03fb-44d0-8429-a23818949bb9",
+      "commands": [
+        {
+          "name": "add_space",
+          "type": "UserScript",
+          "id": "f7e2ea95-1dc2-4b1d-b949-62027a27cb41",
+          "path": "9000-9999 Configuration/9400-9499 Scripts/add_space.js",
+          "settings": {}
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Insert Description Header",
+      "id": "b53fcc6b-6bd5-4dc5-8d3f-4213a7aee228",
+      "commands": [
+        {
+          "name": "add_description_header",
+          "type": "UserScript",
+          "id": "7844d6f3-8a7e-4a11-ba0f-6ea344e00403",
+          "path": "9000-9999 Configuration/9400-9499 Scripts/add_description_header.js",
+          "settings": {}
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Create Link",
+      "id": "a40c2220-1027-4544-8fb7-355d1d1b4e4a",
+      "commands": [
+        {
+          "name": "create_link",
+          "type": "UserScript",
+          "id": "23e7eb87-7c36-4836-9b1b-02c59799bfd3",
+          "path": "9000-9999 Configuration/9400-9499 Scripts/create_link.js",
+          "settings": {}
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Lookup Film",
+      "id": "da02eb08-dfb4-44d5-ba3e-1581bcc62968",
+      "commands": [
+        {
+          "name": "add_film",
+          "type": "UserScript",
+          "id": "9cc30cf1-8644-4040-b70f-257232892254",
+          "path": "900-999 Configuration/904 Scripts/add_film.js",
+          "settings": {
+            "OMDb API Key": "c56b16ec"
+          }
+        },
+        {
+          "name": "Untitled Template Choice",
+          "type": "NestedChoice",
+          "id": "31374491-00cc-4ad1-8a52-3081ecd67900",
+          "choice": {
+            "id": "2b47d022-f435-4074-90a3-17f53c32411a",
+            "name": "Untitled Template Choice",
+            "type": "Template",
+            "command": false,
+            "templatePath": "900-999 Configuration/902 Templates/Film Template/Film Template.md",
+            "fileNameFormat": {
+              "enabled": true,
+              "format": "{{VALUE:fileName}}"
+            },
+            "folder": {
+              "enabled": true,
+              "folders": [
+                "400-499 Interests/407 Collections/Films Collection"
+              ],
+              "chooseWhenCreatingNote": false,
+              "createInSameFolderAsActiveFile": false,
+              "chooseFromSubfolders": false
+            },
+            "appendLink": false,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": false,
+            "openFileInMode": "default",
+            "fileExistsMode": "Increment the file name",
+            "setFileExistsBehavior": false
+          }
+        }
+      ],
+      "runOnStartup": false
+    }
+  ],
+  "inputPrompt": "single-line",
+  "devMode": false,
+  "templateFolderPath": "900-999 Configuration/902 Templates",
+  "announceUpdates": true,
+  "version": "1.8.1",
+  "disableOnlineFeatures": true,
+  "ai": {
+    "defaultModel": "Ask me",
+    "defaultSystemPrompt": "As an AI assistant within Obsidian, your primary goal is to help users manage their ideas and knowledge more effectively. Format your responses using Markdown syntax. Please use the [[Obsidian]] link format. You can write aliases for the links by writing [[Obsidian|the alias after the pipe symbol]]. To use mathematical notation, use LaTeX syntax. LaTeX syntax for larger equations should be on separate lines, surrounded with double dollar signs ($$). You can also inline math expressions by wrapping it in $ symbols. For example, use $$w_{ij}^{\text{new}}:=w_{ij}^{\text{current}}+etacdotdelta_jcdot x_{ij}$$ on a separate line, but you can write \"($eta$ = learning rate, $delta_j$ = error term, $x_{ij}$ = input)\" inline.",
+    "promptTemplatesFolderPath": "",
+    "showAssistant": true,
+    "providers": [
+      {
+        "name": "OpenAI",
+        "endpoint": "https://api.openai.com/v1",
+        "apiKey": "",
+        "models": [
+          {
+            "name": "text-davinci-003",
+            "maxTokens": 4096
+          },
+          {
+            "name": "gpt-3.5-turbo",
+            "maxTokens": 4096
+          },
+          {
+            "name": "gpt-3.5-turbo-16k",
+            "maxTokens": 16384
+          },
+          {
+            "name": "gpt-3.5-turbo-1106",
+            "maxTokens": 16385
+          },
+          {
+            "name": "gpt-4",
+            "maxTokens": 8192
+          },
+          {
+            "name": "gpt-4-32k",
+            "maxTokens": 32768
+          },
+          {
+            "name": "gpt-4-1106-preview",
+            "maxTokens": 128000
+          },
+          {
+            "name": "gpt-4-turbo",
+            "maxTokens": 128000
+          },
+          {
+            "name": "gpt-4o",
+            "maxTokens": 128000
+          }
+        ]
+      }
+    ]
+  },
+  "migrations": {
+    "migrateToMacroIDFromEmbeddedMacro": true,
+    "useQuickAddTemplateFolder": true,
+    "incrementFileNameSettingMoveToDefaultBehavior": true,
+    "mutualExclusionInsertAfterAndWriteToBottomOfFile": true,
+    "setVersionAfterUpdateModalRelease": true,
+    "addDefaultAIProviders": true
+  }
+}

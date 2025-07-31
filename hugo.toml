@@ -69,7 +69,7 @@ email = "pabloaguirrenck@protonmail.ch"
 # --- Social Links ---
 [params.social]
 github = "pabloagn"
-linkedin = "pabloagn"
+linkedin = "pablo-aguirre-nunez"
 
 # --- Ajax Search Engine ---
 [params.search]
@@ -91,7 +91,7 @@ taskList = true
 
 [markup.tableOfContents]
 startLevel = 2
-endLevel = 4
+endLevel = 5
 ordered = false
 
 [markup.highlight]

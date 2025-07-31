@@ -41,6 +41,21 @@
   color: var(--accent-blue);
 }
 
+/* .toc-content { */
+/*   padding: var(--space-sm); */
+/*   max-height: 600px; */
+/*   overflow-y: auto; */
+/*   transition: */
+/*     max-height var(--transition-default) ease, */
+/*     opacity var(--transition-default) ease; */
+/* } */
+/**/
+/* .toc-content.collapsed { */
+/*   max-height: 0; */
+/*   opacity: 0; */
+/*   padding: 0; */
+/* } */
+
 .toc-content {
   padding: var(--space-sm);
   max-height: 600px;
@@ -48,12 +63,14 @@
   transition:
     max-height var(--transition-default) ease,
     opacity var(--transition-default) ease;
+  height: auto !important; /* Critical fix - prevents height:100% override */
 }
 
 .toc-content.collapsed {
   max-height: 0;
   opacity: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .toc-link {
@@ -102,7 +119,6 @@
 /*   color: var(--fg-primary); */
 /* } */
 
-
 .toc-text {
   color: var(--fg-secondary);
   transition: color 0.2s ease;
@@ -118,24 +134,109 @@
 }
 
 /* Proper indentation for nested levels */
-.toc-content li {
-  padding-left: 1rem;
-}
+/* .toc-content li { */
+/*   padding-left: 1rem; */
+/* } */
+/**/
+/* .toc-content ul ul li { */
+/*   padding-left: 1.5rem; */
+/* } */
+/**/
+/* .toc-content ul ul ul li { */
+/*   padding-left: 2rem; */
+/* } */
+/**/
+/* .toc-content ul ul ul ul li { */
+/*   padding-left: 2.5rem; */
+/* } */
 
-.toc-content ul ul li {
-  padding-left: 2rem;
-}
-
-.toc-content ul ul ul li {
-  padding-left: 3rem;
-}
-
-.toc-content ul ul ul ul li {
-  padding-left: 4rem;
-}
-
-/* Optional: anchor spacing */
+/* Anchor spacing */
 .toc-content li > a {
   display: block;
   padding: 0.25rem 0;
 }
+
+/* TOC Fading */
+.toc-scroll-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.toc-content {
+  overflow-y: auto;
+  height: 100%;
+  padding: var(--space-sm);
+}
+
+.toc-content.collapsed {
+  max-height: 0;
+  opacity: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.toc-fade-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 6rem;
+  width: 100%;
+  pointer-events: none;
+  z-index: 10;
+  background: linear-gradient(to top, var(--bg-primary), transparent);
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.toc-scroll-wrapper.hide-fade .toc-fade-bottom {
+  opacity: 0;
+}
+
+.ascii-toc {
+  font-family: var(--font-code, monospace);
+  /* white-space: pre; */
+  /* font-size: var(--font-size-xs); */
+  line-height: 1;
+}
+
+.ascii-line {
+  display: block;
+  white-space: pre;
+  color: var(--fg-secondary);
+  text-decoration: none;
+  padding: 0 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.2s ease;
+}
+
+.ascii-line:hover {
+  background-color: var(--bg-hover);
+}
+
+.ascii-line:hover .ascii-label {
+  color: var(--accent-blue);
+  text-decoration: underline;
+}
+
+.ascii-prefix {
+  color: var(--fg-muted-darker);
+  pointer-events: none;
+  user-select: none;
+}
+
+.ascii-label {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* NOTE: Use this approach for background mode */
+
+/* .ascii-line:hover { */
+/*   background-color: var(--accent-blue) !important; */
+/* } */
+
+/* .ascii-line:hover .ascii-label { */
+/*   color: var(--bg-primary); */
+/*   text-decoration: underline; */
+/* } */

@@ -1,0 +1,17 @@
+{
+  "frames": [
+    {
+      "url": "https://app.clickup.com/2211357/v/li/900800979557",
+      "displayName": "ClickUp",
+      "icon": "",
+      "hideOnMobile": true,
+      "addRibbonIcon": false,
+      "openInCenter": true,
+      "zoomLevel": 1,
+      "forceIframe": false,
+      "customCss": "",
+      "customJs": ""
+    }
+  ],
+  "padding": 5
+}

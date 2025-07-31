@@ -6,70 +6,53 @@ tags: ["test"]
 tools: ["markdown", "latex", "html"]
 summary: "Explore ten advanced programming techniques in Scala that provide different functionalities to your code, making it more elegant, expressive, performant, compact, and modular."
 math: true
-layout: single
 draft: true
 ---
 
-# Heading 1 ◆ Top Level
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-## Heading 2 ⟡ Second Level
+## Heading 2
 
-### Heading 3 ▲ Third Level
+### Heading 3
 
-#### Heading 4 ◇ Fourth Level
+#### Heading 4
 
-##### Heading 5 ◈ Fifth Level
-
-###### Heading 6 ◉ Sixth Level
+##### Heading 5
 
 ## Text Formatting ⟨ Basic Styles ⟩
 
 This is _italic text_ and _also italic_.
-
 This is **bold text** and **also bold**.
-
 This is **_bold italic_** and **_also bold italic_**.
-
 This is ~~strikethrough text~~.
-
 This is `inline code` with backticks.
-
 This is <mark>highlighted text</mark> using HTML.
-
 This is <sub>subscript</sub> and <sup>superscript</sup> text.
-
 Combining styles: **bold with _italic inside_ and `code`** and ~~strikethrough with **bold**~~.
 
 ## Line Breaks and Paragraphs ⊡
 
 Single line break  
 with two spaces at the end.
-
 Double line break creates a new paragraph.
-
 Hard break using backslash\\
 at the end of line.
 
 ## Horizontal Rules ⟷
 
 Three or more hyphens:
-
 Three or more asterisks:
 
 ---
 
-Three or more underscores:
-
----
+## Three or more underscores:
 
 ## Blockquotes ⟪ ⟫
 
 > Single level blockquote with simple text.
-
 > Blockquote with **bold**, _italic_, and `code`.
 >
 > Multiple paragraphs in blockquote.
-
 > Nested blockquotes
 >
 > > Level 2 quote
@@ -77,8 +60,7 @@ Three or more underscores:
 > > > Level 3 quote with `code`
 > > >
 > > > > Level 4 quote
-
-> Blockquote with list:
+> > > > Blockquote with list:
 >
 > - Item 1
 > - Item 2
@@ -147,11 +129,9 @@ Three or more underscores:
 Term 1
 : Definition 1 for term 1
 : Alternative definition for term 1
-
 Complex Term
 : Definition with **bold** and _italic_
 : Another definition with `code`
-
 Nested Definition
 : Primary definition
 : Nested definition part
@@ -162,26 +142,20 @@ Nested Definition
 ### Basic Links ⤳
 
 [Basic link](https://example.com)
-
 [Link with title](https://example.com \"This is a title\")
-
 <https://autolink.com>
-
 <email@example.com>
 
 ### Reference Links ⟳
 
 [Reference link][ref1]
-
 [Another reference][ref2] with text.
-
 [ref1]: https://example.com \"Reference 1\"
 [ref2]: https://example.com/page2 \"Reference 2\"
 
 ### Internal Links ⤺
 
 [Link to heading](#heading-1--top-level)
-
 [Link with `code` in text](https://example.com)
 
 ## Images ⬚ All Formats
@@ -202,29 +176,19 @@ Nested Definition
 
 ### Basic Table ⋮
 
-<div class="table-container">
-
 | Header 1 | Header 2 | Header 3 |
 | -------- | -------- | -------- |
 | Cell 1   | Cell 2   | Cell 3   |
 | Cell 4   | Cell 5   | Cell 6   |
 
-</div>
-
 ### Aligned Table ⟺
-
-<div class="table-container">
 
 | Left Aligned | Center Aligned | Right Aligned |
 | :----------- | :------------: | ------------: |
 | Left         |     Center     |         Right |
 | **Bold**     |    _Italic_    |        `Code` |
 
-</div>
-
 ### Complex Table with Various Content ⊠
-
-<div class="table-container">
 
 | Feature    | Description                         | Code Example         | Status |
 | :--------- | :---------------------------------- | :------------------- | :----: |
@@ -234,11 +198,7 @@ Nested Definition
 | [Links](#) | Clickable references                | `[text](url)`        |   ✓    |
 | Images     | ![](https://via.placeholder.com/30) | `![](url)`           |   ✓    |
 
-</div>
-
 ### Nested Content in Tables ⧈
-
-<div class="table-container">
 
 | Type       | Example       | LaTeX                   |
 | :--------- | :------------ | :---------------------- |
@@ -246,11 +206,7 @@ Nested Definition
 | Logic      | ∀ ∃ ∧ ∨ ¬ ⇒ ⇔ | $\\forall x \\exists y$ |
 | Operators  | ∑ ∏ ∫ ∮ ∂ ∇   | $\\sum_{i=1}^n x_i$     |
 
-</div>
-
 ### Large Table
-
-<div class="table-container">
 
 | Challenge                 | ClickHouse Native Limitation                            | GlassFlow + ClickStack Solution                                     | Column A        | Column B      | Column C        | Column D      |
 | ------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------- | --------------- | ------------- | --------------- | ------------- |
@@ -259,16 +215,12 @@ Nested Definition
 | Real-time Data Enrichment | Query-time JOIN operations are expensive on large data. | Pre-ingestion temporal joins create flat, fast-to-query tables.     | Phantom Trigger | Velvet Ratio  | Carbon Filter   | Spiral Thread |
 | Data Quality              | Inconsistent or invalid data can pollute the database.  | Upstream filtering and transformation acts as a quality gate.       | Hollow Matrix   | Quartz Beacon | Delta Gateway   | Obsidian Key  |
 
-</div>
-
 ## Code Blocks ⌨ All Languages
 
 ### Inline Code Variations
 
 Regular inline: `code`
-
 Inline with backticks: `` `backticks` ``
-
 Inline with more backticks: ` ``double backticks`` `
 
 ### ActionScript
@@ -279,7 +231,6 @@ Inline with more backticks: ` ``double backticks`` `
 package {
     import flash.display.Sprite;
     import flash.text.TextField;
-
     public class Rhodium extends Sprite {
         public function Rhodium() {
             var message:TextField = new TextField();
@@ -296,7 +247,6 @@ package {
 -- rhodium.adb
 -- This is a test for Ada syntax highlighting.
 with Ada.Text_IO; use Ada.Text_IO;
-
 procedure Rhodium is
 begin
    Put_Line(\"Welcome to Rhodium\");
@@ -309,9 +259,7 @@ end Rhodium;
 -- rhodium.agda
 -- This is a test for Agda syntax highlighting.
 module Rhodium where
-
 open import Data.String
-
 message : String
 message = \"Welcome to Rhodium\"
 ```
@@ -322,7 +270,6 @@ message = \"Welcome to Rhodium\"
 // rhodium.component.ts
 // This is a test for Angular syntax highlighting.
 import { Component } from "@angular/core";
-
 @Component({
   selector: "app-rhodium",
   template: "<h1>Welcome to Rhodium</h1>",
@@ -347,10 +294,8 @@ display dialog "Welcome to Rhodium"
 section .data
     msg db 'Welcome to Rhodium',0xa
     len equ $ - msg
-
 section .text
     global _start
-
 _start:
     ; Write message to stdout
     mov eax, 4
@@ -368,7 +313,6 @@ _start:
 // This is a test for Astro syntax highlighting.
 const message = \"Welcome to Rhodium\";
 ---
-
 <html>
   <body>
     <h1>{message}</h1>
@@ -382,7 +326,6 @@ const message = \"Welcome to Rhodium\";
 // rhodium.c
 // This is a test for C syntax highlighting.
 #include <stdio.h>
-
 int main() {
     printf(\"Welcome to Rhodium\
 \");
@@ -396,10 +339,8 @@ int main() {
 ;; rhodium.clj
 ;; This is a test for Clojure syntax highlighting.
 (ns rhodium.core)
-
 (defn greet []
   (println \"Welcome to Rhodium\"))
-
 (greet)
 ```
 
@@ -410,7 +351,6 @@ int main() {
       * This is a test for COBOL syntax highlighting.
        IDENTIFICATION DIVISION.
        PROGRAM-ID. RHODIUM.
-
        PROCEDURE DIVISION.
            DISPLAY \"Welcome to Rhodium\".
            STOP RUN.
@@ -435,7 +375,6 @@ port = 8080
 # rhodium.dockerfile
 # This is a test for container configuration syntax.
 FROM alpine:latest
-
 RUN echo \"Welcome to Rhodium\"
 CMD [\"echo\", \"Container started\"]
 ```
@@ -446,9 +385,7 @@ CMD [\"echo\", \"Container started\"]
 (* rhodium.v *)
 (* This is a test for Coq syntax highlighting. *)
 Require Import String.
-
 Definition message := \"Welcome to Rhodium\"%string.
-
 Compute message.
 ```
 
@@ -459,7 +396,6 @@ Compute message.
 // This is a test for C++ syntax highlighting.
 #include <iostream>
 #include <string>
-
 int main() {
     std::string message = \"Welcome to Rhodium\";
     std::cout << message << std::endl;
@@ -473,7 +409,6 @@ int main() {
 # rhodium.cr
 # This is a test for Crystal syntax highlighting.
 message = \"Welcome to Rhodium\"
-
 puts message
 ```
 
@@ -483,7 +418,6 @@ puts message
 // rhodium.cs
 // This is a test for C# syntax highlighting.
 using System;
-
 namespace Rhodium
 {
     class Program
@@ -505,7 +439,6 @@ namespace Rhodium
   --rhodium-bg: #090e13;
   --rhodium-fg: #c5c9c7;
 }
-
 .rhodium-welcome {
   color: var(--rhodium-fg);
   background: var(--rhodium-bg);
@@ -519,7 +452,6 @@ namespace Rhodium
 // rhodium.d
 // This is a test for D syntax highlighting.
 import std.stdio;
-
 void main() {
     writeln(\"Welcome to Rhodium\");
 }
@@ -546,7 +478,6 @@ defmodule Rhodium do
     IO.puts(\"Welcome to Rhodium\")
   end
 end
-
 Rhodium.greet()
 ```
 
@@ -556,9 +487,7 @@ Rhodium.greet()
 -- rhodium.elm
 -- This is a test for Elm syntax highlighting.
 module Rhodium exposing (main)
-
 import Html exposing (text)
-
 main =
     text \"Welcome to Rhodium\"
 ```
@@ -570,7 +499,6 @@ main =
 % This is a test for Erlang syntax highlighting.
 -module(rhodium).
 -export([greet/0]).
-
 greet() ->
     io:format(\"Welcome to Rhodium~n\").
 ```
@@ -611,7 +539,6 @@ Print(message, \"\
 // rhodium.gleam
 // This is a test for Gleam syntax highlighting.
 import gleam/io
-
 pub fn main() {
   io.println(\"Welcome to Rhodium\")
 }
@@ -623,9 +550,7 @@ pub fn main() {
 // rhodium.go
 // This is a test for Go syntax highlighting.
 package main
-
 import \"fmt\"
-
 func main() {
     message := \"Welcome to Rhodium\"
     fmt.Println(message)
@@ -640,7 +565,6 @@ func main() {
 type Query {
   rhodium: String
 }
-
 query GetRhodium {
   rhodium
 }
@@ -652,7 +576,6 @@ query GetRhodium {
 -- rhodium.hs
 -- This is a test for Haskell syntax highlighting.
 module Rhodium where
-
 main :: IO ()
 main = putStrLn \"Welcome to Rhodium\"
 ```
@@ -666,7 +589,6 @@ main = putStrLn \"Welcome to Rhodium\"
 -- This is a test for HDL syntax highlighting.
 entity rhodium is
 end rhodium;
-
 architecture behavior of rhodium is
 begin
     process
@@ -701,10 +623,8 @@ end behavior;
 GET /rhodium HTTP/1.1
 Host: example.com
 User-Agent: Rhodium/1.0
-
 HTTP/1.1 200 OK
 Content-Type: text/plain
-
 Welcome to Rhodium
 ```
 
@@ -723,7 +643,6 @@ Welcome to Rhodium
 -- rhodium.idr
 -- This is a test for Idris syntax highlighting.
 module Rhodium
-
 main : IO ()
 main = putStrLn \"Welcome to Rhodium\"
 ```
@@ -738,10 +657,8 @@ main = putStrLn \"Welcome to Rhodium\"
 theory Rhodium
 imports Main
 begin
-
 definition message :: string where
   \"message = ''Welcome to Rhodium''\"
-
 end
 ```
 
@@ -764,11 +681,9 @@ public class Rhodium {
 // rhodium.js
 // This is a test for JavaScript syntax highlighting.
 const message = \"Welcome to Rhodium\";
-
 function greet() {
     console.log(message);
 }
-
 greet();
 ```
 
@@ -811,7 +726,6 @@ Welcome to Rhodium
 (defun greet-rhodium ()
   \"Prints a welcome message to Rhodium.\"
   (format t \"Welcome to Rhodium~%\"))
-
 ;; Call the function
 (greet-rhodium)
 ```
@@ -822,11 +736,9 @@ Welcome to Rhodium
 -- rhodium.lua
 -- This is a test for Lua linters and language servers.
 local message = \"Welcome to Rhodium\"
-
 function greet()
     print(message)
 end
-
 greet()
 ```
 
@@ -894,7 +806,6 @@ process.stdout.write(message + '\
 // rhodium.m
 // This is a test for Objective-C syntax highlighting.
 #import <Foundation/Foundation.h>
-
 int main() {
     @autoreleasepool {
         NSString *message = @\"Welcome to Rhodium\";
@@ -919,9 +830,7 @@ let () = print_endline message
 // rhodium.odin
 // This is a test for Odin syntax highlighting.
 package rhodium
-
 import \"core:fmt\"
-
 main :: proc() {
     message := \"Welcome to Rhodium\"
     fmt.println(message)
@@ -949,7 +858,6 @@ end.
 # This is a test for Perl syntax highlighting.
 use strict;
 use warnings;
-
 my $message = \"Welcome to Rhodium\";
 print \"$message\
 \";
@@ -972,7 +880,6 @@ echo "Hi! My name is " . $NaMe . "<br>";
 % rhodium.pl
 % This is a test for Prolog syntax highlighting.
 message('Welcome to Rhodium').
-
 main :-
     message(M),
     write(M), nl.
@@ -984,11 +891,9 @@ main :-
 # rhodium.py
 # This is a test for Python syntax highlighting.
 message = \"Welcome to Rhodium\"
-
 def greet():
     \"\"\"Prints a welcome message.\"\"\"
     print(message)
-
 if __name__ == \"__main__\":
     greet()
 ```
@@ -999,12 +904,10 @@ if __name__ == \"__main__\":
 # rhodium.R
 # This is a test for R syntax highlighting.
 message <- \"Welcome to Rhodium\"
-
 greet <- function() {
   cat(message, \"\
 \")
 }
-
 greet()
 ```
 
@@ -1014,7 +917,6 @@ greet()
 ;; rhodium.rkt
 ;; This is a test for Racket syntax highlighting.
 #lang racket
-
 (define message \"Welcome to Rhodium\")
 (displayln message)
 ```
@@ -1025,12 +927,10 @@ greet()
 // rhodium.jsx
 // This is a test for React syntax highlighting.
 import React from 'react';
-
 const Rhodium = () => {
     const message = \"Welcome to Rhodium\";
     return <h1>{message}</h1>;
 };
-
 export default Rhodium;
 ```
 
@@ -1040,11 +940,9 @@ export default Rhodium;
 # rhodium.rb
 # This is a test for Ruby syntax highlighting.
 message = \"Welcome to Rhodium\"
-
 def greet(msg)
   puts msg
 end
-
 greet(message)
 ```
 
@@ -1116,10 +1014,8 @@ echo \"$message\"
 // rhodium.sol
 // This is a test for Solidity syntax highlighting.
 pragma solidity ^0.8.0;
-
 contract Rhodium {
     string public message = \"Welcome to Rhodium\";
-
     function getMessage() public view returns (string memory) {
         return message;
     }
@@ -1135,7 +1031,6 @@ CREATE TABLE rhodium (
     id INTEGER PRIMARY KEY,
     message TEXT DEFAULT 'Welcome to Rhodium'
 );
-
 SELECT message FROM rhodium;
 ```
 
@@ -1147,7 +1042,6 @@ SELECT message FROM rhodium;
 <script>
     let message = \"Welcome to Rhodium\";
 </script>
-
 <h1>{message}</h1>
 ```
 
@@ -1166,11 +1060,9 @@ print(message)
 // rhodium.ts
 // This is a test for TypeScript syntax highlighting.
 const message: string = \"Welcome to Rhodium\";
-
 function greet(): void {
     console.log(message);
 }
-
 greet();
 ```
 
@@ -1180,9 +1072,7 @@ greet();
 // rhodium.typ
 // This is a test for Typst syntax highlighting.
 #set text(font: \"New Computer Modern\")
-
 = Rhodium
-
 Welcome to Rhodium
 ```
 
@@ -1205,7 +1095,6 @@ fn main() {
 <template>
   <h1>{{ message }}</h1>
 </template>
-
 <script>
 export default {
   data() {
@@ -1223,7 +1112,6 @@ export default {
 // rhodium.zig
 // This is a test for Zig syntax highlighting.
 const std = @import(\"std\");
-
 pub fn main() void {
     const message = \"Welcome to Rhodium\";
     std.debug.print(\"{s}\
@@ -1288,7 +1176,6 @@ echo Welcome to Rhodium
 // rhodium.bicep
 // This is a test for Bicep syntax highlighting.
 param location string = resourceGroup().location
-
 output rhodiumMessage string = 'Welcome to Rhodium'
 ```
 
@@ -1299,7 +1186,6 @@ output rhodiumMessage string = 'Welcome to Rhodium'
 # This is a test for CMake syntax highlighting.
 cmake_minimum_required(VERSION 3.10)
 project(Rhodium)
-
 message(STATUS "Welcome to Rhodium")
 ```
 
@@ -1328,7 +1214,6 @@ console.log message
 {# rhodium.html.j2 #}
 {# This is a test for Django/Jinja2 syntax highlighting. #}
 {% set message = "Welcome to Rhodium" %}
-
 <h1>{{ message }}</h1>
 ```
 
@@ -1359,7 +1244,6 @@ printfn "%s" message
 # rhodium.feature
 # This is a test for Gherkin syntax highlighting.
 Feature: Rhodium Welcome Message
-
   Scenario: Display welcome message
     Given the site is Rhodium
     When a user visits the homepage
@@ -1387,11 +1271,8 @@ Feature: Rhodium Welcome Message
 ```go-mod
 // go.mod
 // This is a test for Go module syntax highlighting.
-
 module my/rhodium
-
 go 1.18
-
 // message = "Welcome to Rhodium"
 ```
 
@@ -1446,7 +1327,6 @@ variable "message" {
   type        = string
   default     = "Welcome to Rhodium"
 }
-
 output "welcome" {
   value = var.message
 }
@@ -1493,7 +1373,6 @@ status = active
 /* This is a test for Less syntax highlighting. */
 @rhodium-bg: #090e13;
 @rhodium-fg: #c5c9c7;
-
 .rhodium-welcome {
   color: @rhodium-fg;
   background: @rhodium-bg;
@@ -1518,7 +1397,6 @@ status = active
 # Makefile
 # This is a test for Makefile syntax highlighting.
 MESSAGE = "Welcome to Rhodium"
-
 .PHONY: greet
 greet:
 	@echo $(MESSAGE)
@@ -1559,7 +1437,6 @@ graph TD;
 server {
     listen 80;
     server_name rhodium.local;
-
     location / {
         return 200 'Welcome to Rhodium';
         add_header Content-Type text/plain;
@@ -1597,16 +1474,12 @@ void setup() {
 // rhodium.proto
 // This is a test for Protobuf syntax highlighting.
 syntax = "proto3";
-
 package rhodium;
-
 // A welcome message service
 service Greeter {
   rpc Greet (RhodiumRequest) returns (RhodiumReply) {}
 }
-
 message RhodiumRequest {}
-
 message RhodiumReply {
   string message = 1; // "Welcome to Rhodium"
 }
@@ -1632,7 +1505,6 @@ html
 # rhodium.pp
 # This is a test for Puppet syntax highlighting.
 $message = 'Welcome to Rhodium'
-
 notify { 'rhodium_welcome':
   message => $message,
 }
@@ -1644,11 +1516,9 @@ notify { 'rhodium_welcome':
 -- src/Rhodium.purs
 -- This is a test for PureScript syntax highlighting.
 module Rhodium where
-
 import Prelude
 import Effect (Effect)
 import Effect.Console (log)
-
 main :: Effect Unit
 main = do
   let message = "Welcome to Rhodium"
@@ -1663,7 +1533,6 @@ main = do
 @{
     var message = "Welcome to Rhodium";
 }
-
 <h1>@message</h1>
 ```
 
@@ -1673,15 +1542,12 @@ main = do
 // rhodium.tsx
 // This is a test for React TSX syntax highlighting.
 import React from "react";
-
 interface RhodiumProps {
   message: string;
 }
-
 const Rhodium: React.FC<RhodiumProps> = ({ message }) => {
   return <h1>{message}</h1>;
 };
-
 // <Rhodium message="Welcome to Rhodium" />
 export default Rhodium;
 ```
@@ -1691,17 +1557,12 @@ export default Rhodium;
 ```rest
 .. rhodium.rst
 .. This is a test for reStructuredText syntax highlighting.
-
 Rhodium
 =======
-
 Welcome to Rhodium.
-
 - A list item
 - Another item
-
 .. code-block:: text
-
    A literal code block.
 ```
 
@@ -1712,7 +1573,6 @@ Welcome to Rhodium.
 /* This is a test for Sass (indented) syntax highlighting. */
 $rhodium-bg: #090E13
 $rhodium-fg: #C5C9C7
-
 .rhodium-welcome
   color: $rhodium-fg
   background: $rhodium-bg
@@ -1726,7 +1586,6 @@ $rhodium-fg: #C5C9C7
 /* This is a test for SCSS syntax highlighting. */
 $rhodium-bg: #090e13;
 $rhodium-fg: #c5c9c7;
-
 .rhodium-welcome {
   color: $rhodium-fg;
   background: $rhodium-bg;
@@ -1787,7 +1646,6 @@ puts $message
 # This is a test for TOML syntax highlighting.
 title = "Rhodium"
 message = "Welcome to Rhodium"
-
 [settings]
 active = true
 version = 1.0
@@ -1847,10 +1705,8 @@ endmodule
 -- Note: This is a duplicate of your HDL example, using the more common VHDL alias.
 library ieee;
 use std.textio.all;
-
 entity rhodium is
 end entity rhodium;
-
 architecture test of rhodium is
 begin
     process
@@ -1908,17 +1764,13 @@ settings:
 ### Inline Math ∈
 
 Simple inline: $a^2 + b^2 = c^2$
-
 Complex inline: $\\int_{-\\infty}^{\\infty} e^{-x^2} dx = \\sqrt{\\pi}$
-
 With text: The derivative $\\frac{d}{dx}(x^n) = nx^{n-1}$ is fundamental.
 
 ### Block Math ∑
 
 Simple equation:
-
 $$E = mc^2$$
-
 Matrix:
 
 $$
@@ -1950,16 +1802,12 @@ abla` | Gradient |
 
 > [!NOTE]
 > Useful information that users should know, even when skimming content.
-
 > [!TIP]
 > Helpful advice for doing things better or more easily.
-
 > [!IMPORTANT]
 > Key information users need to know to achieve their goal.
-
 > [!WARNING]
 > Urgent info that needs immediate user attention to avoid problems.
-
 > [!CAUTION]
 > Advises about risks or negative outcomes of certain actions.
 
@@ -1978,7 +1826,6 @@ abla` | Gradient |
 > ```
 >
 > And even math: $e^{i\\pi} + 1 = 0$
-
 > [!WARNING]
 > | Table | In | Callout |
 > |:------|:--:|--------:|
@@ -1992,13 +1839,10 @@ abla` | Gradient |
 
 <details>
 <summary>Click to expand</summary>
-
 This is hidden content with:
-
 - Lists
 - **Bold text**
 - `Code`
-
 </details>
 
 <kbd>Ctrl</kbd> + <kbd>C</kbd> for copy
@@ -2007,23 +1851,14 @@ This is hidden content with:
 
 <ins>Inserted text</ins> and <del>deleted text</del>
 
----
-
 ## Footnotes ※
 
 Here's a sentence with a footnote[^1].
-
 Another sentence with a longer footnote[^2].
-
 Multiple references to same footnote[^1].
-
 [^1]: This is the first footnote.
-
 [^2]: This is a longer footnote with multiple paragraphs.
-
-    Second paragraph with `code` and **formatting**.
-
----
+Second paragraph with `code` and **formatting**.
 
 ## Unicode Symbols Collection ∞
 
@@ -2047,18 +1882,12 @@ Multiple references to same footnote[^1].
 
 ☐ ☑ ☒ ☓ ☰ ☱ ☲ ☳ ☴ ☵ ☶ ☷ ♠ ♣ ♥ ♦ ♩ ♪ ♫ ♬ ♭ ♮ ♯ ⌀ ⌁ ⌂ ⌃ ⌄ ⌅ ⌆ ⌇ ⌈ ⌉ ⌊ ⌋ ⌌ ⌍ ⌎ ⌏ ⌐ ⌑ ⌒ ⌓ ⌔ ⌕ ⌖ ⌗ ⌘ ⌙ ⌚ ⌛ ⌜ ⌝ ⌞ ⌟ ⌠ ⌡ ⌢ ⌣ ⌤ ⌥ ⌦ ⌧ ⌨ ⟐ ⟑ ⟒ ⟓ ⟔ ⟕ ⟖ ⟗ ⟘ ⟙ ⟚ ⟛ ⟜ ⟝ ⟞ ⟟ ⟠ ⟡ ⟢ ⟣ ⟤ ⟥ ⟦ ⟧ ⟨ ⟩ ⟪ ⟫ ⟬ ⟭ ⟮ ⟯
 
----
-
 ## Escaping Characters \\\\
 
 Escape asterisk: \\_not italic\\_
-
 Escape underscore: \\_not italic\\_
-
 Escape backtick: \\`not code\\`
-
 Escape brackets: \\[not link\\](not url)
-
 Double escape in math: \\\\\\\\
 
 ---
@@ -2085,28 +1914,21 @@ Double escape in math: \\\\\\\\
 ### Mixed Content Types
 
 1. **Ordered item with table:**
-
-   | Col 1 | Col 2  |
+   | Col 1 | Col 2 |
    | :---- | :----- |
-   | Data  | $\\pi$ |
-
+   | Data | $\\pi$ |
    - Nested unordered with image:
      ![](https://via.placeholder.com/50)
-
      > [!TIP]
      > Callout in nested list
-
 2. Second item with details:
-
    <details>
    <summary>Expandable in list</summary>
-
    ```rust
    fn nested() {
        println!(\"Nested code in details in list\");
    }
    ```
-
    </details>
 
 ---
@@ -2124,7 +1946,6 @@ Double escape in math: \\\\\\\\
 ### Subscripts and Superscripts
 
 x² x³ x⁴ x⁵ x⁶ x⁷ x⁸ x⁹ x⁰ x⁺ x⁻ x⁼ x⁽ x⁾ xⁿ
-
 x₀ x₁ x₂ x₃ x₄ x₅ x₆ x₇ x₈ x₉ x₊ x₋ x₌ x₍ x₎
 
 ---
@@ -2132,15 +1953,10 @@ x₀ x₁ x₂ x₃ x₄ x₅ x₆ x₇ x₈ x₉ x₊ x₋ x₌ x₍ x₎
 ## Empty Elements Test ∅
 
 Empty bold: \*\*\*\*
-
 Empty italic: \*\*
-
 Empty code: ``
-
 Empty link: [](
-
 Empty image: ![]()
-
 Empty heading:
 
 ###
@@ -2150,11 +1966,8 @@ Empty heading:
 ## Line Length Test ⟷
 
 Short.
-
 Medium length line with some content to test rendering.
-
 This is a very long line of text that should wrap properly when rendered in the browser depending on the width of the container element that holds this markdown content when it is converted to HTML by the Hugo static site generator using whatever markdown processor is configured such as Goldmark.
-
 Word​with​zero​width​spaces​between​each​letter​to​test​word​breaking.
 
 ---
@@ -2162,6 +1975,5 @@ Word​with​zero​width​spaces​between​each​letter​to​test​word
 ## End of Showcase ◉
 
 This document contains every possible markdown element and combination for comprehensive Hugo testing.
-
 Final unicode collection: ⊂ ⊃ ⊄ ⊅ ⊆ ⊇ ⊈ ⊉ ⊊ ⊋ ∀ ∂ ∃ ∅ ∇ ∈ ∉ ∋ ∌ ∏ ∑ ∓ ∗ ∘ √ ∝ ∞ ∠ ∡ ∢ ∧ ∨ ∩ ∪ ∫ ∬ ∭ ∮ ∴ ∵ ∶ ∷ ∼ ∽ ≈ ≉ ≠ ≡ ≤ ≥ ≪ ≫`
 }

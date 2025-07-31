@@ -1,0 +1,8 @@
+{
+  "pinned": [
+    "quickadd:runQuickAdd",
+    "omnisearch:show-modal",
+    "omnisearch:show-modal-infile",
+    "editor:open-link-in-new-window"
+  ]
+}

@@ -1,9 +1,7 @@
 {{ define "main" }}
-  {{ $slug := .File.BaseFileName | urlize }}
-  {{ $section := .Section }}
-  {{ $img := printf "/images/processed/%s/%s.webp" $section $slug }}
-
-  {{ if (fileExists (printf "static%s" $img)) }}
+  {{ partial "meta/featured-image.html" . }}
+  {{ $img := .Scratch.Get "postImage" }}
+  {{ if $img }}
     <div class="single-hero-wrapper">
       <img
         src="{{ $img | relURL }}"
@@ -12,13 +10,12 @@
       />
     </div>
   {{ end }}
-
-
   <div class="container-top">
     <header class="single-hero-card glass--3-3">
       <div class="single-meta-top">
-        <div class="single-meta-reading">{{ .ReadingTime }} min read</div>
-
+        <div class="single-meta-reading">
+          {{ partial "meta/reading-time.html" . }}
+        </div>
         <div class="single-meta-categories">
           {{ partial "tags/post-type.html" . }}
           {{ with .Params.categories }}
@@ -31,7 +28,6 @@
             {{ end }}
           {{ end }}
         </div>
-
         <div class="single-meta-tags">
           {{ with .Params.tags }}
             {{ range . }}
@@ -44,16 +40,11 @@
           {{ end }}
         </div>
       </div>
-
       <h1 class="single-title">{{ .Title }}</h1>
-
       {{ with .Params.catchphrase }}
         <p class="single-catchphrase"><em>{{ . }}</em></p>
       {{ end }}
-
-
       <p class="hero-divider">─────── § ───────</p>
-
       <div class="single-meta-bottom">
         <span>◉ {{ .Date.Format "Jan 02, 2006" }}</span>
         {{ with .Lastmod }}
@@ -61,34 +52,16 @@
         {{ end }}
       </div>
     </header>
-
     {{ partial "toc.html" . }}
-
-
     <div class="single-page">
       <div class="single-content">
         {{ .Content }}
       </div>
-
-      {{ if .Params.tags }}
-        <footer class="single-footer">
-          <div class="single-tags">
-            <span class="tags-label">Tags:</span>
-            {{ range .Params.tags }}
-              <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="tag-link"
-                >{{ . }}</a
-              >
-            {{ end }}
-          </div>
-        </footer>
-      {{ end }}
-
       {{ partial "single/navigation.html" . }}
     </div>
   </div>
-
   {{ with .Section }}
-    {{ if in (slice "blog" "deep-dive" "project") . }}
+    {{ if in (slice "blog" "deep-dives" "project") . }}
       {{ partial "progress.html" . }}
     {{ end }}
   {{ end }}

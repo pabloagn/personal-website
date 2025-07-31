@@ -25,13 +25,13 @@
         {{ end }}
       </div>
     {{ end }}
-    <h3 class="card-title">
+    <h2 class="card-title">
       {{ with .slug }}
         <a href="/tools/{{ . }}/">{{ $.name }}</a>
       {{ else }}
         <span>{{ $.name }}</span>
       {{ end }}
-    </h3>
+    </h2>
     <p class="card-summary">{{ .summary }}</p>
     {{ with .tags }}
       <div class="card-tags">

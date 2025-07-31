@@ -10,10 +10,10 @@
 
 .header-anchor {
   display: inline-flex;
-  /* height: 1rem; */
   align-items: center;
   justify-content: center;
   margin-right: var(--space-xs);
+  margin-bottom: 5px;
   opacity: 1;
   transition: opacity 0.2s ease;
   color: var(--fg-primary);

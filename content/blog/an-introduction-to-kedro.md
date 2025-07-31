@@ -1,10 +1,10 @@
 ---
 title: "Introduction to Kedro"
+catchphrase: "Bring order to your data workflows."
 categories: ["computer-science", "programming"]
 tags: ["data-engineering", "pipelines", "etl", "project-structure"]
 tools: ["kedro", "python"]
 summary: "Learn how Kedro helps you build maintainable and reproducible data science pipelines using best engineering practices."
-catchphrase: "Bring order to your data workflows."
 layout: single
 draft: true
 math: true
@@ -145,7 +145,6 @@ Belgium, Planning Engineer
 ## Data
 
 Sourced from:
-
 ![[Pasted image 20230504082345.png]]
 
 ---
@@ -159,9 +158,7 @@ Sourced from:
 
 # Conclusions
 
-We've reviewed multiple yet simple mechanisms we can employ to make our code cleaner, more elegant, modular, usable, scalable and safer. These measures can not only help us become better programmers but better collaborators. It will make reading code a pleasure instead of an agonizing process and instantly boost our credibility.
-
----
+## We've reviewed multiple yet simple mechanisms we can employ to make our code cleaner, more elegant, modular, usable, scalable and safer. These measures can not only help us become better programmers but better collaborators. It will make reading code a pleasure instead of an agonizing process and instantly boost our credibility.
 
 # References
 

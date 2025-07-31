@@ -1,0 +1,19 @@
+{
+  "accentColor": "#e4cbaf",
+  "enabledCssSnippets": [
+    "banners",
+    "bookmark-embed",
+    "canvas-candy",
+    "dashboard",
+    "general",
+    "heading-icon",
+    "miner-banner",
+    "pdf-export",
+    "rainbow"
+  ],
+  "cssTheme": "AnuPpuccin",
+  "nativeMenus": false,
+  "monospaceFontFamily": "Source Code Pro",
+  "showViewHeader": true,
+  "showRibbon": false
+}
