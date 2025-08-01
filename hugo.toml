@@ -3,8 +3,6 @@ baseURL = "https://pabloagn.com"
 languageCode = "en-us"
 title = "Pablo Aguirre"
 
-# theme = "kanso"
-
 # --- Build Settings ---
 buildDrafts = false
 buildFuture = false

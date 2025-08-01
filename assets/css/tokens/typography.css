@@ -20,7 +20,9 @@
   --font-size-xl: 2rem; /* 32px – h4 */
   --font-size-2xl: 2.5rem; /* 40px – h3 */
   --font-size-3xl: 3rem; /* 48px – h2 */
-  --font-size-4xl: 4rem; /* 64px – h1 */
+  --font-size-4xl: 3.5rem; /* 64px – h1 */
+  --font-size-5xl: 4rem; /* 80px – h1 desktop */
+  --font-size-6xl: 4.5rem; /* 96px – h1 wide screen */
 
   --font-weight-thin: 100;
   --font-weight-extra-light: 200;

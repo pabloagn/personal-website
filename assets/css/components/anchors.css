@@ -10,6 +10,9 @@
 
 .header-anchor {
   display: inline-flex;
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-color: transparent;
   align-items: center;
   justify-content: center;
   margin-right: var(--space-xs);
@@ -17,9 +20,16 @@
   opacity: 1;
   transition: opacity 0.2s ease;
   color: var(--fg-primary);
-  /* text-decoration: none; */
-  /* vertical-align: baseline; */
   height: 100%;
+}
+
+.header-anchor:hover {
+  text-decoration: none;
+}
+
+.header-anchor svg {
+  text-decoration: none;
+  display: block;
 }
 
 h1:hover .header-anchor,
@@ -34,7 +44,6 @@ h5:hover .header-anchor {
 .anchor-icon {
   display: block;
   fill: currentColor;
-  pointer-events: none;
   transform: translateY(1px);
   filter: drop-shadow(0 0 5px currentColor);
 }

@@ -10,19 +10,21 @@
 }
 
 .toc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: transparent;
   padding: var(--space-md);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   border-bottom: 1px solid var(--fg-muted-darker);
 }
 
 .toc-title {
   color: var(--fg-primary);
-  font-size: var(--text-lg);
+  font-size: var(--font-size-lg);
   margin: 0;
-  font-weight: 500;
+  padding-top: var(--space-sm);
+  font-family: var(--font-serif);
+  line-height: 1;
 }
 
 .toc-toggle {

@@ -5,7 +5,7 @@ tags: ["machine-learning", "supervised", "unsupervised", "algorithms"]
 tools: ["python"]
 summary: "Learn about the different types of machine learning algorithms and how they are applied to real-world problems."
 catchphrase: "Teach machines to learn, one algorithm at a time."
-draft: true
+draft: false
 math: true
 date: 2025-06-30
 ---

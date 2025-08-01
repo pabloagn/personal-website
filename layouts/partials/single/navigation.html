@@ -1,19 +1,22 @@
 <nav class="single-nav">
-  {{ if .PrevInSection }}
-    <div class="single-nav-item single-nav-prev">
+  <!-- Left side (Previous) -->
+  <div class="single-nav-item single-nav-prev">
+    {{ if .PrevInSection }}
       <span class="single-nav-label">← Previous</span>
       <a href="{{ .PrevInSection.Permalink }}" class="single-nav-link">
         {{ .PrevInSection.Title }}
       </a>
-    </div>
-  {{ end }}
+    {{ end }}
+  </div>
 
-  {{ if .NextInSection }}
-    <div class="single-nav-item single-nav-next">
+  <!-- Right side (Next) -->
+  <div class="single-nav-item single-nav-next">
+    {{ if .NextInSection }}
       <a href="{{ .NextInSection.Permalink }}" class="single-nav-link">
         {{ .NextInSection.Title }}
       </a>
       <span class="single-nav-label">Next →</span>
-    </div>
-  {{ end }}
+    {{ end }}
+  </div>
 </nav>
+

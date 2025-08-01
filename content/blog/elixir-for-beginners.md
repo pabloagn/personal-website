@@ -3,7 +3,7 @@ title: "Elixir for Beginners"
 catchphrase: "Elegant, scalable, concurrent."
 categories: ["computer-science", "programming"]
 date: 2025-06-30
-draft: true
+draft: false
 math: true
 summary: "Start your journey with Elixir and discover a functional language built for fault-tolerance and concurrency on the BEAM VM."
 tags: ["elixir", "functional-programming", "beam", "concurrency"]

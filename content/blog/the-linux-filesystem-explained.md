@@ -5,7 +5,7 @@ tags: ["linux", "filesystem", "unix"]
 tools: ["linux"]
 summary: "Understand the structure and purpose of the Linux filesystem, from `/bin` to `/proc`, and how it all fits together."
 catchphrase: "Know your root from your home."
-draft: true
+draft: false
 math: true
 date: 2025-06-30
 ---

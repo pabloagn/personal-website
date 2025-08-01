@@ -5,7 +5,7 @@ tags: ["scala", "functional-programming", "oop"]
 tools: ["scala"]
 summary: "An introduction to Scala 3, covering its modern syntax and blend of functional and object-oriented programming."
 catchphrase: "The power of two paradigms in one language."
-draft: true
+draft: false
 math: true
 date: 2025-06-30
 ---
