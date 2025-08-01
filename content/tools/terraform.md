@@ -1,10 +1,10 @@
 ---
 title: "Terraform"
 slug: "terraform"
-summary: "Infrastructure as Code for declarative cloud provisioning, extensible across all major providers."
-date: 2024-01-01
-categories: ["Infrastructure"]
-tags: ["IaC", "DevOps", "HashiCorp"]
+summary: "Infrastructure as code software tool for building, changing and versioning infrastructure safely and efficiently."
+date: 2025-08-02
+categories: ["Cloud & Infrastructure"]
+tags: ["Infrastructure as Code", "Multi-cloud", "Provisioning"]
 ---
 
-Terraform empowers teams to codify and manage infrastructure across a multi-cloud environment. With provider-based extensibility and full plan/apply workflows, it enables scalable, versioned, auditable infrastructure.
+Infrastructure as code software tool for building, changing and versioning infrastructure safely and efficiently.

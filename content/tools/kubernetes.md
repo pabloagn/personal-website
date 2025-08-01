@@ -1,0 +1,10 @@
+---
+title: "Kubernetes"
+slug: "kubernetes"
+summary: "An open-source container orchestration platform for automating deployment, scaling, and management."
+date: 2025-08-02
+categories: ["Cloud & Infrastructure"]
+tags: ["Container Orchestration", "Scaling", "Cloud Native"]
+---
+
+An open-source container orchestration platform for automating deployment, scaling, and management.
