@@ -72,6 +72,15 @@
   background-color: var(--fg-muted);
   color: var(--bg-primary);
 }
+.tag--category--light {
+  background-color: transparent;
+  color: var(--fg-secondary);
+  border-color: var(--fg-secondary);
+}
+.tag--category--light:hover {
+  background-color: var(--fg-secondary);
+  color: var(--bg-primary);
+}
 
 /* Tag label */
 .tag--label {
@@ -81,5 +90,14 @@
 }
 .tag--label:hover {
   background-color: var(--fg-muted);
+  color: var(--bg-primary);
+}
+.tag--label--light {
+  background-color: transparent;
+  color: var(--fg-secondary);
+  border-color: var(--fg-secondary);
+}
+.tag--label--light:hover {
+  background-color: var(--fg-secondary);
   color: var(--bg-primary);
 }

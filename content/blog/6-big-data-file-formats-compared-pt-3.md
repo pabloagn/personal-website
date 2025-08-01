@@ -11,15 +11,18 @@ date: 2025-06-30
 ---
 
 Over the last two articles of this series, we have discussed different Big Data file formats and their overall characteristics. We have also performed writing & reading examples using different Python modules & methods.
+
 In this section, we will focus on comparing the performance of the formats reviewed. We will evaluate writing times, reading times, and file sizes.
+
 We will then conclude this series by reviewing specific use cases for each one of the formats, as well as discussing some recommendations.
+
 This section will be longer than the previous ones and involve more code. We'll be using Python scripts which can be found in the [Blog Article Repo](https://github.com/pabloagn/blog/tree/master/big-data/6-big-data-file-formats-compared).
 
 ## Importing the required modules
 
 For this section, we will be using the following Python libraries and modules:
 
-```Python
+```python
 # File manipulation modules
 import pandas as pd
 from fastavro import reader, writer, parse_schema
@@ -41,7 +44,7 @@ import seaborn as sns
 
 Since we'll be plotting our experimental results, we will need to define our plot parameters beforehand:
 
-```Python
+```python
 # Before anything else, delete the Matplotlib
 # font cache directory if it exists, to ensure
 # custom font proper loading
@@ -69,17 +72,19 @@ plt.rcParams['font.sans-serif'] = ['Lora']
 ## Preparing the data set
 
 To reduce noise in our performance measurements, we will employ a slightly larger file for this section. We will be using the `Spotify Charts` data set (`2.48 GB`) published by `DHRUVIL DAVE`, which you can download from [Kaggle](https://www.kaggle.com/datasets/dhruvildave/spotify-charts).
+
 We can start by reading the data set as a `pandas.DataFrame` object:
 
-```Python
+```python
 # Load csv file as pandas.DataFrame object
 df = pd.read_csv('datasets/charts.csv')
 ```
 
 This process should take a couple of minutes, depending on the specifications of each machine.
+
 Upon concluding, we should end up with a `pandas.DataFrame` object `df` with the following shape:
 
-```Python
+```python
 # Get the shape of the object
 df.shape
 ```
@@ -89,9 +94,10 @@ df.shape
 ```
 
 Meaning _26,173,514_ rows by _9_ columns.
+
 Next, we will need to do some preprocessing before beginning with the tests:
 
-```Python
+```python
 # Singe we have nan values, we will remove them
 df = df.dropna()
 # Check the current data types and see if casting is required
@@ -125,6 +131,7 @@ Now, we're ready to start designing our experiment.
 ## Experiment design
 
 For both writing & reading performance tests, we will be using a collection of measurements per file format. This is always a good practice in experimental design and will help us calculate a complete set of descriptive statistics.
+
 Our experiment for the **writing process** will consist of the following steps:
 
 1. Define the variables to measure.
@@ -134,14 +141,16 @@ Our experiment for the **writing process** will consist of the following steps:
 5. Repeat for the other file formats.
 6. Consolidate results and perform a statistical description.
 7. Delete all written files except one to read in the next experiment.
-   Our experiment for the **reading process** will consist of the following steps:
-8. Define the variables to measure.
-9. Set the number of trials as a control variable.
-10. Begin with the first trial, measuring variables of interest.
-11. Store measurements.
-12. Clear memory
-13. Repeat for the other file formats.
-14. Consolidate results and perform a statistical description.
+
+Our experiment for the **reading process** will consist of the following steps:
+
+1. Define the variables to measure.
+2. Set the number of trials as a control variable.
+3. Begin with the first trial, measuring variables of interest.
+4. Store measurements.
+5. Clear memory
+6. Repeat for the other file formats.
+7. Consolidate results and perform a statistical description.
 
 ## Performance tests
 
@@ -149,7 +158,7 @@ Our experiment for the **writing process** will consist of the following steps:
 
 We will start by defining our experiment parameters:
 
-```Python
+```python
 # Define number of trials n
 n = 20
 # Define performance tests output path
@@ -169,7 +178,8 @@ We will start by defining our `writingPerformance()` function, which will accept
     Upon calling, it will return the following:
 - `measured_vars_w` : `dict`
   - Execution time for each file format with `n` number of trials.
-    Once we have the expected inputs and outputs, the idea is to perform the following:
+
+Once we have the expected inputs and outputs, the idea is to perform the following:
 
 1. Declare a `pandas.core.series.Series` for each file format, where we will store writing times. This will result in 8 objects in total.
 2. Declare an empty dictionary `measured_vars_w`, used to store key-value pairs of file format-Pandas series of measurements.
@@ -182,9 +192,10 @@ We will start by defining our `writingPerformance()` function, which will accept
 9. Upon loop completion, assign a key-value pair to our `measured_vars_w` dictionary corresponding to the file format and measured execution times.
 10. Remove all generated files except one using the `os.remove` method.
 11. Repeat for all remaining file formats.
-    We can translate our pseudocode into code:
 
-```Python
+We can translate our pseudocode into code:
+
+```python
 def writingPerformance(n, path, df):
     '''
     Parameters
@@ -439,7 +450,8 @@ Similar to the writing performance tests section, we will start by defining our 
     Upon calling, it will return the following:
 - `measured_vars_r` : `dict`
   - Execution time for each file format, with `n` number of trials.
-    Once we have the expected inputs and outputs, the idea is to perform the following:
+
+Once we have the expected inputs and outputs, the idea is to perform the following:
 
 1. Declare a `pandas.core.series.Series` for each file format, where we will store writing times. This would result in 8 objects in total.
 2. Declare an empty dictionary `measured_vars_w`, used to store key-value pairs of file format-Pandas series of measurements.
@@ -452,9 +464,10 @@ Similar to the writing performance tests section, we will start by defining our 
 9. Delete the read object from memory.
 10. Upon loop completion, assign a key-value pair to our `measured_vars_w` dictionary corresponding to the file format and measured execution times.
 11. Repeat for all remaining file formats.
-    We can translate our pseudocode into code:
 
-```Python
+We can translate our pseudocode into code:
+
+```python
 def readingPerformance(n, path, df):
     '''
     Parameters
@@ -691,7 +704,8 @@ Once we have both the `writingPerformance()` and `readingPerformance()` function
   - Statistical description of measured reading times for all formats.
 - `size_d` : `dict`
   - Statistical description of measured file/folder sizes for all formats.
-    Once we have the expected inputs and outputs, the idea is to perform the following:
+
+Once we have the expected inputs and outputs, the idea is to perform the following:
 
 #### Writing performance analysis
 
@@ -716,9 +730,10 @@ Once we have both the `writingPerformance()` and `readingPerformance()` function
 4. Convert file sizes:
    1. The `os.path.getsize` method returns the file size in bytes, so we need to divide the result by $1,024^2$ to get our measurements in `MB` units.
    2. The `f.stat().st_size` method returns the folder size in bytes, so we need to divide the result by $1,024^2$ to get our measurements in `MB` units.
-      We can translate our pseudocode into code:
 
-```Python
+We can translate our pseudocode into code:
+
+```python
 def analysis(n, path, df):
     '''
     Parameters
@@ -797,9 +812,10 @@ def analysis(n, path, df):
 ```
 
 If we closely examine lines `1049` through `1059`, we see that we need to declare different methods for calculating file sizes & folder sizes.
+
 We can then call our `analysis()` function and assign the outputs to 5 different objects:
 
-```Python
+```python
 # Call analysis function
 measured_vars_w, measured_vars_r, stat_dw, stat_dr, size_d = analysis(n, path, df)
 # Print the type and shape of each object
@@ -833,6 +849,7 @@ The shapes of our objects match the output requirements, as we have eight tested
 ## Performance results
 
 We now have everything we need to make sense of the data we just generated.
+
 In this example, the quantity of data is manageable since we only have eight file formats and 20 measurements per format. Regardless, it is always a good practice to visualize the results in a plot as a first step.
 
 ### Plotting the results
@@ -843,7 +860,7 @@ We'll proceed with some visualization techniques appropriate for the results we 
 
 A bar chart is a simple way to visualize data quickly. We can generate a bar chart using the `matplotlib.pyplot` module:
 
-```Python
+```python
 # Create figure
 plt.figure('File Sizes Bar Chart')
 # Plot the file sizes
@@ -865,17 +882,22 @@ plt.close()
 ```
 
 If we save the figure directly and then close it, the image will be written in the path we specify and will not display on our IDE.
+
 If we examine line `1181`, we used an additional library called `seaborn` to include the additional parameter `sns.despine()`. This module is handy when dealing with statistical analysis visualizations. However, we will not use it in this particular section and will limit ourselves to using the `matplotlib.pyplot` module.
+
 ![alt text](https://raw.githubusercontent.com/pabloagn/blog/master/big-data/6-big-data-file-formats-compared/performance_results/file_sizes_bar_chart_bg.png "File Size Bar Chart")
+
 _Figure 1.1: Bar Chart denoting file/folder sizes in `MB` for each file format_
 
 #### Boxplot for writing times
 
 A boxplot is a visualization method widely used in Data Science & statistical analysis. Its purpose is to describe the distribution of experimental measurements, including useful visual information about the set.
+
 A detailed discussion of the boxplot components is out of the scope of this article. That will be covered in another blog post.
+
 We can generate a boxplot using the `matplotlib.pyplot` module:
 
-```Python
+```python
 # Create figure
 plt.figure('Writing Times Boxplot')
 # Plot the writing times
@@ -899,13 +921,14 @@ plt.close()
 ```
 
 ![alt text](https://raw.githubusercontent.com/pabloagn/blog/master/big-data/6-big-data-file-formats-compared/performance_results/writing_time_scattered_boxplots_bg.png "Writing Time Box Plot")
+
 _Figure 1.2: Boxplot denoting the distribution of 20 trials of writing times for each file format_
 
 #### Boxplot for reading times
 
 We can perform a similar treatment to our reading time results:
 
-```Python
+```python
 # Create figure
 plt.figure('Reading Times Boxplot')
 # Plot the writing times
@@ -929,15 +952,18 @@ plt.close()
 ```
 
 ![alt text](https://raw.githubusercontent.com/pabloagn/blog/master/big-data/6-big-data-file-formats-compared/performance_results/reading_time_scattered_boxplots_bg.png "Reading Time Box Plot")
+
 _Figure 1.3: Boxplot denoting the distribution of 20 trials of reading times for each file format_
 
 ### Exporting the results in a tabular format
 
 We can also write our results in an Excel file. This is a valuable technique whenever we want to share or store information that took a fair amount of time to generate (_imagine explaining to our boss why we had to re-run a 2-hour performance test just to get the results back_).
+
 An Excel file is also a very friendly tabular format that everyone understands. It can be used to make further analyses such as pivoting or calculating statistical measures (_$mean$, $min$, $max$, $stdev$, among others_).
+
 For this part, we will be writing four `.xlsx` files, two for writing results and two for reading results. Each file will have eight tabs, each consisting of the file format and the writing and reading times in seconds, respectively:
 
-```Python
+```python
 # Define function to export results to Excel file
 def results_to_excel(dseries_dict, path):
     """Write dictionary of dataframes to separate sheets, within
@@ -976,32 +1002,44 @@ results_to_excel(stat_dr, path_dr)
 | `.pickle`  | 1,539         | 17.6                      | `pickle.dump()`          | 9.1                       | `pickle.load()`     |
 
 _Figure 2: Chart containing file/folder sizes rounded to integer values, average writing & reading times from 20 measurements rounded to one decimal, and writing/reading methods used for each case_
+
 _**Note:** Keep in mind that these values vary across systems. CPU processing power, RAM capacity, and other variables directly affect reading & writing times. Please refer to the [Appendix](#appendix) section for the full list of machine specifications used in this experiment._
 
 ### Interpretation
 
 We can see that the `.csv` & `.txt` file formats had the largest file sizes, while the non-partitioned `.parquet` had the smallest file size. `.parquet` folder sizes increased almost linearly as we increased the number of partitions, which makes sense if we remember that a partitioned file creates a directory hierarchy beneath the main directory.
+
 For writing times, we can see that most of our measures were more or less consistent except with the `.pickle` file format. This is denoted by the two outliers visible in _Figure 1.2_ and can be due to processes starting in the background, thus reducing resources and introducing noise in the measurements. We can mitigate or at least reduce this phenomenon by tightening our experimental conditions.
+
 Writing `.feather` files consistently consumed the least amount of time, followed by the single partitioned `.parquet` file and non-partitioned `.parquet` file consecutively. We can also clearly see that the `.csv` and `.txt` file formats were the worst performing, followed by the `.avro` format.
+
 For reading times, the story is slightly different: Reading from the `.avro` file consumed the most amount of time (_25 seconds more than the second worst case_), along with the highest standard deviation value of all file formats ($stdev = 7$, _meaning 7 seconds of deviation from the mean_). This is due to the fact that the `fastavro` library provides an iterator reading object, meaning the script had to iterate over each row and append it to an object (_in our case, a list_). This additional step adds an extra layer of computational complexity, therefore increasing reading times.
+
 In contrast, the `.feather` file format took the least amount of time to read, closely followed by the non-partitioned & single-partitioned `.parquet` files.
 
 ## Use cases
 
 From the results obtained in the previous section, we can see that the `.feather` file format offers consistently fast writing & reading speeds when compared to the other file formats. Also, the file size is considerably smaller. However, as we previously mentioned, this format is not recommended for long-term storage due to its binary form instability.
+
 A great alternative to handling big data would be the stabler `.parquet` file format: Both non-partitioned and single-partitioned forms presented low writing & reading speeds and relatively small file sizes compared to the other formats.
+
 Even though the non-partitioned approach was the overall highest performing, it is not always the best option: when dealing with large data sets that contain multiple aggregation levels, partitioning lets us divide the aggregation levels into subfolders, making the information accessible by blocks, meaning we would not require to read the entire file to extract a single column field group. This is especially important with big data since Python reads data and stores it in memory, so a single-partitioned 1TB `.parquet` file would be practically impossible to read (_parsing by blocks could do the trick, but then, this is what `.parquet` partitioning achieves more elegantly, right?_).
+
 Another high-performing case was the `.pickle` file format, but we did not mention it as a first or even second option for two extremely relevant reasons:
 
 - It's platform specific.
 - Malicious code can be easily injected, creating potential vulnerabilities in our environment.
-  These two reasons alone make `.pickle` files more of a niche solution for interchanging Python objects and most definitely not apt for production environments.
-  Lastly, the two worst performing file formats, `.csv` and `.txt`, which ironically are the most popular, present all of the advantages that we mentioned earlier, but have substantial limitations if we want to ensure a proper and secure data writing & loading environment; the single fact that these two file formats don't preserve data types is a good-enough reason to evaluate other alternatives.
+
+These two reasons alone make `.pickle` files more of a niche solution for interchanging Python objects and most definitely not apt for production environments.
+
+Lastly, the two worst performing file formats, `.csv` and `.txt`, which ironically are the most popular, present all of the advantages that we mentioned earlier, but have substantial limitations if we want to ensure a proper and secure data writing & loading environment; the single fact that these two file formats don't preserve data types is a good-enough reason to evaluate other alternatives.
 
 ## Conclusions
 
 In summary, not all _"big data"_ file formats are tailored for handling big data. This is counterintuitive, nonetheless true. Each was created with a specific purpose and is better or worse at some applications than others.
+
 Serialized formats, for example, present several advantages over non-serialized formats. Still, the inverse also happens: serialized formats may lose stability across versions and usually consume more processing resources when serializing/deserializing objects.
+
 Before implementing a format, especially in a production environment, it's essential to make a detailed assessment of which formats will be used and how the encoding will be handled. Also, when working with other collaborators, setting a strict standard for data formatting & handling is of vital importance and, more often than not, overlooked in favor of implementing the _"easier way"_.
 
 ## Appendix

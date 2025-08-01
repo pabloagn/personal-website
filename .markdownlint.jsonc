@@ -1,0 +1,10 @@
+{
+  "default": true,
+  "MD012": { "maximum": 1 },  // only allow one blank line
+  "MD022": { "lines_above": 1, "lines_below": 1 },
+  "MD032": { "blanks_around_lists": true },
+  "MD013": false,             // disable line-length enforcement
+  "MD036": false,
+  "MD033": false
+}
+

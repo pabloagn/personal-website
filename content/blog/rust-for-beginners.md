@@ -63,6 +63,7 @@ Let us discuss what makes Rust awesome in more detail.
 Rust provides low-level control by allowing memory management explicitly and efficiently. Rust's ownership and borrowing model offers a safe and efficient way to manage memory, a fundamental aspect of low-level programming. This makes it possible to write secure yet high-performance programs.
 
 In Rust, memory is managed through ownership, meaning each value has a unique owner. When a value is no longer needed, its owner can either move it to a new owner or free the memory it occupies.
+
 Rust also provides borrowing, allowing multiple references to a value to exist simultaneously, but only one can be mutable at a time. This ensures data is accessed safely and prevents data races and other synchronization issues.
 
 ### Concurrency & asynchronous processing
@@ -74,7 +75,8 @@ This is no special thing since other languages also have this possibility. What 
 - Threads in Rust are lightweight and can be created easily using Rust's standard library.
 - Due to its robust compiler, many potential concurrent processing problems are pointed out at compile time.
 - Rust's concurrency model is based on ownership and borrowing, which provides a safe and efficient way to manage shared data in concurrent programs. This prevents data races and other synchronization issues that may occur in other languages.
-  Remember [Polars](https://pabloagn.com/deep-dives/polars-a-lightning-fast-dataframe-library-for-python-and-rust/)? It's implemented in Rust. Polars uses [rayon](https://pola-rs.github.io/polars/polars/export/rayon/index.html), a data-parallelism library that allows for easy parallelization of operations on collections without requiring explicit thread management.
+
+Remember [Polars](https://pabloagn.com/deep-dives/polars-a-lightning-fast-dataframe-library-for-python-and-rust/)? It's implemented in Rust. Polars uses [rayon](https://pola-rs.github.io/polars/polars/export/rayon/index.html), a data-parallelism library that allows for easy parallelization of operations on collections without requiring explicit thread management.
 
 ### Backward compatibility
 
@@ -193,7 +195,8 @@ There are two options for creating a new project:
 
 - Creating a new project folder.
 - Using an existing folder as the project folder.
-  If we want to create a project from scratch, we can first head to our project directory:
+
+If we want to create a project from scratch, we can first head to our project directory:
 
 ```PowerShell
 cd Projects
@@ -216,12 +219,15 @@ This command will create two components:
 
 - A `src` folder: Contains our project's source code.
 - A `Cargo.toml` file: This is the project's manifest and contains metadata needed to compile our package, such as the project name and required dependencies.
-  Once we're at it, we can mention that the `.toml` file format is relatively popular among the Rust developer ecosystem, notably used by Cargo, mainly for configuration purposes.
-  We can optionally install a VS Code extension that will make our life easier when dealing with this file format:
+
+Once we're at it, we can mention that the `.toml` file format is relatively popular among the Rust developer ecosystem, notably used by Cargo, mainly for configuration purposes.
+
+We can optionally install a VS Code extension that will make our life easier when dealing with this file format:
 
 1. Open VS code and head to the Extensions menu in the left panel. We can also open the Extensions menu by using the shortcut <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> or by opening the command palette by typing <kbd>F1</kbd> and searching for _Extensions: Install Extensions_.
 2. To install and enable it, we will search for `Even Better TOML`, maintained by _tamasfe_. We can also get the extension by using [this link](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml).
-   This extension is backed by [taplo](https://taplo.tamasfe.dev/) and will support TOML syntax.
+
+This extension is backed by [taplo](https://taplo.tamasfe.dev/) and will support TOML syntax.
 
 ### The project manifesto
 
@@ -233,8 +239,10 @@ If we open our `Cargo.toml` file, we will see that it contains some boilerplate 
   - `edition`: The Rust edition.
 - `dependencies`: Package library dependencies.
   A `.toml` file general structure consists of sections and key-value pairs, similar to a Python dictionary; a `Cargo.toml` file section groups similar variables together, depending on their functionality.
-  The complete set of sections and key-value pairs can be consulted [here](https://doc.rust-lang.org/cargo/reference/manifest.html).
-  Once we start including dependencies in our project, we will also start working on our manifesto. Once the file is generated, the `Cargo.toml` manifesto is meant to be edited by us.
+
+The complete set of sections and key-value pairs can be consulted [here](https://doc.rust-lang.org/cargo/reference/manifest.html).
+
+Once we start including dependencies in our project, we will also start working on our manifesto. Once the file is generated, the `Cargo.toml` manifesto is meant to be edited by us.
 
 ### Including dependencies
 
@@ -250,8 +258,11 @@ As we mentioned, Rust dependencies are handled by Cargo. There are three main co
   - A `debug` folder: Where the debug build is stored.
   - A `.rustc_info.json` file: Contains metadata about the compilation process and the target platform for which the code was compiled.
   - A `CACHEDIR.TAG` file: Marks a directory as a cache directory. Tools that recognize the signature inside this file will treat the directory as a cache directory and may take appropriate action, such as excluding it from backups or indexing.
-    We'll discuss these files & folders in more detail as we move on. For now, we will focus on the `main.rs` file.
-    We will start by importing the following modules into our main file:
+
+We'll discuss these files & folders in more detail as we move on. For now, we will focus on the `main.rs` file.
+
+We will start by importing the following modules into our main file:
+
 - `std::io`: Standard input/output module.
 - `std::cmp::Ordering`: Comparison module.
 - `rand::Rng`: Random number generator module.
@@ -263,11 +274,13 @@ use rand::Rng;
 ```
 
 If we pay close attention, we can see that we used the keyword `use` to import a library followed by a double colon `::`, the required module(s), nested imports in the case of `std::io` enclosed in curly braces `{}`, and a semicolon `;` termination.
+
 We can also see that two alerts pop up:
 
 - An unused import alert for `std::io`: Rust knows that we have not used the module in our code; hence it raises an alert.
 - An unresolved import for `rand`: We have not specified a version for the `rand` library; hence Rust raises an error.
-  The first alert does not require further action; we will eventually use this module. For the second one, we will head to our `Cargo.toml` manifesto and include the library version under `[dependencies]`:
+
+The first alert does not require further action; we will eventually use this module. For the second one, we will head to our `Cargo.toml` manifesto and include the library version under `[dependencies]`:
 
 ```rust
 [dependencies]
@@ -279,6 +292,7 @@ Once we do this, the error should disappear.
 ### The main function
 
 As we will see later, every executable Rust program requires a `main` function. The main function serves as the entry point to our program.
+
 Whenever we create a new Rust project, this main function will be written by default in our `main.rs` file:
 
 ```rust
@@ -356,7 +370,9 @@ Before diving deeper, it's worth spending some time understanding what pointers 
 ### Pointers
 
 Formally, a pointer is a derived data type that can store the memory address of other variables. It allows us to manipulate and reference data stored in memory by directly accessing its location in memory.
+
 Let us represent a generic block of memory using an array-like structure:
+
 | Address | Value |
 | ------- | -------- |
 | 0x0000 | 01100110 |
@@ -414,13 +430,15 @@ Now we have a pointer, but why is this relevant? Well, in Rust, we have three ty
 - References
 - Raw pointers
 - Smart pointers
-  We'll focus on the most common type: references.
+
+We'll focus on the most common type: references.
 
 ### References
 
 In Rust, a reference is a type of pointer that lets us borrow values without taking ownership. This means that we can include an additional layer of abstraction (_e.g., referencing a value without directly interacting with it_), which allows us to borrow values without copying them. Borrowing rules are validated on compile time by the borrow checker.
 
 This can be much more efficient than making copies of large data structures and is especially important in performance-critical code, where reducing memory usage can improve program speed and reduce resource consumption.
+
 As we will see, references in Rust are created using the ampersand `&` operator. For example, if we want to define a reference to the `str` data type and assign it to a variable, we can use the following syntax:
 
 ```rust
@@ -448,6 +466,7 @@ Now that we have a general understanding of pointers, references, and ownership,
 ## Variables
 
 There are several different variable types depending on their structure. Generally, we use `let` to define a variable under the current scope. There are also static variables, although we won't be covering them here.
+
 We must remember that Rust cares about unused variables; if we declare a variable and don't reference it anywhere in our code, the compiler will throw an error unless we prepend our variable name with an underscore `_`. This tells Rust that the defined variable is meant to be used as a placeholder, and thus the compiler will ignore it:
 
 ```rust
@@ -458,6 +477,7 @@ fn main() {
 ```
 
 The first declaration won't throw an error if left unreferenced, while the second one will.
+
 We can also use underscores `_` in between digits when dealing with numeric variables to denote thousand separators; this will increase legibility while not having any consequence during compilation:
 
 ```rust
@@ -473,6 +493,7 @@ fn main() {
 ```
 
 As expected, the value will be printed without the underscore characters.
+
 If we recall, we installed a Rust extension for VS Code. This extension provides helpful features such as data type inference upon declaring a variable. We cannot see it directly in our code, but the extension is using the compiler to include the following:
 
 ```rust
@@ -484,6 +505,7 @@ fn main() {
 ```
 
 Note the `i32` specification after the name of our variable.
+
 We can also assign multiple variables in a single statement using tuples (_we'll discuss tuples later in the segment_):
 
 ```rust
@@ -501,6 +523,7 @@ fn main() {
 ### Immutable variables
 
 Variables in Rust are immutable by default; when a variable is immutable, we can't change a value once a value is bound to a name. This is the default behavior for security purposes; we don't have to keep track of the variables and how they change throughout our program if they cannot be changed in the first place unless we explicitly decide to do so.
+
 The simplest way to define a mutable variable inside a function is as follows:
 
 ```rust
@@ -535,7 +558,9 @@ Where:
 ### Scope & blocks
 
 As we have mentioned, variable bindings in Rust have a scope. Scopes are important since they indicate to the compiler when borrows are valid, when resources can be freed, and when variables are created or destroyed.
+
 A block or block expression is a control flow expression and anonymous namespace scope for items and variable declarations.
+
 A block can be defined by using curly brackets:
 
 ```rust
@@ -554,6 +579,7 @@ fn main() {
 ```
 
 Variables defined inside a block using `let` will not be accessible outside that block. However, variables defined outside a block using `let` will be accessible from within a given block.
+
 This concept also applies to functions, where we can define a variable under the current scope that will not be accessible outside of that function.
 
 ## Constants
@@ -566,7 +592,7 @@ Let us elaborate further by using an example:
 // Define constant outside main function
 const HELLO: &str = "Constant Hello";
 fn main() {
-	// Print constant from inside main function
+ // Print constant from inside main function
     println!("{}", HELLO);
 }
 ```
@@ -583,7 +609,7 @@ Conversely, if we try to do the same for an immutable variable, the compiler won
 // Define an immutable variable outside main function
 let mystring_immut = 7;
 fn main() {
-	println!("{}", mystring_immut);
+ println!("{}", mystring_immut);
 }
 ```
 
@@ -779,11 +805,12 @@ As well as their unsigned counterparts:
 _[Table 5: unsigned integer types With their respective minimum and maximum values](https://doc.rust-lang.org/reference/types/numeric.html)_
 
 It's important to note that the default type for any Rust program will be `i32` (_i.e., if we define an integer numeric variable without explicitly stating its data type, the compiler will most probably suggest `i32` as its data type_).
+
 We can define an integer variable under the current scope:
 
 ```rust
 fn main() {
-	let mynum_i32:i32 = 2000;
+ let mynum_i32:i32 = 2000;
 }
 ```
 
@@ -791,7 +818,7 @@ We can also directly check the maximum number possible for a given data type usi
 
 ```rust
 fn main() {
-	println!("Max size for u8 is: {}", u8::MAX);
+ println!("Max size for u8 is: {}", u8::MAX);
 }
 ```
 
@@ -803,7 +830,7 @@ If we try to define a variable with a data type where our value is out of its ra
 
 ```rust
 fn main() {
-	let mynumber:u8 = 256;
+ let mynumber:u8 = 256;
 }
 ```
 
@@ -829,14 +856,19 @@ fn main() {
 ```
 
 As with integer types, there is a default floating-point type suggested previously to compilation time; the default type for any Rust program will be `f64` (_i.e., if we define a floating-point numeric variable without explicitly stating its data type, the compiler will most probably suggest `f64` as its data type_).
+
 We mentioned precision when discussing the floating-point types available in Rust. This attribute is common to all floating-point types denoting the number of digits after the [radix point](https://en.wikipedia.org/wiki/Decimal_separator#Radix_point).
+
 Single precision means a limited set of possible numbers after the radix point, while double precision means more possible numbers.
+
 More concretely, single-precision floating-point numbers provide roughly 6 to 7 significant decimal digits, while double-precision numbers provide approximately 14.
 
 #### String
 
 Strings are slightly different in terms of how we use them in Rust; strings and slices are only accessible via references (_borrowing_), thus when we declare a string using the `str` data type, for example, we will have to prepend our data type with an ampersand `&`.
+
 A reference consists of a pointer into memory which cannot be changed directly by the owner of the reference since the owner is not the actual owner of the underlying type.
+
 There are two types of strings in Rust:
 
 - `String`: Is stored as a vector of bytes that can be changed but is always guaranteed to be a valid UTF-8 sequence.
@@ -922,6 +954,7 @@ Once we have a vector, it's easy to perform various operations & transformations
 #### Character
 
 A character `char` is similar to a string, the main difference being the first is always four bytes, while the latter doesn't have to be composed of just four-byte chunks.
+
 We can declare a char under the current scope by using single quotes `''`:
 
 ```rust
@@ -1154,6 +1187,7 @@ Data structures or collections:
 Vectors in Rust are re-sizable arrays (_if defined as mutable_). What makes them attractive vs. other data types is that they have associated several methods we can use to interact with them. In fact, we just saw how a collection of strings or characters could be converted to a vector, opening the possibility to sort, remove duplicates, and perform all sorts of interesting operations.
 
 The downside to vectors is that they accept values with a single data type.
+
 We can define an empty vector or a populated immutable vector using the following syntax:
 
 ```rust
@@ -1216,8 +1250,8 @@ Below are the most commonly used operators, although the full set can be consult
 | ------------------------- | --------------------------------------- | ---------------------------------------- |
 | `!`                       | `ident!(...), ident!{...}, ident![...]` | Macro expansion                          |
 | `!=`                      | `expr != expr`                          | Nonequality comparison                   |
-| `%`                       | `expr % expr `                          | Arithmetic remainder                     |
-| `%=`                      | `var %= expr `                          | Arithmetic remainder and assignment      |
+| `%`                       | `expr % expr`                          | Arithmetic remainder                     |
+| `%=`                      | `var %= expr`                          | Arithmetic remainder and assignment      |
 | `&`                       | `&expr, &mut expr`                      | Borrow                                   |
 | `&`                       | `expr & expr`                           | Bitwise AND                              |
 | `&=`                      | `var &= expr`                           | Bitwise AND and assignment               |
@@ -1319,7 +1353,7 @@ We can define a simple `if`, `else if`, `else` statement using double ampersand 
 
 ```rust
 fn main() {
-	let firstnum:i32 = 7;
+ let firstnum:i32 = 7;
     let secondnum:i32 = 15;
     let thirdnum:i32 = 14;
     if (secondnum > firstnum) && (secondnum > thirdnum) {
@@ -1340,7 +1374,7 @@ We can do something similar with double pipes `||` to test for `or`:
 
 ```rust
 fn main() {
-	if (firstnum % 2 == 0) || (secondnum % 2 == 0) || (thirdnum % 2 == 0) {
+ if (firstnum % 2 == 0) || (secondnum % 2 == 0) || (thirdnum % 2 == 0) {
       println!("There is at least one even number here.");
     }
 }
@@ -1443,6 +1477,7 @@ We have just reviewed a couple of `match` implementations, but this is just a ti
 ## Random
 
 At the beginning of this segment, we imported the `rand::Rng` random number generator module. Rust has multiple ways to generate random numbers, though we'll only discuss a couple.
+
 The first method consists of using the `rand::thread_rng.gen_range()` random number generator:
 
 ```rust
@@ -1462,6 +1497,7 @@ The value corresponding to the `myrandnum` variable will change randomly after e
 ## Loops & iterators
 
 Loops & iterators in Rust are patterns that allow sequential access to a collection of values, one at a time. They are similar in concept to loops and iterators from other languages, such as `for` and `while` loops and the `iter()` function in Python, but are defined differently.
+
 There are four main ways we can use to iterate over a set of values:
 
 - Using `loop`
@@ -1671,8 +1707,6 @@ fn main() {
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 ```
 
----
-
 ## Functions
 
 Functions in Rust can be declared by using the following syntax:
@@ -1778,7 +1812,7 @@ fn main() {
 15
 ```
 
-## We can also return multiple values as outputs using a tuple `()`; the assignment in the main function would also be handled with a tuple `()`.
+We can also return multiple values as outputs using a tuple `()`; the assignment in the main function would also be handled with a tuple `()`
 
 ## Macros
 
@@ -1815,24 +1849,33 @@ If the return value is `Ok`, the user input will be stored in our variable `myst
 ## Next steps
 
 We covered just a fraction of what Rust can do. This language has endless potential for systems programming, web development, cryptographic applications, cross-platform development, CLI-based application development, and many more exciting applications.
+
 Regardless of what we're trying to achieve, the most probable next step to get more familiar with the language is to consult the official documentation. Rust provides three ways to do so:
 
 - **[The Rust Book](https://doc.rust-lang.org/stable/book/)**: The first stop for most aspiring Rustaceans, this book is available as an online index or as an [e-book / paperback published by No Starch Press](https://nostarch.com/rust-programming-language-2nd-edition).
 - **[The Interactive Rust book](https://rust-book.cs.brown.edu/)**: A cool experiment by Brown University aimed at transforming the Rust book into an interactive environment containing quizzes, highlighting, visualizations, and many more features.
 - **[Rust by example](https://doc.rust-lang.org/rust-by-example/)**: An extremely user-friendly collection of runnable examples that illustrate various Rust concepts and standard libraries.
 - **[Rustlings](https://github.com/rust-lang/rustlings) (highly recommended)**: A collection of small Rust exercises covering all fundamental topics.
-  There are also a number of unofficial free resources online:
+
+There are also a number of unofficial free resources online:
+
 - **[Rust Tutorial Full Course](https://www.youtube.com/watch?v=ygL_xcavzQ4)**: This segment was heavily inspired by Derek Banas's material. Rust Tutorial Full Course is a great introductory video covering the key aspects of the language.
 - **[Rust 101 Crash Course](https://www.youtube.com/watch?v=lzKeecy4OmQ)**: A great 6-hr marathon including a comprehensive overview of Rust's most relevant features as well as practice exercises.
-  Additionally, there are some additional books to complement the learning process:
+
+Additionally, there are some additional books to complement the learning process:
+
 - **[Programming Rust, 2nd Edition by O'Reilly](https://www.oreilly.com/library/view/programming-rust-2nd/9781492052586/)**: Hands-down the best complementary book to consult.
 - **[Rust Programming Cookbook](https://www.packtpub.com/product/rust-programming-cookbook/9781789530667)**: Yet another fully packed book containing all the nits and grits of Rust.
 - **[Rust in Action](https://www.manning.com/books/rust-in-action)**: A great resource whose cover resembles that of Charles Mulligan's Steakhouse.
-  I would also heavily advise visiting three key places:
+
+I would also heavily advise visiting three key places:
+
 - **[The Rust Community](https://www.rust-lang.org/community)**: Where Rustaceans talk about Rust.
 - **[The Official Rust Repo](https://github.com/rust-lang/rust)**: Where Rust and issues live (_useful when trying to debug_).
 - **[creates.io](https://crates.io/):** Where Rust crates are hosted. Taking a tour around crates.io could shed additional light on Rust's capabilities.
-  In terms of what could be learned next, I would recommend tackling the following topics, all of which can be consulted in the official documentation:
+
+In terms of what could be learned next, I would recommend tackling the following topics, all of which can be consulted in the official documentation:
+
 - **Reinforcement of key concepts:**
   - [Borrowing](https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html)
   - [Variable shadowing](https://doc.rust-lang.org/rust-by-example/variable_bindings/scope.html)

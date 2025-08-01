@@ -11,14 +11,19 @@ date: 2025-06-30
 ---
 
 Programming paradigms play a crucial role in the realm of computer science. They act as blueprints or frameworks to organize code and tackle problems in a specific manner. Mastery of programming paradigms empowers us to select the most fitting approach for a given problem, considering its requirements, limitations, and inherent nature.
+
 Furthermore, expanding our knowledge of different programming paradigms can widen our horizons and enable us to perceive problems and solutions from a fresh and innovative perspective. By comprehending various programming paradigms, we can gain access to novel techniques and tools that we can leverage to enhance our coding prowess and create software that is more streamlined, powerful, and resilient.
+
 In this Blog Article, we'll explain what they are, why they are essential, the primary paradigms and sub-paradigms, their defining traits, and their respective advantages and drawbacks. Using a real-life example, we will also illustrate the differences between the main paradigms. Finally, we will furnish a list of the most prominent programming languages along with their paradigmatic structure.
+
 We'll be using Python scripts which can be found in the [Blog Article Repo](https://github.com/pabloagn/blog/tree/master/computer-science/programming-paradigms-explained).
 
 ## What are programming paradigms?
 
 A **programming paradigm** is a specific way of conceptualizing how to use a programming language to solve particular problems or build specific applications. It includes a set of guiding principles and best practices that should be followed to get the most out of the language.
+
 Every programming language is designed to include one or more paradigms, while languages that can be used with more than one paradigm are referred to as **multi-paradigm** languages.
+
 Moreover, programming languages can vary in how strictly they enforce programming style. Typically, multi-paradigm languages are more flexible and can be used by combining functionalities from different paradigms.
 
 ## Why are they relevant?
@@ -42,12 +47,15 @@ The two primary paradigms that give rise to other paradigms are:
 
 - **Imperative**: As its name suggests, this paradigm centers on defining how a program should execute a task rather than what the task entails.
 - **Declarative**: Unlike the imperative style, the declarative paradigm emphasizes describing the problem to be solved rather than specifying the steps required to solve it.
-  Let us now examine each of these paradigms in greater depth.
+
+Let us now examine each of these paradigms in greater depth.
 
 ### Imperative
 
 The **imperative** style closely resembles the way machines operate and was officially introduced in the mid-1950s with the release of [Fortran](https://fortran-lang.org/en/).
+
 A classic imperative style explicitly defines a sequential set of commands the machine executes step-by-step. This approach focuses on the "how" to solve a problem, making it well-suited for low-level procedures; the hardware implementation of all computers is imperative in nature.
+
 The imperative paradigm is further divided into two main subcategories that should be more familiar to us:
 
 - Procedural
@@ -56,6 +64,7 @@ The imperative paradigm is further divided into two main subcategories that shou
 #### Procedural
 
 The **procedural** style is founded on structured programming and comprises smaller units called procedures. Procedures define computational steps that need to be executed and can be called at any time during the execution.
+
 Let us discuss some of the main characteristics of procedural programming:
 
 - **Predefined functions**: These are typically named instructions built into higher-level programming languages. They are usually derived from the library or registry rather than the program. An example of a predefined function is `charAt()`, which searches for a character position in a string.
@@ -63,7 +72,9 @@ Let us discuss some of the main characteristics of procedural programming:
 - **Global variable**: A global variable is a variable that is declared outside every other function defined in the code. As a result, unlike local variables, global variables can be used in all functions.
 - **Modularity**: Modularity involves grouping two different systems with distinct tasks to accomplish a larger task. Each group of systems completes its tasks one after the other until all tasks are completed.
 - **Parameter passing**: Parameter passing is a mechanism used to pass parameters to functions, subroutines, or procedures. Parameter passing can be done through "pass by value," "pass by reference," "pass by result," "pass by value-result," and "pass by the name."
-  Below is a list of the most relevant languages that use procedural style partially (_multi-paradigm_) or fully (_100% procedural_):
+
+Below is a list of the most relevant languages that use procedural style partially (_multi-paradigm_) or fully (_100% procedural_):
+
 - C
 - Pascal
 - Fortran
@@ -76,6 +87,7 @@ Let us discuss some of the main characteristics of procedural programming:
 #### Object Oriented
 
 **Object-Oriented** programming is one of the most widely used paradigms due to its popularity in many high-level programming languages. The paradigm is based on the idea of objects that contain data in the form of fields, where a field represents a variable that is associated with a particular class or object. Fields are used to reflect the state of an object and can be accessed and modified by methods of the class or by external code that has access to the object.
+
 Most OOP implementations use classes and inheritance, which provide extensibility, modularity, and reusability.
 Let us discuss some of the main characteristics of OOP:
 
@@ -84,7 +96,9 @@ Let us discuss some of the main characteristics of OOP:
 - **Inheritance**: Classes can reuse code from other classes. Relationships and subclasses between objects can be assigned, enabling us to reuse common logic while maintaining a unique hierarchy.
 - **Polymorphism**: Polymorphism allows different types of objects to pass through the same interface. Objects are designed to share behaviors and can take multiple forms. The program determines which meaning or usage is necessary for each execution of that object from a parent class, reducing the need to duplicate code. A child class is then created, extending the parent class's functionality.
 - **Single Responsibility Principle**: This principle states that each class or module should have only one responsibility. In other words, each class or module should be responsible for doing one thing and doing it well.
-  Below is a list of the most relevant languages that use OOP partially (_multi-paradigm_) or fully (_100% OOP_):
+
+Below is a list of the most relevant languages that use OOP partially (_multi-paradigm_) or fully (_100% OOP_):
+
 - Java
 - Python
 - Ruby
@@ -110,7 +124,9 @@ In addition to Procedural and Object-Oriented Programming, there are other less 
 ### Declarative
 
 The **declarative** style has its roots in formal logic and mathematical notation, particularly the work of [George Boole](https://en.wikipedia.org/wiki/George_Boole) in the mid-19th century. The idea of describing a problem in terms of logical constraints and relations was further developed in the 20th century, leading to the creation of languages like [Prolog](https://en.wikipedia.org/wiki/Prolog) in the 1970s.
+
 Declarative programming emphasizes logic and concepts, focusing on the result we want to achieve rather than how to achieve it, in contrast to the "how" of the imperative style.
+
 The declarative paradigm can be divided into three main subcategories, with the most popular being the functional paradigm:
 
 - Logical
@@ -121,6 +137,7 @@ The declarative paradigm can be divided into three main subcategories, with the 
 
 **Logical** programming is based on [formal logic](https://www.britannica.com/topic/formal-logic), a foundation of a significant part of mathematics and computer science. In a logical approach, there are no instructions, but rather, facts and clauses are introduced, relationships are created between them, and relationships are evaluated using [pattern matching](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/functional/pattern-matching).
 Queries related to the facts and clauses can then be made, and a boolean answer can be returned.
+
 Let us discuss some of the main characteristics of logical programming:
 
 - **Declarative programming**: Logic programming is a declarative programming paradigm that emphasizes describing what the program should do rather than how to do it.
@@ -129,7 +146,9 @@ Let us discuss some of the main characteristics of logical programming:
 - **Unification**: In logic programming, unification is used to match patterns in rules and facts and bind variables to values.
 - **Pattern matching**: Logic programming languages often include powerful pattern-matching capabilities used to match and manipulate complex data structures.
 - **Non-determinism**: Logic programming allows for non-determinism, meaning that there may be multiple possible solutions to a problem, and the program may explore multiple paths simultaneously.
-  Below is a list of the most relevant languages that use logical style partially (_multi-paradigm_) or fully (_100% logical_):
+
+Below is a list of the most relevant languages that use logical style partially (_multi-paradigm_) or fully (_100% logical_):
+
 - Prolog
 - Mercury
 - Logtalk
@@ -138,6 +157,7 @@ Let us discuss some of the main characteristics of logical programming:
 #### Mathematical / academic
 
 **Mathematical** programming is not formally considered a programming paradigm. However, multiple languages behave mathematically in nature. Most of the time, a mathematical language will have a functional component.
+
 Let us discuss some of the main characteristics of mathematical programming:
 
 - **Symbolic expressions**: Mathematical programming languages often use symbolic expressions, representing mathematical objects like equations and functions using symbolic notation.
@@ -145,7 +165,9 @@ Let us discuss some of the main characteristics of mathematical programming:
 - **Numerical optimization**: Mathematical programming often involves numerical optimization, where algorithms are used to find the optimal values of a set of parameters subject to constraints.
 - **Automatic differentiation**: Some mathematical programming languages support automatic differentiation, a technique for efficiently computing the derivatives of functions.
 - **Statistics and data analysis**: Mathematical programming languages often include support for statistical operations and data analysis, including probability distributions, hypothesis testing, and regression analysis.
-  Below is a list of the most relevant languages that use mathematical style partially (_multi-paradigm_) or fully (_100% mathematical_):
+
+Below is a list of the most relevant languages that use mathematical style partially (_multi-paradigm_) or fully (_100% mathematical_):
+
 - MATLAB
 - Mathematica (Wolfram Language)
 - Maple
@@ -158,7 +180,9 @@ Let us discuss some of the main characteristics of mathematical programming:
 #### Functional
 
 The **functional** style is commonly acknowledged as the most widely adopted declarative paradigm. Its foundations are grounded in [lambda calculus](https://en.wikipedia.org/wiki/Lambda_calculus), and like logical and mathematical styles, it has a mathematical nature.
+
 The construction of programs in functional programming is done through the definition and composition of functions. These functions accept input values, evaluate them, and produce output values, all while avoiding mutable state or side effects.
+
 Let us discuss some of the main characteristics of functional programming:
 
 - **Pure functions**: In functional programming, functions are generally pure, indicating that they do not generate side effects and always return the same output for the same input.
@@ -169,7 +193,9 @@ Let us discuss some of the main characteristics of functional programming:
 - **Declarative programming**: Functional programming often follows a declarative programming style in which programs describe what they do rather than how they do it.
 - **Lazy evaluation**: Some functional programming languages use lazy evaluation, in which expressions are not evaluated until their values are necessary.
 - **Pattern matching**: Many functional programming languages support pattern matching, an effective method of matching data structures against specific patterns and extracting values from them.
-  Below is a list of the most relevant languages that use functional style partially (_multi-paradigm_) or fully (_100% functional_):
+
+Below is a list of the most relevant languages that use functional style partially (_multi-paradigm_) or fully (_100% functional_):
+
 - Haskell
 - Common Lisp
 - Clojure
@@ -193,7 +219,9 @@ While Procedural & OOP are the main imperative paradigms, there are lesser-known
 ## A practical example: The Clever Weather Wardrobe Oracle
 
 Paradigms are sometimes hard to grasp if we're thinking in abstract terms. Let us define an example to solidify our understanding:
+
 We live in a world where, interestingly enough, our everyday clothing choices are exclusively selected by a fashion assistant called The Trendminator. This assistant exists to suggest the perfect outfit for every individual using a number of parameters such as current mood, weather, clothing preferences, and personality traits.
+
 The creators of The Trendminator are thinking of multiple possible algorithmic implementations:
 
 - A procedural approach
@@ -201,7 +229,8 @@ The creators of The Trendminator are thinking of multiple possible algorithmic i
 - A logical approach
 - A mathematical approach
 - A functional approach
-  The objective is to develop an algorithm that calculates the optimal outfit based on the user's mood, current weather, clothing preferences, and personality.
+
+The objective is to develop an algorithm that calculates the optimal outfit based on the user's mood, current weather, clothing preferences, and personality.
 
 ### A procedural approach
 
@@ -211,7 +240,9 @@ As we discussed, a procedural approach consists of a precise step-by-step execut
 - Next, we'll use conditionals and loops to iterate through different clothing items and identify those that match the input criteria.
 - We'll then create separate functions for evaluating the suitability of each clothing item, like `is_appropriate_for_mood`, `is_appropriate_for_weather`, and `matches_preferences`.
 - Finally, we'll use a function like `assemble_outfit` to assemble a complete outfit from the selected clothing items.
-  **Key takeaways:**
+
+**Key takeaways:**
+
 - Procedural approaches are sometimes more extensive regarding code length since we need to declare every step of the program explicitly.
 - Because of this, we usually have more control over our program.
 - It also limits code reusability since functions are often tightly coupled to specific tasks or data structures.
@@ -225,7 +256,9 @@ With OOP, we can modularize code by creating classes and hierarchies:
 - We'll create an abstract `ClothingItem` class with properties like `name`, `type`, and `style`, and methods like `matches_mood`, `matches_weather`, and `matches_preferences`.
 - We'll then, define subclasses for different clothing items, like `Shirt`, `Pants`, and `Accessories`.
 - Next, we'll define a `User` class with properties for mood, weather, clothing preferences, and personality traits, and a `WardrobeWizard` class that takes a user as input and has a method `suggest_outfit` which iterates through the available clothing items, checks their suitability using the `matches_` methods, and then assembles and returns the final outfit.
-  **Key takeaways:**
+
+**Key takeaways:**
+
 - OOP is easy to understand and explain to non-technical stakeholders.
 - Inheritance can introduce tight coupling between classes, where changes to the parent class can have unintended consequences on the child class.
 - Inheritance can also introduce inflexibility; it can be difficult to change the hierarchy of classes once established. This can make adapting to the evolving requirements or reusing code in different contexts difficult.
@@ -236,7 +269,9 @@ A logical approach would consist of defining facts and clauses specific to our T
 
 - We'll first define facts and clauses about clothing items, user moods, weather conditions, clothing preferences, and personality traits.
 - We'll then deduce the ideal outfit for each user based on the given facts and rules. For example, we could establish facts like `fits_mood(clothing, mood)`, `suitable_for_weather(clothing, weather)`, and `preferred_by_user(user, clothing)`, and then define rules to find the perfect outfit based on these facts.
-  **Key takeaways:**
+
+**Key takeaways:**
+
 - Logical approaches are perhaps more confusing than others since they require a good understanding of symbolic logic and constraint-solving techniques.
 - They also introduce limited expressiveness, which can limit the capabilities of our application.
 - Logical approaches can underperform in certain applications. This is because they rely heavily on backtracking and may need to explore many possible solutions before finding the correct one.
@@ -249,7 +284,9 @@ There are multiple ways we can use to approach a problem mathematically. In this
 - We'll start by defining variables for each clothing item and user preference and create a linear or integer programming model to represent the problem.
 - We'll then define our constraints to ensure that each clothing item is appropriate for the user's mood, weather conditions, preferences, and personality traits and then create an objective function that maximizes user satisfaction.
 - We'll finally use a solver method to find the optimal solution.
-  **Key takeaways:**
+
+**Key takeaways:**
+
 - Mathematical approaches can work as black boxes with multiple levels of abstraction; we don't need to implement the optimization method ourselves.
 - Because of this, they can be trickier to implement and debug without the proper domain knowledge.
 
@@ -260,7 +297,9 @@ A functional approach ideally includes the use of higher-order functions, recurs
 - We'll start by defining data structures for clothing items, users, and their preferences.
 - We'll use higher-order functions like `filter` to create lists of suitable clothing items based on the user's mood, weather conditions, preferences, and personality traits.
 - We'll then write a recursive function `assemble_outfit` that selects one item from each clothing category and combines them into a final outfit.
-  **Key takeaways:**
+
+**Key takeaways:**
+
 - Functional programming is sometimes simpler and more elegant.
 - It makes use of functions instead of classes.
 - It does not mutate parameters. Instead, it uses recursion to find the best possible solution.
@@ -269,9 +308,13 @@ A functional approach ideally includes the use of higher-order functions, recurs
 ## Pros, cons, and use cases
 
 Paradigms would not be useful to us if they did not present advantages & disadvantages between each other; each paradigm is tailored towards a specific set of applications, which, if used correctly, can relieve the problem-thinking and code-writing processes. These advantages & disadvantages are highly correlated with the nature of our application (_i.e., what's our code trying to achieve?_)
+
 For example, translating a research paper to a mathematical or purely functional language is straightforward, while the same might not be true for OOP or procedural.
+
 More importantly, some applications simply cannot be implemented using specific paradigms in certain languages.
+
 For example, we could never implement an ML model using SQL because the language was not designed to do so; it's out of its capabilities and highly constrained by its architecture.
+
 We can classify use cases using three particular situations:
 
 - **Situation 1**: An application is entirely possible to deploy on a given language using a given paradigm:
@@ -281,15 +324,18 @@ We can classify use cases using three particular situations:
   - **Situation 1.4**: The translation / problem statement is hard to implement, and the code is underperforming.
 - **Situation 2**: An application is not entirely possible to deploy on a given language using a given paradigm. We can encounter roadblocks that could result in low performance, an error-prone implementation, or even the application crashing altogether.
 - **Situation 3**: An application is impossible to deploy on a given language using a given paradigm.
-  Of course, there's a grayscale between these steps since writing code is never black & white, but the point is made.
-  Let us explore each situation in more detail.
+
+Of course, there's a grayscale between these steps since writing code is never black & white, but the point is made.
+
+Let us explore each situation in more detail.
 
 ### Situation 1: Implementation is possible and ideal
 
 This particular case can be rare; such a thing as a perfect implementation does not exist since all implementations have flaws. However, there are cases where the problem matches almost perfectly a given language and its associated paradigm(s).
+
 A good example would be to model a family of 4 using OOP:
 
-```Python
+```python
 class Family():
     def __init__(self, family_name):
         self.family_name = family_name
@@ -319,7 +365,7 @@ class Child(Parent):
 
 Now that we have our classes, we can start building some family members:
 
-```Python
+```python
 # Create a family instance
 family = Family("Johnson")
 # Create 2 parents
@@ -332,7 +378,7 @@ child_2 = Child("Rowan", "12", family.getFamilyName(), parent_1, parent_2)
 
 We can then let them make some proper introductions:
 
-```Python
+```python
 # Introduce family
 family.introduceFamily()
 # Introduce parents
@@ -354,26 +400,32 @@ My parents are Elena and Paul.
 ```
 
 We can create as many subclasses and methods as we require (_e.g., creating a Toddler class where the introduction method includes a Doodle Doo instead_).
+
 This implementation is possible and easy to execute since the concept of a family assimilates many of the core features of OOP:
 
 - **Abstraction**: We can abstract a complex hierarchical structure and translate that into classes and subclasses.
 - **Inheritance**: Children inherit some of their parent's attributes, such as `family_name`.
 - **Single Responsibility**: Each class has one function depending on the level of abstraction, and each method has one function (_e.g. `introduce`, `get`, etc._).
-  Another great example would be implementing a telecommunication system infrastructure using a concurrent language such as Erlang or Elixir; these languages were built for concurrency and fault tolerance in complex interconnected systems.
+
+Another great example would be implementing a telecommunication system infrastructure using a concurrent language such as Erlang or Elixir; these languages were built for concurrency and fault tolerance in complex interconnected systems.
 
 #### Situation 1.1: Translation is ideal, and the code is performant
 
 What do we mean by translation? Let us think of an example where we have a classroom with 28 students and would like to abstract that concept and write an application that stores student grades.
+
 There are a couple of ways to think of this problem abstraction-wise, but probably the most direct would be by using an OOP approach, where we define a `class` for the class, a `subclass` for the students, a `subclass` for assignments, and `attributes` for names & grades.
+
 This translation is ideal since it perfectly matches the real-life situation (_or at least the relevant aspects of it_).
+
 However, a smooth translation does not mean that code will be performant.
 
 #### Situation 1.2: Translation is ideal, but the code is underperforming
 
 There are situations where the abstraction is ideal, but the application's performance is inefficient.
+
 Let us look at an example where we want to implement a search algorithm and apply it to a list in Python:
 
-```Python
+```python
 import time
 # Implement a linear search algorithm
 def linear_search(arr, target):
@@ -416,11 +468,13 @@ Binary Search: 0.0 s
 ```
 
 As we can see, the linear search algorithm takes more time to execute, while the binary search algorithm is much faster. This is due to the algorithm itself and is related to a concept called [computational complexity](https://www.britannica.com/topic/computational-complexity).
+
 Even though the first approach was easier to implement in terms of abstracting the problem, the performance was better for the `binary_search` implementation.
 
 #### Situation 1.3: Translation is not ideal, but the code is performant
 
 This situation is the inverse of the previous one: we have a problem abstraction harder to translate, but the results are performant compared to other implementations.
+
 In this case, the `binary_search` algorithm would serve as a great example.
 
 #### Situation 1.4: Translation is not ideal, and the code is underperforming
@@ -439,6 +493,7 @@ We always have situations where neither the abstraction process nor the performa
 ### Situation 2: Implementation is possible but not ideal
 
 We can have situations where an implementation is possible, but the problem abstraction, the paradigm, or the actual language used are not ideal for the solution; it is technically possible to write an operating system in Python, but it would not be practical nor efficient.
+
 This happens more often than not simply because finding the perfect match is hard. However, we currently have a variety of languages to choose from; the only limitation is actually knowing about them and being critical when evaluating a potential solution to the problem.
 
 ### Situation 3: Implementation is impossible
@@ -463,6 +518,7 @@ _Figure 1: Programming Paradigm Guidelines (Meant to be used for Reference), Dia
 ## Composition of popular languages
 
 We mentioned that languages can adopt a paradigm as 100% of their structure or include multiple paradigms; it all depends on the problem we're trying to solve.
+
 Most of the popular languages are comprised of at least two paradigms having one predominant one. Below is a table of the most popular languages with their approximate paradigm composition:
 
 | Language     | Main Paradigm                            | Paradigms                                                              | Composition                                                                       |
@@ -520,7 +576,9 @@ Most of the popular languages are comprised of at least two paradigms having one
 ## Conclusions
 
 Throughout this article, we explored the primary programming paradigms and sub-paradigms, examining their defining characteristics and pros and cons. We also highlighted the differences between the main paradigms using a practical example, demonstrating each paradigm's unique advantages in particular scenarios.
+
 Moreover, we presented a comprehensive list of popular programming languages along with their paradigmatic affiliations. This knowledge can guide us in choosing the right language for our projects and encourage us to investigate new languages and paradigms, expanding our skill set and fostering innovation.
+
 Programming paradigms are invaluable tools in computer science, providing frameworks and methodologies for effectively tackling various problems. Understanding and mastering these paradigms allows us to select the most appropriate approach for specific challenges, leading to more efficient and robust software solutions.
 
 ## References

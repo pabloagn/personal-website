@@ -11,12 +11,15 @@ date: 2025-06-30
 ---
 
 In the first part of this 3-article series, we introduced the concepts of **columnar file formats** & **row-based file formats**. We also defined **serialization** and **deserialization** and provided an overview of six relevant Big Data file formats. Finally, we went over some examples involving writing different objects to these file formats using Python.
+
 In this section, we will focus on **reading** the files we created.
+
 We'll be using Python scripts which can be found in the [Blog Article Repo](https://github.com/pabloaguirrenck/blog/tree/master/big-data/6-big-data-file-formats-compared).
 
 ## Preparing the files
 
 On our last session we generated a total of 12 files:
+
 | File Name | Format | Method Used |
 | ----------------------------- | ------- | ------------------------------- |
 | `01_dataset_method_1.csv` | CSV | `numpy.tofile()` |
@@ -31,15 +34,18 @@ On our last session we generated a total of 12 files:
 | `10_dataset_method_1.avro` | Avro | `fastavro` |
 | `11_dataset_method_1.pickle` | Pickle | `pickle.dump()` |
 | `12_dataset_method_2.pickle` | Pickle | `pickle.dumps()` |
+
 _Table 1. Files written on Part 1 of Article Series_
+
 We will only be reading outputs 02, 05, 06, 07, 08, 09, 10 & 11.
+
 Files can be found in the blog article repo [`outputs`](https://github.com/pabloaguirrenck/blog/tree/master/big-data/6-big-data-file-formats-compared/outputs) folder.
 
 ## Reading with Python
 
 As a first step, we will import all the required modules:
 
-```Python
+```python
 import csv
 import numpy as np
 import pandas as pd
@@ -49,7 +55,7 @@ import pickle
 
 If we don't have the `pyarrow` library already installed, we can do so since we'll be needing it for `.feather` & `.parquet` file format reading.
 
-```Python
+```python
 pip install pyarrow
 ```
 
@@ -61,7 +67,7 @@ There are two primary methods for reading a CSV file using Python:
 
 This method uses the Python file handler, and creates a `reader` object by using the `csv.reader()` method. We can then use the `csv.reader()` method as a row iterable in order to build a `numpy.ndarray()` object, from a list of lists object `lol`:
 
-```Python
+```python
 # Declare an empty list object
 lol = []
 # Define the file handler, and open in read mode
@@ -82,7 +88,7 @@ list
 
 We can then build a `numpy.ndarray` object `arr` from our list of lists object:
 
-```Python
+```python
 # Build a numpy.ndarray object from a list of lists
 arr = np.array(lol)
 # Check the resulting object's type
@@ -103,7 +109,7 @@ array([['Name', 'Age', 'Occupation', 'Country', 'State', 'City'],
 
 If we wanted to, we could also convert our `numpy.ndarray` object `arr`, to a `pandas.DataFrame` object `df`, by first specifying row 1 through the end as data, & row 0 as the header:
 
-```Python
+```python
 # Build a pandas.DataFrame object from numpy.ndarray object
 df = pd.DataFrame(arr[1:], columns = arr[0])
 # Check the resulting object's type
@@ -125,9 +131,10 @@ As we can see, this method involves a fair amount of steps that could be easily 
 #### Using `pandas.read_csv()`
 
 As with writing, this method is by far the most used if we aim to get a `pandas.DataFrame()` object in return.
+
 With one line of code, we can directly read the `.csv` file into a `pandas.DataFrame()` object:
 
-```Python
+```python
 # Read the csv and import to pandas.DataFrame object
 df = pd.read_csv("outputs/02_dataset_method_2.csv")
 # Check the resulting object's type
@@ -156,7 +163,7 @@ There are two primary methods for reading a TXT file using Python:
 
 Similar to the `csv.reader()` methodology previously shown, we can make use of the built-in Python file handler:
 
-```Python
+```python
 # Declare an empty list object
 lol = []
 # Define the file handler, and open in read mode
@@ -175,6 +182,7 @@ lol
 ```
 
 If we recall from the first part of this article series, we mentioned that it was important to remember which delimiter we were using, especially when working with TXT files. This is because when we open a `.txt` file, at least with this method and the next one we will review, we need to know the delimiter used to write it in order to parse the content properly.
+
 In our case, a newline `\n` delimiter was used for specifying rows, and a tab `\t` delimiter was used for specifying entries. This is why we needed to include the additional `.split()` methods for each case.
 
 ```
@@ -186,16 +194,17 @@ In our case, a newline `\n` delimiter was used for specifying rows, and a tab `\
 ```
 
 If we look closely at the output, we can see an empty list at the end of our list of lists object `lol`. This is because the split method splits the object into two parts, and in our case, the last line was split, with the first part being the actual list and the second being an empty list since we had no additional data.
+
 We can take care of this by simply removing the last entry of our `lol` object:
 
-```Python
+```python
 # Remove last entry using inplace method .pop()
 lol.pop()
 ```
 
 We can now simply convert the list of lists object `lol` to a `numpy.ndarray` object:
 
-```Python
+```python
 # Convert list of lists to
 arr = np.array(lol)
 # Print our output
@@ -203,15 +212,15 @@ arr
 ```
 
 ```
-Name	Age	Occupation	Country	State	City
-Joe	20	Student	United States	Kansas	Kansas City
-Chloe	37	Detective	United States	California	Los Angeles
-Dan	39	Detective	United States	California	Los Angeles
+Name Age Occupation Country State City
+Joe 20 Student United States Kansas Kansas City
+Chloe 37 Detective United States California Los Angeles
+Dan 39 Detective United States California Los Angeles
 ```
 
 If we wanted to, we could also convert our `numpy.ndarray` object `arr`, to a `pandas.DataFrame` object `df`, by first specifying rows 1 through the end as data, & row 0 as header:
 
-```Python
+```python
 # Build a pandas.DataFrame object from numpy.ndarray object
 df = pd.DataFrame(arr[1:], columns = arr[0])
 # Check the resulting object's type
@@ -234,7 +243,7 @@ As we can see, this method involves a fair amount of steps that could be easily 
 
 Similar to reading a `.csv` file, we can use the `pandas.read_csv()` method to read a `.txt` file:
 
-```Python
+```python
 # Read the txt file and import to pandas.DataFrame object
 df = pd.read_csv("outputs/04_dataset_method_1.txt", sep = '\t')
 # Check the resulting object's type
@@ -261,7 +270,7 @@ There is one method for reading a Feather file using Python:
 
 Analogous to the `df.to_feather()` method, we have a way to read `.feather` files using Pandas:
 
-```Python
+```python
 # Read the feather file and import to pandas.DataFrame object
 df = pd.read_feather("outputs/06_dataset_method_1.feather")
 ```
@@ -274,7 +283,7 @@ There is one method for reading a Parquet file using Python:
 
 Analogous to the `pandas.Dataframe.to_parquet()` method, we have a way to read non-partitioned `.parquet` files using Pandas:
 
-```Python
+```python
 # Read the parquet non-partitioned file and import to pandas.DataFrame object
 df = pd.read_parquet("outputs/06_dataset_method_1.feather")
 ```
@@ -283,7 +292,7 @@ df = pd.read_parquet("outputs/06_dataset_method_1.feather")
 
 We can also read single & multi-partitioned files using the same method without the need to specify any additional parameters:
 
-```Python
+```python
 # Read the parquet single-partitioned file and import to pandas.DataFrame object
 df = pd.read_parquet("outputs/07_dataset_method_2.feather")
 # Read the parquet multi-partitioned file and import to pandas.DataFrame object
@@ -299,9 +308,10 @@ There is one method for reading a Avro file using Python:
 #### Using `fastavro` `reader`
 
 If we recall from the first part of this article series, we mentioned that in order to write a `.avro` file, we first needed to convert our data set into dictionaries consisting of key-value pairs (_one dictionary per row_). Then, we needed to save our dictionaries as a list.
+
 The same applies when attempting to read a `.avro` file:
 
-```Python
+```python
 # Declare an empty list of dictionaries
 lod = []
 # Use the Python file handler along with the fastavro reader method
@@ -316,7 +326,9 @@ df = pd.DataFrame.from_dict(lod)
 ```
 
 If we pay close attention to the code above, we specify a reading mode parameter `rb`, meaning read in binary mode.
+
 Then, we iterate over the `fastavro` `_read.reader()` object, and append each dictionary (_row_) to our list of dictionaries `lod`.
+
 Finally, we convert our list of dictionaries to a `pandas.core.frame.DataFrame` object.
 
 ### Pickle
@@ -325,7 +337,7 @@ There are two methods for reading a Pickle file using Python, but we will only b
 
 #### Using `pickle.load()` to read from an open file
 
-```Python
+```python
 # Use the Python file handler
 with open('outputs/11_dataset_method_1.pickle', 'rb') as file:
     my_pickled_object = pickle.load(file)
@@ -343,14 +355,11 @@ The great thing about serializing and deserializing using `.pickle` file formats
 {'Name': 'Dan', 'Age': 39, 'Occupation': 'Detective', 'Country': 'United States', 'State': 'California', 'City': 'Los Angeles'}
 ```
 
----
-
 ## Conclusions
 
 We've reviewed different reading methods for six file formats. We've also specified which method is best for a given application, whether we're working with `numpy.ndarray` objects, `pandas.DataFrame` objects, or other Python objects such as tuples, lists & dictionaries.
-Now that we know how to write & read these formats using Python, it's time to move on to comparing them.
 
----
+Now that we know how to write & read these formats using Python, it's time to move on to comparing them.
 
 ## References
 

@@ -11,6 +11,7 @@ date: 2025-06-30
 ---
 
 A **filesystem** is a method and data structure used by operating systems to manage how data is stored, organized and retrieved. Each operating system has a different filesystem with different logical rules and structures. Also, every external storage device has a filesystem included. Without this, data storage & data retrieval would be impossible.
+
 File systems perform multiple functions. They are responsible for the following:
 
 - User data management
@@ -20,9 +21,13 @@ File systems perform multiple functions. They are responsible for the following:
 - Metadata
 - Access permission & restriction
 - Data integrity
-  In this article, we will perform a general overview of the Linux directory tree starting from the root directory. We will then discuss the functions of each directory, their relation with the Linux Kernel and some important command line utilities for interacting with the filesystem. We will also perform some examples to help clarify if this is the first time we'll be interacting with a Linux system.
-  We will be using [WSL2](https://pabloagn.com/technologies/wsl2/) (_Windows Subsystem for Linux_) with [Ubuntu](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview), although this article applies for every other installation method and distribution. We will use the [Windows terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=es-mx&gl=mx&rtc=1) and `bash` commands to illustrate examples.
-  We will not cover the installation process for each of the components mentioned. Links for that purpose can be found below:
+
+In this article, we will perform a general overview of the Linux directory tree starting from the root directory. We will then discuss the functions of each directory, their relation with the Linux Kernel and some important command line utilities for interacting with the filesystem. We will also perform some examples to help clarify if this is the first time we'll be interacting with a Linux system.
+
+We will be using [WSL2](https://pabloagn.com/technologies/wsl2/) (_Windows Subsystem for Linux_) with [Ubuntu](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview), although this article applies for every other installation method and distribution. We will use the [Windows terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=es-mx&gl=mx&rtc=1) and `bash` commands to illustrate examples.
+
+We will not cover the installation process for each of the components mentioned. Links for that purpose can be found below:
+
 - [WSL2 installation](https://learn.microsoft.com/en-us/windows/wsl/install)
 - [Ubuntu installation on WSL2](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview)
 - [Windows terminal installation](https://learn.microsoft.com/en-us/windows/terminal/install)
@@ -38,28 +43,32 @@ The current Windows filesystem dates back to MS-DOS _(Microsoft Disk Operating S
 ### The Linux filesystem
 
 Linux is a UNIX-like operating system. The UNIX structure was fundamentally different from MS-DOS when created, and upon evolving, Linux adopted most of its conventions, including the filesystem. Linux, unlike Windows, has a hierarchical file structure; it contains a root directory and subdirectories. Also, Linux treats most of its components as files.
+
 Interestingly, not all Linux distributions manage their directory structure equally. For example, a given distribution may use `/media` for mounting external drives, while another may use `/run`. Still, detailed information regarding directory structures for a given distribution can be found on its respective documentation site. Ubuntu's filesystem structure can be found [here](https://help.ubuntu.com/community/LinuxFilesystemTreeOverview).
 
 ### The macOS filesystem
 
-## MacOS is more similar to Linux since it evolved from a similar UNIX-like operating system called BSD. It has the same hierarchical file structure, but the executables are not binary-compatible with Linux.
+MacOS is more similar to Linux since it evolved from a similar UNIX-like operating system called BSD. It has the same hierarchical file structure, but the executables are not binary-compatible with Linux
 
 ## Preparing our environment
 
 ### A word of caution
 
 **A word of caution before we begin:** Some of the directories we'll review, such as `/boot`, contain vital information for the Linux operating system to function correctly. We could easily break our system if we were to access them using `root` privileges and accidentally delete or modify their content.
+
 An excellent option for avoiding messing up when tinkering around is to use a Virtual Machine; if we were to break anything, we could quickly restore the entire system from a snapshot or even do a fresh reinstall.
 
 ### Choosing a distribution, an emulator and a shell
 
 Given that we already have a Linux distribution installed, we can start by getting our hands on a terminal emulator and a shell. All distributions have at least one terminal emulator and one shell already installed. The most common shell is `bash`. As for terminal emulators, it depends on which family of distributions and which desktop manager we installed.
+
 In our case, we'll be using Ubuntu running on Windows WSL2. We'll use the windows Terminal as our terminal emulator and `zsh` as our shell. The WSL2 setup process is out of the scope of this article but will be covered in the future.
+
 We can confirm which shell is currently used by the system:
 
 ##### Code
 
-```Bash
+```bash
 ps -p $$
 ```
 
@@ -69,6 +78,7 @@ PID TTY          TIME CMD
 ```
 
 The output tells us we're currently using the `zsh` shell, which has a process ID PID = 128 (_not to worry, we'll discuss processes more in-depth in the `/proc` section_).
+
 Ubuntu is a distribution based on Debian, so the filesystem will be similar for the two. Also, we'll be able to use either the `apt` or the `dpkg` package managers for installing terminal utilities.
 
 ### Installing two useful packages
@@ -77,11 +87,14 @@ Many of the packages we'll be using already come preinstalled on Ubuntu. For the
 
 - `apt` : The native Ubuntu package manager.
 - `dpkg` : The native Debian package manager.
-  For this example, we'll be using Ubuntu's `apt`.
-  We'll first install the `tree` package for visualizing our directory structure in a tree-like diagram.
-  We can confirm we don't yet have the `tree` package:
 
-```Bash
+For this example, we'll be using Ubuntu's `apt`.
+
+We'll first install the `tree` package for visualizing our directory structure in a tree-like diagram.
+
+We can confirm we don't yet have the `tree` package:
+
+```bash
 tree
 ```
 
@@ -92,11 +105,12 @@ sudo apt install tree
 
 We can then install it:
 
-```Bash
+```bash
 sudo apt install tree
 ```
 
 The shell will prompt us for our `sudo` password since we're installing this package for all users, including root (_similar to Windows administrator permissions_).
+
 Upon inputting it, we can see what `apt` will install for us:
 
 ```
@@ -107,20 +121,21 @@ The following NEW packages will be installed:
 
 We can also install the `htop` command line utility used for monitoring and managing active processes, similar to the Task manager application on Windows.
 
-```Bash
+```bash
 sudo apt install htop
 ```
 
-## Now, we can begin exploring the Linux filesystem.
+## Now, we can begin exploring the Linux filesystem
 
 ## root (/)
 
 This is the root directory and is the uppermost directory in the Linux system containing all the files, device data and system information.
+
 If we're executing our terminal emulator as a user different than `root`, the shell will start in `/home/ourusername`. This is the home directory for our user. We can confirm where we are by executing the following command:
 
 ##### Code
 
-```Bash
+```bash
 pwd
 ```
 
@@ -134,14 +149,14 @@ Now that we know where we are, we can change directories to the `root` directory
 
 ##### Code
 
-```Bash
+```bash
 cd ../..
 pwd
 ```
 
 ##### Code
 
-```Bash
+```bash
 cd /
 pwd
 ```
@@ -156,7 +171,7 @@ The two periods `..` in the first prompt allow us to change the directory to the
 
 If we execute the `tree` command without any parameters, it will recursively go over every directory and file on `/` and list it. We don't want that. Instead, we can specify a recursion level which will list only the immediate directories.
 
-```Bash
+```bash
 tree -L 1
 ```
 
@@ -188,9 +203,10 @@ We can see that 21 directories were listed:
 
 - The first directory `.` denotes the current directory `/`.
 - The ones with the arrow symbol on the right `->` denote symbolic links, or `symlinks`. This means they are links pointing to another directory.
-  Each directory has an `owner` and a `group` assigned. If we recall, the file structure in Linux is hierarchical. It's based on a set of standards called the [FHS](https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html) _(File Hierarchy Standard)_; all directories immediately below `/` will have `root` as their owner. We can confirm this by using the _list_ `ls` command with the _single column_ output parameter `-l`:
 
-```Bash
+Each directory has an `owner` and a `group` assigned. If we recall, the file structure in Linux is hierarchical. It's based on a set of standards called the [FHS](https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html) _(File Hierarchy Standard)_; all directories immediately below `/` will have `root` as their owner. We can confirm this by using the _list_ `ls` command with the _single column_ output parameter `-l`:
+
+```bash
 ls -l
 ```
 
@@ -233,22 +249,24 @@ From left to right:
 - The fifth column denotes the size in bytes.
 - The sixth column denotes the last update date and time.
 - The last column denotes the name of the file, directory or link.
-  We can read further documentation on the `ls` command by consulting its manual pages, using the `man` command:
+
+We can read further documentation on the `ls` command by consulting its manual pages, using the `man` command:
 
 ##### Code
 
-```Bash
+```bash
 man ls
 ```
 
-## As we go over the directory structure, we will notice that, as opposed to Windows, the directory & system file names are intuitive; they're acronyms for actual names describing their purpose. This is also part of the UNIX philosophy and applies not just to the directory structure but to commands and file naming conventions.
+## As we go over the directory structure, we will notice that, as opposed to Windows, the directory & system file names are intuitive; they're acronyms for actual names describing their purpose. This is also part of the UNIX philosophy and applies not just to the directory structure but to commands and file naming conventions
 
 ## /bin
 
 The `/bin` directory stands for **binary** and contains the most basic executables such as `ls`, `man` and `cat`. In modern distributions, it's usually linked to `/usr/bin`.
+
 We can list the contents of the `/bin` directory. The output will be large since our Linux system has multiple executables already installed. We can truncate our output to the ten first entries by piping our `ls` output into the `head` command:
 
-```Bash
+```bash
 cd /bin
 ls | head -10
 ```
@@ -272,15 +290,13 @@ We can also filter the `ls` output to look for a given executable, in this case,
 
 ##### Code
 
-```Bash
+```bash
 ls ls
 ```
 
 ```
 ls
 ```
-
----
 
 ## /boot
 
@@ -289,9 +305,8 @@ The `/boot` directory contains everything necessary for the operating system to 
 - The bootloader
 - The initial ram system `initramfs`
 - The Linux Kernel files
-  We need to be careful with this directory since deleting or modifying files could cause our system to stop working.
 
----
+We need to be careful with this directory since deleting or modifying files could cause our system to stop working.
 
 ## /dev
 
@@ -304,12 +319,14 @@ The `/dev` directory stands for **devices** and contains file representations of
 - Standard input and standard output (`/stdin`, `/stdout`)
 - Other serial ports
 - Every other peripheral we connect to our system
-  This can be confusing at first, but we must remember that for Linux, almost anything is represented by a file (_even directories_).
-  We can get all the RAM devices on `/dev`:
+
+This can be confusing at first, but we must remember that for Linux, almost anything is represented by a file (_even directories_).
+
+We can get all the RAM devices on `/dev`:
 
 ##### Code
 
-```Bash
+```bash
 cd /dev
 ls -l ram*
 ```
@@ -333,14 +350,15 @@ brw------- 1 root root 1,  8 Jan 28 14:02 ram8
 brw------- 1 root root 1,  9 Jan 28 14:02 ram9
 ```
 
-## Most of these block files don't contain any information but can be written by programs.
+Most of these block files don't contain any information but can be written by programs
 
 ## /etc
 
 The `/etc` directory stands for **etcetera** and contains all system-wide configuration files. It also contains startup scripts. Applications installed for all users will have system-wide settings in this directory.
+
 We can display the head of the `/etc` directory:
 
-```Bash
+```bash
 ls | head -10
 ```
 
@@ -358,12 +376,16 @@ bash.bashrc
 ```
 
 One important thing to remember is that this directory belongs to the `root` user. That means we cannot edit files inside the `/etc` directly within our user shell without using the super user do `sudo` command.
+
 It is also not recommended to modify the settings of conventional executables here since they will most likely get overwritten with an update. That's what the `/home/.config` directory is for, which we'll visit shortly.
+
 The `/etc` directory is also extremely important when managing users in our Linux system since here; we will find the `sudoers` configuration file in charge of managing user credentials and permissions.
+
 If we were to add a new user to our system, we would have to login as `root` and include username, user password and permissions here (_not directly, but by using the `visudo` command, which in turn writers to the `sudoers` file_).
+
 We can take a look at our `sudoers` file to explore its contents:
 
-```Bash
+```bash
 sudo cat sudoers
 ```
 
@@ -378,14 +400,13 @@ root    ALL=(ALL:ALL) ALL
 %sudo   ALL=(ALL:ALL) ALL
 ```
 
----
-
 ## /home
 
 The `/home` directory contains a collection of the non-root user's folders. When a user is created, a directory with its username is also generated on `/home`. The username folder is created with the username as the `owner` and the username group as the `group`. This makes this folder accessible by the user without needing `root` permissions.
+
 We can list the contents of the `/home` directory:
 
-```Bash
+```bash
 cd /home
 tree -L 1
 ```
@@ -396,14 +417,15 @@ tree -L 1
 ```
 
 Since we only have one non-root user set up, we are shown the current directory and the username folder.
+
 If we go one level deeper, we can see the contents of the user's home folder:
 
-```Bash
+```bash
 cd pabloagnck/
 ls -la
 ```
 
-Here we use the `ls` command along with the `la` parameters. As we have seen, the *list* parameter `l` lists the content in a columnar format, while the *all* parameter `a` lists all content, including hidden files and folders. This is important because usually, the user's home folder contains user-level configuration folders and files hidden by default (_prepended by a dot `.`_).
+Here we use the `ls` command along with the `la` parameters. As we have seen, the _list_ parameter `l` lists the content in a columnar format, while the _all_ parameter `a` lists all content, including hidden files and folders. This is important because usually, the user's home folder contains user-level configuration folders and files hidden by default (_prepended by a dot `.`_).
 
 ```
 drwxr-x--- 5 pabloagnck pabloagnck  4096 Jan 27 22:46 .
@@ -431,21 +453,23 @@ If we pay attention, we can notice three things:
 - We have several hidden files, each denoting a configuration file for a specific application.
 - We also have several hidden folders, each denoting a configuration folder, the cache folder, or the libraries folder (_inside `.local/`_) containing user-wide libraries and application settings.
   By default, our system includes all these files directly in `/home/pabloagnck`, but this can become a mess quickly, so the best practice is to try to have every configuration file live inside the `.config` directory _(we can not do this by simply dragging the files inside `.config`. Instead, we need to specify a separate variable which is out of the scope of this article)_. This directory is analogous to `/etc` for system-wide configuration. In fact, most applications usually include a user-level configuration file template and a system-wide one as well.
-  As we can see, we don't have any `Desktop`, `Documents`, or `Downloads` folders. This is because we're using WSL2, which does not need all these home directories.
-  One important thing to remember is that a typical user will not be able to see other users' content without superuser permission.
 
----
+As we can see, we don't have any `Desktop`, `Documents`, or `Downloads` folders. This is because we're using WSL2, which does not need all these home directories.
+
+One important thing to remember is that a typical user will not be able to see other users' content without superuser permission.
 
 ## /lib, /lib32, /lib64
 
 The `/lib`, `/lib32` and `/lib64` stand for **libraries** and contain files that applications can use to perform various functions. They hold the shared libraries our system's executables will need. `/lib/systemd/system`, for example, hosts unit files used in Linux services, a crucial component in any Linux system.
+
 Typically, we will have two additional `/lib` directories apart from `/lib`:
 
 - `/lib32` : Libraries for 32-bit programs
 - `/lib64` : Libraries for 64-bit programs
-  As with the `/bin` directory, the `/lib` directories will be symbolically linked to their corresponding `/usr/lib` directory:
 
-```Bash
+As with the `/bin` directory, the `/lib` directories will be symbolically linked to their corresponding `/usr/lib` directory:
+
+```bash
 cd /
 ls -l lib*
 ```
@@ -457,17 +481,18 @@ lrwxrwxrwx 1 root root  9 Oct 25 16:34 lib64 -> usr/lib64
 lrwxrwxrwx 1 root root 10 Oct 25 16:34 libx32 -> usr/libx32
 ```
 
----
-
 ## /lost+found
 
-## The `/lost+found` directory contains pieces of broken files after a system crash. It also includes programs that were already unlinked (_i.e. their name had been erased_) but still opened by some process when the system halted. Most distributions contain a predefined space in `/lost+found` for the filesystem check utility `fsck` to deposit unlinked files.
+The `/lost+found` directory contains pieces of broken files after a system crash. It also includes programs that were already unlinked (_i.e. their name had been erased_) but still opened by some process when the system halted. Most distributions contain a predefined space in `/lost+found` for the filesystem check utility `fsck` to deposit unlinked files
 
 ## /media
 
 The `/media` directory contains the files representing the mounted drives. If we were to attach an external hard drive to our operating system, `/media` would be one of the options where the system could mount it. Each distribution handles this differently, but it has become the standard for the system's automatic mounts.
+
 In short, it serves as a mount point for system-mounted devices, but we can also use it to mount devices manually.
+
 We can connect an external hard drive in our system to exemplify (_currently, WSL2 does not support flash drive mount, only external hard drives_).
+
 For our case, since we're using WSL2, we'll mount our device to our subsystem first:
 
 ##### Code
@@ -501,7 +526,7 @@ The operation completed successfully.
 
 We can confirm that our device exists in our WSL2 subsystem:
 
-```Bash
+```bash
 lsblk
 ```
 
@@ -513,9 +538,10 @@ sdd      8:48   0   7.3T  0 disk
 ```
 
 This tells us that our device exists as `sdd` and has two partitions available: `sdd1` and `sdd2`.
+
 Since the filesystem for our external hard drive is `NTFS`, we will need two additional packages:
 
-```Bash
+```bash
 sudo apt install ntfs-3g fuse3
 ```
 
@@ -523,22 +549,23 @@ We will then need to mount the device manually. When mounting devices in Linux, 
 
 ##### Code
 
-```Bash
+```bash
 cd /media
 sudo mkdir WD
 ```
 
 We already know the device and partition names, thus can proceed as such:
 
-```Bash
+```bash
 cd WD
 sudo mount -t ntfs /dev/sdd2 .
 ```
 
 The dot at the end of the statement tells the system to mount our device in the current directory `/media/WD`. We need to mount using `sudo` since `/media` is a `root` folder, and the `mount` command also requires superuser permissions.
+
 We can confirm that our device was mounted correctly:
 
-```Bash
+```bash
 df -aTh
 ```
 
@@ -548,7 +575,7 @@ df -aTh
 
 We can also list the contents of our mounted partition:
 
-```Bash
+```bash
 ls -la
 ```
 
@@ -561,16 +588,17 @@ drwxrwxrwx 1 root root    0 Jan 25 10:47 'Transfer to QNAP'
 ```
 
 All folders have `root` as owner and group since we mounted using `sudo` permissions.
+
 Finally, we must remember to unmount our device. If we're still on `/media/WD`, we need to change directories first:
 
-```Bash
+```bash
 cd ..
 sudo umount WD
 ```
 
 If we want to remove this mount point, we can do so:
 
-```Bash
+```bash
 sudo rm -r WD
 ```
 
@@ -584,26 +612,27 @@ wsl --unmount \\.\PHYSICALDRIVE2
 The operation completed successfully.
 ```
 
-## This was too much work for mounting an external drive to our Linux system because we're using a subsystem which has limitations. Still, if we're working on a Linux machine, this process is straightforward, specifically on user-friendly distributions such as Ubuntu, and can be further customized using configuration files.
+This was too much work for mounting an external drive to our Linux system because we're using a subsystem which has limitations. Still, if we're working on a Linux machine, this process is straightforward, specifically on user-friendly distributions such as Ubuntu, and can be further customized using configuration files
 
 ## /mnt
 
 The `/mnt` directory stands for **mount** and was the original mounting point for external devices. Nowadays, most distributions use `/media` instead, although `/mnt` is still a temporary mount point.
-WSL2 mounts devices on `/mnt` if Linux natively supports their filesystem.
 
----
+WSL2 mounts devices on `/mnt` if Linux natively supports their filesystem.
 
 ## /opt
 
-## The `/opt` directory stands for **optional** and contains installed software from external sources. We can also use this directory to host the software we create.
+The `/opt` directory stands for **optional** and contains installed software from external sources. We can also use this directory to host the software we create
 
 ## /proc
 
 The `/proc` directory stands for **processes** and contains information about system processes. Every process executed will have a directory inside `/proc` and be assigned a unique `pid` (_process ID_). Continuing with the UNIX _"almost everything is treated as a file"_ philosophy, processes are no exception.
+
 This directory is extremely helpful when developing software in a Linux environment. We can see which processes are firing and obtain detailed information about their nature.
+
 We can list the content of our `/proc` directory:
 
-```Bash
+```bash
 cd /proc
 ls -l
 ```
@@ -625,16 +654,19 @@ dr-xr-xr-x  9 pabloagnck pabloagnck               0 Jan 27 22:41 90
 
 We can view & monitor the active processes by using the `htop` utility we installed earlier:
 
-```Bash
+```bash
 htop
 ```
 
 ![Figure 1. htop utility](https://pabloagn.com/wp-content/uploads/2023/01/figure_1_htop_PID.png "Figure 1. htop utility")
+
 We can see that the system is currently running ten processes. Looking at the first column, we can identify each process by its respective PID.
+
 Processes 1 through 9 are being run by `root`, while the remaining ones are being run by our user.
+
 To exit the `htop` utility, we use the <kbd>q</kbd> key. If we go back to `/proc` and look for process `88`, we can see a directory. We then `cd` into it and list its contents:
 
-```Bash
+```bash
 cd /proc/88
 ls -l
 ```
@@ -656,10 +688,12 @@ lrwxrwxrwx  1 pabloagnck pabloagnck 0 Jan 27 22:41 exe -> /usr/bin/zsh
 ```
 
 As displayed, there is a link to the binary executable `/usr/bin/zsh` being run, which makes sense since we're using the `zsh` shell for this precise action.
+
 One important thing to know is that the first process is the `/init` process. This process refers to the initialization system and is in charge of creating the following processes. It is up from boot to shut down and will permanently be assigned a PID of `1`since it will always be the first process to start.
+
 We can view the contents of any file by using the _concatenate_ command `cat`:
 
-```Bash
+```bash
 cat cmdline
 ```
 
@@ -667,62 +701,60 @@ cat cmdline
 -zsh%
 ```
 
----
-
 ## /root
 
 The `/root` directory is the home directory for the `root` user. It contains `root` user configuration folders & files.
+
 We cannot simply change directories into `/root` since we need `root` permissions. To be able to view the contents, we are going to change to the `root` shell by using the superuser command:
 
-```Bash
+```bash
 sudo su
 ```
 
 We need to be extremely careful since we are now in the `root` shell and can delete virtually anything without the system prompting us for a password.
+
 We can now change directories to the root home directory:
 
-```Bash
+```bash
 cd /root
 ls -l
 ```
 
 In our case, we don't have anything since we have not configured anything `root` user-related.
-To exit the `root` shell, we type `exit` and return to the user shell.
 
----
+To exit the `root` shell, we type `exit` and return to the user shell.
 
 ## /run
 
 The `/run` directory is somewhat new and has different uses depending on each distribution. It is a `tempfs` filesystem meaning it runs in ram and is deleted upon system shutdown. This is why some distributions use it to mount devices such as external hard drives.
-It usually contains information regarding which users are currently logged in and active daemons running in our system, among others.
 
----
+It usually contains information regarding which users are currently logged in and active daemons running in our system, among others.
 
 ## /sbin
 
 The `/sbin` directory stands for **system binaries** and, similar to the `/bin` directory, contains executables that the system administrator would use. `/sbin` is often a link to `/usr/sbin`.
-Differences between `/bin` and `/sbin` have a historical component as well as a functional one; historically, `/sbin` used to contain statically linked executables, thus having fewer library dependencies. Functionally, `/sbin` includes utilities typically only run by a sysadmin with `root` privileges and `/bin` contains everything else. On some systems, non-root users don't have `/sbin` in their path, so they must use the [[Absolute Path|full path]] to run these tools.
-We can find executables such as `adduser`, `addgroup`, `chgpasswd`, `chroot`, `fsck`, and other utilities typically used by a system administrator.
 
----
+Differences between `/bin` and `/sbin` have a historical component as well as a functional one; historically, `/sbin` used to contain statically linked executables, thus having fewer library dependencies. Functionally, `/sbin` includes utilities typically only run by a sysadmin with `root` privileges and `/bin` contains everything else. On some systems, non-root users don't have `/sbin` in their path, so they must use the [[Absolute Path|full path]] to run these tools.
+
+We can find executables such as `adduser`, `addgroup`, `chgpasswd`, `chroot`, `fsck`, and other utilities typically used by a system administrator.
 
 ## /snap
 
-## The `/snap` directory is specific to Linux distributions using the `systemd` init system since it contains all packages related to Snap, a software packaging and deployment system developed by Canonical. Snap packages are self-contained and run differently than conventional executables.
+The `/snap` directory is specific to Linux distributions using the `systemd` init system since it contains all packages related to Snap, a software packaging and deployment system developed by Canonical. Snap packages are self-contained and run differently than conventional executables
 
 ## /srv
 
 The `/srv` directory stands for **service** and contains files related to web or FTP servers. If we were running a server on our Linux system, it would serve as an access point for external users. It can be isolated from the rest of the directories by hosting it in a different partition, making file sharing and accessing by external users safe.
-The `/srv` directory is usually empty and not commonly used for most distributions, although there are exceptions such as OpenSUSE, which uses it as the default for web servers.
 
----
+The `/srv` directory is usually empty and not commonly used for most distributions, although there are exceptions such as OpenSUSE, which uses it as the default for web servers.
 
 ## /sys
 
 The `/sys` directory stands for **system** and serves as a direct way to interact with the kernel. It contains information about devices, drivers and kernel features running on our system. As with `/run`, it resides on RAM and is deleted when we shut down the system. Its content structure is very similar to the `/proc` directory, although the first one is better organized.
+
 We can compare the contents of both directories:
 
-```Bash
+```bash
 cd /sys
 tree -L 1
 ```
@@ -740,7 +772,7 @@ tree -L 1
 `-- module
 ```
 
-```Bash
+```bash
 cd /proc
 tree -L 1
 ```
@@ -784,19 +816,19 @@ tree -L 1
 ...
 ```
 
----
-
 ## /tmp
 
-## The `/tmp` directory stands for **temporary** and contains files temporarily stored by applications. It also resides on RAM and is deleted upon system shutdown.
+The `/tmp` directory stands for **temporary** and contains files temporarily stored by applications. It also resides on RAM and is deleted upon system shutdown
 
 ## /usr
 
 The `/usr` directory stands for **Unix System Resources** and contains all user binaries, libraries and documentation for the user applications, as opposed to the `/bin` directory used by the system and root user.
+
 As we discussed, directories such as `/usr/bin`, `/usr/lib` and `/usr/sbin` are linked to `/bin`, `/lib` and `/sbin`, respectively. This is done for compatibility purposes.
+
 We can take a look at its contents by executing the `tree` command:
 
-```Bash
+```bash
 cd /usr
 tree
 ```
@@ -829,16 +861,16 @@ We can see we have 12 folders:
 - The `sbin` folder contains system binaries.
 - The `share` folder contains larger user applications.
 - The `src` folder contains source code applications, such as the Kernel source and headers.
-  The `/usr` directory is used differently depending on our distribution. It is also used differently between developers; one developer might adhere to the FHS standards, while another might choose a different folder to install his application.
 
----
+The `/usr` directory is used differently depending on our distribution. It is also used differently between developers; one developer might adhere to the FHS standards, while another might choose a different folder to install his application.
 
 ## /var
 
 The `/var` directory stands for **variable** and contains directories and files expected to grow in size. A good example would be the `/var/log` folder, which includes system and user logs. Also, some web servers, such as Apache place can place their files here.
+
 We can display the contents in the `/var` directory:
 
-```Bash
+```bash
 cd /var
 tree
 ```
@@ -862,7 +894,7 @@ tree
 
 We can view the contents of our `apt` package manager log files:
 
-```Bash
+```bash
 cd /var/log/apt
 ls -l
 ```
@@ -878,7 +910,7 @@ drwxrwxr-x 7 root syslog  4096 Dec 16 12:07 ..
 
 If we want to see the command history, we can concatenate `history.log`:
 
-```Bash
+```bash
 cat history.log
 ```
 
@@ -897,11 +929,10 @@ End-Date: 2023-01-28  17:50:30
 ```
 
 The command history for `apt` is displayed in ascending order.
+
 We can also filter by specific date by piping our concatenation into a `grep -A` command:
 
-##### Code
-
-```Bash
+```bash
 cat history.log | grep -A 10 '2023-01-28'
 ```
 
@@ -915,15 +946,15 @@ Install: fdisk:amd64 (2.37.2-4ubuntu3), libfdisk1:amd64 (2.37.2-4ubuntu3, automa
 End-Date: 2023-01-28  17:50:30
 ```
 
-## As we can see, this directory is extremely useful for any system administrator since it shows, in detail, each user's history log, among many other things.
+As we can see, this directory is extremely useful for any system administrator since it shows, in detail, each user's history log, among many other things
 
 ## Conclusions
 
 We've reviewed the entire Linux filesystem and the functions each directory serves. At first, it might seem intimidating and confusing, but the reality is that the Linux filesystem is more optimal than other filesystems, such as Windows's.
-Getting familiarized with the Linux folder structure is vital if we are to learn more advanced subjects. When getting more involved in the Linux ecosystem, we'll inevitably spend a fair amount of time on these directories.
-Lastly, this was just an overview, but if we'd like to get more intimate with the Linux filesystem, we can always consult the [official documentation](https://help.ubuntu.com/). The Linux community is vast, active and heavily involved. We can use forums as an alternative way to learn or stick with using `man`, the masterfully crafted utility providing manual pages for virtually any package out there.
 
----
+Getting familiarized with the Linux folder structure is vital if we are to learn more advanced subjects. When getting more involved in the Linux ecosystem, we'll inevitably spend a fair amount of time on these directories.
+
+Lastly, this was just an overview, but if we'd like to get more intimate with the Linux filesystem, we can always consult the [official documentation](https://help.ubuntu.com/). The Linux community is vast, active and heavily involved. We can use forums as an alternative way to learn or stick with using `man`, the masterfully crafted utility providing manual pages for virtually any package out there.
 
 ## References
 

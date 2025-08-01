@@ -22,7 +22,7 @@
             {{ range . }}
               <a
                 href="{{ "/categories/" | relURL }}{{ . | urlize }}"
-                class="tag tag--category"
+                class="tag tag--category--light"
                 >{{ . }}</a
               >
             {{ end }}
@@ -33,7 +33,7 @@
             {{ range . }}
               <a
                 href="{{ "/tags/" | relURL }}{{ . | urlize }}"
-                class="tag tag--label"
+                class="tag tag--label--light"
                 >{{ . }}</a
               >
             {{ end }}
