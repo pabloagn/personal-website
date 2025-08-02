@@ -5,6 +5,7 @@ summary: "A systems programming language focused on safety, speed, and concurren
 date: 2025-08-02
 categories: ["Languages"]
 tags: ["Systems", "Memory Safety", "Performance"]
+draft: false
 ---
 
 A systems programming language focused on safety, speed, and concurrency.

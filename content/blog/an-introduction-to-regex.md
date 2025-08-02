@@ -4,7 +4,7 @@ catchphrase: "Master the art of pattern matching."
 categories: ["computer-science", "programming"]
 tags: ["regex", "text-processing", "pattern-matching"]
 tools: ["general"]
-summary: "Get started with regular expressions and learn how to match, extract, and transform text with precision and power."
+summary: "Learn how to match, extract, and transform text without succumbing to despair."
 layout: single
 draft: false
 math: true

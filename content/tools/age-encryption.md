@@ -5,6 +5,7 @@ summary: "A simple, modern, and secure file encryption tool with a minimalist in
 date: 2025-08-02
 categories: ["Security"]
 tags: ["Encryption", "Security", "CLI Tool"]
+draft: false
 ---
 
 A simple, modern, and secure file encryption tool with a minimalist interface.

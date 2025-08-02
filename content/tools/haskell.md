@@ -5,6 +5,7 @@ summary: "A purely functional programming language with strong static typing and
 date: 2025-08-02
 categories: ["Languages"]
 tags: ["Functional", "Pure", "Type System"]
+draft: false
 ---
 
 A purely functional programming language with strong static typing and lazy evaluation.

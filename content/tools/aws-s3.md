@@ -5,6 +5,7 @@ summary: "Scalable object storage service used for storing and retrieving any am
 date: 2025-08-02
 categories: ["Cloud & Infrastructure"]
 tags: ["Storage", "Object Storage", "Backup"]
+draft: false
 ---
 
 Scalable object storage service used for storing and retrieving any amount of data from anywhere.

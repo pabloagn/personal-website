@@ -1183,8 +1183,6 @@ To construct a tuple, we can use parentheses `()` to delimit the beginning and e
 my_tuple = (1, "2", '3', "four", "🚀")
 ```
 
-##### Output
-
 ```
 my_tuple = (1, "2", '3', "four", "🚀")
 ```
@@ -1730,8 +1728,6 @@ begin
  println(call_to_fun)
 end
 ```
-
-##### Output
 
 ```
 3

@@ -5,6 +5,7 @@ summary: "A Linux distribution built on the Nix package manager with declarative
 date: 2025-08-02
 categories: ["Operating Systems"]
 tags: ["Linux", "Declarative", "Reproducible"]
+draft: false
 ---
 
 A Linux distribution built on the Nix package manager with declarative configuration management.

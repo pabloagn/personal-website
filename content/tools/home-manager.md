@@ -5,6 +5,7 @@ summary: "A declarative configuration manager for user-specific dotfiles and pac
 date: 2025-08-02
 categories: ["Operating Systems"]
 tags: ["Nix", "Declarative Configuration", "Dotfiles"]
+draft: false
 ---
 
 A declarative configuration manager for user-specific dotfiles and packages on NixOS and other Linux systems.

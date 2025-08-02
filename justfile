@@ -15,7 +15,7 @@ ASSET_DIR   := "assets"
 NODE_BIN    := "npm"
 
 # --- Hugo Flags ---
-HUGO_FLAGS  := "--ignoreCache --noHTTPCache"
+HUGO_FLAGS  := "--disableFastRender --ignoreCache --noHTTPCache"
 DEV_FLAGS   := "--buildDrafts --buildFuture --disableFastRender --bind 0.0.0.0"
 
 # --- Recipes ---

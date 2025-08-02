@@ -5,6 +5,7 @@ summary: "GitHub's CI/CD platform for automating workflows directly in your repo
 date: 2025-08-02
 categories: ["CI/CD"]
 tags: ["CI/CD", "Automation", "GitHub"]
+draft: false
 ---
 
 GitHub's CI/CD platform for automating workflows directly in your repository.
