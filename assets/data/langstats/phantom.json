@@ -1,0 +1,49 @@
+{
+  "languages": [
+    {
+      "name": "Python",
+      "percent": 49,
+      "color": "#3572A5"
+    },
+    {
+      "name": "TypeScript",
+      "percent": 35,
+      "color": "#2b7489"
+    },
+    {
+      "name": "Jupyter Notebook",
+      "percent": 10,
+      "color": "#999999"
+    },
+    {
+      "name": "CSS",
+      "percent": 2,
+      "color": "#563d7c"
+    },
+    {
+      "name": "Shell",
+      "percent": 2,
+      "color": "#89e051"
+    },
+    {
+      "name": "JavaScript",
+      "percent": 2,
+      "color": "#f1e05a"
+    },
+    {
+      "name": "Nix",
+      "percent": 0,
+      "color": "#658594"
+    },
+    {
+      "name": "Dockerfile",
+      "percent": 0,
+      "color": "#999999"
+    },
+    {
+      "name": "Makefile",
+      "percent": 0,
+      "color": "#999999"
+    }
+  ]
+}

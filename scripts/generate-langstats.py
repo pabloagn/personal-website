@@ -101,7 +101,7 @@ COLOR_MAP = {
 
 EXCLUDED_LANGS = {"Markdown", "YAML", "JSON", "Text"}
 
-DATA_DIR = Path("data/langstats")
+DATA_DIR = Path("assets/data/langstats")
 CONTENT_DIR = Path("content/projects")
 
 

@@ -5,7 +5,7 @@ tags: ["polars", "dataframes", "python", "rust", "data-processing"]
 tools: ["python", "rust", "polars"]
 summary: "Discover how Polars outperforms traditional data libraries by combining speed, parallelism, and expressive APIs in Python and Rust."
 catchphrase: "Speed meets structure in data science."
-draft: true
+draft: false
 math: true
 date: 2025-06-30
 ---

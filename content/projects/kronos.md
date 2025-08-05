@@ -1,15 +1,15 @@
 ---
-title: "Rhodium"
-date: 2025-05-30
-tags: ["linux", "nixos"]
-summary: "A minimal status bar configuration for tiling window managers, following sacred computer principles."
-repository: https://github.com/pabloagn/rhodium
-docs: https://rhodium.solenoidlabs.com/docs
-abbreviation: "Rh"
-serial: 7
-tools: ["nixos", "julia"]
+title: "Kronos"
+date: 2025-03-30
+tags: ["rust", "nixos"]
+summary: " An elegant TUI-based timer with its own controller utils, written in Rust."
+repository: https://github.com/pabloagn/kronos
+docs: https://github.com/pabloagn/kronos/README.md
+abbreviation: "Kr"
+serial: 5
+tools: ["rust", "nix"]
 status: "In Progress"
-catchphrase: "A Hypermodular NixOS System"
+catchphrase: "A Simple Timer With Controller Units"
 draft: false
 ---
 
@@ -23,3 +23,4 @@ A minimal status bar configuration for tiling window managers, following sacred 
 - Performance-focused updates
 
 The configuration emphasizes readability and function over visual noise.
+

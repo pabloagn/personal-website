@@ -7,7 +7,7 @@
     <!-- Recent Projects -->
     <div class="recent-section">
       <h2 class="section-title">Recent Projects</h2>
-      {{ $projects := first 4 (where site.RegularPages "Type" "in" $projectTypes) }}
+      {{ $projects := first 6 (where site.RegularPages "Type" "in" $projectTypes) }}
       {{ partial "layout/grid.html" (dict
         "Pages" $projects
         "class" "grid--2"

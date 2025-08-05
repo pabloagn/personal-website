@@ -24,9 +24,22 @@
       <p class="project-catchphrase"><em>{{ . }}</em></p>
     {{ end }}
 
+
+    <p class="hero-divider">─────── § ───────</p>
+    <div class="project-actions">
+      {{ if .Params.repository }}
+        {{ partial "buttons/dual.html" (dict
+          "left"  (dict "href" .Params.repository "text" "Repo")
+          "right" (dict "href" .Params.docs "text" "Docs")
+          )
+        }}
+      {{ end }}
+
+    </div>
   </div>
 
   <div class="project-content container-mid">
+    {{ partial "toc.html" . }}
     <div class="single-content">
       {{ .Content }}
     </div>

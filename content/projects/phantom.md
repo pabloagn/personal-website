@@ -1,15 +1,15 @@
 ---
-title: "Rhodium"
-date: 2025-05-30
+title: "Phantom"
+date: 2024-04-30
 tags: ["linux", "nixos"]
-summary: "A minimal status bar configuration for tiling window managers, following sacred computer principles."
-repository: https://github.com/pabloagn/rhodium
-docs: https://rhodium.solenoidlabs.com/docs
+summary: "An open-source initiative to build a deeply interconnected, queryable digital canon of human art and thought"
+repository: https://github.com/pabloagn/phantom
+docs: https://github.com/pabloagn/phantom/README.md
 abbreviation: "Rh"
-serial: 7
-tools: ["nixos", "julia"]
+serial: 4
+tools: ["python", "nodejs", "reactjs", "postgresql", "qdrant", "docker"]
 status: "In Progress"
-catchphrase: "A Hypermodular NixOS System"
+catchphrase: "A monorepo"
 draft: false
 ---
 
@@ -23,3 +23,4 @@ A minimal status bar configuration for tiling window managers, following sacred 
 - Performance-focused updates
 
 The configuration emphasizes readability and function over visual noise.
+

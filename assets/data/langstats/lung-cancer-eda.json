@@ -1,0 +1,14 @@
+{
+  "languages": [
+    {
+      "name": "Python",
+      "percent": 65,
+      "color": "#3572A5"
+    },
+    {
+      "name": "TeX",
+      "percent": 35,
+      "color": "#999999"
+    }
+  ]
+}

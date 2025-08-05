@@ -109,6 +109,8 @@
 .card-summary {
   color: var(--fg-secondary);
   font-size: var(--text-md);
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .card-footer {

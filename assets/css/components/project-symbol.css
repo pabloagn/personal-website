@@ -1,4 +1,5 @@
 .project-symbol-wrapper {
+  width: 100%;
   display: flex;
   justify-content: center;
   margin-top: var(--space-xl);
@@ -42,6 +43,7 @@
   font-weight: 500;
   color: var(--fg-secondary);
   margin-bottom: var(--space-xs);
+  text-align: center;
 }
 
 .project-serial {

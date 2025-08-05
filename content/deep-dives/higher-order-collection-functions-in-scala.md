@@ -4,9 +4,9 @@ categories: ["computer-science", "programming"]
 tags:
   ["scala", "collections", "functional-programming", "higher-order-functions"]
 tools: ["scala"]
-summary: "Master Scala's powerful collection transformations with map, filter, fold, and more—unlocking expressive and concise functional code."
+summary: "Learn Scala's powerful collection transformations with map, filter, fold, and more."
 catchphrase: "Transform collections with elegance."
-draft: true
+draft: false
 math: true
 date: 2025-06-30
 ---

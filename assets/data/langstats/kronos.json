@@ -1,0 +1,19 @@
+{
+  "languages": [
+    {
+      "name": "Rust",
+      "percent": 97,
+      "color": "#dea584"
+    },
+    {
+      "name": "Nix",
+      "percent": 2,
+      "color": "#658594"
+    },
+    {
+      "name": "Shell",
+      "percent": 1,
+      "color": "#89e051"
+    }
+  ]
+}
