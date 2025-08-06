@@ -94,6 +94,7 @@
 }
 
 .single-meta-reading {
+  color: var(--fg-secondary);
   padding-bottom: var(--space-sm);
 }
 

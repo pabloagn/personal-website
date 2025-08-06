@@ -3,11 +3,11 @@ title: "Polars: A Lightning-Fast DataFrame Library for Python and Rust"
 categories: ["computer-science", "programming"]
 tags: ["polars", "dataframes", "python", "rust", "data-processing"]
 tools: ["python", "rust", "polars"]
-summary: "Discover how Polars outperforms traditional data libraries by combining speed, parallelism, and expressive APIs in Python and Rust."
+summary: "Learn how Polars outperforms traditional data libraries by combining speed, parallelism, and expressive APIs in Python and Rust."
 catchphrase: "Speed meets structure in data science."
 draft: false
 math: true
-date: 2025-06-30
+date: 2025-01-30
 ---
 
 Of all the libraries belonging to any Data Scientist's toolbox, `Pandas` may be the most important one; it's built on top of the `NumPy` package and provides data structures and methods tailored for data manipulation and analysis with a syntax similar to SQL queries.

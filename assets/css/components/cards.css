@@ -94,7 +94,7 @@
 .card-title {
   margin-bottom: var(--space-sm);
   padding-bottom: var(--space-md);
-  font-size: var(--font-size-6);
+  /* font-size: var(--font-size-6); */
 }
 
 .card-link {
@@ -217,7 +217,7 @@
 }
 
 .card--tool .card-title {
-  font-size: var(--font-size-4);
+  font-size: var(--font-size-7);
   color: var(--accent-purple);
 }
 
@@ -234,7 +234,8 @@
 }
 
 .cert-title {
-  margin-bottom: 0 !important;
+  margin: 0;
+  padding: var(--space-lg) 0;
   color: var(--fg-primary) !important;
 }
 
@@ -251,7 +252,7 @@
   /* font-size: var(--text-sm); */
   color: var(--fg-secondary);
   padding-bottom: var(--space-sm);
-  border-bottom: solid 1px var(--fg-muted-darker);
+  /* border-bottom: solid 1px var(--fg-muted-darker); */
 }
 
 .cert-topics li {

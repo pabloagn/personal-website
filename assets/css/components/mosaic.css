@@ -17,7 +17,7 @@
 }
 
 .mosaic-title {
-  font-size: var(--text-lg);
+  /* font-size: var(--font-size-); */
   margin-bottom: var(--space-sm);
   color: var(--fg-primary);
 }

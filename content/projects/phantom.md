@@ -5,7 +5,7 @@ tags: ["linux", "nixos"]
 summary: "An open-source initiative to build a deeply interconnected, queryable digital canon of human art and thought"
 repository: https://github.com/pabloagn/phantom
 docs: https://github.com/pabloagn/phantom/README.md
-abbreviation: "Rh"
+abbreviation: "P"
 serial: 4
 tools: ["python", "nodejs", "reactjs", "postgresql", "qdrant", "docker"]
 status: "In Progress"

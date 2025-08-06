@@ -3,11 +3,11 @@ title: "Destructuring in JavaScript"
 categories: ["computer-science", "programming"]
 tags: ["javascript", "syntax", "patterns", "destructuring"]
 tools: ["javascript"]
-summary: "Learn how JavaScript's destructuring syntax simplifies code by extracting values from arrays and objects with clarity and brevity."
-catchphrase: "Unpack your code with elegance."
-draft: true
+summary: "Learn how JavaScript's destructuring syntax simplifies code by extracting values from arrays and objects."
+catchphrase: "Pack, Unpack, Repeat"
+draft: false
 math: true
-date: 2025-06-30
+date: 2024-06-30
 ---
 
 Destructuring is a very powerful & widely-used syntactic construct that allows us to decompose a given object or structure into smaller components. This is especially useful when we have, for example, objects with nested elements and would like to extract all or some of them and assign them to variables without having to write multiple lines of code to do so.

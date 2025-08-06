@@ -232,7 +232,7 @@ println("Hello Scala")
 Hello Scala
 ```
 
-## Although most of the code we'll be writing will be inside Scala files, we can also use the REPL to quickly evaluate any expression on-the-fly
+Although most of the code we'll be writing will be inside Scala files, we can also use the REPL to quickly evaluate any expression on-the-fly
 
 ## Creating a new project
 

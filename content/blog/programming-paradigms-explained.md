@@ -3,7 +3,7 @@ title: "Programming Paradigms Explained"
 categories: ["computer-science", "programming"]
 tags: ["paradigms", "functional-programming", "oop", "imperative"]
 tools: ["general"]
-summary: "Understand the major programming paradigms—imperative, functional, object-oriented—and when to use each."
+summary: "Understand the major programming paradigms and when to use each."
 catchphrase: "Paradigms shape how we think and code."
 draft: false
 math: true
