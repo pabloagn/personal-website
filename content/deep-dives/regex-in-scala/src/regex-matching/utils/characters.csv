@@ -1,0 +1,44 @@
+Name,LastName,Address,Profession,Age,EmailAddress,Phone
+Lucifer,Morningstar,Lux, Nightclub Owner, Immortal, lucifermorningstarlux.com,123-456-7890
+Ray,Shoesmith,Sydney, Criminal, 40, ray.shoesmith@underworld.com.au,234-567-890
+John,Tavner,Milwaukee, Intelligence Officer, 30, john.tavnermilwaukee.gov,345-678-9012
+Doron,Kavillio,Israel, Commando, 50, doron.kavillio@israel.gov,456-789-0123
+Wayne,McCullough,Brockton, Teenager, 16, wayne.mcculloughbrockton.net,567-890-1234
+Edmond,Dantes,Château d'If, Sailor, 25, edmond.dantes@montecristo.com,678-901-2345
+Rodion,Raskolnikov,Saint Petersburg, Ex-Student, 23, raskolnikov.rodionstpetersburg.ru,789-012-3456
+Anna,Karenina,Moscow, Socialite, 30, anna.karenina@moscow.society.ru,890-123-456
+Gania,Ivolgin,Saint Petersburg, Civil Servant, 27, gania.ivolgin@stpetersburg.ru,901-234-5678
+Pierre,Bezukhov,Moscow, Count, 32, pierre.bezukhov@moscow.gov.ru,012-345-678
+Clary,Desiree,Paris,Actress,20,desiree.clary@paris.fr,-222-333
+Edmond,Alexandre,Marseilles,Sailor,30,alexandre.edmond@marseilles.fr,222-333-4444
+Kitty,Shcherbatsky,Moscow,Socialite,20,kitty.shcherbatskymoscow.society.ru,333-444-555
+Konstantin,Levin,Russian Countryside,Farmer,35,konstantin.levincountryside.ru,444-555-6666
+Alyosha,Karamazov,Saint Petersburg,Monk,20,alyosha.karamazov@stpetersburg.ru,555-666-7777
+Ivan,Karamazov,Saint Petersburg,Intellectual,24,ivan.karamazov@stpetersburg.ru,666-777-8888
+Elizabeth,Comstock,Columbia,Librarian,20,elizabeth.comstock@columbia.com,777-888-999
+Dewitt,Booker,Columbia,Detective,38,booker.dewitt@columbia.com,888-999-1010
+Guts,Berserk,Midland,Mercenary,24,guts.berserk@midland.com,999-1010-1111
+Griffith,Berserk,Midland,Noble,22,griffith.berserk@midland.com,1010-1111-1212
+Artagnan,Gascony,Paris,Musketeer,18,artagnan.gasconyparis.fr,1111-1212-1313
+Aramis,Renault,Paris,Musketeer,27,aramis.renault@paris.fr,1212-1313-1414
+Porthos,du Vallon,Paris,Musketeer,35
+Mercy,Meerson,Paris,Designer,28,mercymeerson,1-999-888-7777
+Raskolnikov,,Saint Petersburg,Ex-student,23,,2-888-777-6666
+Konstantin,Levin,Russian Countryside,,35,levin.konstantin@countryside.ru,3-777-666-5555
+,Alyosha,Saint Petersburg,Monk,20,alyosha.stpetersburg@ru,4-666-555-4444
+Sherlock,Holmes,221B Baker Street,Consulting Detective,,sherlock.holmes@bakerstreet.uk,5-555-444-3333
+John,Watson,221B Baker Street,Doctor,40.2,john.watson@bakerstreet.uk,
+Alexei,Karamazov,Saint Petersburg,Monk,20,alexei.karamazov@stpetersburg.ru,6-444-333-2222
+Ivan,Karamazov,Saint Petersburg,Intellectual,24,ivan.karamazov@stpetersburg.ru,7-333-222-1111
+Alexei,Vronsky,Moscow,Army Officer,30,alexei.vronsky@army.ru,8-222-111-0000
+Edmond,Dantes,Château d'If,,25,edmond.dantes@montecristo.com,
+,,Moscow,Socialite,25,anna.karenina@moscow.society.ru,9-111-000-9999
+D'Artagnan,,,Musketeer,19,dartagnan.musketeer@paris.fr,10-000-999-8888
+Dracula,,,Vampire,Immortal,dracula@transylvania.ro,
+,,Paris,Musketeer,27,aramis.musketeer@paris.fr,11-999-888-7777
+Porthos,du Vallon,Paris,,35.2,porthos.duvallon@paris.fr,12-888-777-6666
+,,,Musketeer,36,,13-777-666-5555
+Marius,Pontmercy,Paris,Student,20,marius.pontmercy@paris.fr,
+Cosette,Fauchelevent,Paris,,20,cosette.fauchelevent@paris.fr,14-666-555-4444
+Jean,Valjean,Paris,Factory Owner,50,jean.valjean@paris.fr,15-555-444-3333
+Javert,,Paris,Inspector,50,javert@paris.fr,16-444-333-2222

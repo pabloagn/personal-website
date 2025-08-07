@@ -1,0 +1,90 @@
+
+First name: Edmond
+Last name: Alexandre
+Address: Marseilles
+Profession: Sailor
+Age: 30
+Email address: alexandre.edmond@marseilles.fr
+Phone number: 222-333-4444
+-----
+
+First name: Alyosha
+Last name: Karamazov
+Address: Saint Petersburg
+Profession: Monk
+Age: 20
+Email address: alyosha.karamazov@stpetersburg.ru
+Phone number: 555-666-7777
+-----
+
+First name: Ivan
+Last name: Karamazov
+Address: Saint Petersburg
+Profession: Intellectual
+Age: 24
+Email address: ivan.karamazov@stpetersburg.ru
+Phone number: 666-777-8888
+-----
+
+First name: Dewitt
+Last name: Booker
+Address: Columbia
+Profession: Detective
+Age: 38
+Email address: booker.dewitt@columbia.com
+Phone number: 888-999-1010
+-----
+
+First name: Konstantin
+Last name: Levin
+Address: Russian Countryside
+Profession:  
+Age: 35
+Email address: levin.konstantin@countryside.ru
+Phone number: 3-777-666-5555
+-----
+
+First name: Alexei
+Last name: Karamazov
+Address: Saint Petersburg
+Profession: Monk
+Age: 20
+Email address: alexei.karamazov@stpetersburg.ru
+Phone number: 6-444-333-2222
+-----
+
+First name: Ivan
+Last name: Karamazov
+Address: Saint Petersburg
+Profession: Intellectual
+Age: 24
+Email address: ivan.karamazov@stpetersburg.ru
+Phone number: 7-333-222-1111
+-----
+
+First name: Alexei
+Last name: Vronsky
+Address: Moscow
+Profession: Army Officer
+Age: 30
+Email address: alexei.vronsky@army.ru
+Phone number: 8-222-111-0000
+-----
+
+First name: Cosette
+Last name: Fauchelevent
+Address: Paris
+Profession:  
+Age: 20
+Email address: cosette.fauchelevent@paris.fr
+Phone number: 14-666-555-4444
+-----
+
+First name: Jean
+Last name: Valjean
+Address: Paris
+Profession: Factory Owner
+Age: 50
+Email address: jean.valjean@paris.fr
+Phone number: 15-555-444-3333
+-----

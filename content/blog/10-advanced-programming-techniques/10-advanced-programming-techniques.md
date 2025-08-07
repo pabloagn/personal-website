@@ -30,13 +30,13 @@ As mentioned, we'll be using Scala for this segment.
 
 We'll first head to the directory where we wish our project to be created in:
 
-```PowerShell
+```powershell
 cd Projects
 ```
 
 We'll then create a new Scala project by executing the following command in our terminal:
 
-```PowerShell
+```powershell
 sbt new sbt/scala-seed.g8
 ```
 
@@ -44,11 +44,11 @@ We'll name our project whenever sbt requests the project name.
 
 We'll then open our preferred IDE, import the newly generated build, and create a new worksheet inside `/projectname/src/main/scala`.
 
-```PowerShell
+```powershell
 cd /projectname/src/main/scala
 ```
 
-```PowerShell
+```powershell
 New-Item -ItemType File -Path ".\Sheet.worksheet.sc"
 ```
 
@@ -94,7 +94,7 @@ What we'll do here is the following:
 
 We first import the `tailrec` annotation and define our outer and nested recursive functions:
 
-```Scala
+```scala
 import scala.annotation.tailrec
 
 def recursiveSum(list: List[Int]): Int = {
@@ -110,7 +110,7 @@ def recursiveSum(list: List[Int]): Int = {
 
 If we call our outer function with a simple list first:
 
-```Scala
+```scala
 recursiveSum(List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
 ```
 
@@ -120,7 +120,7 @@ recursiveSum(List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
 
 We can try our function with a larger number:
 
-```Scala
+```scala
 recursiveSum(List.range(1, 100000))
 ```
 
@@ -130,7 +130,7 @@ recursiveSum(List.range(1, 100000))
 
 But what if we try it with an even larger number?
 
-```Scala
+```scala
 recursiveSum(List.range(1, 1000000000))
 ```
 
@@ -162,7 +162,7 @@ As with the previous example, we will import the `@tailrec` annotation and defin
    - The second nested function will accept our `Int` type value and a counter with `BigInt` type that we'll use to keep track of the factorial operation.  
 3. Call our outer function with an integer value.
 
-```Scala
+```scala
 def factorialCalc(n: Int): BigInt = {
   @tailrec
   def factorialItems(n: Int, counter: BigInt): BigInt = {
@@ -177,7 +177,7 @@ def factorialCalc(n: Int): BigInt = {
 
 We can start by calling our function using an edge case, which in our case will be `0`:
 
-```Scala
+```scala
 factorialCalc(0)
 ```
 
@@ -187,7 +187,7 @@ factorialCalc(0)
 
 We can then call our outer function with a small integer:
 
-```Scala
+```scala
 factorialCalc(4)
 ```
 
@@ -197,7 +197,7 @@ factorialCalc(4)
 
 We can try our function with a larger number:
 
-```Scala
+```scala
 factorialCalc(10)
 ```
 
@@ -207,7 +207,7 @@ factorialCalc(10)
 
 And even with a larger number:
 
-```Scala
+```scala
 factorialCalc(100)
 ```
 
@@ -234,7 +234,7 @@ We define `next` and `curr` as follows:
 - `next`: the previous number in our sequence.  
 - `curr`: the current number in our sequence.
 
-```Scala
+```scala
 def fibCalc(n: Int): BigInt = {
   @tailrec
   def fibItems(n: Int, next: BigInt, current: BigInt): BigInt = {
@@ -248,7 +248,7 @@ def fibCalc(n: Int): BigInt = {
 
 We can test our algorithm with some smaller and bigger numbers:
 
-```Scala
+```scala
 // Edge case call
 fibCalc(0)
 
@@ -281,7 +281,7 @@ We'll take a similar approach to our previous implementations:
    - The second nested function will accept our two `Int` type variables, `base` and `exp`, and a counter with `BigInt` type.  
 3. Call our outer function with two integer values.
 
-```Scala
+```scala
 def expCalc(base: Int, exp: Int): BigInt = {
   @tailrec
   def expItems(base: Int, exp: Int, counter: BigInt): BigInt = {
@@ -297,7 +297,7 @@ def expCalc(base: Int, exp: Int): BigInt = {
 
 We will then call our function with smaller and bigger numbers:
 
-```Scala
+```scala
 // Edge case call
 expCalc(0, 0)
 
@@ -360,7 +360,7 @@ This concept is easy to implement in Scala since all functions are first-class c
 
 The basic syntax of a higher-order function is as follows:
 
-```Scala
+```scala
 // Higher-order function
 def myfun(f: Int => Boolean, n: Int): Boolean = {
   f(n)
@@ -398,7 +398,7 @@ We can follow the steps below:
 3. Define a predicate function to evaluate whether a given number is even.  
 4. Return the total number of occurrences by using a counter.
 
-```Scala
+```scala
 def checkList(checkerEven: Int => Boolean, list: List[Int]): Int = {
   def countElements(checkerEven: Int => Boolean, list: List[Int], counter: Int): Int = {
     if (list.isEmpty) counter
@@ -418,7 +418,7 @@ def checkerEven(target: Int): Boolean = {
 
 If we call our higher-order function, we should get the following:
 
-```Scala
+```scala
 checkList(checkerEven, List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
 ```
 
@@ -437,7 +437,7 @@ Similar to the previous example, we can follow the steps below:
 3. Define a third function that performs the product operation.  
 4. Return the resulting value.
 
-```Scala
+```scala
 def sumNumbers(
   applyProduct: (Int, Int) => Int,
   applyAddition: (Int, Int) => Int,
@@ -460,7 +460,7 @@ def applyAddition(n: Int, x: Int): Int = {
 
 We can finally call our function:
 
-```Scala
+```scala
 sumNumbers(applyProduct, applyAddition, 2, 3, 2)
 ```
 
@@ -514,7 +514,7 @@ The steps to follow are straightforward:
 2. Partially call the curried function.  
 3. Complete the curried-function call in a new line.
 
-```Scala
+```scala
 // Define a curried function
 def sumNums(x: Int)(y: Int) = x + y
 
@@ -539,7 +539,7 @@ This one is a little bit trickier since we need to first define a function that 
 - A function that will square the result.  
 - Two integers, `x` and `y`, that will be operated on.
 
-```Scala
+```scala
 def sumInts(squareInt: (Int, Int) => Int)(x: Int, y: Int): Int =
   squareInt(x + y, 1)
 
@@ -549,7 +549,7 @@ def squareInt(a: Int, dummy: Int): Int =
 
 We can finally call our functions:
 
-```Scala
+```scala
 sumInts(squareInt)(2, 3)
 ```
 
@@ -559,7 +559,7 @@ sumInts(squareInt)(2, 3)
 
 We could also perform a partial call and reuse the resulting function:
 
-```Scala
+```scala
 val applySumSquare = sumInts(squareInt) _
 applySumSquare(2, 3)
 ```
@@ -625,7 +625,7 @@ We want to pack two expressions into two separate functions and perform them con
 - Value A divided by Value B equals Value C.  
 - Value C divided by Value D equals E.
 
-```Scala
+```scala
 // Unsafe division one
 def unsafeDivOne(
   unsafeDivTwo: (Double, Double) => Double,
@@ -642,7 +642,7 @@ def unsafeDivTwo(a: Double, b: Double): Double =
 
 If we call our first function with positive real numbers, we'll get the expected result:
 
-```Scala
+```scala
 unsafeDivOne(unsafeDivTwo, 12, 2, 3)
 ```
 
@@ -652,7 +652,7 @@ unsafeDivOne(unsafeDivTwo, 12, 2, 3)
 
 However, as simple as this example is, it can easily fail; if we feed `0` to the parameter `b`, the result of the expression becomes undefined, and the execution returns infinity:
 
-```Scala
+```scala
 unsafeDivOne(unsafeDivTwo, 12, 0, 3)
 ```
 
@@ -662,7 +662,7 @@ unsafeDivOne(unsafeDivTwo, 12, 0, 3)
 
 Let us redefine our unsafe implementations to safe ones:
 
-```Scala
+```scala
 // Safe division one
 def safeDivOne(
   safeDivTwo: (Double, Double) => Option[Double],
@@ -682,7 +682,7 @@ def safeDivTwo(a: Double, b: Double): Option[Double] =
 
 We can now call our function with unsafe parameters:
 
-```Scala
+```scala
 safeDivOne(safeDivTwo, 12, 0, 3)
 ```
 
@@ -724,7 +724,7 @@ Pattern matching is often used with case classes, sealed traits, tuples, and lis
 
 Here is the basic syntax of a pattern-matching construct:
 
-```Scala
+```scala
 // Define a pattern-matching construct
 def patternMatch(x: Int): Unit = {
   x match {
@@ -771,7 +771,7 @@ In our first example, we'll add more functionalities to this implementation.
 
 We can extend our `safeDivision` functionality by using pattern matching:
 
-```Scala
+```scala
 def checkDivide(result: Option[Double]) = {
     result match {
     case Some(value) => println(s"Division result: $value")
@@ -782,7 +782,7 @@ def checkDivide(result: Option[Double]) = {
 
 Now, we simply feed our expression:
 
-```Scala
+```scala
 checkDivide(safeDivOne(safeDivTwo, 12, 2, 3))
 checkDivide(safeDivOne(safeDivTwo, 12, 0, 3))
 ```
@@ -796,7 +796,7 @@ checkDivide(safeDivOne(safeDivTwo, 12, 0, 3))
 
 Let us create a simple application that takes an input string representing an animal's name and, using pattern matching, determines the animal's classification within a basic hierarchy. The hierarchy consists of 3 levels: Mammal, Bird, and Reptile. We must match the input animal to the correct classification and return the correct class as a `String`.
 
-```Scala
+```scala
 // Define an animal checker
 def checkAnimal(animal: String): String = {
     animal match {
@@ -822,7 +822,7 @@ Let us define a function that checks for four basic base data types in Scala. Th
 
 For this example, we'll define two versions of the same function: one using pattern matching and the other using if-else if-else constructs.
 
-```Scala
+```scala
 // Implement using pattern matching
 def checkType1(x: Any): String = x match {
   case _: Int => "Int"
@@ -857,7 +857,7 @@ res4: String = "String"
 
 Let us define a custom class called `PositiveInt`, which can represent a positive integer object. We want to be able to check if an integer is positive by using the `PositiveInt` constructor and pattern matching.
 
-```Scala
+```scala
 // Define our custom class
 class PositiveInt(val value: Int)
 // Define an object
@@ -947,7 +947,7 @@ We can, however, declare a lazy value by using the `lazy` keyword:
 
 Let us declare two simple variables: An eager variable and a lazy one:
 
-```Scala
+```scala
 // Define an eager list and a lazy list
 val my_list:List[Int] = List(1, 2, 3, 4, 5)
 lazy val my_lazy_list:List[Int] = List(1, 2, 3, 4, 5)
@@ -1027,7 +1027,7 @@ Let us define a very simple example.
 
 Let us declare a function that accepts an integer value and returns the same value. We'll define its parameter as implicit and study its behavior.
 
-```Scala
+```scala
 // Define a function with implicit parameter x
 def findInt(implicit x: Int) = x
 // Call function without argument
@@ -1042,7 +1042,7 @@ could not find implicit value for parameter x: Int
 
 This is because we have not yet declared an implicit value that falls under the scope of the implicit parameter lookup. Let us do that:
 
-```Scala
+```scala
 // Define a function with implicit parameter x
 def findInt(implicit x: Int) = x
 // Define an implicit value
@@ -1059,7 +1059,7 @@ Surprise, surprise, the function gets magically evaluated. What happened was clo
 
 What if we declare another implicit `Int`?
 
-```Scala
+```scala
 // Define a function with implicit parameter x
 def findInt(implicit x: Int) = x
 // Define two implicit values
@@ -1080,7 +1080,7 @@ We will get an ambiguous implicit value error: since both values belong to the s
 
 But what if, in turn, we declare a value of a different type?
 
-```Scala
+```scala
 // Define a function with implicit parameter x
 def findInt(implicit x: Int) = x
 // Define an implicit value
@@ -1100,7 +1100,7 @@ This works perfectly because our second implicit value, `my_string`, is not of t
 
 Let us define a type class to format different types when printing them to `stdout`. We want to be able to use two types: `String` and `Int`.
 
-```Scala
+```scala
 trait Formatter[T] {
   def format(value: T): String
 }
@@ -1199,7 +1199,7 @@ Let us think of a more concrete example where we would like to define two functi
 
 We'll start with the conventional style:
 
-```Scala
+```scala
 // Define an addition function
 def addInts(x: Int, y: Int): Int = {
     x + y
@@ -1224,7 +1224,7 @@ Simple, right?
 
 Now, let us define an equivalent implementation using the CPS style:
 
-```Scala
+```scala
 // Define an addition function
 def addIntsCPS(x: Int, y: Int, k: Int => Unit): Unit = {
     k(x + y)
@@ -1290,7 +1290,7 @@ Let us start by defining what we'll need to achieve this:
 - A list of `Int` values.
 - A call to the CPS functions we defined previously.
 
-```Scala
+```scala
 def sumListCPS(list: List[Int], k: Int => Unit): Unit = k(list.sum)
 def productListCPS(list: List[Int], k: Int => Unit): Unit = k(list.product)
 val numbers = List(7, 14, 21, 28, 35)
@@ -1384,7 +1384,7 @@ Let us break our approach step-by-step:
 5. We finally call our asynchronous process using the `Await` API.
 6. The `sumAsync` process call will tell us if our process terminated successfully.
 
-```Scala
+```scala
 import scala.concurrent.{Promise, Await, Future}
 import scala.concurrent.duration._
 // Define Promise
@@ -1423,7 +1423,7 @@ Let us implement an addition and a multiplication asynchronously and returns a f
 
 The process will be similar to our previous example. The only difference is that we'll now use a `for` comprehension that combines the futures returned by the `addAsync` and `multiplyAsync` functions.
 
-```Scala
+```scala
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
 // Define operation 1
@@ -1508,7 +1508,7 @@ Before any code, we'll explain step-by-step what we will do:
 4. **Implement a function that can work with instances of both types:** Implement a function `findFirst` that works with instances of our higher-kinded type.
    Now that we have a little bit more clarity, we can begin with our implementation:
 
-```Scala
+```scala
 // 1. Define the higher-kinded type called Box
 trait Box[F[_]] {
   def first[A](fa: F[A]): Option[A]
@@ -1535,7 +1535,7 @@ val myVector = Vector(4, 5, 6)
 val firstElementVector = findFirst(vectorBox, myVector)
 ```
 
-```Scala
+```scala
 // Print both values
 println(firstElementList)
 println(firstElementVector)
@@ -1550,13 +1550,13 @@ We can even go one step further and introduce a generic implementation of the `B
 
 For this, we will first head to our `build.sbt` file and append the following line:
 
-```Scala
+```scala
 libraryDependencies += "org.typelevel" %% "cats-core" % "2.6.1"
 ```
 
 So that our entire build file should look like such:
 
-```Scala
+```scala
 import Dependencies._
 ThisBuild / scalaVersion     := "2.12.8"
 ThisBuild / version          := "0.1.0-SNAPSHOT"
@@ -1572,7 +1572,7 @@ lazy val root = (project in file("."))
 
 This should automatically download `Cats` and make it available for import. So, back in our worksheet file, we can include the following:
 
-```Scala
+```scala
 import cats._
 import cats.implicits._
 import cats.instances.list._
@@ -1583,7 +1583,7 @@ Lets get this party started, shall we?
 
 Let us define our generic implementation:
 
-```Scala
+```scala
 class GenericBox[F[_]: Foldable] extends Box[F] {
   def first[A](container: F[A]): Option[A] = {
     Foldable[F].reduceLeftOption(container)((a, _) => a)
@@ -1600,7 +1600,7 @@ So, in summary, the combination of `Foldable` with `reduceLeftOption` gets us th
 
 Lastly, we simply need to define our appropriate instances and call the appropriate methods:
 
-```Scala
+```scala
 // 2. Create an instance of ListBox and use it to find the first element in a list
 val genericListBox = new GenericBox[List]
 val myList2 = List(1, 2, 3)
@@ -1611,7 +1611,7 @@ val myVector2 = Vector(4, 5, 6)
 val firstElementVector2 = genericVectorBox.first(myVector2)
 ```
 
-```Scala
+```scala
 println(firstElementList)
 println(firstElementVector)
 ```
