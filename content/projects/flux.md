@@ -13,5 +13,9 @@ catchphrase: "A digital twin engine for electrochemical processes, written in Ru
 draft: false
 ---
 
-Flux is an open-source digital twin for chlor-alkali electrolysis plants, modeling multi-electrolyzer operations to optimize energy use, predict membrane degradation, and improve efficiency. Built with Rust, Python, GlassFlow, and ClickHouse, it ingests high-frequency sensor data to deliver real-time KPIs, predictive maintenance, and process optimization.
+Flux is an open-source digital twin engine for chlor-alkali electrolysis plants. It models multi-electrolyzer operations, simulating the production of chlorine, hydrogen, and sodium hydroxide while tracking energy use, membrane health, and process efficiency.
+
+The system ingests high-frequency sensor data into a real-time analytics pipeline powered by GlassFlow and ClickHouse. Predictive models forecast membrane degradation, correlate brine quality with performance, and optimize current distribution to reduce downtime and costs.
+
+Built with Rust and Python, Flux combines process simulation, streaming data pipelines, and real-time, ultra-low latency analytics to deliver live KPIs, anomaly detection, and decision support for industrial electrochemical operations.
 
