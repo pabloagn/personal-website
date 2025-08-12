@@ -7,7 +7,7 @@ summary: "A personal reflection on the reasons for starting this blog, and what 
 catchphrase: "Write, reflect, repeat."
 draft: true
 math: true
-date: 2025-06-30
+date: 2023-01-01
 ---
 
 Hello, & welcome!

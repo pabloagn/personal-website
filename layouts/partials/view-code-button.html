@@ -1,0 +1,22 @@
+{{/* Get full relative path from content root (e.g., blog/017_go-for-developers/) */}}
+{{ $contentDir := .File.Dir }}
+{{ $repo := site.Params.repo }}
+{{ $branch := "main" }}
+
+{{/* Build the GitHub URL pointing to the matching static/src folder */}}
+{{ $url := printf "https://github.com/%s/tree/%s/static/%s/src" $repo $branch (strings.TrimSuffix "/" $contentDir) }}
+
+{{/* Only render button if src folder exists */}}
+{{ if (fileExists (printf "static/%s/src" $contentDir)) }}
+  <div style="text-align: center; margin-top: var(--space-lg);">
+    <a 
+      href="{{ $url }}" 
+      target="_blank" 
+      rel="noopener" 
+      class="btn btn--primary"
+    >
+      View Code
+    </a>
+  </div>
+{{ end }}
+

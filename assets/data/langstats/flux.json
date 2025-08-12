@@ -2,17 +2,17 @@
   "languages": [
     {
       "name": "Rust",
-      "percent": 48,
+      "percent": 44,
       "color": "#dea584"
     },
     {
       "name": "Python",
-      "percent": 31,
+      "percent": 35,
       "color": "#3572A5"
     },
     {
       "name": "Nix",
-      "percent": 13,
+      "percent": 12,
       "color": "#658594"
     },
     {
@@ -22,8 +22,13 @@
     },
     {
       "name": "Shell",
-      "percent": 2,
+      "percent": 3,
       "color": "#89e051"
+    },
+    {
+      "name": "Dockerfile",
+      "percent": 0,
+      "color": "#999999"
     }
   ]
 }

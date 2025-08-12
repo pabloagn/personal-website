@@ -8,6 +8,7 @@ catchphrase: "Tame text with powerful patterns."
 draft: true
 math: true
 date: 2025-06-30
+slug: "regex-in-scala"
 ---
 
 Writing code can be as simple as importing the required libraries, declaring our variables, functions, and classes as required, including some docstrings here and there, some additional comments, executing, and we're done. While we're at it, let's skip the function & class part and drop everything as is. Even better, let's also save some lines by stripping our file from all comments.
@@ -226,7 +227,7 @@ What we're doing:
 - Start at the end of the line.
 - Create a named capturing group.
 - Include any alphabetical character, lower or upper-case.
-- Include a comma `,` separator and an optional whitespace ` `.
+- Include a comma `,` separator and an optional whitespace ``.
 
 Now, for the second name, we do a similar approach:
 

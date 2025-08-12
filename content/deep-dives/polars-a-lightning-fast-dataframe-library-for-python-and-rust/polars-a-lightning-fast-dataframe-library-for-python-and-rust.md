@@ -8,6 +8,7 @@ catchphrase: "Speed meets structure in data science."
 draft: false
 math: true
 date: 2025-01-30
+slug: "polars"
 ---
 
 Of all the libraries belonging to any Data Scientist's toolbox, `Pandas` may be the most important one; it's built on top of the `NumPy` package and provides data structures and methods tailored for data manipulation and analysis with a syntax similar to SQL queries.

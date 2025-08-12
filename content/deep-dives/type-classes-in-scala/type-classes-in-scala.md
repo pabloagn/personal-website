@@ -8,6 +8,7 @@ catchphrase: "Abstract cleanly with type power."
 draft: true
 math: true
 date: 2025-06-30
+slug: "type-classes-in-scala"
 ---
 
 Formally, a type class is a type-system construct that supports ad hoc polymorphism. This is achieved by adding constraints to type variables in parametrically polymorphic types. In simpler terms, a type class is a construct that lets us add constraints to generic functions.

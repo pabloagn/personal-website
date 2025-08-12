@@ -21,6 +21,11 @@ term = ["HTML", "RSS"]
 [pagination]
 pagerSize = 12
 
+[permalinks]
+blog = "/blog/:slug/"
+deep-dives = "/deep-dives/:slug/"
+
+
 # --- Menu Configuration ---
 [menu]
 [[menu.main]]
@@ -58,6 +63,7 @@ weight = 70
 description = "Pablo Aguirre • Elegant Development"
 author = "Pablo Aguirre"
 email = "pabloaguirrenck@protonmail.ch"
+repo = "pabloagn/personal-website"
 
 # --- Social Links ---
 [params.social]

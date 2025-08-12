@@ -9,6 +9,7 @@ catchphrase: "Transform collections with elegance."
 draft: false
 math: true
 date: 2024-09-30
+slug: "higher-order-collection-functions-in-scala"
 ---
 
 Higher-order functions take other functions as arguments and/or return other functions as a result. These powerful abstractions allow us to perform very complex computations with the benefit of reduced verbosity and declaration. Scala has a strong functional component embedded in its architecture; it then makes sense that Scala provides a wide variety of powerful higher-order functions, specifically for collections such as lists, tuples, arrays, vectors, and more.

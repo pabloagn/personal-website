@@ -3,6 +3,6 @@
 }
 
 .katex-display {
-  margin: var(--space-lg) 0;
-  text-align: center;
+  margin: var(--space-2xl) 0 !important;
+  text-align: center !important;
 }

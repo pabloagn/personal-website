@@ -8,6 +8,7 @@ catchphrase: "Pack, Unpack, Repeat"
 draft: false
 math: true
 date: 2024-06-30
+slug: "destructuring-in-javascript"
 ---
 
 Destructuring is a very powerful & widely-used syntactic construct that allows us to decompose a given object or structure into smaller components. This is especially useful when we have, for example, objects with nested elements and would like to extract all or some of them and assign them to variables without having to write multiple lines of code to do so.
